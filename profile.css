@@ -14,7 +14,17 @@ fieldset {
 }
 
 
+#waterSupply {
+    display: none;
+}
 
+#waterDischarge {
+    display: none;
+}
+
+#riskAndChallenges {
+    display: none;
+}
 
 
 body {
@@ -149,7 +159,8 @@ h1 {
 .submit:active {
     background-color: #06b;
 }
-#mail{
+
+#mail {
     margin-left: 100px;
 }
 
@@ -176,26 +187,51 @@ html {
     box-sizing: border-box;
 }
 
-@media(max-width: 800px){
-    form, select{font-size: 12px;}
-    input, select{width: 120px; height: 20px;}
-    textarea{max-width: 200px;}
-    #end_product{margin-left: 20px;}
-    #women{margin-left: 42px;}
-    #name{margin-left: 74px;}
-    #next2{margin-left: 180px;
-           float: right;
-            margin-right: 20px;}
+@media(max-width: 800px) {
+
+    form,
+    select {
+        font-size: 12px;
+    }
+
+    input,
+    select {
+        width: 120px;
+        height: 20px;
+    }
+
+    textarea {
+        max-width: 200px;
+    }
+
+    #end_product {
+        margin-left: 20px;
+    }
+
+    #women {
+        margin-left: 42px;
+    }
+
+    #name {
+        margin-left: 74px;
+    }
+
+    #next2 {
+        margin-left: 180px;
+        float: right;
+        margin-right: 20px;
+    }
 
 
 }
 
-#Contact{
+#Contact {
     margin-left: 42px;
 }
-#country{
-max-width: 200px;
-background-color: #303245;
-color: #fff;
-border-color: #303245;
-} 
+
+#country {
+    max-width: 200px;
+    background-color: #303245;
+    color: #fff;
+    border-color: #303245;
+}
