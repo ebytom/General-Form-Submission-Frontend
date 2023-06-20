@@ -206,9 +206,615 @@
                 </fieldset>
             </form>
         </div>
-    </div>
+    </div><br>
 
-    //start from here
+
+
+    <div><h1>WATER   SUPPLY</h1>
+    <div class="container">
+    
+
+        <form id="form" action="Water supply">
+            <fieldset>
+                <!-- <legend>WATER SUPPLY</legend> -->
+                <p>13. Sourcing (with percentage if known):</p>
+                
+                <input class="checkbox" type="checkbox" id="pipe" name="pipe" value="pipe">
+                <label for="pipe">Pipe water / Municipal water</label>
+                <br>
+                <input type="checkbox" id="bore" name="bore" value="bore">
+                <label for="bore">Groundwater (Bore)</label>
+                <br>
+                <input type="checkbox" id="Surface" name="Surface" value="Surface">
+                <label for="Surface">Surface water (River)</label>
+                <br>
+                <input type="checkbox" id="treated" name="treated" value="treated">
+                <label for="treated">Treated water (IETP/CETP)</label>
+                <br>
+                <input type="checkbox" id="sources" name="sources" value="sources">
+                <label for="sources">Water from other sources</label>
+                <br>
+                <br>
+                <br>
+                <p>14. Quality of Water supply:</p>
+                
+                <input type="radio" id="Performed" name="quality" value="Performed">
+                <label for="Performed">Water Testing Performed</label>
+                <br>
+                <input type="radio" id="not Performed" name="quality" value="not Performed">
+                <label for="not Performed">Water Testing Not Performed</label>
+                <br>
+                <br>
+                <br>
+                <p>15. Is the water treated before being used ?</p>
+                
+                <input type="radio" id="treateds" name="use" value="treateds">
+                <label for="treateds">No treatment</label>
+                <br>
+                <input type="radio" id="treatment" name="use" value="treatment">
+                <label for="treatment">Yes, pre treatment</label>
+                <br>
+                <input type="radio" id="yes" name="use" value="yes">
+                <label for="yes">Yes, biological treatment</label>
+                <br>
+                <input type="radio" id="secondary" name="use" value="secondary">
+                <label for="secondary">Yes, secondary treatment</label>
+                <br>
+                <input type="radio" id="advanced" name="use" value="advanced">
+                <label for="advanced">Yes, advanced treatment</label>
+                <br>
+                <br>
+                <p class="quantity">16. Quantity of water supply : <input id="firstname" class="input" type="text" placeholder=" " /></p>
+                
+                
+                  
+            
+            
+                  
+                <label for="water"></label>
+               
+                <br>
+                <br>
+                <!-- <p>17. Water consumption in last 3 years (in Kilo Litres; 1000 m3 = 1 KL) : </p>
+                <br>
+               -->
+                <!-- <table>
+
+                    <thead>
+                        <th>Year</th>
+                        <th>1st Quarter</th>
+                        <th>2nd Quarter</th>
+                        <th>3rd Quarter</th>
+                        <th>4th Quarter</th>
+                       
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                           
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                           
+                        </tr>
+                    </tbody>
+                </table> -->
+
+                <p id="last">17. Water consumption of year 2022 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                <input id="lastyear" type="text" class="input"/>
+
+
+                <br>
+                <p>18. Cost of Water (INR/KL) – Treated / Fresh Water : 
+                    <input id="firstname" class="input" type="text" placeholder=" " />
+                </p>
+                <p>19. Does your unit track its factory / office water consumption separately:
+                    <input type="radio" id="a" name="unit" value="a">
+                    <label for="a">Yes</label>
+                    <input type="radio" id="b" name="unit" value="b">
+                    <label for="b">No</label>
+                </p>
+                <p id="if-yes">
+                </p>
+                <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                    <input type="radio" id="c" name="io" value="c">
+                    <label for="c">Yes</label>
+                    <input type="radio" id="d" name="io" value="d">
+                    <label for="d">No</label>
+                </p>
+                <p>21. Which facility process/operation uses water the most : <input id="firstname" class="input" type="text" placeholder=" " /></p>
+                <br>
+                <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                    <input type="radio" id="e" name="plan" value="e">
+                    <label for="e">Yes</label>
+                    <input type="radio" id="f" name="plan" value="f">
+                    <label for="f">No</label>
+                </p>
+                <label for="avatar">23. upload water report file(pdf/docx):</label>
+
+                <input type="file"
+                  id="avatar" name="avatar"
+                  accept=".pdf, .doc, .docx">
+
+
+
+                <br>
+                <!-- <button class="btn btn-primary" type="submit" id="prev" name="submit2" onclick="window.location.href='profile.html';">&laquo; Previous</button> -->
+                <a href="profile.html" class="btn btn-primary" type="submit" id="prev" name="submit2">&laquo; Previous</a>
+                <!-- <button type="text" class="btn btn-primary" id="next">Next &raquo;</button> -->
+                <a type="text" class="btn btn-primary" id="next" href="./discharge.html">Next &raquo;</a>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+
+<!--discharge page-->
+
+<div>
+<h1>
+    WATER DISCHARGE
+</h1>
+
+<div class="container">
+
+    <form action="discharge_php.php" method="post">
+
+        <fieldset>
+
+            <!--<legend>Water Discharge</legend> -->
+
+
+
+            <!-- waste water -->
+            <div class="waste__water">
+                <label for="waste_water">24. Does your facility generate waste water</label>
+                <div class="form-check" id="select1">
+                    <input class="form-check-input" type="radio" name="waste" id="yes" value="true">
+                    <label class="form-check-label" for="yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check" id="select2">
+                    <input class="form-check-input" type="radio" name="waste" id="No" value="false">
+                    <label class="form-check-label" for="No">
+                        No
+                    </label>
+                </div>
+            </div><br>
+
+
+            <!-- total discharge -->
+            <div id="yes-display">
+                <!-- <label for="total_discharge">If yes, total discharge volume per day (m³ ):</label>
+                <input type="text" id="total_discharge" name="total_discharge"> -->
+            </div><br>
+
+            <!-- zero liquid discharge -->
+            <div id="zd">
+                <label for="zero_discharge">25. Does your facility have zero liquid discharge (ZLD):</label>
+                <div class="form-check" id="select3">
+                    <input class="form-check-input" type="radio" name="zld" id="yes1" value="true">
+                    <label class="form-check-label" for="yes1">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check" id="select4">
+                    <input class="form-check-input" type="radio" name="zld" id="No1" value="false">
+                    <label class="form-check-label" for="No1">
+                        No
+                    </label>
+                </div>
+            </div><br><br>
+
+
+            <!-- treatment facility -->
+
+            <div class="treatment_facility">
+
+                <p id="tr">26. Treatment facility for the unit</p>
+
+                <div id="tf">
+                    <div class="form-check" id="c1">
+                        <input class="form-check-input" type="checkbox" value="Common effluent treatment facility"
+                            id="check1a" name="Tfacility[]">
+                        <label class="form-check-label" for="check1a">
+                            Common effluent treatment facility
+                        </label>
+                    </div>
+                    <div class="form-check" id="c2">
+                        <input class="form-check-input" type="checkbox"
+                            value="Individual effluent treatment facility" id="check2b" name="Tfacility[]">
+                        <label class="form-check-label" for="check2b">
+                            Individual effluent treatment facility
+                        </label>
+                    </div>
+                    <div class="form-check" id="c3">
+                        <input class="form-check-input" type="checkbox" value="No treatment facility" id="check3c"
+                            name="Tfacility[]">
+                        <label class="form-check-label" for="check3c">
+                            No treatment facility
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <ul id="check2b-display">
+                    <li>26.1. Wastewater treatment methods/ practices:
+                        <div class="form-check" id="c11">
+                            <input class="form-check-input" type="checkbox" value="Primary" id="check1d"
+                                name="method[]">
+                            <label class="form-check-label" for="check1d">
+                                Primary
+                            </label>
+                        </div>
+                        <div class="form-check" id="c22">
+                            <input class="form-check-input" type="checkbox" value="Secondary" id="check2e"
+                                name="method[]">
+                            <label class="form-check-label" for="check2e">
+                                Secondary
+                            </label>
+                        </div>
+                        <div class="form-check" id="c33">
+                            <input class="form-check-input" type="checkbox" value="Tertiary" id="check3f"
+                                name="method[]">
+                            <label class="form-check-label" for="check3f">
+                                Tertiary
+                            </label>
+                        </div>
+                    </li><br>
+
+                    <li>
+                        <label for="methods">26.2.Please, fill the appropriate methods (<i>refer FEM 3.0 Module</i>) :</label>
+                        <input type="number" id="methods" name="metods">
+                    </li>
+                    <li>
+                        <label for="treatment_capacity">26.3. Total water treatment (m³) capacity of the unit:</label>
+                        <input type="number" id="treatment_capacity" name="treatment_capacity">
+                    </li>
+                </ul>
+            </div><br>
+
+
+            <!-- track wastewater volume seperately -->
+            <div class="track_volume">
+                <label for="track_volume">27. Does your unit track its industrial / domestic wastewater volumes
+                    separately:</label>
+                <div class="form-check" id="select5">
+                    <input class="form-check-input" type="radio" name="volume" id="yes2" value="true">
+                    <label class="form-check-label" for="yes2">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check" id="select6">
+                    <input class="form-check-input" type="radio" name="volume" id="No2" value="false">
+                    <label class="form-check-label" for="No2">
+                        No
+                    </label>
+                </div>
+
+
+                <ul id="yes2-display">
+                    <li>
+                        <p>27.1. Wastewater volume percentage: <br> Industrial <input type="number" name="industrial"
+                                id="induatrial"> % &nbsp;<br><br> Domestic <input type="number" name="domestic"
+                                id="domestic">
+                            %</p><br>
+                    </li>
+                    <li>
+                        <p>27.2. Volume of treated wastewater per category: <br> Industrial <input type="number"
+                                name="industrial1" id="induatrial1"> % &nbsp;<br><br> Domestic
+                            <input type="number" name="domestic1" id="domestic1"> %
+                        </p>
+                    </li>
+                </ul>
+            </div><br><br>
+
+
+
+
+
+
+            <div class="treatment_facility">
+
+                <p id="dp">28. Final discharge point of treated / untreated wastewater:</p>
+
+                <div id="fd">
+                    <div class="form-check" id="c1a">
+                        <input class="form-check-input" type="checkbox" value="Land" id="check1g" name="points[]">
+                        <label class="form-check-label" for="check1g">
+                            Land
+                        </label>
+                    </div>
+                    <div class="form-check" id="c2b">
+                        <input class="form-check-input" type="checkbox" value="Water" id="check2h" name="points[]">
+                        <label class="form-check-label" for="check2h">
+                            Water
+                        </label>
+                    </div>
+                    <div class="form-check" id="c3c">
+                        <input class="form-check-input" type="checkbox" value="Re-use" id="check3i" name="points[]">
+                        <label class="form-check-label" for="check3i">
+                            Re-use
+                        </label>
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div id="pw">
+                <label for="water_recovery">29. Percentage of Water Recovery % from Effluent:</label>
+                <input type="number" id="water_recovery" name="water_recovery">
+            </div><br><br>
+
+            <div>
+                <label for="Industrial_sludge" id="is">30. Details on discharge of Industrial sludge:</label><br>
+                <textarea id="Industrial_sludge" name="Industrial_sludge" rows="5" cols="80"></textarea>
+            </div><br><br>
+
+
+            <div class="quality_standards">
+
+                <p id="le">31. Is the factory always in compliance with legal waste water quality standards, permits,
+                    monitoring or
+                    other contractual agreements?</p>
+
+                <div id="qs">
+                    <div class="form-check" id="c1d">
+                        <input class="form-check-input" type="checkbox"
+                            value="Company meets all existing quality standards and has either a company standard and/or has a compliance system in place"
+                            id="check1j" name="wquality[]">
+                        <label class="form-check-label" for="check1j">
+                            Company meets all existing quality standards and has either a company standard and/or
+                            has a compliance system in place
+                        </label>
+                    </div>
+                    <div class="form-check" id="c2e">
+                        <input class="form-check-input" type="checkbox"
+                            value="Site meets water quality requirements, but no company-specific standards or compliance systems exist"
+                            id="check2k" name="wquality[]">
+                        <label class="form-check-label" for="check2k">
+                            Site meets water quality requirements, but no company-specific standards or compliance
+                            systems exist
+                        </label>
+                    </div>
+                    <div class="form-check" id="c3f">
+                        <input class="form-check-input" type="checkbox"
+                            value="Unknown or in general meets water quality standards, but may have some violations"
+                            id="check3l" name="wquality[]">
+                        <label class="form-check-label" for="check3l">
+                            Unknown or in general meets water quality standards, but may have some violations
+                        </label>
+                    </div>
+                    <div class="form-check" id="c4g">
+                        <input class="form-check-input" type="checkbox"
+                            value="The site sometimes meets water quality standards, but is regularly in violation"
+                            id="check1m" name="wquality[]">
+                        <label class="form-check-label" for="check1m">
+                            The site sometimes meets water quality standards, but is regularly in violation
+                        </label>
+                    </div>
+                    <div class="form-check" id="c5h">
+                        <input class="form-check-input" type="checkbox"
+                            value="The site rarely or never meets existing water quality standards" id="check2n"
+                            name="wquality[]">
+                        <label class="form-check-label" for="check2n">
+                            The site rarely or never meets existing water quality standards
+                        </label>
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div>
+                <label for="comments" id="gc">32. General Comments and Feedback:</label><br>
+                <textarea name="comments" id="comments" cols="80" rows="6"
+                    placeholder="Write any comment or suggestion..."></textarea>
+            </div><br>
+
+
+            <!-- <button class="btn btn-primary" type="submit" id="prev" name="submit2">&laquo; Previous</button>
+            <button type="text" class="btn btn-primary" id="next" onclick="window.location.href='Risks and challanges.html';">Next &raquo;</button> -->
+
+            <a href="supply.html" class="btn btn-primary" type="submit" id="prev" name="submit2">&laquo; Previous</a>
+            <!-- <button type="text" class="btn btn-primary" id="next">Next &raquo;</button> -->
+            <a type="text" class="btn btn-primary" id="next" href="./Risks and challanges.html">Next &raquo;</a>
+        </fieldset>
+    </form>
+</div>
+</div>
+
+
+<!--risk and challenges page-->
+
+<div>
+<h1>RISKS AND CHALLENGES</h1>
+<div class="container">
+  <div>
+    <fieldset>
+      <!-- <legend>RISKS AND CHALLENGES</legend> -->
+      <div>
+        <p>
+          33. Relative to other water users in your local catchment (within 50km radius), does the factory face heavy
+          water-related regulation and legal enforcement?</p>
+        <input type="checkbox" id="ab" name="water[]" value="ab">
+        <label for="ab">No, the site is under no/minimal regulation and/or legal enforcement</label>
+      </div>
+      <div>
+        <input type="checkbox" id="bb" name="water[]" value="bb">
+        <label for="bb">No, the site is under similar regulation and/or legal enforcement as other users</label>
+      </div>
+      <div>
+        <input type="checkbox" id="cb" name="water[]" value="cb">
+        <label for="cb">Unknown</label>
+      </div>
+      <div>
+        <input type="checkbox" id="db" name="water[]" value="db">
+        <label for="db">Yes, possibly the site is under greater regulation and/or legal enforcement</label>
+      </div>
+      <div>
+        <input type="checkbox" id="eb" name="water[]" value="eb">
+        <label for="eb">Yes, the site is under much greater regulation and/or legal enforcement</label>
+      </div><br><br><br>
+      <p>
+        34. Did your facility receive any government issued environmental violation records in the last 3 years:
+      </p>
+      <input type="radio" id="yes" name="AC" value="true">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" name="AC" value="false">
+      <label for="no">No</label>
+      <div id="yes-display">
+        <!--
+        <textarea id="waters" cols="100" rows="5"></textarea> -->
+      </div>
+      <br>
+
+      <!-- siudfcsjkcnhbchjsbhcsdsadads -->
+      <p>
+        35. Did your facility face temporary shutdown in the last 3 years:
+      </p>
+      <input type="radio" id="ad" name="AD" value="true">
+      <label for="ad">Yes</label>
+      <input type="radio" id="bd" name="AD" value="false">
+      <label for="bd">No</label>
+      <div id="ad-display">
+
+        <!-- <textarea id="w" cols="100" rows="5"></textarea> -->
+      </div>
+      <br>
+      <p>
+        36. Did your facility considerable loss of business in the last 3 years:
+      </p>
+      <input type="radio" id="ae" name="AE" value="true">
+      <label for="ae">Yes</label>
+      <input type="radio" id="be" name="AE" value="false">
+      <label for="be">No</label>
+      <div id="ae-display">
+
+        <!-- <textarea id="w" cols="100" rows="5"></textarea> -->
+      </div>
+      <br>
+      <p>
+        37. Did your facility recive legal action from individuals/community/instructons in the last 3 years:
+      </p>
+      <input type="radio" id="af" name="AF" value="true">
+      <label for="af">Yes</label>
+      <input type="radio" id="bf" name="AF" value="false">
+      <label for="bf">No</label>
+      <div id="af-display">
+
+        <!-- <textarea id="w" cols="100" rows="5"></textarea> -->
+      </div>
+      <br><br>
+      <p>
+        38. Relative to other water users in your local catchment (within a 50km radius), would you consider the
+        site a large water user/polluter?
+      </p>
+      <input type="radio" id="ca" name="CA" value="No, the site is not a large water user">
+      <label for="ca">No, the site is not a large water user</label>
+      <div>
+        <input type="radio" id="cc" name="CA"
+          value="No, the site is not a large water user/polluter (relative to others)">
+        <label for="cc">No, the site is not a large water user/polluter (relative to others)</label>
+      </div>
+      <div>
+        <input type="radio" id="cd" name="CA" value="Unknown">
+        <label for="cd">Unknown</label>
+      </div>
+      <div>
+        <input type="radio" id="ce" name="CA" value="Yes,the site is a recoginable branf=d to some locals">
+        <label for="ce">Yes,the site is a recoginable branf=d to some locals</label>
+      </div>
+      <div>
+        <input type="radio" id="cf" name="CA" value="Yes, the site is a recoginable brand to most/all locals">
+        <label for="cf">Yes, the site is a recoginable brand to most/all locals</label>
+      </div>
+      <br><br><br>
+      <p>
+        39. How would you describe this site&#39;s general water management/stewardship maturity?
+      </p>
+      <input type="radio" id="da" name="DA" value="Long standing advanced water stewardship practices">
+      <label for="da">Long standing advanced water stewardship practices</label>
+      <div>
+        <input type="radio" id="dc" name="DA" value="Recently began advanced water stewardship practices">
+        <label for="dc">Recently began advanced water stewardship practices</label>
+      </div>
+      <div>
+        <input type="radio" id="de" name="DA" value="Established Water Management">
+        <label for="de">Established Water Management</label>
+      </div>
+      <div>
+        <input type="radio" id="df" name="DA" value="Initial actions on water">
+        <label for="df">Initial actions on water</label>
+      </div>
+      <div>
+        <input type="radio" id="dg" name="DA" value="No action(s) on water">
+        <label for="dg">No action(s) on water</label>
+      </div>
+      <br><br><br>
+      <p>
+        40. Standards/ certifications- achieved/ planned. Give reasons:
+      </p>
+      <textarea id="waterr" cols="100" name="certi" rows="5"></textarea>
+      <br><br><br>
+      <p>
+        41. Access to finance-source (incentives, government/ private schemes):
+      </p>
+      <textarea id="wateer" cols="100" name="fsource" rows="5"></textarea>
+      <br><br><br>
+      <p>
+        42. Access to technical know-how :
+      </p>
+      <input type="radio" id="ea" name="EA" value="Consultants">
+      <label for="ea">Consultants</label>
+      <div>
+        <input type="radio" id="ec" name="EA" value="Research and Tech institutes">
+        <label for="ec">Research and Tech institutes</label>
+      </div>
+      <div>
+        <input type="radio" id="ee" name="EA" value="In-house experts">
+        <label for="ee">In-house experts</label>
+      </div>
+      <div>
+        <input type="radio" id="ef" name="EA" value="Buyer collaboration">
+        <label for="ef">Buyer collaboration</label>
+      </div>
+      <div>
+        <input type="radio" id="eg" name="EA" value="Others">
+        <label for="eg">Others</label><br><br>
+      </div>
+      <div id="eg-display">
+        <!-- <textarea id="wwate" cols="100" name="odetail" rows="5"></textarea> -->
+      </div>
+      <br><br><br>
+      <p>
+        43. Details regarding cluster level sustainbality intiatives:
+      </p>
+      <textarea id="war" cols="100" name="cluster" rows="5"></textarea>
+      <br><br><br>
+      <p>
+        44. regarding engagements with other stakeholder (state/national governament, communities, NGOs,academia):
+      </p>
+      <textarea id="war" cols="100" name="stake" rows="5"></textarea>
+      <br><br>
+      <button name="submit3" onclick="submitForm()" class="submit">Submit</button>
+
+  </div>
+  </div>
 
     <script src="profile.js"></script>
 </body>
