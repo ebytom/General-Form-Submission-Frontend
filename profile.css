@@ -25,6 +25,9 @@ fieldset {
 #riskAndChallenges {
     display: none;
 }
+#success {
+    display: none;
+}
 
 
 body {
@@ -234,4 +237,10 @@ html {
     background-color: #303245;
     color: #fff;
     border-color: #303245;
+}
+
+.successDiv{
+    background-color: green;
+    padding: 10px;
+    border-radius: 12px;
 }

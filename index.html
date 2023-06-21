@@ -827,48 +827,67 @@
 
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-        <script>
-            function handleCompanyProfile() {
-                document.getElementById("companyProfile").style.display = "none";
-                document.getElementById("waterSupply").style.display = "block";
-                scrollToTop()
-            }
-            function handleWaterSupply() {
-                document.getElementById("waterSupply").style.display = "none";
-                document.getElementById("waterDischarge").style.display = "block";
-                scrollToTop()
-            }
-            function handleWaterDischarge() {
-                document.getElementById("waterDischarge").style.display = "none";
-                document.getElementById("riskAndChallenges").style.display = "block";
-                scrollToTop()
-            }
-            function scrollToTop() {
-                window.scroll({
-                    top: 0,
-                    left: 0,
-                    behavior: 'smooth'
-                });
-            }
-            function submitForm() {
+    </div>
 
-                var name = document.getElementById("name");
-                var orgName = document.getElementById("org-name");
-                var mail = document.getElementById("mail");
+    <div style="text-align: center;" height="100vh" width="100vw" id="success">
+        <div class="successDiv d-flex align-items-center">
+            <img src="./img/tick.png" height="70px" width="80px"/>
+            <h3><b>Form Submitted Successfully!</b></h3>
+        </div>
+        <div onclick="reloadPage()" class="btn btn-light mt-3">
+            Done
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script>
+        function handleCompanyProfile() {
+            document.getElementById("companyProfile").style.display = "none";
+            document.getElementById("waterSupply").style.display = "block";
+            scrollToTop()
+        }
+        function handleWaterSupply() {
+            document.getElementById("waterSupply").style.display = "none";
+            document.getElementById("waterDischarge").style.display = "block";
+            scrollToTop()
+        }
+        function handleWaterDischarge() {
+            document.getElementById("waterDischarge").style.display = "none";
+            document.getElementById("riskAndChallenges").style.display = "block";
+            scrollToTop()
+        }
+        function scrollToTop() {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+        function submitForm() {
+
+            const name = document.getElementById('name').value;
+            const orgName = document.getElementById("org-name").value;
+            const mail = document.getElementById("mail").value;
 
 
-                axios.post("http://localhost:8080/services/postInformation", {
-                    name: name
+            axios.post("http://localhost:8080/services/postInformation", {
+                name: name,
+                orgName: orgName,
+                mail: mail,
+            })
+                .then(function (response) {
+                    console.log(response)
+                    document.getElementById("riskAndChallenges").style.display = "none";
+                    document.getElementById("success").style.display = "block";
                 })
-                    .then(function (response) {
-                        console.log(response)
-                    })
-                    .catch(err => console.log(err))
-            }
-        </script>
+                .catch(err => console.log(err))
+        }
+        function reloadPage()
+        {
+            location.reload()
+        }
+    </script>
 
-        <script src="profile.js"></script>
+    <script src="profile.js"></script>
 </body>
 
 </html>
