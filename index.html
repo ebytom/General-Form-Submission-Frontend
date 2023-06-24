@@ -229,7 +229,7 @@
                     <input type="checkbox" id="bore" name="bore" value="bore">
                     <label for="bore">Groundwater (Bore)</label>
                     <br>
-                    <input type="checkbox" id="Surface" name="Surface" value="Surface">
+                    <input type="checkbox" id="surface" name="Surface" value="Surface">
                     <label for="Surface">Surface water (River)</label>
                     <br>
                     <input type="checkbox" id="treated" name="treated" value="treated">
@@ -242,7 +242,7 @@
                     <br>
                     <p>14. Quality of Water supply:</p>
 
-                    <input type="radio" id="Performed" name="quality" value="Performed">
+                    <input type="radio" id="performed" name="quality" value="Performed">
                     <label for="Performed">Water Testing Performed</label>
                     <br>
                     <input type="radio" id="notPerformed" name="quality" value="not Performed">
@@ -914,7 +914,7 @@
             const treated = document.getElementById("treated").value;
             const sources = document.getElementById('sources').value;
             const performed = document.getElementById("performed").value;
-            const notperformed = document.getElementById("notperformed").value;
+            const notPerformed = document.getElementById("notPerformed").value;
             const treateds = document.getElementById('treateds').value;
             const treatment = document.getElementById("treatment").value;
             const advanced = document.getElementById("advanced").value;
@@ -953,6 +953,7 @@
                 name: name,
                 orgName: orgName,
                 mail: mail,
+                
                 contact: contact,
                 address: address,
                 country: country,
@@ -982,7 +983,7 @@
                 treated:treated,
                 sources:sources,
                 performed:performed,
-                notperformed:notperformed,
+                notPerformed:notPerformed,
                 treateds:treateds,
                 treatment:treatment,
                 biological:biological,
@@ -1015,8 +1016,6 @@
                 no10:no10,
                 yes11:yes11,
                 no11:no11,
-                
-
 
             })
                 .then(function (response) {
