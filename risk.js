@@ -1,13 +1,13 @@
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 yes.addEventListener('click', () => {
-    const yes_display = document.getElementById('yes-display');
+    const yes_display = document.getElementById('yes-display2');
     yes_display.innerHTML = '<textarea id="waters" placeholder="Details..." cols="100" rows="5"></textarea> ';
 
 })
 
 no.addEventListener('click', () => {
-    const yes_display = document.getElementById('yes-display');
+    const yes_display = document.getElementById('yes-display2');
     yes_display.innerHTML = ' ';
 
 })

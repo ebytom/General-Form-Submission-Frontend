@@ -3,8 +3,8 @@ const water_consumption = document.getElementById('water-consumption');
 const cost_of_water = document.getElementById('cost-of-water');
 const form = document.getElementById('form');
 const errorElement = document.getElementById('error');
-const a = document.getElementById('a');
-const b = document.getElementById('b');
+const a = document.getElementById('yes1');
+const b = document.getElementById('no1');
 
 a.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes');
@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
         messages.push('Cost of water is required and it should be an integer')
     }
     if(water_consumption.value === '' || water_consumption.value == null || Number.isInteger(water_consumption.value) == false) {
-        messages.push('Wtaer consumption is required and it should be an integer')
+        messages.push('Water consumption is required and it should be an integer')
     }
     if(messages.length > 0) {
     e.preventDefault();

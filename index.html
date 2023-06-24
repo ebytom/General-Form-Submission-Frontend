@@ -14,6 +14,9 @@
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="supply.css">
+    <link rel="stylesheet" href="discharge.css">
+    <link rel="stylesheet" href="risk&challenges.css">
     <title>Document</title>
 
 
@@ -71,29 +74,29 @@
                     <div id="op">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" value="Micro"
-                                id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                                id="below25">
+                            <label class="form-check-label" for="below25">
                                 Micro (Below 25L)
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" value="Small"
-                                id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
+                                id="above25">
+                            <label class="form-check-label" for="above25">
                                 Small (25L-5Cr)
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" value="Medium"
-                                id="flexRadioDefault3">
-                            <label class="form-check-label" for="flexRadioDefault3">
+                                id="above5">
+                            <label class="form-check-label" for="above5">
                                 Medium (5Cr to 10Cr)
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" value="Large"
-                                id="flexRadioDefault4">
-                            <label class="form-check-label" for="flexRadioDefault4">
+                                id="above10">
+                            <label class="form-check-label" for="above10">
                                 Large (Above 10Cr)
                             </label>
                         </div>
@@ -145,50 +148,50 @@
                                 institutions)</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Water_use"
-                                    name="flexCheckDefault[]" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                    name="flexCheckDefault[]" id="wateruse">
+                                <label class="form-check-label" for="wateruse">
                                     Water use
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Wastewater_discharge"
-                                    name="flexCheckDefault[]" id="flexCheckDefault1">
-                                <label class="form-check-label" for="flexCheckDefault1">
+                                    name="flexCheckDefault[]" id="wastewaterdischarge">
+                                <label class="form-check-label" for="wastewaterdischarge">
                                     Wastewater discharge
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Wastewater_treatment"
-                                    name="flexCheckDefault[]" id="flexCheckDefault2">
-                                <label class="form-check-label" for="flexCheckDefault2">
+                                    name="flexCheckDefault[]" id="wastewatertreatment">
+                                <label class="form-check-label" for="wastewatertreatment">
                                     Wastewater treatment
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Chemical"
-                                    name="flexCheckDefault[]" id="flexCheckDefault3">
-                                <label class="form-check-label" for="flexCheckDefault3">
+                                    name="flexCheckDefault[]" id="chemicaluse">
+                                <label class="form-check-label" for="chemicaluse">
                                     Chemical use and management
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Air_emissions"
-                                    name="flexCheckDefault[]" id="flexCheckDefault4">
-                                <label class="form-check-label" for="flexCheckDefault4">
+                                    name="flexCheckDefault[]" id="airemissions">
+                                <label class="form-check-label" for="airemissions">
                                     Air emissions
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Solid_waste_management"
-                                    name="flexCheckDefault[]" id="flexCheckDefault5">
-                                <label class="form-check-label" for="flexCheckDefault5">
+                                    name="flexCheckDefault[]" id="solidwaste">
+                                <label class="form-check-label" for="solidwaste">
                                     Solid waste management
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Other_Environmental_permits"
-                                    name="flexCheckDefault[]" id="flexCheckDefault6">
-                                <label class="form-check-label" for="flexCheckDefault6">
+                                    name="flexCheckDefault[]" id="otherpermits">
+                                <label class="form-check-label" for="otherpermits">
                                     Other Environmental permits
                                 </label>
                             </div>
@@ -242,8 +245,8 @@
                     <input type="radio" id="Performed" name="quality" value="Performed">
                     <label for="Performed">Water Testing Performed</label>
                     <br>
-                    <input type="radio" id="not Performed" name="quality" value="not Performed">
-                    <label for="not Performed">Water Testing Not Performed</label>
+                    <input type="radio" id="notPerformed" name="quality" value="not Performed">
+                    <label for="notPerformed">Water Testing Not Performed</label>
                     <br>
                     <br>
                     <br>
@@ -255,8 +258,8 @@
                     <input type="radio" id="treatment" name="use" value="treatment">
                     <label for="treatment">Yes, pre treatment</label>
                     <br>
-                    <input type="radio" id="yes" name="use" value="yes">
-                    <label for="yes">Yes, biological treatment</label>
+                    <input type="radio" id="biological" name="use" value="biological">
+                    <label for="biological">Yes, biological treatment</label>
                     <br>
                     <input type="radio" id="secondary" name="use" value="secondary">
                     <label for="secondary">Yes, secondary treatment</label>
@@ -265,7 +268,7 @@
                     <label for="advanced">Yes, advanced treatment</label>
                     <br>
                     <br>
-                    <p class="quantity">16. Quantity of water supply : <input id="firstname" class="input" type="text"
+                    <p class="quantity">16. Quantity of water supply : <input id="quantity" class="input" type="text"
                             placeholder=" " /></p>
 
 
@@ -324,30 +327,30 @@
 
                     <br>
                     <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
-                        <input id="firstname" class="input" type="text" placeholder=" " />
+                        <input id="cost" class="input" type="text" placeholder=" " />
                     </p>
                     <p>19. Does your unit track its factory / office water consumption separately:
-                        <input type="radio" id="a" name="unit" value="a">
-                        <label for="a">Yes</label>
-                        <input type="radio" id="b" name="unit" value="b">
-                        <label for="b">No</label>
+                        <input type="radio" id="yes1" name="unit" value="a">
+                        <label for="yes1">Yes</label>
+                        <input type="radio" id="no1" name="unit" value="b">
+                        <label for="no1">No</label>
                     </p>
                     <p id="if-yes">
                     </p>
                     <p>20. Has your facility implemented a water balance to evaluate water input and output ?
-                        <input type="radio" id="c" name="io" value="c">
-                        <label for="c">Yes</label>
-                        <input type="radio" id="d" name="io" value="d">
-                        <label for="d">No</label>
+                        <input type="radio" id="yes2" name="io" value="c">
+                        <label for="yes2">Yes</label>
+                        <input type="radio" id="no2" name="io" value="d">
+                        <label for="no2">No</label>
                     </p>
-                    <p>21. Which facility process/operation uses water the most : <input id="firstname" class="input"
+                    <p>21. Which facility process/operation uses water the most : <input id="waterusage" class="input"
                             type="text" placeholder=" " /></p>
                     <br>
                     <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
-                        <input type="radio" id="e" name="plan" value="e">
-                        <label for="e">Yes</label>
-                        <input type="radio" id="f" name="plan" value="f">
-                        <label for="f">No</label>
+                        <input type="radio" id="yes3" name="plan" value="e">
+                        <label for="yes3">Yes</label>
+                        <input type="radio" id="no3" name="plan" value="f">
+                        <label for="no3">No</label>
                     </p>
                     <label for="avatar">23. upload water report file(pdf/docx):</label>
 
@@ -378,14 +381,14 @@
                     <div class="waste__water">
                         <label for="waste_water">24. Does your facility generate waste water</label>
                         <div class="form-check" id="select1">
-                            <input class="form-check-input" type="radio" name="waste" id="yes" value="true">
-                            <label class="form-check-label" for="yes">
+                            <input class="form-check-input" type="radio" name="waste" id="yes4" value="true">
+                            <label class="form-check-label" for="yes4">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check" id="select2">
-                            <input class="form-check-input" type="radio" name="waste" id="No" value="false">
-                            <label class="form-check-label" for="No">
+                            <input class="form-check-input" type="radio" name="waste" id="No4" value="false">
+                            <label class="form-check-label" for="No4">
                                 No
                             </label>
                         </div>
@@ -402,14 +405,14 @@
                     <div id="zd">
                         <label for="zero_discharge">25. Does your facility have zero liquid discharge (ZLD):</label>
                         <div class="form-check" id="select3">
-                            <input class="form-check-input" type="radio" name="zld" id="yes1" value="true">
-                            <label class="form-check-label" for="yes1">
+                            <input class="form-check-input" type="radio" name="zld" id="yes5" value="true">
+                            <label class="form-check-label" for="yes6">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check" id="select4">
-                            <input class="form-check-input" type="radio" name="zld" id="No1" value="false">
-                            <label class="form-check-label" for="No1">
+                            <input class="form-check-input" type="radio" name="zld" id="No6" value="false">
+                            <label class="form-check-label" for="No6">
                                 No
                             </label>
                         </div>
@@ -425,22 +428,22 @@
                         <div id="tf">
                             <div class="form-check" id="c1">
                                 <input class="form-check-input" type="checkbox"
-                                    value="Common effluent treatment facility" id="check1a" name="Tfacility[]">
-                                <label class="form-check-label" for="check1a">
+                                    value="Common effluent treatment facility" id="commoneffluent" name="Tfacility[]">
+                                <label class="form-check-label" for="commoneffluent">
                                     Common effluent treatment facility
                                 </label>
                             </div>
                             <div class="form-check" id="c2">
                                 <input class="form-check-input" type="checkbox"
-                                    value="Individual effluent treatment facility" id="check2b" name="Tfacility[]">
-                                <label class="form-check-label" for="check2b">
+                                    value="Individual effluent treatment facility" id="individual" name="Tfacility[]">
+                                <label class="form-check-label" for="individual">
                                     Individual effluent treatment facility
                                 </label>
                             </div>
                             <div class="form-check" id="c3">
                                 <input class="form-check-input" type="checkbox" value="No treatment facility"
-                                    id="check3c" name="Tfacility[]">
-                                <label class="form-check-label" for="check3c">
+                                    id="nofacility" name="Tfacility[]">
+                                <label class="form-check-label" for="nofacility">
                                     No treatment facility
                                 </label>
                             </div>
@@ -449,23 +452,23 @@
                         <ul id="check2b-display">
                             <li>26.1. Wastewater treatment methods/ practices:
                                 <div class="form-check" id="c11">
-                                    <input class="form-check-input" type="checkbox" value="Primary" id="check1d"
+                                    <input class="form-check-input" type="checkbox" value="Primary" id="primary"
                                         name="method[]">
-                                    <label class="form-check-label" for="check1d">
+                                    <label class="form-check-label" for="primary">
                                         Primary
                                     </label>
                                 </div>
                                 <div class="form-check" id="c22">
-                                    <input class="form-check-input" type="checkbox" value="Secondary" id="check2e"
+                                    <input class="form-check-input" type="checkbox" value="Secondary" id="Secondary"
                                         name="method[]">
-                                    <label class="form-check-label" for="check2e">
+                                    <label class="form-check-label" for="Secondary">
                                         Secondary
                                     </label>
                                 </div>
                                 <div class="form-check" id="c33">
-                                    <input class="form-check-input" type="checkbox" value="Tertiary" id="check3f"
+                                    <input class="form-check-input" type="checkbox" value="Tertiary" id="Tertiary"
                                         name="method[]">
-                                    <label class="form-check-label" for="check3f">
+                                    <label class="form-check-label" for="Tertiary">
                                         Tertiary
                                     </label>
                                 </div>
@@ -490,14 +493,14 @@
                         <label for="track_volume">27. Does your unit track its industrial / domestic wastewater volumes
                             separately:</label>
                         <div class="form-check" id="select5">
-                            <input class="form-check-input" type="radio" name="volume" id="yes2" value="true">
-                            <label class="form-check-label" for="yes2">
+                            <input class="form-check-input" type="radio" name="volume" id="yes7" value="true">
+                            <label class="form-check-label" for="yes7">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check" id="select6">
-                            <input class="form-check-input" type="radio" name="volume" id="No2" value="false">
-                            <label class="form-check-label" for="No2">
+                            <input class="form-check-input" type="radio" name="volume" id="No7" value="false">
+                            <label class="form-check-label" for="No7">
                                 No
                             </label>
                         </div>
@@ -506,7 +509,7 @@
                         <ul id="yes2-display">
                             <li>
                                 <p>27.1. Wastewater volume percentage: <br> Industrial <input type="number"
-                                        name="industrial" id="induatrial"> % &nbsp;<br><br> Domestic <input
+                                        name="industrial" id="industrial"> % &nbsp;<br><br> Domestic <input
                                         type="number" name="domestic" id="domestic">
                                     %</p><br>
                             </li>
@@ -530,23 +533,23 @@
 
                         <div id="fd">
                             <div class="form-check" id="c1a">
-                                <input class="form-check-input" type="checkbox" value="Land" id="check1g"
+                                <input class="form-check-input" type="checkbox" value="Land" id="land"
                                     name="points[]">
-                                <label class="form-check-label" for="check1g">
+                                <label class="form-check-label" for="land">
                                     Land
                                 </label>
                             </div>
                             <div class="form-check" id="c2b">
-                                <input class="form-check-input" type="checkbox" value="Water" id="check2h"
+                                <input class="form-check-input" type="checkbox" value="Water" id="Water"
                                     name="points[]">
-                                <label class="form-check-label" for="check2h">
+                                <label class="form-check-label" for="Water">
                                     Water
                                 </label>
                             </div>
                             <div class="form-check" id="c3c">
-                                <input class="form-check-input" type="checkbox" value="Re-use" id="check3i"
+                                <input class="form-check-input" type="checkbox" value="Re-use" id="reuse"
                                     name="points[]">
-                                <label class="form-check-label" for="check3i">
+                                <label class="form-check-label" for="reuse">
                                     Re-use
                                 </label>
                             </div>
@@ -576,8 +579,8 @@
                             <div class="form-check" id="c1d">
                                 <input class="form-check-input" type="checkbox"
                                     value="Company meets all existing quality standards and has either a company standard and/or has a compliance system in place"
-                                    id="check1j" name="wquality[]">
-                                <label class="form-check-label" for="check1j">
+                                    id="standards" name="wquality[]">
+                                <label class="form-check-label" for="standards">
                                     Company meets all existing quality standards and has either a company standard
                                     and/or
                                     has a compliance system in place
@@ -586,8 +589,8 @@
                             <div class="form-check" id="c2e">
                                 <input class="form-check-input" type="checkbox"
                                     value="Site meets water quality requirements, but no company-specific standards or compliance systems exist"
-                                    id="check2k" name="wquality[]">
-                                <label class="form-check-label" for="check2k">
+                                    id="requirements" name="wquality[]">
+                                <label class="form-check-label" for="requirements">
                                     Site meets water quality requirements, but no company-specific standards or
                                     compliance
                                     systems exist
@@ -596,24 +599,24 @@
                             <div class="form-check" id="c3f">
                                 <input class="form-check-input" type="checkbox"
                                     value="Unknown or in general meets water quality standards, but may have some violations"
-                                    id="check3l" name="wquality[]">
-                                <label class="form-check-label" for="check3l">
+                                    id="violations" name="wquality[]">
+                                <label class="form-check-label" for="violations">
                                     Unknown or in general meets water quality standards, but may have some violations
                                 </label>
                             </div>
                             <div class="form-check" id="c4g">
                                 <input class="form-check-input" type="checkbox"
                                     value="The site sometimes meets water quality standards, but is regularly in violation"
-                                    id="check1m" name="wquality[]">
-                                <label class="form-check-label" for="check1m">
+                                    id="regular_violation" name="wquality[]">
+                                <label class="form-check-label" for="regular_violation">
                                     The site sometimes meets water quality standards, but is regularly in violation
                                 </label>
                             </div>
                             <div class="form-check" id="c5h">
                                 <input class="form-check-input" type="checkbox"
-                                    value="The site rarely or never meets existing water quality standards" id="check2n"
+                                    value="The site rarely or never meets existing water quality standards" id="existing"
                                     name="wquality[]">
-                                <label class="form-check-label" for="check2n">
+                                <label class="form-check-label" for="existing">
                                     The site rarely or never meets existing water quality standards
                                 </label>
                             </div>
@@ -652,36 +655,36 @@
                             33. Relative to other water users in your local catchment (within 50km radius), does the
                             factory face heavy
                             water-related regulation and legal enforcement?</p>
-                        <input type="checkbox" id="ab" name="water[]" value="ab">
-                        <label for="ab">No, the site is under no/minimal regulation and/or legal enforcement</label>
+                        <input type="checkbox" id="noregulation" name="water[]" value="noregulation">
+                        <label for="noregulation">No, the site is under no/minimal regulation and/or legal enforcement</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="bb" name="water[]" value="bb">
-                        <label for="bb">No, the site is under similar regulation and/or legal enforcement as other
+                        <input type="checkbox" id="regulation" name="water[]" value="regulation">
+                        <label for="regulation">No, the site is under similar regulation and/or legal enforcement as other
                             users</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="cb" name="water[]" value="cb">
-                        <label for="cb">Unknown</label>
+                        <input type="checkbox" id="unknown" name="water[]" value="unknown">
+                        <label for="unknown">Unknown</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="db" name="water[]" value="db">
-                        <label for="db">Yes, possibly the site is under greater regulation and/or legal
+                        <input type="checkbox" id="greater" name="water[]" value="greater">
+                        <label for="greater">Yes, possibly the site is under greater regulation and/or legal
                             enforcement</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="eb" name="water[]" value="eb">
-                        <label for="eb">Yes, the site is under much greater regulation and/or legal enforcement</label>
+                        <input type="checkbox" id="muchgreater" name="water[]" value="muchgreater">
+                        <label for="muchgreater">Yes, the site is under much greater regulation and/or legal enforcement</label>
                     </div><br><br><br>
                     <p>
                         34. Did your facility receive any government issued environmental violation records in the last
                         3 years:
                     </p>
-                    <input type="radio" id="yes" name="AC" value="true">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="AC" value="false">
-                    <label for="no">No</label>
-                    <div id="yes-display">
+                    <input type="radio" id="yes8" name="AC" value="true">
+                    <label for="yes8">Yes</label>
+                    <input type="radio" id="no8" name="AC" value="false">
+                    <label for="no8">No</label>
+                    <div id="yes-display2">
                         <!--
         <textarea id="waters" cols="100" rows="5"></textarea> -->
                     </div>
@@ -691,10 +694,10 @@
                     <p>
                         35. Did your facility face temporary shutdown in the last 3 years:
                     </p>
-                    <input type="radio" id="ad" name="AD" value="true">
-                    <label for="ad">Yes</label>
-                    <input type="radio" id="bd" name="AD" value="false">
-                    <label for="bd">No</label>
+                    <input type="radio" id="yes9" name="AD" value="true">
+                    <label for="yes9">Yes</label>
+                    <input type="radio" id="no9" name="AD" value="false">
+                    <label for="no9">No</label>
                     <div id="ad-display">
 
                         <!-- <textarea id="w" cols="100" rows="5"></textarea> -->
@@ -703,10 +706,10 @@
                     <p>
                         36. Did your facility considerable loss of business in the last 3 years:
                     </p>
-                    <input type="radio" id="ae" name="AE" value="true">
-                    <label for="ae">Yes</label>
-                    <input type="radio" id="be" name="AE" value="false">
-                    <label for="be">No</label>
+                    <input type="radio" id="yes10" name="AE" value="true">
+                    <label for="yes10">Yes</label>
+                    <input type="radio" id="no10" name="AE" value="false">
+                    <label for="no10">No</label>
                     <div id="ae-display">
 
                         <!-- <textarea id="w" cols="100" rows="5"></textarea> -->
@@ -716,10 +719,10 @@
                         37. Did your facility recive legal action from individuals/community/instructons in the last 3
                         years:
                     </p>
-                    <input type="radio" id="af" name="AF" value="true">
-                    <label for="af">Yes</label>
-                    <input type="radio" id="bf" name="AF" value="false">
-                    <label for="bf">No</label>
+                    <input type="radio" id="yes11" name="AF" value="true">
+                    <label for="yes11">Yes</label>
+                    <input type="radio" id="no11" name="AF" value="false">
+                    <label for="no11">No</label>
                     <div id="af-display">
 
                         <!-- <textarea id="w" cols="100" rows="5"></textarea> -->
@@ -730,81 +733,81 @@
                         consider the
                         site a large water user/polluter?
                     </p>
-                    <input type="radio" id="ca" name="CA" value="No, the site is not a large water user">
-                    <label for="ca">No, the site is not a large water user</label>
+                    <input type="radio" id="nolarge" name="CA" value="No, the site is not a large water user">
+                    <label for="nolarge">No, the site is not a large water user</label>
                     <div>
-                        <input type="radio" id="cc" name="CA"
+                        <input type="radio" id="nopolluter" name="CA"
                             value="No, the site is not a large water user/polluter (relative to others)">
-                        <label for="cc">No, the site is not a large water user/polluter (relative to others)</label>
+                        <label for="nopolluter">No, the site is not a large water user/polluter (relative to others)</label>
                     </div>
                     <div>
-                        <input type="radio" id="cd" name="CA" value="Unknown">
-                        <label for="cd">Unknown</label>
+                        <input type="radio" id="unknown2" name="CA" value="Unknown">
+                        <label for="unknown2">Unknown</label>
                     </div>
                     <div>
-                        <input type="radio" id="ce" name="CA"
+                        <input type="radio" id="somelocals" name="CA"
                             value="Yes,the site is a recoginable branf=d to some locals">
-                        <label for="ce">Yes,the site is a recoginable branf=d to some locals</label>
+                        <label for="somelocals">Yes,the site is a recoginable branf=d to some locals</label>
                     </div>
                     <div>
-                        <input type="radio" id="cf" name="CA"
+                        <input type="radio" id="alllocals" name="CA"
                             value="Yes, the site is a recoginable brand to most/all locals">
-                        <label for="cf">Yes, the site is a recoginable brand to most/all locals</label>
+                        <label for="alllocals">Yes, the site is a recoginable brand to most/all locals</label>
                     </div>
                     <br><br><br>
                     <p>
                         39. How would you describe this site&#39;s general water management/stewardship maturity?
                     </p>
-                    <input type="radio" id="da" name="DA" value="Long standing advanced water stewardship practices">
-                    <label for="da">Long standing advanced water stewardship practices</label>
+                    <input type="radio" id="longstanding" name="DA" value="Long standing advanced water stewardship practices">
+                    <label for="longstanding">Long standing advanced water stewardship practices</label>
                     <div>
-                        <input type="radio" id="dc" name="DA"
+                        <input type="radio" id="advancedpractice" name="DA"
                             value="Recently began advanced water stewardship practices">
-                        <label for="dc">Recently began advanced water stewardship practices</label>
+                        <label for="advancedpractice">Recently began advanced water stewardship practices</label>
                     </div>
                     <div>
-                        <input type="radio" id="de" name="DA" value="Established Water Management">
-                        <label for="de">Established Water Management</label>
+                        <input type="radio" id="watermanagement" name="DA" value="Established Water Management">
+                        <label for="watermanagement">Established Water Management</label>
                     </div>
                     <div>
-                        <input type="radio" id="df" name="DA" value="Initial actions on water">
-                        <label for="df">Initial actions on water</label>
+                        <input type="radio" id="initialwater" name="DA" value="Initial actions on water">
+                        <label for="initialwater">Initial actions on water</label>
                     </div>
                     <div>
-                        <input type="radio" id="dg" name="DA" value="No action(s) on water">
-                        <label for="dg">No action(s) on water</label>
+                        <input type="radio" id="noaction" name="DA" value="No action(s) on water">
+                        <label for="noaction">No action(s) on water</label>
                     </div>
                     <br><br><br>
                     <p>
                         40. Standards/ certifications- achieved/ planned. Give reasons:
                     </p>
-                    <textarea id="waterr" cols="100" name="certi" rows="5"></textarea>
+                    <textarea id="achievement" cols="100" name="certi" rows="5"></textarea>
                     <br><br><br>
                     <p>
                         41. Access to finance-source (incentives, government/ private schemes):
                     </p>
-                    <textarea id="wateer" cols="100" name="fsource" rows="5"></textarea>
+                    <textarea id="financeaccess" cols="100" name="fsource" rows="5"></textarea>
                     <br><br><br>
                     <p>
                         42. Access to technical know-how :
                     </p>
-                    <input type="radio" id="ea" name="EA" value="Consultants">
-                    <label for="ea">Consultants</label>
+                    <input type="radio" id="Consultants" name="EA" value="Consultants">
+                    <label for="Consultants">Consultants</label>
                     <div>
-                        <input type="radio" id="ec" name="EA" value="Research and Tech institutes">
-                        <label for="ec">Research and Tech institutes</label>
+                        <input type="radio" id="research" name="EA" value="Research and Tech institutes">
+                        <label for="research">Research and Tech institutes</label>
                     </div>
                     <div>
-                        <input type="radio" id="ee" name="EA" value="In-house experts">
-                        <label for="ee">In-house experts</label>
+                        <input type="radio" id="experts" name="EA" value="In-house experts">
+                        <label for="experts">In-house experts</label>
                     </div>
                     <div>
-                        <input type="radio" id="ef" name="EA" value="Buyer collaboration">
-                        <label for="ef">Buyer collaboration</label>
+                        <input type="radio" id="buyer" name="EA" value="Buyer collaboration">
+                        <label for="buyer">Buyer collaboration</label>
                     </div>
                     <div>
-                        <input type="radio" id="eg" name="EA" value="Others">
-                        <label for="eg">Others</label><br><br>
+                        <input type="radio" id="others1" name="EA" value="Others">
+                        <label for="others1">Others</label><br><br>
                     </div>
                     <div id="eg-display">
                         <!-- <textarea id="wwate" cols="100" name="odetail" rows="5"></textarea> -->
@@ -813,13 +816,13 @@
                     <p>
                         43. Details regarding cluster level sustainbality intiatives:
                     </p>
-                    <textarea id="war" cols="100" name="cluster" rows="5"></textarea>
+                    <textarea id="clusterlevel" cols="100" name="cluster" rows="5"></textarea>
                     <br><br><br>
                     <p>
                         44. regarding engagements with other stakeholder (state/national governament, communities,
                         NGOs,academia):
                     </p>
-                    <textarea id="war" cols="100" name="stake" rows="5"></textarea>
+                    <textarea id="stakeholders" cols="100" name="stake" rows="5"></textarea>
                     <br><br>
                     <!-- <button name="submit3" onclick="submitForm()" class="submit">Submit</button> -->
                     <button type="button" class="button bg-primary"
@@ -882,12 +885,139 @@
             const name = document.getElementById('name').value;
             const orgName = document.getElementById("org-name").value;
             const mail = document.getElementById("mail").value;
-
+            const contact = document.getElementById('contact').value;
+            const address = document.getElementById("address").value;
+            const country = document.getElementById("country").value;
+            const below25 = document.getElementById('below25').value;
+            const above25 = document.getElementById("above25").value;
+            const above5 = document.getElementById("above5").value;
+            const above10 = document.getElementById('above10').value;
+            const volume = document.getElementById("volume").value;
+            const end_product = document.getElementById("end_product").value;
+            const countries = document.getElementById('countries').value;
+            const countries1 = document.getElementById("countries1").value;
+            const countries2 = document.getElementById("countries2").value;
+            const memberships = document.getElementById('memberships').value;
+            const labour = document.getElementById("labour").value;
+            const women = document.getElementById("women").value;
+            const wateruse = document.getElementById('wateruse').value;
+            const wastewatertreatment = document.getElementById("wastewatertreatment").value;
+            const wastewaterdischarge = document.getElementById("wastewaterdischarge").value;
+            const chemicaluse = document.getElementById('chemicaluse').value;
+            const airemissions = document.getElementById("airemissions").value;
+            const solidwaste = document.getElementById("solidwaste").value;
+            const otherpermits = document.getElementById('otherpermits').value;
+            const additional = document.getElementById("additional").value;
+            const pipe = document.getElementById("pipe").value;
+            const bore = document.getElementById('bore').value;
+            const surface = document.getElementById("surface").value;
+            const treated = document.getElementById("treated").value;
+            const sources = document.getElementById('sources').value;
+            const performed = document.getElementById("performed").value;
+            const notperformed = document.getElementById("notperformed").value;
+            const treateds = document.getElementById('treateds').value;
+            const treatment = document.getElementById("treatment").value;
+            const advanced = document.getElementById("advanced").value;
+            const secondary = document.getElementById('secondary').value;
+            const biological = document.getElementById("biological").value;
+            const quantity = document.getElementById("quantity").value;
+            const waterusage = document.getElementById("treatment").value;
+            const cost = document.getElementById("advanced").value;
+            const avatar = document.getElementById('secondary').value;
+            const treatment_capacity = document.getElementById("biological").value;
+            const yes1 = document.getElementById("quantity").value;
+            const no1 = document.getElementById("treatment").value;
+            const yes2 = document.getElementById("advanced").value;
+            const no2 = document.getElementById('secondary').value;
+            const yes3 = document.getElementById("biological").value;
+            const yes4 = document.getElementById("quantity").value;
+            const yes5 = document.getElementById("treatment").value;
+            const yes6 = document.getElementById("advanced").value;
+            const yes7 = document.getElementById('secondary').value;
+            const yes8 = document.getElementById("biological").value;
+            const yes9 = document.getElementById("quantity").value;
+            const yes10 = document.getElementById("treatment").value;
+            const yes11 = document.getElementById("advanced").value;
+            const no3 = document.getElementById('secondary').value;
+            const no4 = document.getElementById("biological").value;
+            const no5 = document.getElementById("quantity").value;
+            const no6 = document.getElementById('secondary').value;
+            const no7 = document.getElementById("biological").value;
+            const no8 = document.getElementById("quantity").value;
+            const no9 = document.getElementById('secondary').value;
+            const no10 = document.getElementById("biological").value;
+            const no11 = document.getElementById("quantity").value;
+    
 
             axios.post("http://localhost:8080/services/postInformation", {
                 name: name,
                 orgName: orgName,
                 mail: mail,
+                contact: contact,
+                address: address,
+                country: country,
+                below25: below25,
+                above25: above25,
+                above5: above5,
+                above10: above10,
+                volume: volume,
+                end_product: end_product,
+                countries: countries,
+                countries1: countries1,
+                countries2: countries2,
+                memberships: memberships,
+                labour:labour,
+                women:women,
+                wateruse: wateruse,
+                wastewatertreatment:wastewatertreatment, 
+                wastewaterdischarge: wastewaterdischarge,
+                chemicaluse:chemicaluse,
+                airemissions:airemissions,
+                solidwaste:solidwaste,
+                otherpermits:otherpermits,
+                additional:additional,
+                pipe:pipe,
+                bore:bore,
+                surface:surface,
+                treated:treated,
+                sources:sources,
+                performed:performed,
+                notperformed:notperformed,
+                treateds:treateds,
+                treatment:treatment,
+                biological:biological,
+                secondary:secondary,
+                advanced:advanced,
+                quantity:quantity,
+                cost:cost,
+                yes1:yes1,
+                no1:no1,
+                yes2:yes2,
+                no2:no2,
+                waterusage:waterusage,
+                yes3:yes3,
+                no3:no3,
+                avatar:avatar,
+                treatment_capacity:treatment_capacity,
+                yes4:yes4,
+                no4:no4,
+                yes5:yes5,
+                no5:no5,
+                yes6:yes6,
+                no6:no6,
+                yes7:yes7,
+                no7:no7,
+                yes8:yes8,
+                no8:no8,
+                yes9:yes9,
+                no9:no9,
+                yes10:yes10,
+                no10:no10,
+                yes11:yes11,
+                no11:no11,
+                
+
+
             })
                 .then(function (response) {
                     console.log(response)
@@ -902,6 +1032,9 @@
     </script>
 
     <script src="profile.js"></script>
+    <script src="supply.js"></script>
+    <script src="risk.js"></script>
+    <script src="discharge.js"></script>
 </body>
 
 </html>

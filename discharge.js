@@ -1,10 +1,10 @@
 const yes = document.getElementById('yes');
 const no = document.getElementById('No');
-const indi = document.getElementById('check2b');
+const indi = document.getElementById('individual');
 const check2b_display = document.getElementById('check2b-display');
 check2b_display.style.display = "none";
-const yes2 = document.getElementById('yes2');
-const no2 = document.getElementById('No2');
+const yes2 = document.getElementById('yes7');
+const no2 = document.getElementById('No7');
 const yes2_display = document.getElementById('yes2-display');
 
 yes2_display.style.display = "none";
