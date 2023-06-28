@@ -418,7 +418,7 @@
                     <br>
                     <div id="thirdyear">
                         <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
-                            <input id="cost" class="input" type="text" placeholder=" " />
+                            <input id="cost3" class="input" type="text" placeholder=" " />
                         </p>
                         <p>19. Does your unit track its factory / office water consumption separately:
                             <input type="radio" id="yes15" name="unit" value="l">
@@ -946,6 +946,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script>
 
+        
+        firstyear=document.getElementById("firstyear");
+        secondyear=document.getElementById("secondyear");
+        thirdyear=document.getElementById("thirdyear");
+       
+        
 
         year2 = document.getElementById("secondyear");
         year3 = document.getElementById("thirdyear");
@@ -953,38 +959,42 @@
 
 
 
+        firstyear.style.display= "none";
+        secondyear.style.display = "none";
+        thirdyear.style.display = "none";
 
 
-
-        firstyear.style.display = "none";
-
-
-        //accessing h1 element with the help of id='check' using getElementById('check')
-        document.getElementById('year1').onclick = function () {  // object.onclick = function(){ } 
-
-            if (firstyear.style.display === "none") {
-                firstyear.style.display = "block";
-            } else {
-                firstyear.style.display = "none";
-            }
-        };
+                //accessing h1 element with the help of id='check' using getElementById('check')
+                document.getElementById('year1').onclick = function () {  // object.onclick = function(){ } 
+                
+                if(firstyear.style.display === "none"){
+                    firstyear.style.display="block";
+                    } else{
+                    firstyear.style.display="none";
+                    }
+            };
 
 
+            document.getElementById('year2').onclick = function () {  // object.onclick = function(){ } 
+                
+                if(secondyear.style.display === "none"){
+                    secondyear.style.display="block";
+                    } else{
+                    secondyear.style.display="none";
+                    }
+            };
 
-        year2.style.display = "none";
 
-        function handleyear2() {
-            year2.style.display = "block";
-        }
+            document.getElementById('year3').onclick = function () {  // object.onclick = function(){ } 
+                
+                if(thirdyear.style.display === "none"){
+                    thirdyear.style.display="block";
+                    } else{
+                    thirdyear.style.display="none";
+                    }
+            };
 
 
-
-
-        year3.style.display = "none";
-
-        function handleyear3() {
-            year3.style.display = "block";
-        }
 
 
         function handleFirstPage() {
@@ -1098,6 +1108,33 @@
             }
 
 
+
+
+
+
+            
+
+
+            const yes12 = document.getElementById('yes12').value;
+            const no12 = document.getElementById("no12").value;
+            const no13 = document.getElementById("no13").value;
+            const yes13 = document.getElementById('yes13').value;
+            const yes14 = document.getElementById("yes14").value;
+            const no14 = document.getElementById("no14").value;
+            const yes15 = document.getElementById('yes15').value;
+            const no15 = document.getElementById("no15").value;
+            const yes16 = document.getElementById("yes16").value;
+            const no16 = document.getElementById('no16').value;
+            const yes17 = document.getElementById("yes17").value;
+            const no17 = document.getElementById("no17").value;
+            const avatar2 = document.getElementById('avatar2').value;
+            const avatar3 = document.getElementById("avatar3").value;
+            const cost2 = document.getElementById("cost2").value;
+            const cost3 = document.getElementById('cost3').value;
+            const waterusage2= document.getElementById("waterusage2").value;
+            const waterusage3 = document.getElementById("waterusage3").value;
+    
+
             axios.post("http://localhost:8080/services/postInformation", {
                 name: name,
                 orgName: orgName,
@@ -1165,6 +1202,31 @@
                 no10: no10,
                 yes11: yes11,
                 no11: no11,
+
+
+
+
+
+
+
+                yes12:yes12,
+                no12:no12,
+                yes13:yes13,
+                no13:no13,
+                yes14:yes14,
+                no14:no14,
+                yes15:yes15,
+                no15:no15,
+                yes16:yes16,
+                no16:no16,
+                yes17:yes17,
+                no17:no17,
+                cost2:cost2,
+                cost3:cost3,
+                avatar2:avatar2,
+                avatar3:avatar3,
+
+
 
             })
                 .then(function (response) {
