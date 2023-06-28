@@ -5,6 +5,11 @@ const form = document.getElementById('form');
 const errorElement = document.getElementById('error');
 const a = document.getElementById('yes1');
 const b = document.getElementById('no1');
+const g = document.getElementById('yes12');
+const h = document.getElementById('no12');
+const l = document.getElementById('yes15');
+const m = document.getElementById('no15');
+
 
 a.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes');
@@ -14,6 +19,33 @@ a.addEventListener('click', () => {
 
 b.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes');
+    if_yes.innerHTML = ' ';
+
+})
+
+
+g.addEventListener('click', () => {
+    const if_yes=document.getElementById('if-yes2');
+    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstname" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstname" class="input" type="text" placeholder=" " /></li></ul>';
+
+})
+
+h.addEventListener('click', () => {
+    const if_yes=document.getElementById('if-yes2');
+    if_yes.innerHTML = ' ';
+
+})
+
+
+
+l.addEventListener('click', () => {
+    const if_yes=document.getElementById('if-yes3');
+    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstname" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstname" class="input" type="text" placeholder=" " /></li></ul>';
+
+})
+
+m.addEventListener('click', () => {
+    const if_yes=document.getElementById('if-yes3');
     if_yes.innerHTML = ' ';
 
 })

@@ -322,44 +322,139 @@
                     </tbody>
                 </table> -->
 
-                    <p id="last">17. Water consumption of year 2022 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
-                    <input id="lastyear" type="text" class="input" />
+                    <p id="yearfirst" >17. Water consumption of year 1 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                    <button id="year1" onclick="handleyear1">year1</button>
+                    <!-- <input id="lastyear" type="text" class="input" /> -->
+                    <br>
+                    <div id="firstyear">
+                        <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
+                            <input id="cost" class="input" type="text" placeholder=" " />
+                        </p>
+                        <p>19. Does your unit track its factory / office water consumption separately:
+                            <input type="radio" id="yes1" name="unit" value="a">
+                            <label for="yes1">Yes</label>
+                            <input type="radio" id="no1" name="unit" value="b">
+                            <label for="no1">No</label>
+                        </p>
+                        <p id="if-yes">
+                        </p>
+                        <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                            <input type="radio" id="yes2" name="io" value="c">
+                            <label for="yes2">Yes</label>
+                            <input type="radio" id="no2" name="io" value="d">
+                            <label for="no2">No</label>
+                        </p>
+                        <p>21. Which facility process/operation uses water the most : <input id="waterusage" class="input"
+                                type="text" placeholder=" " /></p>
+                        <br>
+                        <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                            <input type="radio" id="yes3" name="plan" value="e">
+                            <label for="yes3">Yes</label>
+                            <input type="radio" id="no3" name="plan" value="f">
+                            <label for="no3">No</label>
+                        </p>
+                        <label for="avatar">23. upload water report file(pdf/docx):</label>
+    
+                        <input type="file" id="avatar" name="avatar" accept=".pdf, .doc, .docx">
+    
+                    </div>
 
 
                     <br>
-                    <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
-                        <input id="cost" class="input" type="text" placeholder=" " />
-                    </p>
-                    <p>19. Does your unit track its factory / office water consumption separately:
-                        <input type="radio" id="yes1" name="unit" value="a">
-                        <label for="yes1">Yes</label>
-                        <input type="radio" id="no1" name="unit" value="b">
-                        <label for="no1">No</label>
-                    </p>
-                    <p id="if-yes">
-                    </p>
-                    <p>20. Has your facility implemented a water balance to evaluate water input and output ?
-                        <input type="radio" id="yes2" name="io" value="c">
-                        <label for="yes2">Yes</label>
-                        <input type="radio" id="no2" name="io" value="d">
-                        <label for="no2">No</label>
-                    </p>
-                    <p>21. Which facility process/operation uses water the most : <input id="waterusage" class="input"
-                            type="text" placeholder=" " /></p>
+
+
+
+
+
+
+                    <p id="yearsecond" >17. Water consumption of year 2 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                    <button id="year2" onclick="handleyear2">year2</button>
+                    <!-- <input id="lastyear" type="text" class="input" /> -->
                     <br>
-                    <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
-                        <input type="radio" id="yes3" name="plan" value="e">
-                        <label for="yes3">Yes</label>
-                        <input type="radio" id="no3" name="plan" value="f">
-                        <label for="no3">No</label>
-                    </p>
-                    <label for="avatar">23. upload water report file(pdf/docx):</label>
-
-                    <input type="file" id="avatar" name="avatar" accept=".pdf, .doc, .docx">
-
+                    <div id="secondyear">
+                        <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
+                            <input id="cost2" class="input" type="text" placeholder=" " />
+                        </p>
+                        <p>19. Does your unit track its factory / office water consumption separately:
+                            <input type="radio" id="yes12" name="unit" value="g">
+                            <label for="yes12">Yes</label>
+                            <input type="radio" id="no12" name="unit" value="h">
+                            <label for="no12">No</label>
+                        </p>
+                        <p id="if-yes2">
+                        </p>
+                        <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                            <input type="radio" id="yes13" name="io" value="i">
+                            <label for="yes13">Yes</label>
+                            <input type="radio" id="no13" name="io" value="j">
+                            <label for="no13">No</label>
+                        </p>
+                        <p>21. Which facility process/operation uses water the most : <input id="waterusage2" class="input"
+                                type="text" placeholder=" " /></p>
+                        <br>
+                        <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                            <input type="radio" id="yes14" name="plan" value="k">
+                            <label for="yes14">Yes</label>
+                            <input type="radio" id="no14" name="plan" value="l">
+                            <label for="no14">No</label>
+                        </p>
+                        <label for="avatar2">23. upload water report file(pdf/docx):</label>
+    
+                        <input type="file" id="avatar2" name="avatar" accept=".pdf, .doc, .docx">
+    
+                    </div>
 
 
                     <br>
+
+
+
+
+
+
+                    <p id="yearthird" >17. Water consumption of year 3 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                    <button id="year3" onclick="handleyear3">year3</button>
+                    <!-- <input id="lastyear" type="text" class="input" /> -->
+                    <br>
+                    <div id="thirdyear">
+                        <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
+                            <input id="cost" class="input" type="text" placeholder=" " />
+                        </p>
+                        <p>19. Does your unit track its factory / office water consumption separately:
+                            <input type="radio" id="yes15" name="unit" value="l">
+                            <label for="yes15">Yes</label>
+                            <input type="radio" id="no15" name="unit" value="m">
+                            <label for="no15">No</label>
+                        </p>
+                        <p id="if-yes3">
+                        </p>
+                        <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                            <input type="radio" id="yes16" name="io" value="c">
+                            <label for="yes16">Yes</label>
+                            <input type="radio" id="no16" name="io" value="d">
+                            <label for="no16">No</label>
+                        </p>
+                        <p>21. Which facility process/operation uses water the most : <input id="waterusage3" class="input"
+                                type="text" placeholder=" " /></p>
+                        <br>
+                        <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                            <input type="radio" id="yes17" name="plan" value="e">
+                            <label for="yes17">Yes</label>
+                            <input type="radio" id="no17" name="plan" value="f">
+                            <label for="no17">No</label>
+                        </p>
+                        <label for="avatar3">23. upload water report file(pdf/docx):</label>
+    
+                        <input type="file" id="avatar3" name="avatar" accept=".pdf, .doc, .docx">
+    
+                    </div>
+
+
+                    <br>
+
+
+
+
                     <!-- <button class="btn btn-primary" type="submit" id="prev" name="submit2" onclick="window.location.href='profile.html';">&laquo; Previous</button> -->
                     <button onclick="handleFirstPage()" class="btn btn-primary" id="prev">&laquo;Previous</button>
                     <!-- <button type="text" class="btn btn-primary" id="next">Next &raquo;</button> -->
@@ -846,6 +941,48 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script>
+
+        
+        year2=document.getElementById("secondyear");
+        year3=document.getElementById("thirdyear");
+        firstyear=document.getElementById("firstyear");
+        
+
+        
+
+
+
+        firstyear.style.display= "none";
+
+
+                //accessing h1 element with the help of id='check' using getElementById('check')
+                document.getElementById('year1').onclick = function () {  // object.onclick = function(){ } 
+                
+                if(firstyear.style.display === "none"){
+                    firstyear.style.display="block";
+                    } else{
+                    firstyear.style.display="none";
+                    }
+            };
+
+
+
+        year2.style.display="none";
+
+        function handleyear2(){
+            year2.style.display="block";
+        }
+
+
+
+
+        year3.style.display="none";
+
+        function handleyear3(){
+            year3.style.display="block";
+        }
+
+
         function handleFirstPage() {
             document.getElementById("companyProfile").style.display = "block";
             document.getElementById("waterSupply").style.display = "none";
