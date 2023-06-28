@@ -946,12 +946,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script>
 
-        
-        firstyear=document.getElementById("firstyear");
-        secondyear=document.getElementById("secondyear");
-        thirdyear=document.getElementById("thirdyear");
-       
-        
+
+        firstyear = document.getElementById("firstyear");
+        secondyear = document.getElementById("secondyear");
+        thirdyear = document.getElementById("thirdyear");
+
+
 
         year2 = document.getElementById("secondyear");
         year3 = document.getElementById("thirdyear");
@@ -959,40 +959,40 @@
 
 
 
-        firstyear.style.display= "none";
+        firstyear.style.display = "none";
         secondyear.style.display = "none";
         thirdyear.style.display = "none";
 
 
-                //accessing h1 element with the help of id='check' using getElementById('check')
-                document.getElementById('year1').onclick = function () {  // object.onclick = function(){ } 
-                
-                if(firstyear.style.display === "none"){
-                    firstyear.style.display="block";
-                    } else{
-                    firstyear.style.display="none";
-                    }
-            };
+        //accessing h1 element with the help of id='check' using getElementById('check')
+        document.getElementById('year1').onclick = function () {  // object.onclick = function(){ } 
+
+            if (firstyear.style.display === "none") {
+                firstyear.style.display = "block";
+            } else {
+                firstyear.style.display = "none";
+            }
+        };
 
 
-            document.getElementById('year2').onclick = function () {  // object.onclick = function(){ } 
-                
-                if(secondyear.style.display === "none"){
-                    secondyear.style.display="block";
-                    } else{
-                    secondyear.style.display="none";
-                    }
-            };
+        document.getElementById('year2').onclick = function () {  // object.onclick = function(){ } 
+
+            if (secondyear.style.display === "none") {
+                secondyear.style.display = "block";
+            } else {
+                secondyear.style.display = "none";
+            }
+        };
 
 
-            document.getElementById('year3').onclick = function () {  // object.onclick = function(){ } 
-                
-                if(thirdyear.style.display === "none"){
-                    thirdyear.style.display="block";
-                    } else{
-                    thirdyear.style.display="none";
-                    }
-            };
+        document.getElementById('year3').onclick = function () {  // object.onclick = function(){ } 
+
+            if (thirdyear.style.display === "none") {
+                thirdyear.style.display = "block";
+            } else {
+                thirdyear.style.display = "none";
+            }
+        };
 
 
 
@@ -1032,7 +1032,8 @@
                 behavior: 'smooth'
             });
         }
-        function submitForm() {
+
+        async function submitForm() {
 
             const name = document.getElementById('name').value;
             const orgName = document.getElementById("org-name").value;
@@ -1100,19 +1101,7 @@
             const no10 = document.getElementById("biological").value;
             const no11 = document.getElementById("quantity").value;
 
-            const selectedFile = document.getElementById("avatar").files[0];
 
-            if (selectedFile != null) {
-                const fileName = uploadFile(selectedFile)
-                console.log("fileeeeee : ", fileName);
-            }
-
-
-
-
-
-
-            
 
 
             const yes12 = document.getElementById('yes12').value;
@@ -1127,13 +1116,33 @@
             const no16 = document.getElementById('no16').value;
             const yes17 = document.getElementById("yes17").value;
             const no17 = document.getElementById("no17").value;
-            const avatar2 = document.getElementById('avatar2').value;
-            const avatar3 = document.getElementById("avatar3").value;
+            // const avatar2 = document.getElementById('avatar2').value;
+            // const avatar3 = document.getElementById("avatar3").value;
             const cost2 = document.getElementById("cost2").value;
             const cost3 = document.getElementById('cost3').value;
-            const waterusage2= document.getElementById("waterusage2").value;
+            const waterusage2 = document.getElementById("waterusage2").value;
             const waterusage3 = document.getElementById("waterusage3").value;
-    
+
+
+            const selectedFile1 = document.getElementById("avatar").files[0];
+            const selectedFile2 = document.getElementById("avatar2").files[0];
+            const selectedFile3 = document.getElementById("avatar3").files[0];
+
+
+            let fileName1 = "";
+            let fileName2 = "";
+            let fileName3 = "";
+
+            if (selectedFile1 != null) {
+                fileName1 = await uploadFile(selectedFile1)
+            }
+            if (selectedFile2 != null) {
+                fileName2 = await uploadFile(selectedFile2)
+            }
+            if (selectedFile3 != null) {
+                fileName3 = await uploadFile(selectedFile3)
+            }
+
 
             axios.post("http://localhost:8080/services/postInformation", {
                 name: name,
@@ -1184,7 +1193,6 @@
                 waterusage: waterusage,
                 yes3: yes3,
                 no3: no3,
-                avatar: avatar,
                 treatment_capacity: treatment_capacity,
                 yes4: yes4,
                 no4: no4,
@@ -1209,25 +1217,23 @@
 
 
 
-                yes12:yes12,
-                no12:no12,
-                yes13:yes13,
-                no13:no13,
-                yes14:yes14,
-                no14:no14,
-                yes15:yes15,
-                no15:no15,
-                yes16:yes16,
-                no16:no16,
-                yes17:yes17,
-                no17:no17,
-                cost2:cost2,
-                cost3:cost3,
-                avatar2:avatar2,
-                avatar3:avatar3,
-
-
-
+                yes12: yes12,
+                no12: no12,
+                yes13: yes13,
+                no13: no13,
+                yes14: yes14,
+                no14: no14,
+                yes15: yes15,
+                no15: no15,
+                yes16: yes16,
+                no16: no16,
+                yes17: yes17,
+                no17: no17,
+                cost2: cost2,
+                cost3: cost3,
+                avatar1: fileName1,
+                avatar2: fileName2,
+                avatar3: fileName3,
             })
                 .then(function (response) {
                     console.log(response)
@@ -1252,7 +1258,6 @@
                         "Content-Type": "multipart/form-data",
                     }
                 });
-                console.log(response.data);
                 return response.data
             } catch (error) {
                 if (error.response) { // get response with a status code not in range 2xx
