@@ -13,10 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Tiro Gurmukhi:wght@200;300;400;500&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="profile.css">
+    
     <link rel="stylesheet" href="supply.css">
     <link rel="stylesheet" href="discharge.css">
     <link rel="stylesheet" href="risk&challenges.css">
+    <link rel="stylesheet" href="profile.css">
     <title>Document</title>
 
 
@@ -729,9 +730,11 @@
                     <!-- <button class="btn btn-primary" type="submit" id="prev" name="submit2">&laquo; Previous</button>
             <button type="text" class="btn btn-primary" id="next" onclick="window.location.href='Risks and challanges.html';">Next &raquo;</button> -->
 
+            <div id="nex">
                     <button onclick="handleCompanyProfile()" class="btn btn-primary" id="prev">&laquo; Previous</button>
                     <!-- <button type="text" class="btn btn-primary" id="next">Next &raquo;</button> -->
                     <button onclick="handleWaterDischarge()" class="btn btn-primary" id="next">Next &raquo;</button>
+                </div>
                 </fieldset>
             </div>
         </div>
@@ -921,10 +924,13 @@
                     <textarea id="stakeholders" cols="100" name="stake" rows="5"></textarea>
                     <br><br>
                     <!-- <button name="submit3" onclick="submitForm()" class="submit">Submit</button> -->
-                    <button type="button" class="button bg-primary"
+                    <div id="sub">
+                    <button onclick="handleWaterSupply()" class="btn btn-primary" id="prev1">&laquo; Previous</button>
+                    <button type="button" class="button bg-primary" id="sub1"
                         onclick="this.classList.toggle('button--loading'); submitForm()">
                         <span class="button__text px-4">Submit</span>
                     </button>
+                    </div>
 
             </div>
         </div>
@@ -990,6 +996,11 @@
 
 
 
+            for(i=0;i<flexRadio.length;i++){
+                if(flexRadio[i].checked){
+
+                }
+            }
 
         function handleFirstPage() {
             document.getElementById("companyProfile").style.display = "block";
@@ -1120,6 +1131,7 @@
             const cost3 = document.getElementById('cost3').value;
             const waterusage2= document.getElementById("waterusage2").value;
             const waterusage3 = document.getElementById("waterusage3").value;
+            const flexRadio= document.getElementsByName("flexRadioDefault").value;
     
 
             axios.post("http://localhost:8080/services/postInformation", {

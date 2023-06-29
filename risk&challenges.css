@@ -112,3 +112,9 @@ fieldset {
   .submit:active {
     background-color: #06b;
   }
+
+  #sub{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+  }

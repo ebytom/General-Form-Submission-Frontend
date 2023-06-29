@@ -1,5 +1,5 @@
-const yes = document.getElementById('yes');
-const no = document.getElementById('No');
+const yes4 = document.getElementById('yes4');
+const no4 = document.getElementById('No4');
 const indi = document.getElementById('individual');
 const check2b_display = document.getElementById('check2b-display');
 check2b_display.style.display = "none";
@@ -38,13 +38,13 @@ indi.addEventListener('click', () => {
 })
 
 
-yes.addEventListener('click', () => {
+yes4.addEventListener('click', () => {
     const yes_display = document.getElementById('yes-display');
     yes_display.innerHTML = '<ul><li><label for="total_discharge">24.1. If yes, total discharge volume per day (m³ ):</label><input type="text" id="total_discharge" name="total_discharge" placeholder="Total discharge m³"></li></ul>';
 
 })
 
-no.addEventListener('click', () => {
+no4.addEventListener('click', () => {
     const yes_display = document.getElementById('yes-display');
     yes_display.innerHTML = ' ';
 

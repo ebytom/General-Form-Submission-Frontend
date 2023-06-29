@@ -67,7 +67,11 @@ h1 {
     margin-bottom: 40px;
 }
 
-
+#nex{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
 
 
 .input-text {
@@ -172,9 +176,7 @@ button {
     margin-bottom: 20px;
 }
 
-#next {
-    margin-left: 550px;
-}
+
 
 
 #wd,

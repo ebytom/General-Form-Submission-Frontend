@@ -196,6 +196,10 @@ html {
         font-size: 12px;
     }
 
+ 
+    .container{
+        width: 400px;
+    }
     input,
     select {
         width: 120px;
