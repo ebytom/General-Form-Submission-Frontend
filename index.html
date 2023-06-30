@@ -513,7 +513,7 @@
                     <div id="zd">
                         <label for="zero_discharge">25. Does your facility have zero liquid discharge (ZLD):</label>
                         <div class="form-check" id="select3">
-                            <input class="form-check-input" type="radio" onclick="zeroliquid('yes5')" name="zld" id="yes5" value="true">
+                            <input class="form-check-input" type="radio" onclick="zeroliquid('yes6')" name="zld" id="yes6" value="true">
                             <label class="form-check-label" for="yes6">
                                 Yes
                             </label>
@@ -906,7 +906,7 @@
                     <p>
                         42. Access to technical know-how :
                     </p>
-                    <input type="radio" id="Consultants" onclick="technicalknowhow('consultants')" name="EA" value="consultants">
+                    <input type="radio" id="consultants" onclick="technicalknowhow('consultants')" name="EA" value="consultants">
                     <label for="consultants">Consultants</label>
                     <div>
                         <input type="radio" id="research" onclick="technicalknowhow('research')"  name="EA" value="research">
@@ -1181,10 +1181,6 @@
             const contact = document.getElementById('contact').value;
             const address = document.getElementById("address").value;
             const country = document.getElementById("country").value;
-            const below25 = document.getElementById('below25').value;
-            const above25 = document.getElementById("above25").value;
-            const above5 = document.getElementById("above5").value;
-            const above10 = document.getElementById('above10').value;
             const volume = document.getElementById("volume").value;
             const end_product = document.getElementById("end_product").value;
             const countries = document.getElementById('countries').value;
@@ -1206,55 +1202,12 @@
             const surface = document.getElementById("surface").value;
             const treated = document.getElementById("treated").value;
             const sources = document.getElementById('sources').value;
-            const performed = document.getElementById("performed").value;
-            const notPerformed = document.getElementById("notPerformed").value;
-            const treateds = document.getElementById('treateds').value;
-            const treatment = document.getElementById("treatment").value;
-            const advanced = document.getElementById("advanced").value;
-            const secondary = document.getElementById('secondary').value;
-            const biological = document.getElementById("biological").value;
             const quantity = document.getElementById("quantity").value;
             const waterusage = document.getElementById("treatment").value;
             const cost = document.getElementById("advanced").value;
             const avatar = document.getElementById('secondary').value;
             const treatment_capacity = document.getElementById("biological").value;
-            const yes1 = document.getElementById("quantity").value;
-            const no1 = document.getElementById("treatment").value;
-            const yes2 = document.getElementById("advanced").value;
-            const no2 = document.getElementById('secondary').value;
-            const yes3 = document.getElementById("biological").value;
-            const yes4 = document.getElementById("quantity").value;
-            const yes5 = document.getElementById("treatment").value;
-            const yes6 = document.getElementById("advanced").value;
-            const yes7 = document.getElementById('secondary').value;
-            const yes8 = document.getElementById("biological").value;
-            const yes9 = document.getElementById("quantity").value;
-            const yes10 = document.getElementById("treatment").value;
-            const yes11 = document.getElementById("advanced").value;
-            const no3 = document.getElementById('secondary').value;
-            const no4 = document.getElementById("biological").value;
-            const no6 = document.getElementById('secondary').value;
-            const no7 = document.getElementById("biological").value;
-            const no8 = document.getElementById("quantity").value;
-            const no9 = document.getElementById('secondary').value;
-            const no10 = document.getElementById("biological").value;
-            const no11 = document.getElementById("quantity").value;
-
-
-
-
-            const yes12 = document.getElementById('yes12').value;
-            const no12 = document.getElementById("no12").value;
-            const no13 = document.getElementById("no13").value;
-            const yes13 = document.getElementById('yes13').value;
-            const yes14 = document.getElementById("yes14").value;
-            const no14 = document.getElementById("no14").value;
-            const yes15 = document.getElementById('yes15').value;
-            const no15 = document.getElementById("no15").value;
-            const yes16 = document.getElementById("yes16").value;
-            const no16 = document.getElementById('no16').value;
-            const yes17 = document.getElementById("yes17").value;
-            const no17 = document.getElementById("no17").value;
+           
             // const avatar2 = document.getElementById('avatar2').value;
             // const avatar3 = document.getElementById("avatar3").value;
             const cost2 = document.getElementById("cost2").value;
@@ -1313,57 +1266,10 @@
                 surface: surface,
                 treated: treated,
                 sources: sources,
-                performed: performed,
-                notPerformed: notPerformed,
-                treateds: treateds,
-                treatment: treatment,
-                biological: biological,
-                secondary: secondary,
-                advanced: advanced,
                 quantity: quantity,
                 cost: cost,
-                yes1: yes1,
-                no1: no1,
-                yes2: yes2,
-                no2: no2,
                 waterusage: waterusage,
-                yes3: yes3,
-                no3: no3,
                 treatment_capacity: treatment_capacity,
-                yes4: yes4,
-                no4: no4,
-                yes5: yes5,
-                yes6: yes6,
-                no6: no6,
-                yes7: yes7,
-                no7: no7,
-                yes8: yes8,
-                no8: no8,
-                yes9: yes9,
-                no9: no9,
-                yes10: yes10,
-                no10: no10,
-                yes11: yes11,
-                no11: no11,
-
-
-
-
-
-
-
-                yes12: yes12,
-                no12: no12,
-                yes13: yes13,
-                no13: no13,
-                yes14: yes14,
-                no14: no14,
-                yes15: yes15,
-                no15: no15,
-                yes16: yes16,
-                no16: no16,
-                yes17: yes17,
-                no17: no17,
                 cost2: cost2,
                 cost3: cost3,
                 avatar1: fileName1,
