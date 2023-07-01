@@ -255,12 +255,10 @@
                     <br>
                     <p>14. Quality of Water supply:</p>
 
-                    <input type="radio" onclick="setperformance('performed')" id="performed" name="quality"
-                        value="Performed">
+                    <input type="radio" onclick="setperformance('performed')" id="performed" name="quality">
                     <label for="performed">Water Testing Performed</label>
                     <br>
-                    <input type="radio" onclick="setperformance('notperformed')" id="notPerformed" name="quality"
-                        value="notperformed">
+                    <input type="radio" onclick="setperformance('notperformed')" id="notPerformed" name="quality">
                     <label for="notPerformed">Water Testing Not Performed</label>
                     <br>
                     <br>
@@ -1077,7 +1075,7 @@
         // ------------------------------------------------------------------------------------------------------------
 
         var unitInvestment = null;
-        var performance = null;
+        var performanceValue = null;
         var treatment = null;
         var consumption = null;
         var balance = null;
@@ -1107,7 +1105,7 @@
         }
 
         function setperformance(val) {
-            performance = val
+            performanceValue = val
         }
 
         function settreatment(val) {
@@ -1222,7 +1220,7 @@
             const waterusage = document.getElementById("waterusage").value;
             const cost = document.getElementById("cost").value;
             const treatment_capacity = document.getElementById("treatment_capacity").value;
-           
+
             // const avatar2 = document.getElementById('avatar2').value;
             // const avatar3 = document.getElementById("avatar3").value;
             const cost2 = document.getElementById("cost2").value;
@@ -1259,7 +1257,7 @@
                 knowhow: knowhow,
                 large: large,
                 legal: legal,
-                performance: performance,
+                performanceValue: performanceValue,
                 treatment: treatment,
                 consumption: consumption,
                 balance: balance,

@@ -10,22 +10,57 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         body {
-            width: 100vw;
             overflow-y: scroll;
+        }
+
+        #informations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #informations {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     </style>
     <title>Dashboard</title>
 </head>
 
-<body class="bg-secondary">
-    <div class="bg-dark">
-        <div class="w-100 d-flex justify-content-center">
-            <h2 class="text-white p-3 py-5">Dashboard</h2>
+<body class="p-5 py-3" style="background-color: #243b55;">
+    <div>
+        <div class="rounded-3 w-100 d-flex justify-content-center" style="background-color: rgba(0, 0, 0, .5); border: 3px solid #fff">
+            <h2 class="text-white p-3 py-3"><b>Dashboard</b></h2>
         </div>
-        <div>
-            
+        <div id="informations" class="my-4">
+
+            <!-- <div class="my-3">
+                <div class="btn btn-primary text-white rounded-3 p-3 d-flex align-items-center">
+                    <b class="fs-4">Company Name</b>
+                    <b class="p-2 py-1 mx-3 rounded bg-dark" style="font-size: 13px;">12/04/2023</b>
+                </div>
+            </div> -->
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+
+    <script>
+        axios.post("http://localhost:8080/services/getInformations")
+            .then(function (response) {
+                console.log(response.data.requests)
+                const htmlRequests = response.data.requests.map(item =>
+                    `<div>
+                <div class="btn text-white rounded-3 p-4 d-flex align-items-center" style="background-color: rgba(0, 0, 0, .5)">
+                    <b class="fs-4">${item.name}</b>
+                    <b class="p-2 py-1 mx-3 rounded bg-dark" style="font-size: 13px;">${new Date(item.informationId).toLocaleDateString('en-GB')}</b>
+                </div>
+            </div>`).join("");
+                document.getElementById("informations").innerHTML = htmlRequests
+            })
+            .catch(err => console.log(err))
+
+    </script>
 </body>
 
 </html>
