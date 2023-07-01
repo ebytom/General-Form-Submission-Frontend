@@ -145,39 +145,26 @@
                         </div>
                         <br><br>
 
-                        <div class="requirement">
+                        <div class="requirement permit">
                             <p>14. Permit requirement and compliance status( If yes, mention the regulatory
                                 institutions)</p>
-<<<<<<< HEAD
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Null" name="flexCheckDefault[]"
-                                    id="null1" checked>
+                                <input class="form-check-input" type="checkbox" value="Null" name="permit" id="null1"
+                                    checked>
                                 <label class="form-check-label" for="null1">
                                     Null
                                 </label>
                             </div>
-=======
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Null"
-                                    onclick="updateCheckBox()"
-                                        name="permit" id="null1" checked>
-                                    <label class="form-check-label" for="null1">
-                                        Null
-                                    </label>
-                                </div>
->>>>>>> df7494ae2bd96b234fe2dc2701f84a48de79f16f
 
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Water_use"
-                                onclick="updateCheckBox() "
-                                    name="permit" id="wateruse">
+                                <input class="form-check-input" type="checkbox" value="Water_use" name="permit"
+                                    id="wateruse">
                                 <label class="form-check-label" for="wateruse">
                                     Water use
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Wastewater_discharge"
-                                onclick="updateCheckBox() "
                                     name="permit" id="wastewaterdischarge">
                                 <label class="form-check-label" for="wastewaterdischarge">
                                     Wastewater discharge
@@ -185,31 +172,27 @@
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Wastewater_treatment"
-                                onclick="updateCheckBox() "
                                     name="permit" id="wastewatertreatment">
                                 <label class="form-check-label" for="wastewatertreatment">
                                     Wastewater treatment
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Chemical"
-                                onclick="updateCheckBox() "
-                                    name="permit" id="chemicaluse">
+                                <input class="form-check-input" type="checkbox" value="Chemical" name="permit"
+                                    id="chemicaluse">
                                 <label class="form-check-label" for="chemicaluse">
                                     Chemical use and management
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Air_emissions"
-                                onclick="updateCheckBox() "
-                                    name="permit" id="airemissions">
+                                <input class="form-check-input" type="checkbox" value="Air_emissions" name="permit"
+                                    id="airemissions">
                                 <label class="form-check-label" for="airemissions">
                                     Air emissions
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Solid_waste_management"
-                                onclick="updateCheckBox() "
                                     name="permit" id="solidwaste">
                                 <label class="form-check-label" for="solidwaste">
                                     Solid waste management
@@ -217,7 +200,6 @@
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Other_Environmental_permits"
-                                onclick="updateCheckBox() "
                                     name="permit" id="otherpermits">
                                 <label class="form-check-label" for="otherpermits">
                                     Other Environmental permits
@@ -231,7 +213,8 @@
                             cols="50"></textarea>
                         <br><br>
                         <!-- <button type="submit" class="btn btn-primary" name="Submit" id="next2" onclick="location.href = 'supply.html';">Next &raquo;</button> -->
-                        <button onclick="handleCompanyProfile()" onclick="validateProfile()" name="Submit" id="next2" class="btn btn-primary">Next
+                        <button onclick="handleCompanyProfile()" onclick="validateProfile()" name="Submit" id="next2"
+                            class="btn btn-primary">Next
                             &raquo;</button>
 
                 </fieldset>
@@ -1202,7 +1185,7 @@
         function generalmanagement(val) {
             general = val
         }
-        
+
 
         async function submitForm() {
 
@@ -1246,7 +1229,7 @@
             const waterusage3 = document.getElementById("waterusage3").value;
 
 
-          
+
 
 
 
@@ -1275,6 +1258,27 @@
             if (selectedFile3 != null) {
                 fileName3 = await uploadFile(selectedFile3)
             }
+
+
+            // Get all checkbox groups
+            var checkboxGroups = document.querySelectorAll('.permit');
+            var permitItems = [];
+
+
+            // Loop through each checkbox group
+            checkboxGroups.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        permitItems.push(checkbox.value);
+                        console.log(permitItems);
+                    }
+                });
+            })
 
 
             axios.post("http://localhost:8080/services/postInformation", {
@@ -1315,13 +1319,7 @@
                 memberships: memberships,
                 labour: labour,
                 women: women,
-                wateruse: wateruse,
-                wastewatertreatment: wastewatertreatment,
-                wastewaterdischarge: wastewaterdischarge,
-                chemicaluse: chemicaluse,
-                airemissions: airemissions,
-                solidwaste: solidwaste,
-                otherpermits: otherpermits,
+                permit: permitItems,
                 additional: additional,
                 pipe: pipe,
                 bore: bore,
@@ -1376,13 +1374,13 @@
             }
         }
 
-        function validateProfile(){
-  
+        function validateProfile() {
+
             if (no === "" || no === null) {
-              alert("Name must be filled out");
-              return false;
-          }
-          }
+                alert("Name must be filled out");
+                return false;
+            }
+        }
     </script>
 
     <script src="profile.js"></script>
