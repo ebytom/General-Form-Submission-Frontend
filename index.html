@@ -150,7 +150,8 @@
                                 institutions)</p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Null"
-                                        name="flexCheckDefault[]" id="null1" checked>
+                                    onclick="updateCheckBox()"
+                                        name="permit" id="null1" checked>
                                     <label class="form-check-label" for="null1">
                                         Null
                                     </label>
@@ -158,49 +159,56 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Water_use"
-                                    name="flexCheckDefault[]" id="wateruse">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="wateruse">
                                 <label class="form-check-label" for="wateruse">
                                     Water use
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Wastewater_discharge"
-                                    name="flexCheckDefault[]" id="wastewaterdischarge">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="wastewaterdischarge">
                                 <label class="form-check-label" for="wastewaterdischarge">
                                     Wastewater discharge
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Wastewater_treatment"
-                                    name="flexCheckDefault[]" id="wastewatertreatment">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="wastewatertreatment">
                                 <label class="form-check-label" for="wastewatertreatment">
                                     Wastewater treatment
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Chemical"
-                                    name="flexCheckDefault[]" id="chemicaluse">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="chemicaluse">
                                 <label class="form-check-label" for="chemicaluse">
                                     Chemical use and management
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Air_emissions"
-                                    name="flexCheckDefault[]" id="airemissions">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="airemissions">
                                 <label class="form-check-label" for="airemissions">
                                     Air emissions
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Solid_waste_management"
-                                    name="flexCheckDefault[]" id="solidwaste">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="solidwaste">
                                 <label class="form-check-label" for="solidwaste">
                                     Solid waste management
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Other_Environmental_permits"
-                                    name="flexCheckDefault[]" id="otherpermits">
+                                onclick="updateCheckBox() "
+                                    name="permit" id="otherpermits">
                                 <label class="form-check-label" for="otherpermits">
                                     Other Environmental permits
                                 </label>
@@ -213,7 +221,7 @@
                             cols="50"></textarea>
                         <br><br>
                         <!-- <button type="submit" class="btn btn-primary" name="Submit" id="next2" onclick="location.href = 'supply.html';">Next &raquo;</button> -->
-                        <button onclick="handleCompanyProfile()" name="Submit" id="next2" class="btn btn-primary">Next
+                        <button onclick="handleCompanyProfile()" onclick="validateProfile()" name="Submit" id="next2" class="btn btn-primary">Next
                             &raquo;</button>
 
                 </fieldset>
@@ -1171,6 +1179,26 @@
             general = val
         }
 
+
+
+        var selectedValues = [];
+        
+        
+
+
+        function updateCheckBox() {
+            // Create an array to store selected checkbox values
+            const checkboxes = document.getElementsByName('permit');
+            // Loop through checkboxes and add selected values to the array
+            checkboxes.forEach(checkbox => {
+                
+              if (checkbox.checked) {
+                selectedValues.push(checkbox.value);
+                console.log(selectedValues);
+              }
+            });
+          }
+
         
 
         async function submitForm() {
@@ -1213,6 +1241,17 @@
             const cost3 = document.getElementById('cost3').value;
             const waterusage2 = document.getElementById("waterusage2").value;
             const waterusage3 = document.getElementById("waterusage3").value;
+
+
+          
+
+
+
+            const no = document.getElementById('name');
+
+
+
+
 
 
             const selectedFile1 = document.getElementById("avatar").files[0];
@@ -1333,6 +1372,14 @@
                 console.log(error.config);
             }
         }
+
+        function validateProfile(){
+  
+            if (no === "" || no === null) {
+              alert("Name must be filled out");
+              return false;
+          }
+          }
     </script>
 
     <script src="profile.js"></script>

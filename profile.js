@@ -5,7 +5,6 @@ const three = document.getElementById('flexCheckDefault3');
 const four = document.getElementById('flexCheckDefault4');
 const five  = document.getElementById('flexCheckDefault5');
 const six  = document.getElementById('flexCheckDefault6');
-
 const add = document.getElementById('additional');
 add.style.display = "none";
 one.addEventListener('click', () => {
@@ -151,3 +150,5 @@ countryInput2.addEventListener("input", function() {
     dataList2.appendChild(option);
   });
 });
+
+
