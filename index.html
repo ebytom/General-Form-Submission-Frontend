@@ -547,7 +547,7 @@
 
                         <p id="tr">26. Treatment facility for the unit</p>
 
-                        <div id="tf">
+                        <div id="tf" class="treatmentFacility">
                             <div class="form-check" id="c1">
                                 <input class="form-check-input" type="checkbox"
                                     value="Common effluent treatment facility" id="commoneffluent" name="Tfacility[]">
@@ -573,6 +573,7 @@
                         <br>
                         <ul id="check2b-display">
                             <li>26.1. Wastewater treatment methods/ practices:
+                                <div class="practiceMethods">
                                 <div class="form-check" id="c11">
                                     <input class="form-check-input" type="checkbox" value="Primary" id="primary"
                                         name="method[]">
@@ -581,7 +582,7 @@
                                     </label>
                                 </div>
                                 <div class="form-check" id="c22">
-                                    <input class="form-check-input" type="checkbox" value="Secondary" id="Secondary"
+                                    <input class="form-check-input" type="checkbox" value="Secondary" id="Secondary1"
                                         name="method[]">
                                     <label class="form-check-label" for="Secondary">
                                         Secondary
@@ -594,6 +595,7 @@
                                         Tertiary
                                     </label>
                                 </div>
+                            </div>
                             </li><br>
 
                             <li>
@@ -655,7 +657,7 @@
 
                         <p id="dp">28. Final discharge point of treated / untreated wastewater:</p>
 
-                        <div id="fd">
+                        <div id="fd" class="untreatedWater">
                             <div class="form-check" id="c1a">
                                 <input class="form-check-input" type="checkbox" value="Land" id="land" name="points[]">
                                 <label class="form-check-label" for="land">
@@ -698,7 +700,7 @@
                             monitoring or
                             other contractual agreements?</p>
 
-                        <div id="qs">
+                        <div id="qs" class="qualityStandards">
                             <div class="form-check" id="c1d">
                                 <input class="form-check-input" type="checkbox"
                                     value="Company meets all existing quality standards and has either a company standard and/or has a compliance system in place"
@@ -776,15 +778,16 @@
             <div>
                 <fieldset>
                     <!-- <legend>RISKS AND CHALLENGES</legend> -->
-                    <div>
+                    
                         <p>
                             33. Relative to other water users in your local catchment (within 50km radius), does the
                             factory face heavy
                             water-related regulation and legal enforcement?</p>
+                    <div class="legalEnforcement">
                         <input type="checkbox" id="noregulation" name="water[]" value="noregulation">
                         <label for="noregulation">No, the site is under no/minimal regulation and/or legal
                             enforcement</label>
-                    </div>
+                    
                     <div>
                         <input type="checkbox" id="regulation" name="water[]" value="regulation">
                         <label for="regulation">No, the site is under similar regulation and/or legal enforcement as
@@ -805,6 +808,7 @@
                         <label for="muchgreater">Yes, the site is under much greater regulation and/or legal
                             enforcement</label>
                     </div><br><br><br>
+                </div>
                     <p>
                         34. Did your facility receive any government issued environmental violation records in the last
                         3 years:
@@ -1213,19 +1217,10 @@
             const memberships = document.getElementById('memberships').value;
             const labour = document.getElementById("labour").value;
             const women = document.getElementById("women").value;
-            const wateruse = document.getElementById('wateruse').value;
-            const wastewatertreatment = document.getElementById("wastewatertreatment").value;
-            const wastewaterdischarge = document.getElementById("wastewaterdischarge").value;
-            const chemicaluse = document.getElementById('chemicaluse').value;
-            const airemissions = document.getElementById("airemissions").value;
-            const solidwaste = document.getElementById("solidwaste").value;
-            const otherpermits = document.getElementById('otherpermits').value;
+          
+           
             const additional = document.getElementById("additional").value;
-            const pipe = document.getElementById("pipe").value;
-            const bore = document.getElementById('bore').value;
-            const surface = document.getElementById("surface").value;
-            const treated = document.getElementById("treated").value;
-            const sources = document.getElementById('sources').value;
+           
             const quantity = document.getElementById("quantity").value;
             const waterusage = document.getElementById("waterusage").value;
             const cost = document.getElementById("cost").value;
@@ -1305,6 +1300,89 @@
                 });
             })
 
+            
+            var treatmentFacility = document.querySelectorAll('.treatmentFacility');
+            var treatmentItems = [];
+            // Loop through each checkbox group
+            treatmentFacility.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        treatmentItems.push(checkbox.value);
+                    }
+                });
+            })
+
+
+
+            var practiceMethods = document.querySelectorAll('.practiceMethods');
+            var practiceItems = [];
+            // Loop through each checkbox group
+            practiceMethods.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        practiceItems.push(checkbox.value);
+                    }
+                });
+            })
+
+            var untreatedWater = document.querySelectorAll('.untreatedWater');
+            var untreatedItems = [];
+            // Loop through each checkbox group
+            untreatedWater.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        untreatedItems.push(checkbox.value);
+                    }
+                });
+            })
+
+            var qualityStandards = document.querySelectorAll('.qualityStandards');
+            var qualityItems = [];
+            // Loop through each checkbox group
+            qualityStandards.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        qualityItems.push(checkbox.value);
+                    }
+                });
+            })
+
+            var legalEnforcement = document.querySelectorAll('.legalEnforcement');
+            var legalItems = [];
+            // Loop through each checkbox group
+            legalEnforcement.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        legalItems.push(checkbox.value);
+                    }
+                });
+            })
+
 
 
 
@@ -1349,6 +1427,17 @@
                 permit: permitItems,
                 additional: additional,
                 sourcing: sourcingItems,
+                treatmentFacility:treatmentItems,
+                practiceMethods:practiceItems,
+                legalEnforcement:legalItems,
+                qualityStandards:qualityItems,
+                untreatedWater:untreatedItems,
+
+
+
+
+
+
                 quantity: quantity,
                 cost: cost,
                 waterusage: waterusage,
