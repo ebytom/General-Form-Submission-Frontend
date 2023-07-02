@@ -965,9 +965,13 @@
                         <button onclick="handleWaterSupply()" class="btn btn-primary" id="prev1">&laquo;
                             Previous
                         </button>
-                        <button type="button" class="btn btn-primary" id="sub1"
+                        <!-- <button type="button" class="btn btn-primary splbutton" id="sub1"
                             onclick="this.classList.toggle('button--loading'); submitForm()">
                             <span class="px-3">Submit</span>
+                        </button> -->
+                        <button type="button" class="btn btn-primary splbutton"
+                            onclick="this.classList.toggle('splbutton--loading'); submitForm()">
+                            <span class="splbutton__text">Submit</span>
                         </button>
                     </div>
 
@@ -1297,7 +1301,6 @@
                     if (checkbox.checked) {
                         // Add checked value to the array
                         sourcingItems.push(checkbox.value);
-                        console.log(sourcingItems);
                     }
                 });
             })
