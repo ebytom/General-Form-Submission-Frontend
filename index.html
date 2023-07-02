@@ -24,8 +24,22 @@
 </head>
 
 <body>
+    <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
+        style="height: 70px; width: 100vw;">
+        <div>
+            <b class="fs-2" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MSME</b>
+        </div>
+        <div class="d-flex">
+            <a class="p-0" href="index.html">
+                <div class="btn rounded-3 text-white"><b>Form</b></div>
+            </a>
+            <a href="dashboard.html">
+                <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
+            </a>
+        </div>
+    </div>
     <div id="companyProfile">
-        <h1>Company Profile</h1>
+        <h1 class="fs-1"><b>Company Profile</b></h1>
         <div class="container">
             <div>
                 <fieldset>
@@ -149,14 +163,6 @@
                             <p>14. Permit requirement and compliance status( If yes, mention the regulatory
                                 institutions)</p>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Null" name="permit" id="null1"
-                                    checked>
-                                <label class="form-check-label" for="null1">
-                                    Null
-                                </label>
-                            </div>
-
-                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="Water_use" name="permit"
                                     id="wateruse">
                                 <label class="form-check-label" for="wateruse">
@@ -225,35 +231,35 @@
     <br>
 
     <div id="waterSupply">
-        <h1>WATER SUPPLY</h1>
+        <h1 class="fs-1"><b>Water Supply</b></h1>
         <div class="container">
 
 
             <div id="form">
                 <fieldset>
                     <!-- <legend>WATER SUPPLY</legend> -->
-                    <p>13. Sourcing (with percentage if known):</p>
+                    <div class="sourcing">
+                        <p>13. Sourcing (with percentage if known):</p>
 
-                    <input class="checkbox" type="checkbox" id="null2" name="null2" value="null" checked>
-                    <label for="null2">Null</label>
-                    <br>
-                    <input class="checkbox" type="checkbox" id="pipe" name="pipe" value="pipe">
-                    <label for="pipe">Pipe water / Municipal water</label>
-                    <br>
-                    <input type="checkbox" id="bore" name="bore" value="bore">
-                    <label for="bore">Groundwater (Bore)</label>
-                    <br>
-                    <input type="checkbox" id="surface" name="Surface" value="Surface">
-                    <label for="Surface">Surface water (River)</label>
-                    <br>
-                    <input type="checkbox" id="treated" name="treated" value="treated">
-                    <label for="treated">Treated water (IETP/CETP)</label>
-                    <br>
-                    <input type="checkbox" id="sources" name="sources" value="sources">
-                    <label for="sources">Water from other sources</label>
-                    <br>
-                    <br>
-                    <br>
+                        <input class="checkbox" type="checkbox" id="pipe" name="pipe"
+                            value="Pipe water / Muncipal water">
+                        <label for="pipe">Pipe water / Municipal water</label>
+                        <br>
+                        <input type="checkbox" id="bore" name="bore" value="Groundwater">
+                        <label for="bore">Groundwater (Bore)</label>
+                        <br>
+                        <input type="checkbox" id="surface" name="Surface" value="Surface water">
+                        <label for="Surface">Surface water (River)</label>
+                        <br>
+                        <input type="checkbox" id="treated" name="treated" value="Treated water ">
+                        <label for="treated">Treated water (IETP/CETP)</label>
+                        <br>
+                        <input type="checkbox" id="sources" name="sources" value="Water from other sources">
+                        <label for="sources">Water from other sources</label>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
                     <p>14. Quality of Water supply:</p>
 
                     <input type="radio" onclick="setperformance('performed')" id="performed" name="quality">
@@ -483,7 +489,7 @@
     <!--discharge page-->
 
     <div id="waterDischarge">
-        <h1>WATER DISCHARGE</h1>
+        <h1 class="fs-1"><b>Water Discharge</b></h1>
         <div class="container">
 
             <div>
@@ -765,7 +771,7 @@
     <!--risk and challenges page-->
 
     <div id="riskAndChallenges">
-        <h1>RISKS AND CHALLENGES</h1>
+        <h1 class="fs-1"><b>Risks & challanges</h1>
         <div class="container">
             <div>
                 <fieldset>
@@ -969,7 +975,7 @@
         </div>
     </div>
 
-    <div style="text-align: center;" height="100vh" width="100vw" id="success">
+    <div class="mt-4" style="text-align: center;" height="100vh" width="100vw" id="success">
         <div class="successDiv d-flex align-items-center">
             <img src="./img/tick.png" height="70px" width="80px" />
             <h3><b>Form Submitted Successfully!</b></h3>
@@ -1261,12 +1267,10 @@
 
 
             // Get all checkbox groups
-            var checkboxGroups = document.querySelectorAll('.permit');
+            var permitGroups = document.querySelectorAll('.permit');
             var permitItems = [];
-
-
             // Loop through each checkbox group
-            checkboxGroups.forEach(function (group, index) {
+            permitGroups.forEach(function (group, index) {
                 // Get all checkboxes within the group
                 var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
@@ -1279,6 +1283,26 @@
                     }
                 });
             })
+
+
+            var sourcingGroups = document.querySelectorAll('.sourcing');
+            var sourcingItems = [];
+            // Loop through each checkbox group
+            sourcingGroups.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        sourcingItems.push(checkbox.value);
+                        console.log(sourcingItems);
+                    }
+                });
+            })
+
+
 
 
             axios.post("http://localhost:8080/services/postInformation", {
@@ -1321,11 +1345,7 @@
                 women: women,
                 permit: permitItems,
                 additional: additional,
-                pipe: pipe,
-                bore: bore,
-                surface: surface,
-                treated: treated,
-                sources: sources,
+                sourcing: sourcingItems,
                 quantity: quantity,
                 cost: cost,
                 waterusage: waterusage,
