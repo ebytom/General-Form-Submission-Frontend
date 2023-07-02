@@ -241,20 +241,20 @@
                     <div class="sourcing">
                         <p>13. Sourcing (with percentage if known):</p>
 
-                        <input class="checkbox" type="checkbox" id="pipe" name="pipe"
+                        <input class="checkbox" type="checkbox" id="pipe" name="source"
                             value="Pipe water / Muncipal water">
                         <label for="pipe">Pipe water / Municipal water</label>
                         <br>
-                        <input type="checkbox" id="bore" name="bore" value="Groundwater">
+                        <input type="checkbox" id="bore" name="source" value="source">
                         <label for="bore">Groundwater (Bore)</label>
                         <br>
-                        <input type="checkbox" id="surface" name="Surface" value="Surface water">
+                        <input type="checkbox" id="surface" name="source" value="Surface water">
                         <label for="Surface">Surface water (River)</label>
                         <br>
-                        <input type="checkbox" id="treated" name="treated" value="Treated water ">
+                        <input type="checkbox" id="treated" name="source" value="Treated water ">
                         <label for="treated">Treated water (IETP/CETP)</label>
                         <br>
-                        <input type="checkbox" id="sources" name="sources" value="Water from other sources">
+                        <input type="checkbox" id="sources" name="source" value="Water from other sources">
                         <label for="sources">Water from other sources</label>
                         <br>
                         <br>
@@ -550,21 +550,21 @@
                         <div id="tf" class="treatmentFacility">
                             <div class="form-check" id="c1">
                                 <input class="form-check-input" type="checkbox"
-                                    value="Common effluent treatment facility" id="commoneffluent" name="Tfacility[]">
+                                    value="Common effluent treatment facility" id="commoneffluent" name="facility">
                                 <label class="form-check-label" for="commoneffluent">
                                     Common effluent treatment facility
                                 </label>
                             </div>
                             <div class="form-check" id="c2">
                                 <input class="form-check-input" type="checkbox"
-                                    value="Individual effluent treatment facility" id="individual" name="Tfacility[]">
+                                    value="Individual effluent treatment facility" id="individual" name="facility">
                                 <label class="form-check-label" for="individual">
                                     Individual effluent treatment facility
                                 </label>
                             </div>
                             <div class="form-check" id="c3">
                                 <input class="form-check-input" type="checkbox" value="No treatment facility"
-                                    id="nofacility" name="Tfacility[]">
+                                    id="nofacility" name="facility">
                                 <label class="form-check-label" for="nofacility">
                                     No treatment facility
                                 </label>
@@ -576,21 +576,21 @@
                                 <div class="practiceMethods">
                                 <div class="form-check" id="c11">
                                     <input class="form-check-input" type="checkbox" value="Primary" id="primary"
-                                        name="method[]">
+                                        name="method">
                                     <label class="form-check-label" for="primary">
                                         Primary
                                     </label>
                                 </div>
                                 <div class="form-check" id="c22">
                                     <input class="form-check-input" type="checkbox" value="Secondary" id="Secondary1"
-                                        name="method[]">
+                                        name="method">
                                     <label class="form-check-label" for="Secondary">
                                         Secondary
                                     </label>
                                 </div>
                                 <div class="form-check" id="c33">
                                     <input class="form-check-input" type="checkbox" value="Tertiary" id="Tertiary"
-                                        name="method[]">
+                                        name="method">
                                     <label class="form-check-label" for="Tertiary">
                                         Tertiary
                                     </label>
@@ -659,21 +659,21 @@
 
                         <div id="fd" class="untreatedWater">
                             <div class="form-check" id="c1a">
-                                <input class="form-check-input" type="checkbox" value="Land" id="land" name="points[]">
+                                <input class="form-check-input" type="checkbox" value="Land" id="land" name="treated">
                                 <label class="form-check-label" for="land">
                                     Land
                                 </label>
                             </div>
                             <div class="form-check" id="c2b">
                                 <input class="form-check-input" type="checkbox" value="Water" id="Water"
-                                    name="points[]">
+                                    name="treated">
                                 <label class="form-check-label" for="Water">
                                     Water
                                 </label>
                             </div>
                             <div class="form-check" id="c3c">
                                 <input class="form-check-input" type="checkbox" value="Re-use" id="reuse"
-                                    name="points[]">
+                                    name="treated">
                                 <label class="form-check-label" for="reuse">
                                     Re-use
                                 </label>
@@ -704,7 +704,7 @@
                             <div class="form-check" id="c1d">
                                 <input class="form-check-input" type="checkbox"
                                     value="Company meets all existing quality standards and has either a company standard and/or has a compliance system in place"
-                                    id="standards" name="wquality[]">
+                                    id="standards" name="monitor">
                                 <label class="form-check-label" for="standards">
                                     Company meets all existing quality standards and has either a company standard
                                     and/or
@@ -714,7 +714,7 @@
                             <div class="form-check" id="c2e">
                                 <input class="form-check-input" type="checkbox"
                                     value="Site meets water quality requirements, but no company-specific standards or compliance systems exist"
-                                    id="requirements" name="wquality[]">
+                                    id="requirements" name="monitor">
                                 <label class="form-check-label" for="requirements">
                                     Site meets water quality requirements, but no company-specific standards or
                                     compliance
@@ -724,7 +724,7 @@
                             <div class="form-check" id="c3f">
                                 <input class="form-check-input" type="checkbox"
                                     value="Unknown or in general meets water quality standards, but may have some violations"
-                                    id="violations" name="wquality[]">
+                                    id="violations" name="monitor">
                                 <label class="form-check-label" for="violations">
                                     Unknown or in general meets water quality standards, but may have some violations
                                 </label>
@@ -732,7 +732,7 @@
                             <div class="form-check" id="c4g">
                                 <input class="form-check-input" type="checkbox"
                                     value="The site sometimes meets water quality standards, but is regularly in violation"
-                                    id="regular_violation" name="wquality[]">
+                                    id="regular_violation" name="monitor">
                                 <label class="form-check-label" for="regular_violation">
                                     The site sometimes meets water quality standards, but is regularly in violation
                                 </label>
@@ -740,7 +740,7 @@
                             <div class="form-check" id="c5h">
                                 <input class="form-check-input" type="checkbox"
                                     value="The site rarely or never meets existing water quality standards"
-                                    id="existing" name="wquality[]">
+                                    id="existing" name="monitor">
                                 <label class="form-check-label" for="existing">
                                     The site rarely or never meets existing water quality standards
                                 </label>
@@ -784,27 +784,27 @@
                             factory face heavy
                             water-related regulation and legal enforcement?</p>
                     <div class="legalEnforcement">
-                        <input type="checkbox" id="noregulation" name="water[]" value="noregulation">
+                        <input type="checkbox" id="noregulation" name="local" value="noregulation">
                         <label for="noregulation">No, the site is under no/minimal regulation and/or legal
                             enforcement</label>
                     
                     <div>
-                        <input type="checkbox" id="regulation" name="water[]" value="regulation">
+                        <input type="checkbox" id="regulation" name="local" value="regulation">
                         <label for="regulation">No, the site is under similar regulation and/or legal enforcement as
                             other
                             users</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="unknown" name="water[]" value="unknown">
+                        <input type="checkbox" id="unknown" name="local" value="unknown">
                         <label for="unknown">Unknown</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="greater" name="water[]" value="greater">
+                        <input type="checkbox" id="greater" name="local" value="greater">
                         <label for="greater">Yes, possibly the site is under greater regulation and/or legal
                             enforcement</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="muchgreater" name="water[]" value="muchgreater">
+                        <input type="checkbox" id="muchgreater" name="local" value="muchgreater">
                         <label for="muchgreater">Yes, the site is under much greater regulation and/or legal
                             enforcement</label>
                     </div><br><br><br>
