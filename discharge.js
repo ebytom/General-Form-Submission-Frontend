@@ -40,7 +40,7 @@ indi.addEventListener('click', () => {
 
 yes4.addEventListener('click', () => {
     const yes_display = document.getElementById('yes-display');
-    yes_display.innerHTML = '<ul><li><label for="total_discharge">24.1. If yes, total discharge volume per day (m³ ):</label><input type="text" id="total_discharge" name="total_discharge" placeholder="Total discharge m³"></li></ul>';
+    yes_display.innerHTML = '<ul><li><label for="total_discharge">22.1. If yes, total discharge volume per day (m³ ):</label><input type="text" id="total_discharge" name="total_discharge" placeholder="Total discharge m³"></li></ul>';
 
 })
 

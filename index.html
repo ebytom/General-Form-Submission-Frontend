@@ -80,7 +80,7 @@
                         </select>
                     </div><br>
                     <div id="others-display">
-                        <input placeholder="Details..." type="text" id="others-display" name="Others">
+                         <input placeholder="Details..." type="text" id="others-display" name="Others">
                     </div>
 
                     <br>
@@ -239,7 +239,7 @@
                 <fieldset>
                     <!-- <legend>WATER SUPPLY</legend> -->
                     <div class="sourcing">
-                        <p>13. Sourcing (with percentage if known):</p>
+                        <p>15. Sourcing (with percentage if known):</p>
 
                         <input class="checkbox" type="checkbox" id="pipe" name="source"
                             value="Pipe water / Muncipal water">
@@ -260,7 +260,7 @@
                         <br>
                         <br>
                     </div>
-                    <p>14. Quality of Water supply:</p>
+                    <p>16. Quality of Water supply:</p>
 
                     <input type="radio" onclick="setperformance('performed')" id="performed" name="quality">
                     <label for="performed">Water Testing Performed</label>
@@ -270,7 +270,7 @@
                     <br>
                     <br>
                     <br>
-                    <p>15. Is the water treated before being used ?</p>
+                    <p>17. Is the water treated before being used ?</p>
 
                     <input type="radio" onclick="settreatment('treateds')" id="treateds" name="use" value="treateds">
                     <label for="treateds">No treatment</label>
@@ -289,7 +289,7 @@
                     <label for="advanced">Yes, advanced treatment</label>
                     <br>
                     <br>
-                    <p class="quantity">16. Quantity of water supply : <input id="quantity" class="input" type="text"
+                    <p class="quantity">18. Quantity of water supply : <input id="quantity" class="input" type="text"
                             placeholder=" " /></p>
 
 
@@ -342,15 +342,15 @@
                     </tbody>
                 </table> -->
 
-                    <p id="yearfirst">17. Water consumption of year 1 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                    <p id="yearfirst">19. Water consumption of year 1 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
                     <button id="year1" onclick="handleyear1">year1</button>
                     <!-- <input id="lastyear" type="text" class="input" /> -->
                     <br>
                     <div id="firstyear">
-                        <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
+                        <p>19.1 Cost of Water (INR/KL) – Treated / Fresh Water :
                             <input id="cost" class="input" type="text" placeholder=" " />
                         </p>
-                        <p>19. Does your unit track its factory / office water consumption separately:
+                        <p>19.2 Does your unit track its factory / office water consumption separately:
                             <input type="radio" id="yes1" onclick="waterconsumption('yes1')" name="unit" value="yes1">
                             <label for="yes1">Yes</label>
                             <input type="radio" id="no1" onclick="waterconsumption('no1')" name="unit" value="no1">
@@ -358,22 +358,22 @@
                         </p>
                         <p id="if-yes">
                         </p>
-                        <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                        <p>19.3 Has your facility implemented a water balance to evaluate water input and output ?
                             <input type="radio" id="yes2" name="io" onclick="waterbalance('yes2')" value="yes2">
                             <label for="yes2">Yes</label>
                             <input type="radio" id="no2" name="io" onclick="waterbalance('no2')" value="no2">
                             <label for="no2">No</label>
                         </p>
-                        <p>21. Which facility process/operation uses water the most : <input id="waterusage"
+                        <p>19.4 Which facility process/operation uses water the most : <input id="waterusage"
                                 class="input" type="text" placeholder=" " /></p>
                         <br>
-                        <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                        <p>19.5 Has your facility implemented a plan to optimize water usage (provide details) ?
                             <input type="radio" id="yes3" onclick="waterusage('yes3')" name="plan" value="yes3">
                             <label for="yes3">Yes</label>
                             <input type="radio" id="no3" onclick="waterusage('no3')" name="plan" value="no3">
                             <label for="no3">No</label>
                         </p>
-                        <label for="avatar">23. upload water report file(pdf/docx):</label>
+                        <label for="avatar">19.6 upload water report file(pdf/docx):</label>
 
                         <input type="file" id="avatar" name="avatar" accept=".pdf, .doc, .docx">
 
@@ -387,15 +387,15 @@
 
 
 
-                    <p id="yearsecond">17. Water consumption of year 2 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                    <p id="yearsecond">20. Water consumption of year 2 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
                     <button id="year2" onclick="handleyear2">year2</button>
                     <!-- <input id="lastyear" type="text" class="input" /> -->
                     <br>
                     <div id="secondyear">
-                        <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
+                        <p>20.1 Cost of Water (INR/KL) – Treated / Fresh Water :
                             <input id="cost2" class="input" type="text" placeholder=" " />
                         </p>
-                        <p>19. Does your unit track its factory / office water consumption separately:
+                        <p>20.2 Does your unit track its factory / office water consumption separately:
                             <input type="radio" id="yes12" onclick="waterconsumption2('yes12')" name="unit"
                                 value="yes12">
                             <label for="yes12">Yes</label>
@@ -404,22 +404,22 @@
                         </p>
                         <p id="if-yes2">
                         </p>
-                        <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                        <p>20.3 Has your facility implemented a water balance to evaluate water input and output ?
                             <input type="radio" id="yes13" onclick="waterbalance2('yes13')" name="io" value="yes13">
                             <label for="yes13">Yes</label>
                             <input type="radio" id="no13" onclick="waterbalance2('no13')" name="io" value="no13">
                             <label for="no13">No</label>
                         </p>
-                        <p>21. Which facility process/operation uses water the most : <input id="waterusage2"
+                        <p>20.4 Which facility process/operation uses water the most : <input id="waterusage2"
                                 class="input" type="text" placeholder=" " /></p>
                         <br>
-                        <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                        <p>20.5 Has your facility implemented a plan to optimize water usage (provide details) ?
                             <input type="radio" id="yes14" onclick="waterusage2('yes14')" name="plan" value="yes14">
                             <label for="yes14">Yes</label>
                             <input type="radio" id="no14" onclick="waterusage2('no14')" name="plan" value="no14">
                             <label for="no14">No</label>
                         </p>
-                        <label for="avatar2">23. upload water report file(pdf/docx):</label>
+                        <label for="avatar2">20.6 upload water report file(pdf/docx):</label>
 
                         <input type="file" id="avatar2" name="avatar" accept=".pdf, .doc, .docx">
 
@@ -433,15 +433,15 @@
 
 
 
-                    <p id="yearthird">17. Water consumption of year 3 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
+                    <p id="yearthird">21. Water consumption of year 3 (in Kilo Litres; 1000 m3 = 1 KL) :</p>
                     <button id="year3" onclick="handleyear3">year3</button>
                     <!-- <input id="lastyear" type="text" class="input" /> -->
                     <br>
                     <div id="thirdyear">
-                        <p>18. Cost of Water (INR/KL) – Treated / Fresh Water :
+                        <p>21.1 Cost of Water (INR/KL) – Treated / Fresh Water :
                             <input id="cost3" class="input" type="text" placeholder=" " />
                         </p>
-                        <p>19. Does your unit track its factory / office water consumption separately:
+                        <p>21.2. Does your unit track its factory / office water consumption separately:
                             <input type="radio" id="yes15" onclick="waterconsumption3('yes15')" name="unit"
                                 value="yes15">
                             <label for="yes15">Yes</label>
@@ -450,22 +450,22 @@
                         </p>
                         <p id="if-yes3">
                         </p>
-                        <p>20. Has your facility implemented a water balance to evaluate water input and output ?
+                        <p>21.3 Has your facility implemented a water balance to evaluate water input and output ?
                             <input type="radio" id="yes16" onclick="waterbalance3('yes16')" name="io" value="no16">
                             <label for="yes16">Yes</label>
                             <input type="radio" id="no16" onclick="waterbalance3('no16')" name="io" value="no16">
                             <label for="no16">No</label>
                         </p>
-                        <p>21. Which facility process/operation uses water the most : <input id="waterusage3"
+                        <p>21.4 Which facility process/operation uses water the most : <input id="waterusage3"
                                 class="input" type="text" placeholder=" " /></p>
                         <br>
-                        <p>22. Has your facility implemented a plan to optimize water usage (provide details) ?
+                        <p>21.5 Has your facility implemented a plan to optimize water usage (provide details) ?
                             <input type="radio" id="yes17" onclick="waterusage3('yes17')" name="plan" value="yes17">
                             <label for="yes17">Yes</label>
                             <input type="radio" id="no17" onclick="waterusage3('no17')" name="plan" value="no17">
                             <label for="no17">No</label>
                         </p>
-                        <label for="avatar3">23. upload water report file(pdf/docx):</label>
+                        <label for="avatar3">21.6 upload water report file(pdf/docx):</label>
 
                         <input type="file" id="avatar3" name="avatar" accept=".pdf, .doc, .docx">
 
@@ -497,7 +497,7 @@
                     <!--<legend>Water Discharge</legend> -->
                     <!-- waste water -->
                     <div class="waste__water">
-                        <label for="waste_water">24. Does your facility generate waste water</label>
+                        <label for="waste_water">22. Does your facility generate waste water</label>
                         <div class="form-check" id="select1">
                             <input class="form-check-input" type="radio" onclick="wastewater('yes4')" name="waste"
                                 id="yes4" value="yes4">
@@ -523,7 +523,7 @@
 
                     <!-- zero liquid discharge -->
                     <div id="zd">
-                        <label for="zero_discharge">25. Does your facility have zero liquid discharge (ZLD):</label>
+                        <label for="zero_discharge">23. Does your facility have zero liquid discharge (ZLD):</label>
                         <div class="form-check" id="select3">
                             <input class="form-check-input" type="radio" onclick="zeroliquid('yes6')" name="zld"
                                 id="yes6" value="true">
@@ -545,7 +545,7 @@
 
                     <div class="treatment_facility">
 
-                        <p id="tr">26. Treatment facility for the unit</p>
+                        <p id="tr">24. Treatment facility for the unit</p>
 
                         <div id="tf" class="treatmentFacility">
                             <div class="form-check" id="c1">
@@ -572,7 +572,7 @@
                         </div>
                         <br>
                         <ul id="check2b-display">
-                            <li>26.1. Wastewater treatment methods/ practices:
+                            <li>24.1. Wastewater treatment methods/ practices:
                                 <div class="practiceMethods">
                                 <div class="form-check" id="c11">
                                     <input class="form-check-input" type="checkbox" value="Primary" id="primary"
@@ -599,12 +599,12 @@
                             </li><br>
 
                             <li>
-                                <label for="methods">26.2.Please, fill the appropriate methods (<i>refer FEM 3.0
+                                <label for="methods">24.2.Please, fill the appropriate methods (<i>refer FEM 3.0
                                         Module</i>) :</label>
                                 <input type="number" id="methods" name="metods">
                             </li>
                             <li>
-                                <label for="treatment_capacity">26.3. Total water treatment (m³) capacity of the
+                                <label for="treatment_capacity">24.3. Total water treatment (m³) capacity of the
                                     unit:</label>
                                 <input type="number" id="treatment_capacity" name="treatment_capacity">
                             </li>
@@ -614,7 +614,7 @@
 
                     <!-- track wastewater volume seperately -->
                     <div class="track_volume">
-                        <label for="track_volume">27. Does your unit track its industrial / domestic wastewater volumes
+                        <label for="track_volume">25. Does your unit track its industrial / domestic wastewater volumes
                             separately:</label>
                         <div class="form-check" id="select5">
                             <input class="form-check-input" onclick="domesticwater('yes7')" type="radio" name="volume"
@@ -634,13 +634,13 @@
 
                         <ul id="yes2-display">
                             <li>
-                                <p>27.1. Wastewater volume percentage: <br> Industrial <input type="number"
+                                <p>25.1. Wastewater volume percentage: <br> Industrial <input type="number"
                                         name="industrial" id="industrial"> % &nbsp;<br><br> Domestic <input
                                         type="number" name="domestic" id="domestic">
                                     %</p><br>
                             </li>
                             <li>
-                                <p>27.2. Volume of treated wastewater per category: <br> Industrial <input type="number"
+                                <p>25.2. Volume of treated wastewater per category: <br> Industrial <input type="number"
                                         name="industrial1" id="induatrial1"> % &nbsp;<br><br> Domestic
                                     <input type="number" name="domestic1" id="domestic1"> %
                                 </p>
@@ -655,7 +655,7 @@
 
                     <div class="treatment_facility">
 
-                        <p id="dp">28. Final discharge point of treated / untreated wastewater:</p>
+                        <p id="dp">26. Final discharge point of treated / untreated wastewater:</p>
 
                         <div id="fd" class="untreatedWater">
                             <div class="form-check" id="c1a">
@@ -682,12 +682,12 @@
                     </div><br><br>
 
                     <div id="pw">
-                        <label for="water_recovery">29. Percentage of Water Recovery % from Effluent:</label>
+                        <label for="water_recovery">27. Percentage of Water Recovery % from Effluent:</label>
                         <input type="number" id="water_recovery" name="water_recovery">
                     </div><br><br>
 
                     <div>
-                        <label for="Industrial_sludge" id="is">30. Details on discharge of Industrial
+                        <label for="Industrial_sludge" id="is">28. Details on discharge of Industrial
                             sludge:</label><br>
                         <textarea id="Industrial_sludge" name="Industrial_sludge" rows="5" cols="80"></textarea>
                     </div><br><br>
@@ -695,7 +695,7 @@
 
                     <div class="quality_standards">
 
-                        <p id="le">31. Is the factory always in compliance with legal waste water quality standards,
+                        <p id="le">29. Is the factory always in compliance with legal waste water quality standards,
                             permits,
                             monitoring or
                             other contractual agreements?</p>
@@ -749,7 +749,7 @@
                     </div><br><br>
 
                     <div>
-                        <label for="comments" id="gc">32. General Comments and Feedback:</label><br>
+                        <label for="comments" id="gc">30. General Comments and Feedback:</label><br>
                         <textarea name="comments" id="comments" cols="80" rows="6"
                             placeholder="Write any comment or suggestion..."></textarea>
                     </div><br>
@@ -780,7 +780,7 @@
                     <!-- <legend>RISKS AND CHALLENGES</legend> -->
                     
                         <p>
-                            33. Relative to other water users in your local catchment (within 50km radius), does the
+                            31. Relative to other water users in your local catchment (within 50km radius), does the
                             factory face heavy
                             water-related regulation and legal enforcement?</p>
                     <div class="legalEnforcement">
@@ -810,7 +810,7 @@
                     </div><br><br><br>
                 </div>
                     <p>
-                        34. Did your facility receive any government issued environmental violation records in the last
+                        32. Did your facility receive any government issued environmental violation records in the last
                         3 years:
                     </p>
                     <input type="radio" id="yes8" onclick="violationrecords('yes8')" name="AC" value="yes8">
@@ -825,7 +825,7 @@
 
                     <!-- siudfcsjkcnhbchjsbhcsdsadads -->
                     <p>
-                        35. Did your facility face temporary shutdown in the last 3 years:
+                        33. Did your facility face temporary shutdown in the last 3 years:
                     </p>
                     <input type="radio" id="yes9" onclick="tempshutdown('yes9')" name="AD" value="yes9">
                     <label for="yes9">Yes</label>
@@ -837,7 +837,7 @@
                     </div>
                     <br>
                     <p>
-                        36. Did your facility considerable loss of business in the last 3 years:
+                        34. Did your facility considerable loss of business in the last 3 years:
                     </p>
                     <input type="radio" id="yes10" onclick="businessloss('yes10')" name="AE" value="true">
                     <label for="yes10">Yes</label>
@@ -849,7 +849,7 @@
                     </div>
                     <br>
                     <p>
-                        37. Did your facility recive legal action from individuals/community/instructons in the last 3
+                        35. Did your facility recive legal action from individuals/community/instructons in the last 3
                         years:
                     </p>
                     <input type="radio" id="yes11" onclick="legalaction('yes11')" name="AF" value="yes11">
@@ -862,7 +862,7 @@
                     </div>
                     <br><br>
                     <p>
-                        38. Relative to other water users in your local catchment (within a 50km radius), would you
+                        36. Relative to other water users in your local catchment (within a 50km radius), would you
                         consider the
                         site a large water user/polluter?
                     </p>
@@ -888,7 +888,7 @@
                     </div>
                     <br><br><br>
                     <p>
-                        39. How would you describe this site&#39;s general water management/stewardship maturity?
+                        37. How would you describe this site&#39;s general water management/stewardship maturity?
                     </p>
                     <input type="radio" id="longstanding" name="DA" onclick="generalmanagement('steward')"
                         value="steward">
@@ -915,17 +915,17 @@
                     </div>
                     <br><br><br>
                     <p>
-                        40. Standards/ certifications- achieved/ planned. Give reasons:
+                        38. Standards/ certifications- achieved/ planned. Give reasons:
                     </p>
                     <textarea id="achievement" cols="100" name="certi" rows="5"></textarea>
                     <br><br><br>
                     <p>
-                        41. Access to finance-source (incentives, government/ private schemes):
+                        39. Access to finance-source (incentives, government/ private schemes):
                     </p>
                     <textarea id="financeaccess" cols="100" name="fsource" rows="5"></textarea>
                     <br><br><br>
                     <p>
-                        42. Access to technical know-how :
+                        40. Access to technical know-how :
                     </p>
                     <input type="radio" id="consultants" onclick="technicalknowhow('consultants')" name="EA"
                         value="consultants">
@@ -954,12 +954,12 @@
                     </div>
                     <br><br><br>
                     <p>
-                        43. Details regarding cluster level sustainbality intiatives:
+                        41. Details regarding cluster level sustainbality intiatives:
                     </p>
                     <textarea id="clusterlevel" cols="100" name="cluster" rows="5"></textarea>
                     <br><br><br>
                     <p>
-                        44. regarding engagements with other stakeholder (state/national governament, communities,
+                        42. regarding engagements with other stakeholder (state/national governament, communities,
                         NGOs,academia):
                     </p>
                     <textarea id="stakeholders" cols="100" name="stake" rows="5"></textarea>
