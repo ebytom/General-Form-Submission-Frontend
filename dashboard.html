@@ -100,6 +100,10 @@
                             <div class="p-2" id="country"></div>
                         </div>
                         <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">6.1 Others</div>
+                            <div class="p-2" id="others_display"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">7. Unit investment (INR):</div>
                             <div class="p-2" id="unitInvestment"></div>
                         </div>
@@ -453,12 +457,12 @@
                     document.getElementById("treatment_capacity").innerHTML = res.data.information.treatment_capacity
                     document.getElementById("domestic").innerHTML = res.data.information.domestic
                     document.getElementById("industrial").innerHTML = res.data.information.industrial
-                    document.getElementById("dom").innerHTML = res.data.information.dom
+                    document.getElementById("dom").innerHTML = res.data.information.domestic1
                     document.getElementById("industrial2").innerHTML = res.data.information.industrial2
-                    document.getElementById("dom2").innerHTML = res.data.information.dom2
+                    document.getElementById("dom2").innerHTML = res.data.information.domestic2
                     document.getElementById("untreated").innerHTML = res.data.information.untreatedWater
                     document.getElementById("recovery").innerHTML = res.data.information.recovery
-                    document.getElementById("industrial_sludge").innerHTML = res.data.information.Industrial_sludge
+                    document.getElementById("industrial_sludge").innerHTML = res.data.information.industrial_sludge
                     document.getElementById("standards").innerHTML = res.data.information.qualityStandards
                     document.getElementById("comments").innerHTML = res.data.information.comments
                     document.getElementById("legal").innerHTML = res.data.information.legalEnforcement
@@ -479,6 +483,8 @@
                     document.getElementById("knowhow").innerHTML = res.data.information.knowhow
                     document.getElementById("clusterlevel").innerHTML = res.data.information.clusterlevel
                     document.getElementById("stakeholders").innerHTML = res.data.information.stakeholders
+                    document.getElementById("others_display").innerHTML = res.data.information.others_display
+                    document.getElementById("recovery").innerHTML = res.data.information.water_recovery
                 })
         }
 
