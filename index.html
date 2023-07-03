@@ -79,8 +79,8 @@
                             <option id="others" value="others">Others</option>
                         </select>
                     </div><br>
-                    <div id="others-display">
-                         <input placeholder="Details..." type="text" id="others-display" name="Others">
+                    <div id="others_display">
+                         <input placeholder="Details..." type="text" id="others_display" name="Others">
                     </div>
 
                     <br>
@@ -601,7 +601,7 @@
                             <li>
                                 <label for="methods">24.2.Please, fill the appropriate methods (<i>refer FEM 3.0
                                         Module</i>) :</label>
-                                <input type="number" id="methods" name="metods">
+                                <input type="number" id="methods" name="methods">
                             </li>
                             <li>
                                 <label for="treatment_capacity">24.3. Total water treatment (m³) capacity of the
@@ -636,13 +636,13 @@
                             <li>
                                 <p>25.1. Wastewater volume percentage: <br> Industrial <input type="number"
                                         name="industrial" id="industrial"> % &nbsp;<br><br> Domestic <input
-                                        type="number" name="domestic" id="domestic">
+                                        type="number" name="domestic1" id="domestic">
                                     %</p><br>
                             </li>
                             <li>
                                 <p>25.2. Volume of treated wastewater per category: <br> Industrial <input type="number"
                                         name="industrial1" id="induatrial1"> % &nbsp;<br><br> Domestic
-                                    <input type="number" name="domestic1" id="domestic1"> %
+                                    <input type="number" name="domestic2" id="domestic1"> %
                                 </p>
                             </li>
                         </ul>
@@ -1217,24 +1217,35 @@
             const memberships = document.getElementById('memberships').value;
             const labour = document.getElementById("labour").value;
             const women = document.getElementById("women").value;
-           
             const additional = document.getElementById("additional").value;
-           
             const quantity = document.getElementById("quantity").value;
             const waterusage = document.getElementById("waterusage").value;
             const cost = document.getElementById("cost").value;
             const treatment_capacity = document.getElementById("treatment_capacity").value;
-
             const cost2 = document.getElementById("cost2").value;
             const cost3 = document.getElementById('cost3').value;
             const waterusage2 = document.getElementById("waterusage2").value;
             const waterusage3 = document.getElementById("waterusage3").value;
-
-            const no = document.getElementById('name');
-
             const selectedFile1 = document.getElementById("avatar").files[0];
             const selectedFile2 = document.getElementById("avatar2").files[0];
             const selectedFile3 = document.getElementById("avatar3").files[0];
+
+
+
+
+            
+            const industrial1 = document.getElementById("industrial1").value;
+            const industrial = document.getElementById("industrial").value;
+            const domestic1 = document.getElementById("domestic1").value;
+            const domestic2 = document.getElementById("domestic2").value;
+            const clusterlevel = document.getElementById("clusterlevel").value;
+            const stakeholders = document.getElementById("stakeholders").value;
+            const achievement = document.getElementById('achievement').value;
+            const financeaccess = document.getElementById("financeaccess").value;
+            const comments = document.getElementById("comments").value;
+            const water_recovery = document.getElementById("water_recovery").value;
+            const industrial_sludge = document.getElementById("industrial_sludge").value;
+            const others_display = document.getElementById("others_display").value;
 
 
             let fileName1 = "";
@@ -1428,6 +1439,26 @@
                 avatar1: fileName1,
                 avatar2: fileName2,
                 avatar3: fileName3,
+
+
+
+
+                industrial:industrial,
+                industrial1:industrial1,
+                domestic1:domestic1,
+                domestic2:domestic2,
+                clusterlevel:clusterlevel,
+                stakeholders:stakeholders,
+                achievement:achievement,
+                financeaccess:financeaccess,
+                comments:comments,
+                industrial_sludge:industrial_sludge,
+                water_recovery:water_recovery,
+                others_display:others_display,
+
+
+
+
             })
                 .then(function (response) {
                     console.log(response)
@@ -1467,13 +1498,6 @@
             }
         }
 
-        function validateProfile() {
-
-            if (no === "" || no === null) {
-                alert("Name must be filled out");
-                return false;
-            }
-        }
     </script>
 
     <script src="profile.js"></script>

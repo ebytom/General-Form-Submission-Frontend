@@ -45,7 +45,7 @@ seven.addEventListener('click', () => {
 
 
 const others = document.getElementById('others');
-const others_display = document.getElementById('others-display');
+const others_display = document.getElementById('others_display');
 const country = document.getElementById('country');
 
 others_display.style.display = "none";
