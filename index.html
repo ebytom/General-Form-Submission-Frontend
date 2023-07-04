@@ -866,7 +866,7 @@
                         consider the
                         site a large water user/polluter?
                     </p>
-                    <input type="radio" id="nolarge" name="CA" value="No, the site is not a large water user">
+                    <input type="radio" id="nolarge" onclick="largewater('nopolluter')" name="CA" value="No, the site is not a large water user">
                     <label for="nolarge">No, the site is not a large water user</label>
                     <div>
                         <input type="radio" id="nopolluter" name="CA" onclick="largewater('nolarge')" value="nolarge">
@@ -1190,6 +1190,7 @@
 
         function largewater(val) {
             large = val
+            console.log(large);
         }
 
         function technicalknowhow(val) {
@@ -1408,7 +1409,6 @@
                 domestic: domestic,
                 records: records,
                 temp: temp,
-
                 contact: contact,
                 address: address,
                 country: country,
