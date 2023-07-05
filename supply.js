@@ -13,7 +13,7 @@ const m = document.getElementById('no15');
 
 a.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes');
-    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstname" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstname" class="input" type="text" placeholder=" " /></li></ul>';
+    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic" class="input" type="text" placeholder=" " /></li></ul>';
 
 })
 
@@ -26,7 +26,7 @@ b.addEventListener('click', () => {
 
 g.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes2');
-    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstname" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstname" class="input" type="text" placeholder=" " /></li></ul>';
+    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess1" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic1" class="input" type="text" placeholder=" " /></li></ul>';
 
 })
 
@@ -40,7 +40,7 @@ h.addEventListener('click', () => {
 
 l.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes3');
-    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstname" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstname" class="input" type="text" placeholder=" " /></li></ul>';
+    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess2" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic2" class="input" type="text" placeholder=" " /></li></ul>';
 
 })
 
