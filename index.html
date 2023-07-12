@@ -351,12 +351,15 @@
                             <input id="cost" class="input" type="text" placeholder=" " />
                         </p>
                         <p>19.2 Does your unit track its factory / office water consumption separately:
-                            <input type="radio" id="yes1" onclick="waterconsumption('yes')" name="unit" value="yes1">
+                            <input type="radio" id="yes1" onclick="waterconsumption('yes')" name="unit" value="show">
                             <label for="yes1">Yes</label>
-                            <input type="radio" id="no1" onclick="waterconsumption('no')" name="unit" value="no1">
+                            <input type="radio" id="no1" onclick="waterconsumption('no')" name="unit" value="hide">
                             <label for="no1">No</label>
                         </p>
-                        <p id="if-yes">
+                        <div id="process1">
+                            <ul><li>Water consumption by process : <input id="firstnameprocess" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic" class="input" type="text" placeholder=" " /></li></ul>
+                        </div>
+                        <!-- <p id="if-yes">  -->
                         </p>
                         <p>19.3 Has your facility implemented a water balance to evaluate water input and output ?
                             <input type="radio" id="yes2" name="io" onclick="waterbalance('yes')" value="yes2">
@@ -396,13 +399,16 @@
                             <input id="cost2" class="input" type="text" placeholder=" " />
                         </p>
                         <p>20.2 Does your unit track its factory / office water consumption separately:
-                            <input type="radio" id="yes12" onclick="waterconsumption2('yes')" name="unit"
-                                value="yes12">
+                            <input type="radio" id="yes12" onclick="waterconsumption2('yes')" name="unit1"
+                                value="show">
                             <label for="yes12">Yes</label>
-                            <input type="radio" id="no12" onclick="waterconsumption2('no')" name="unit" value="no12">
+                            <input type="radio" id="no12" onclick="waterconsumption2('no')" name="unit1" value="hide">
                             <label for="no12">No</label>
                         </p>
-                        <p id="if-yes2">
+                        <div id="process2">
+                            <ul><li>Water consumption by process : <input id="firstnameprocess1" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic1" class="input" type="text" placeholder=" " /></li></ul>
+                        </div>
+                        <!-- <p id="if-yes2"> -->
                         </p>
                         <p>20.3 Has your facility implemented a water balance to evaluate water input and output ?
                             <input type="radio" id="yes13" onclick="waterbalance2('yes')" name="io" value="yes13">
@@ -438,17 +444,20 @@
                     <!-- <input id="lastyear" type="text" class="input" /> -->
                     <br>
                     <div id="thirdyear">
-                        <p>21.1 Cost of Water (INR/KL) – Treated / Fresh Water :
+                        <p>21.1 Cost of Water (INR/KL) - Treated / Fresh Water :
                             <input id="cost3" class="input" type="text" placeholder=" " />
                         </p>
                         <p>21.2. Does your unit track its factory / office water consumption separately:
-                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit"
-                                value="yes15">
+                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit2"
+                                value="show">
                             <label for="yes15">Yes</label>
-                            <input type="radio" id="no15" onclick="waterconsumption3('no')" name="unit" value="no15">
+                            <input type="radio" id="no15" onclick="waterconsumption3('no')" name="unit2" value="hide">
                             <label for="no15">No</label>
                         </p>
-                        <p id="if-yes3">
+                        <div id="process3">
+                            <ul><li>Water consumption by process : <input id="firstnameprocess2" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic2" class="input" type="text" placeholder=" " /></li></ul>
+                        </div>
+                        <!-- <p id="if-yes3"> -->
                         </p>
                         <p>21.3 Has your facility implemented a water balance to evaluate water input and output ?
                             <input type="radio" id="yes16" onclick="waterbalance3('yes')" name="io" value="no16">
@@ -499,20 +508,24 @@
                     <div class="waste__water">
                         <label for="waste_water">22. Does your facility generate waste water</label>
                         <div class="form-check" id="select1">
-                            <input class="form-check-input" type="radio" onclick="wastewater('yes')" name="waste"
-                                id="yes4" value="yes4">
+                            <input class="form-check-input" type="radio" onclick="wastewater('yes')" name="toggle"
+                                id="yes4" value="show">
                             <label class="form-check-label" for="yes4">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check" id="select2">
-                            <input class="form-check-input" type="radio" onclick="wastewater('no')" name="waste"
-                                id="no4" value="no4">
+                            <input class="form-check-input" type="radio" onclick="wastewater('no')" name="toggle"
+                                id="no4" value="hide">
                             <label class="form-check-label" for="no4">
                                 No
                             </label>
                         </div>
                     </div><br>
+
+                    <div id="displayDischarge">
+                        <ul><li><label  for="total_discharge">22.1. If yes, total discharge volume per day (m³ ):</label><input type="text" id="total_discharge" name="total_discharge" placeholder="Total discharge m³"></li></ul>
+                    </div>
 
 
                     <!-- total discharge -->
