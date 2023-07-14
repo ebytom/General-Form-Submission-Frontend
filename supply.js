@@ -11,6 +11,8 @@ const l = document.getElementById('yes15');
 const m = document.getElementById('no15');
 
 
+
+
 a.addEventListener('click', () => {
     const if_yes=document.getElementById('if-yes');
     if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic" class="input" type="text" placeholder=" " /></li></ul>';

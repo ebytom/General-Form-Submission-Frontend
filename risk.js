@@ -1,16 +1,19 @@
-const yes = document.getElementById('yes');
-const no = document.getElementById('no');
-yes.addEventListener('click', () => {
-    const yes_display = document.getElementById('yes-display2');
-    yes_display.innerHTML = '<textarea id="waters" placeholder="Details..." cols="100" rows="5"></textarea> ';
+const yes = document.getElementById('yes8');
+const no = document.getElementById('no8');
 
+const yes_display = document.getElementById('yes-display2');
+yes_display.style.display = "none";
+
+yes.addEventListener('click', () => {
+    yes_display.style.display = "block";
+    // yes_display.innerHTML = '<textarea id="waters" placeholder="Details..." cols="100" rows="5"></textarea> ';
 })
 
 no.addEventListener('click', () => {
-    const yes_display = document.getElementById('yes-display2');
-    yes_display.innerHTML = ' ';
-
+    yes_display.style.display = "none";
 })
+
+
 
 const ad = document.getElementById('ad');
 const bd = document.getElementById('bd');

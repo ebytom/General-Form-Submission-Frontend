@@ -21,14 +21,6 @@ no2.addEventListener('click', () => {
 })
 
 
-
-
-
-
-
-
-
-
 indi.addEventListener('click', () => {
      if (check2b_display.style.display === "none") {
         check2b_display.style.display = "block";

@@ -27,7 +27,7 @@
     <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
         style="height: 70px; width: 100vw;">
         <div>
-            <b class="fs-2" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MSME</b>
+            <b class="fs-2" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
         </div>
         <div class="d-flex">
             <a class="p-0" href="index.html">
@@ -80,7 +80,7 @@
                         </select>
                     </div><br>
                     <div id="others_display">
-                         <input placeholder="Details..." type="text" id="others_display" name="Others">
+                        <input placeholder="Details..." type="text" id="others_display" name="Others">
                     </div>
 
                     <br>
@@ -396,8 +396,7 @@
                             <input id="cost2" class="input" type="text" placeholder=" " />
                         </p>
                         <p>20.2 Does your unit track its factory / office water consumption separately:
-                            <input type="radio" id="yes12" onclick="waterconsumption2('yes')" name="unit"
-                                value="yes12">
+                            <input type="radio" id="yes12" onclick="waterconsumption2('yes')" name="unit" value="yes12">
                             <label for="yes12">Yes</label>
                             <input type="radio" id="no12" onclick="waterconsumption2('no')" name="unit" value="no12">
                             <label for="no12">No</label>
@@ -442,8 +441,7 @@
                             <input id="cost3" class="input" type="text" placeholder=" " />
                         </p>
                         <p>21.2. Does your unit track its factory / office water consumption separately:
-                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit"
-                                value="yes15">
+                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit" value="yes15">
                             <label for="yes15">Yes</label>
                             <input type="radio" id="no15" onclick="waterconsumption3('no')" name="unit" value="no15">
                             <label for="no15">No</label>
@@ -517,8 +515,7 @@
 
                     <!-- total discharge -->
                     <div id="yes-display">
-                        <!-- <label for="total_discharge">If yes, total discharge volume per day (m³ ):</label>
-                <input type="text" id="total_discharge" name="total_discharge"> -->
+                        <input type="text" id="total_discharge" name="total_discharge"> -->
                     </div><br>
 
                     <!-- zero liquid discharge -->
@@ -574,28 +571,28 @@
                         <ul id="check2b-display">
                             <li>24.1. Wastewater treatment methods/ practices:
                                 <div class="practiceMethods">
-                                <div class="form-check" id="c11">
-                                    <input class="form-check-input" type="checkbox" value="Primary" id="primary"
-                                        name="method">
-                                    <label class="form-check-label" for="primary">
-                                        Primary
-                                    </label>
+                                    <div class="form-check" id="c11">
+                                        <input class="form-check-input" type="checkbox" value="Primary" id="primary"
+                                            name="method">
+                                        <label class="form-check-label" for="primary">
+                                            Primary
+                                        </label>
+                                    </div>
+                                    <div class="form-check" id="c22">
+                                        <input class="form-check-input" type="checkbox" value="Secondary"
+                                            id="Secondary1" name="method">
+                                        <label class="form-check-label" for="Secondary">
+                                            Secondary
+                                        </label>
+                                    </div>
+                                    <div class="form-check" id="c33">
+                                        <input class="form-check-input" type="checkbox" value="Tertiary" id="Tertiary"
+                                            name="method">
+                                        <label class="form-check-label" for="Tertiary">
+                                            Tertiary
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="form-check" id="c22">
-                                    <input class="form-check-input" type="checkbox" value="Secondary" id="Secondary1"
-                                        name="method">
-                                    <label class="form-check-label" for="Secondary">
-                                        Secondary
-                                    </label>
-                                </div>
-                                <div class="form-check" id="c33">
-                                    <input class="form-check-input" type="checkbox" value="Tertiary" id="Tertiary"
-                                        name="method">
-                                    <label class="form-check-label" for="Tertiary">
-                                        Tertiary
-                                    </label>
-                                </div>
-                            </div>
                             </li><br>
 
                             <li>
@@ -665,8 +662,7 @@
                                 </label>
                             </div>
                             <div class="form-check" id="c2b">
-                                <input class="form-check-input" type="checkbox" value="Water" id="Water"
-                                    name="treated">
+                                <input class="form-check-input" type="checkbox" value="Water" id="Water" name="treated">
                                 <label class="form-check-label" for="Water">
                                     Water
                                 </label>
@@ -778,37 +774,37 @@
             <div>
                 <fieldset>
                     <!-- <legend>RISKS AND CHALLENGES</legend> -->
-                    
-                        <p>
-                            31. Relative to other water users in your local catchment (within 50km radius), does the
-                            factory face heavy
-                            water-related regulation and legal enforcement?</p>
+
+                    <p>
+                        31. Relative to other water users in your local catchment (within 50km radius), does the
+                        factory face heavy
+                        water-related regulation and legal enforcement?</p>
                     <div class="legalEnforcement">
                         <input type="checkbox" id="noregulation" name="local" value="noregulation">
                         <label for="noregulation">No, the site is under no/minimal regulation and/or legal
                             enforcement</label>
-                    
-                    <div>
-                        <input type="checkbox" id="regulation" name="local" value="regulation">
-                        <label for="regulation">No, the site is under similar regulation and/or legal enforcement as
-                            other
-                            users</label>
+
+                        <div>
+                            <input type="checkbox" id="regulation" name="local" value="regulation">
+                            <label for="regulation">No, the site is under similar regulation and/or legal enforcement as
+                                other
+                                users</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="unknown" name="local" value="unknown">
+                            <label for="unknown">Unknown</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="greater" name="local" value="greater">
+                            <label for="greater">Yes, possibly the site is under greater regulation and/or legal
+                                enforcement</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="muchgreater" name="local" value="muchgreater">
+                            <label for="muchgreater">Yes, the site is under much greater regulation and/or legal
+                                enforcement</label>
+                        </div><br><br><br>
                     </div>
-                    <div>
-                        <input type="checkbox" id="unknown" name="local" value="unknown">
-                        <label for="unknown">Unknown</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="greater" name="local" value="greater">
-                        <label for="greater">Yes, possibly the site is under greater regulation and/or legal
-                            enforcement</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="muchgreater" name="local" value="muchgreater">
-                        <label for="muchgreater">Yes, the site is under much greater regulation and/or legal
-                            enforcement</label>
-                    </div><br><br><br>
-                </div>
                     <p>
                         32. Did your facility receive any government issued environmental violation records in the last
                         3 years:
@@ -818,8 +814,7 @@
                     <input type="radio" id="no8" onclick="violationrecords('no')" name="AC" value="no8">
                     <label for="no8">No</label>
                     <div id="yes-display2">
-                        <!--
-        <textarea id="waters" cols="100" rows="5"></textarea> -->
+                        <textarea id="waters" cols="100" rows="5"></textarea>
                     </div>
                     <br>
 
@@ -866,7 +861,8 @@
                         consider the
                         site a large water user/polluter?
                     </p>
-                    <input type="radio" id="nolarge" onclick="largewater('nopolluter')" name="CA" value="No, the site is not a large water user">
+                    <input type="radio" id="nolarge" onclick="largewater('nopolluter')" name="CA"
+                        value="No, the site is not a large water user">
                     <label for="nolarge">No, the site is not a large water user</label>
                     <div>
                         <input type="radio" id="nopolluter" name="CA" onclick="largewater('nolarge')" value="nolarge">
@@ -1229,9 +1225,6 @@
             const selectedFile3 = document.getElementById("avatar3").files[0];
 
 
-
-
-            
             const industrial1 = document.getElementById("industrial1").value;
             const industrial = document.getElementById("industrial").value;
             const domestic1 = document.getElementById("domestic1").value;
@@ -1250,14 +1243,14 @@
 
             const total_discharge = document.getElementById("total_discharge").value;
             const waters = document.getElementById("waters").value;
-            const firstnameprocess = document.getElementById("firstnameprocess").value;
-            const firstnameprocess1 = document.getElementById("firstnameprocess1").value;
-            const firstnameprocess2 = document.getElementById("firstnameprocess2").value;
-            const firstnamedomestic = document.getElementById("firstnamedomestic").value;
-            const firstnamedomestic1 = document.getElementById("firstnamedomestic1").value;
-            const firstnamedomestic2 = document.getElementById("firstnamedomestic2").value;
-           
-            
+            // const firstnameprocess = document.getElementById("firstnameprocess").value;
+            // const firstnameprocess1 = document.getElementById("firstnameprocess1").value;
+            // const firstnameprocess2 = document.getElementById("firstnameprocess2").value;
+            // const firstnamedomestic = document.getElementById("firstnamedomestic").value;
+            // const firstnamedomestic1 = document.getElementById("firstnamedomestic1").value;
+            // const firstnamedomestic2 = document.getElementById("firstnamedomestic2").value;
+
+
 
 
             let fileName1 = "";
@@ -1310,7 +1303,7 @@
                 });
             })
 
-            
+
             var treatmentFacility = document.querySelectorAll('.treatmentFacility');
             var treatmentItems = [];
             // Loop through each checkbox group
@@ -1426,20 +1419,20 @@
                 unitInvestment: unitInvestment,
                 volume: volume,
                 end_product: end_product,
-                countryInput:countryInput,
-                countryInput1:countryInput1,
-                countryInput2:countryInput2,
+                countryInput: countryInput,
+                countryInput1: countryInput1,
+                countryInput2: countryInput2,
                 memberships: memberships,
                 labour: labour,
                 women: women,
                 permit: permitItems,
                 additional: additional,
                 sourcing: sourcingItems,
-                treatmentFacility:treatmentItems,
-                practiceMethods:practiceItems,
-                legalEnforcement:legalItems,
-                qualityStandards:qualityItems,
-                untreatedWater:untreatedItems,
+                treatmentFacility: treatmentItems,
+                practiceMethods: practiceItems,
+                legalEnforcement: legalItems,
+                qualityStandards: qualityItems,
+                untreatedWater: untreatedItems,
                 quantity: quantity,
                 cost: cost,
                 waterusage: waterusage,
@@ -1449,30 +1442,30 @@
                 avatar1: fileName1,
                 avatar2: fileName2,
                 avatar3: fileName3,
-                industrial:industrial,
-                industrial1:industrial1,
-                domestic1:domestic1,
-                domestic2:domestic2,
-                clusterlevel:clusterlevel,
-                stakeholders:stakeholders,
-                achievement:achievement,
-                financeaccess:financeaccess,
-                comments:comments,
-                industrial_sludge:industrial_sludge,
-                water_recovery:water_recovery,
-                others_display:others_display,
-                loss:loss,
+                industrial: industrial,
+                industrial1: industrial1,
+                domestic1: domestic1,
+                domestic2: domestic2,
+                clusterlevel: clusterlevel,
+                stakeholders: stakeholders,
+                achievement: achievement,
+                financeaccess: financeaccess,
+                comments: comments,
+                industrial_sludge: industrial_sludge,
+                water_recovery: water_recovery,
+                others_display: others_display,
+                loss: loss,
 
 
 
-                total_discharge:total_discharge,
-                firstnamedomestic:firstnamedomestic,
-                firstnamedomestic1:firstnamedomestic1,
-                firstnamedomestic2:firstnamedomestic2,
-                firstnameprocess:firstnameprocess,
-                firstnameprocess1:firstnameprocess1,
-                firstnameprocess2:firstnameprocess2,
-                waters:waters,
+                total_discharge: total_discharge,
+                // firstnamedomestic: firstnamedomestic,
+                // firstnamedomestic1: firstnamedomestic1,
+                // firstnamedomestic2: firstnamedomestic2,
+                // firstnameprocess: firstnameprocess,
+                // firstnameprocess1: firstnameprocess1,
+                // firstnameprocess2: firstnameprocess2,
+                waters: waters,
 
 
 
