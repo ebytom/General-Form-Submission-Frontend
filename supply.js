@@ -13,44 +13,47 @@ const m = document.getElementById('no15');
 
 
 
-a.addEventListener('click', () => {
-    const if_yes=document.getElementById('if-yes');
-    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic" class="input" type="text" placeholder=" " /></li></ul>';
+document.getElementById("process1").style.display = "none";
 
-})
+document.querySelectorAll('input[name="unit"]').forEach(function(radioButton) {
+    radioButton.addEventListener('change', function() {
+      var element = document.getElementById("process1");
+      if (this.value === "show") {
+        element.style.display = "block";
+      } else if (this.value === "hide") {
+        element.style.display = "none";
+      }
+    });
+  });
 
-b.addEventListener('click', () => {
-    const if_yes=document.getElementById('if-yes');
-    if_yes.innerHTML = ' ';
+  document.getElementById("process2").style.display = "none";
 
-})
+  document.querySelectorAll('input[name="unit1"]').forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        var element = document.getElementById("process2");
+        if (this.value === "show") {
+          element.style.display = "block";
+        } else if (this.value === "hide") {
+          element.style.display = "none";
+        }
+      });
+    });
+  
+    document.getElementById("process3").style.display = "none";
+
+  document.querySelectorAll('input[name="unit2"]').forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        var element = document.getElementById("process3");
+        if (this.value === "show") {
+          element.style.display = "block";
+        } else if (this.value === "hide") {
+          element.style.display = "none";
+        }
+      });
+    });
+  
 
 
-g.addEventListener('click', () => {
-    const if_yes=document.getElementById('if-yes2');
-    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess1" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic1" class="input" type="text" placeholder=" " /></li></ul>';
-
-})
-
-h.addEventListener('click', () => {
-    const if_yes=document.getElementById('if-yes2');
-    if_yes.innerHTML = ' ';
-
-})
-
-
-
-l.addEventListener('click', () => {
-    const if_yes=document.getElementById('if-yes3');
-    if_yes.innerHTML = '<ul><li>Water consumption by process : <input id="firstnameprocess2" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic2" class="input" type="text" placeholder=" " /></li></ul>';
-
-})
-
-m.addEventListener('click', () => {
-    const if_yes=document.getElementById('if-yes3');
-    if_yes.innerHTML = ' ';
-
-})
 
 
 form.addEventListener('submit', (e) => {
