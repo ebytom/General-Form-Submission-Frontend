@@ -69,7 +69,7 @@
 
                     <div>
                         <label for="country">6. Unit type</label>
-                        <select id="country" name="country">
+                        <select id="unitType" name="unitType">
                             <option value="null">Choose an option</option>
                             <option value="spinning">Spinning</option>
                             <option value="dyeing">Dyeing</option>
@@ -79,7 +79,7 @@
                             <option id="others" value="others">Others</option>
                         </select>
                     </div><br>
-                    <div id="others_display">
+                    <div>
                         <input placeholder="Details..." type="text" id="others_display" name="Others">
                     </div>
 
@@ -357,7 +357,12 @@
                             <label for="no1">No</label>
                         </p>
                         <div id="process1">
-                            <ul><li>Water consumption by process : <input id="firstnameprocess" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic" class="input" type="text" placeholder=" " /></li></ul>
+                            <ul>
+                                <li>Water consumption by process : <input id="firstnameprocess" class="input"
+                                        type="text" placeholder=" " /></li>
+                                <li>Water consumption by domestic : <input id="firstnamedomestic" class="input"
+                                        type="text" placeholder=" " /></li>
+                            </ul>
                         </div>
                         <!-- <p id="if-yes">  -->
                         </p>
@@ -399,14 +404,18 @@
                             <input id="cost2" class="input" type="text" placeholder=" " />
                         </p>
                         <p>20.2 Does your unit track its factory / office water consumption separately:
-                            <input type="radio" id="yes12" onclick="waterconsumption2('yes')" name="unit1"
-                                value="show">
+                            <input type="radio" id="yes12" onclick="waterconsumption2('yes')" name="unit1" value="show">
                             <label for="yes12">Yes</label>
                             <input type="radio" id="no12" onclick="waterconsumption2('no')" name="unit1" value="hide">
                             <label for="no12">No</label>
                         </p>
                         <div id="process2">
-                            <ul><li>Water consumption by process : <input id="firstnameprocess1" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic1" class="input" type="text" placeholder=" " /></li></ul>
+                            <ul>
+                                <li>Water consumption by process : <input id="firstnameprocess1" class="input"
+                                        type="text" placeholder=" " /></li>
+                                <li>Water consumption by domestic : <input id="firstnamedomestic1" class="input"
+                                        type="text" placeholder=" " /></li>
+                            </ul>
                         </div>
                         <!-- <p id="if-yes2"> -->
                         </p>
@@ -448,18 +457,18 @@
                             <input id="cost3" class="input" type="text" placeholder=" " />
                         </p>
                         <p>21.2. Does your unit track its factory / office water consumption separately:
-<<<<<<< HEAD
-                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit" value="yes15">
-=======
-                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit2"
-                                value="show">
->>>>>>> ca1a3583b6742aad50deed408c98ddb99b70f711
+                            <input type="radio" id="yes15" onclick="waterconsumption3('yes')" name="unit2" value="show">
                             <label for="yes15">Yes</label>
                             <input type="radio" id="no15" onclick="waterconsumption3('no')" name="unit2" value="hide">
                             <label for="no15">No</label>
                         </p>
                         <div id="process3">
-                            <ul><li>Water consumption by process : <input id="firstnameprocess2" class="input" type="text" placeholder=" " /></li><li>Water consumption by domestic : <input id="firstnamedomestic2" class="input" type="text" placeholder=" " /></li></ul>
+                            <ul>
+                                <li>Water consumption by process : <input id="firstnameprocess2" class="input"
+                                        type="text" placeholder=" " /></li>
+                                <li>Water consumption by domestic : <input id="firstnamedomestic2" class="input"
+                                        type="text" placeholder=" " /></li>
+                            </ul>
                         </div>
                         <!-- <p id="if-yes3"> -->
                         </p>
@@ -528,7 +537,11 @@
                     </div><br>
 
                     <div id="displayDischarge">
-                        <ul><li><label  for="total_discharge">22.1. If yes, total discharge volume per day (m³ ):</label><input type="text" id="total_discharge" name="total_discharge" placeholder="Total discharge m³"></li></ul>
+                        <ul>
+                            <li><label for="total_discharge">22.1. If yes, total discharge volume per day (m³
+                                    ):</label><input type="text" id="total_discharge" name="total_discharge"
+                                    placeholder="Total discharge m³"></li>
+                        </ul>
                     </div>
 
 
@@ -1224,7 +1237,7 @@
             const mail = document.getElementById("mail").value;
             const contact = document.getElementById('contact').value;
             const address = document.getElementById("address").value;
-            const country = document.getElementById("country").value;
+            const unitType = document.getElementById("unitType").value;
             const volume = document.getElementById("volume").value;
             const end_product = document.getElementById("end_product").value;
             const memberships = document.getElementById('memberships').value;
@@ -1434,7 +1447,7 @@
                 temp: temp,
                 contact: contact,
                 address: address,
-                country: country,
+                unitType: unitType,
                 unitInvestment: unitInvestment,
                 volume: volume,
                 end_product: end_product,
