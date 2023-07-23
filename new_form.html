@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro Gurmukhi:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="supply.css">
+    <link rel="stylesheet" href="discharge.css">
+    <link rel="stylesheet" href="risk&challenges.css">
+    <link rel="stylesheet" href="profile.css">
+    <title>New_Form</title>
+
+</head>
+
+<body>
+    <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
+        style="height: 70px; width: 100vw;">
+        <div>
+            <b class="fs-2" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
+        </div>
+        <div class="d-flex">
+            <a class="p-0" href="index.html">
+                <div class="btn rounded-3 text-white"><b>Form</b></div>
+            </a>
+            <a href="dashboard.html">
+                <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
+            </a>
+        </div>
+    </div>
+    <div id="form">
+        <div id="sect_1">
+            <h1 class="fs-1"><b>Diagnostic Study on Clean Technology
+                    Implementation in Tiruppur Textile
+                    Cluster
+                </b></h1>
+            <div class="container">
+                <fieldset>
+                    <div>
+                        <label for="facility_pic_ent">Facility Photo at Entrance</label><br>
+                        <a class=" btn upload-btn"> <label for="image_upload"  type="file" >Upload Image  </label></a>
+                        <p class="file-name" id="file_name"></p>
+                    
+                    </div><br>
+                    <div>
+                        <label for="facility_name">Facility Name</label><br>
+                        <input type="text" id="facility_name" name="facility_name">
+                    </div><br>
+                    <div>
+                        <label for="facility_pic">Facility Photo</label><br>
+                        <input type="file" id="fileInput" name="uploadedFile" accept=".pdf, .doc, .docx, .png">
+                    </div><br><br>
+                    <div>
+                        <label for="facility_location">Facility location</label><br>
+                        <input type="text" id="facility_location" name="facility_location">
+                    </div><br>
+                    <div>
+                        <label for="dateInput">Assesment Conducted on:</label><br>
+                        <input type="date" id="dateInput" name="selectedDate">
+                    </div><br><br>
+                    <div>
+                        <label>Facility Operation:</label><br>
+                        <input type="checkbox" id="spinning" name="Facility Operation" value="spinning">
+                        <label for="spinning">Spinning</label><br>
+                        <input type="checkbox" id="Knitting" name="Facility Operation" value="Knitting">
+                        <label for="Knitting">Knitting</label><br>
+                        <input type="checkbox" id="Processing" name="Facility Operation" value="Processing">
+                        <label for="Processing">Processing</label><br>
+                        <input type="checkbox" id="Garmenting" name="Facility Operation" value="Garmenting">
+                        <label for="Garmenting">Garmenting</label><br>
+                    </div><br><br>
+                    <div>
+                        <label>Facility category</label><br>
+                        <input type="radio" id="Micro" name="Facility category" value="Micro">
+                        <label for="Micro">Micro</label>
+                        <br>
+                        <input type="radio" id="Small" name="Facility category" value="Small">
+                        <label for="Small">Small</label>
+                        <br>
+                        <input type="radio" id="Medium" name="Facility category" value="Medium">
+                        <label for="Medium">Medium</label>
+                        <br>
+                        <input type="radio" id="Large" name="Facility category" value="large">
+                        <label for="large">large</label>
+                    </div><br><br>
+                    <div>
+                        <label for="product_mfd">Products Manufactured</label><br>
+                        <input type="text" id="product_mfd" name="product_mfd">
+                    </div><br><br>
+                    <div>
+                        <label for="prod_capacity">Production Capacity:</label><br>
+                        <input type="text" id="prod_capacity" name="prod_capacity">
+                    </div><br><br>
+                    <div>
+                        <label>No of Shifts</label>
+                        <br>
+                        <input type="radio" id="Single_Shift" name="No of Shifts" value="Single Shift">
+                        <label for="Single_Shift">Single Shift</label>
+                        <br>
+                        <input type="radio" id="Two_Shift" name="No of Shifts" value="Two Shift">
+                        <label for="Two_Shift">Two Shift</label>
+                        <br>
+                        <input type="radio" id="Three_Shift" name="No of Shifts" value="Three Shift">
+                        <label for="Three_Shift">Three Shift</label>
+                    </div><br><br>
+                    <div>
+                        <label for="name">Hrs/Shift</label>
+                        <input type="text" id="hr_shift" name="hr-shift">
+                    </div><br><br>
+                    <div>
+                        <label for="wrk_frc">Total Number of Workforce Employed</label>
+                        <input type="text" id="wrk_frc" name="wrk-frc">
+                    </div><br><br>
+                    <div>
+                        <label for="name">Certification Obtained</label>
+                        <input type="text" id="name" name="name">
+                    </div><br><br>
+                    <div>
+                        <label for="name">Certifications Planned</label>
+                        <input type="text" id="name" name="name">
+                    </div><br><br>
+                    <div>
+                        <label for="name">Awards recieved</label>
+                        <input type="text" id="name" name="name">
+                    </div><br><br>
+                    <div>
+                        <label>Electrical Energy Source</label><br>
+
+                        <input type="checkbox" id="Grid_Electricity_HT" name="Electrical Energy Source"
+                            value="Grid Electricity HT">
+                        <label for="Grid_Electricity_LT">Grid Electricity - HT</label><br>
+                        <input type="checkbox" id="Grid_Electricity_LT" name="Electrical Energy Source"
+                            value="Grid Electricity - LT">
+                        <label for="Grid_Electricity_LT">Grid Electricity - LT</label><br>
+                    </div><br><br>
+                    <div>
+                        <label for="baseline_data_period">Baseline Data Period (Mention the FY Period as
+                            YY-YY)</label><br>
+                        <input type="text" id="baseline_data_period" name="baseline_data_period">
+                    </div><br><br>
+                    <div>
+                        <label for="total_elec_consumption">Annual Electricity Consumption
+                            (Total)(kWh/Annum)</label><br>
+                        <input type="text" id="total_elec_consumption" name="total_elec_consumption">
+                    </div><br>
+                    <button onclick="sect2()" onclick="validateProfile()" name="next1" id="next"
+                        class="btn btn-primary">Next &raquo;</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="sect_2" >
+            <h1 class="fs-1"><b># Section - 2</b></h1>
+            <div class="container">
+                <div>
+                    <fieldset></fieldset>
+                        <div>
+                            <label for="annual_elec_consumption">Annual Electricity Consumption
+                                (Grid)(kWh/Annum)</label>
+                            <input type="text" id="annual_elec_consumption" name="annual_elec_consumption"><br><br>
+                        </div>
+                        <div>
+                            <label for="wind_elec_generation">Annual Electricity generation (Renewable
+                                Energy-Wind)(kWh/Annum)</label>
+                            <input type="text" id="wind_elec_generation" name="wind_elec_generation"><br><br>
+                        </div>
+                        <div>
+                            <label for="solar_elec_generation">Annual Electricity generation (Renewable
+                                Energy-Solar)(kWh/Annum)</label>
+                            <input type="text" id="solar_elec_generation" name="solar_elec_generation"><br><br>
+                        </div>
+                        <div>
+                            <label for="annual_energy_cost">Annual Energy Cost (INR/Annum)</label>
+                            <input type="text" id="annual_energy_cost" name="annual_energy_cost"><br><br>
+                        </div>
+                        <div>
+                            <label for="energy_cost">Energy cost (INR/kWh)</label>
+                            <input type="text" id="energy_cost" name="energy_cost"><br><br>
+                        </div>
+                        <div>
+                            <label for="genset_diesel_consumption">Genset Diesel Consumption (Kl/Annum)</label>
+                            <input type="text" id="genset_diesel_consumption" name="genset_diesel_consumption"><br><br>
+                        </div>
+                        <div>
+                            <label for="boiler_diesel_consumption">Boiler Diesel Consumption (Kl/Annum)</label>
+                            <input type="text" id="boiler_diesel_consumption" name="boiler_diesel_consumption"><br><br>
+                        </div>
+                        <div>
+                            <label for="annual_diesel_cost">Annual Diesel Cost (INR/Annum)</label>
+                            <input type="text" id="annual_diesel_cost" name="annual_diesel_cost"><br><br>
+                        </div>
+                        <div>
+                            <label for="petrol_consumption_logistics">Petrol Consumption - Logistics (Kl/Annum)</label>
+                            <input type="text" id="petrol_consumption_logistics"
+                                name="petrol_consumption_logistics"><br><br>
+                        </div>
+                        <div>
+                            <label for="petrol_cost_logistics">Petrol Cost- Logistics (INR/Annum)</label>
+                            <input type="text" id="petrol_cost_logistics" name="petrol_cost_logistics"><br><br>
+                        </div>
+                        <div>
+                            <label for="boiler_fuel">Boiler Fuel Used</label><br>
+                            <input type="checkbox" id="coal" name="coal" value="Coal">
+                            <label for="coal">Coal</label><br>
+                            <input type="checkbox" id="firewood" name="firewood" value="Firewood">
+                            <label for="firewood">Firewood</label><br>
+                            <input type="checkbox" id="biomass" name="biomass" value="Biomass">
+                            <label for="biomass">Biomass</label><br>
+                            <input type="checkbox" id="other" name="other" value="other">
+                            <label for="other">Other : </label><input type="text" id="other" name="other"><br>
+                        </div><br>
+                        <div>
+                            <label for="boiler_fuel_quantity">Boiler Fuel Used in Quantity (Ton/Annum)</label>
+                            <input type="text" id="boiler_fuel_quantity" name="boiler_fuel_quantity"><br><br>
+                        </div>
+                        <div>
+                            <label for="boiler_fuel_cost">Boiler Fuel Cost (INR/Kg)</label>
+                            <input type="text" id="boiler_fuel_cost" name="boiler_fuel_cost"><br><br>
+                        </div>
+                        <div>
+                            <label for="annual_production_quantity">Annual Production Qty</label>
+                            <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br>
+                        </div><br>
+                        <div>
+                            <label for="source_water">Source Water</label><br>
+                            <input type="checkbox" id="borewell" name="borewell" value="Borewell">
+                            <label for="borewell">Borewell</label><br>
+                            <input type="checkbox" id="municipal_supply" name="municipal_supply"
+                                value="Municipal Supply">
+                            <label for="municipal_supply">Municipal Supply</label><br>
+                            <input type="checkbox" id="ntadcl" name="ntadcl" value="NTADCL">
+                            <label for="ntadcl">NTADCL</label><br>
+                            <input type="checkbox" id="sipcot" name="sipcot" value="Industrial Estate Supply (SIPCOT)">
+                            <label for="sipcot">Industrial Estate Supply (SIPCOT)</label><br>
+                            <input type="checkbox" id="tanker_lorry_supply" name="tanker_lorry_supply"
+                                value="Tanker Lorry Supply">
+                            <label for="tanker_lorry_supply">Tanker Lorry Supply</label><br>
+                        </div><br>
+                        <div>
+                            <label for="qty_fresh_water">Quantity of Fresh Water (Kl/Annum)</label>
+                            <input type="text" id="qty_fresh_water" name="qty_fresh_water">
+                        </div><br>
+                        <div>
+                            <label for="total_qty_water">Total Quantity of Water (KL/Annum)</label>
+                            <input type="text" id="total_qty_water" name="total_qty_water"><br>
+                        </div>
+                        <div>
+                            <label for="cost_fresh_water">Cost of Fresh Water (INR/KL)</label>
+                            <input type="text" id="cost_fresh_water" name="cost_fresh_water"><br>
+                        </div><br>
+                        <div>
+                            <label for="cost_recovered_water">Cost of Recovered Water (INR/KL)</label>
+                            <input type="text" id="cost_recovered_water" name="cost_recovered_water"><br>
+                        </div><br>
+                        <div>
+                            <label for="ZLD">ZLD Applicable</label><br>
+                            <input type="radio" id="Yes" name="ZLD" value="Yes">
+                            <label for="Yes">Yes</label><br>
+                            <input type="radio" id="No" name="ZLD" value="No">
+                            <label for="No">No</label><br>
+                        </div><br>
+                        <div>
+                            <label for="effluent_treatment">Effluent Treatment Plant Category</label><br>
+                            <input type="radio" id="CETP" name="effluent_treatment" value="CETP">
+                            <label for="CETP">CETP</label><br>
+                            <input type="radio" id="IETP" name="effluent_treatment" value="IETP">
+                            <label for="IETP">IETP</label><br>
+                            <input type="radio" id="no_zld" name="effluent_treatment" value="no-zld">
+                            <label for="no_zld">No ZLD Plant</label><br>
+                        </div><br>
+                        <div>
+                            <label for="water_quality">Implementation of Water Quality Watch Center</label><br>
+                            <input type="radio" id="yes1" name="effluent_treatment" value="yes1">
+                            <label for="yes1">Yes</label><br>
+                            <input type="radio" id="no1" name="effluent_treatment" value="no1">
+                            <label for="no1">No</label><br>
+                            <input type="radio" id="na1" name="effluent_treatment" value="na1">
+                            <label for="na1">Not Applicable</label><br>
+                        </div><br>
+                        <div>
+                            <label for="domestic_water_consumption">Water Consumed for Domestic Use (KL/Day)</label>
+                            <input type="text" id="domestic_water_consumption" name="domestic_water_consumption"><br>
+                        </div><br>
+                        <div>
+                            <label for="garden_area">Garden Area in Sq.Meter</label>
+                            <input type="text" id="garden_area" name="garden_area"><br>
+                        </div><br>
+                        <div>
+                            <label for="garden_use">Water Consumed for Garden Use (KL/Day)</label>
+                            <input type="text" id="garden_use" name="garden_use"><br><br>
+                        </div><br>
+                        <button onclick="sect1()" name="prev3" id="prev" class="btn btn-primary">&laquo;
+                            Previous</button>
+                        <button onclick="sect3()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+                </div><br>
+                </fieldset>
+            </div>
+        </div>
+        <br>
+        <div id="sect_3">
+            <h1 class="fs-1"><b># Section - 3</b></h1>
+            <div class="container">
+                <fieldset>
+                    <div>
+                        <label for="Garden_&_Domestic_Water_Use_Observations">Garden & Domestic Water Use Observations
+                        </label><br>
+                        <input type="text" id="Garden_&_Domestic_Water_Use_Observations"
+                            name="Garden_&_Domestic_Water_Use_Observations"><br><br>
+                    </div>
+                    <div>
+                        <label for="Energy_Source_Forms_of_Fuels">Energy Source Forms of Fuels</label><br>
+                        <input type="checkbox" id="electricity" name="electricity" value="Electricity">
+                        <label for="electricity">Electricity</label><br>
+                        <input type="checkbox" id="diesel" name="diesel" value="Diesel">
+                        <label for="diesel">Diesel</label><br>
+                        <input type="checkbox" id="firewood" name="firewood" value="Firewood">
+                        <label for="firewood">Firewood</label><br>
+                        <input type="checkbox" id="coal" name="coal" value="Coal">
+                        <label for="coal">Coal</label><br>
+                        <input type="checkbox" id="gas" name="gas" value="Gas">
+                        <label for="gas">Gas</label><br>
+                        <input type="checkbox" id="other" name="other" value="Other">
+                        <label for="other">Other : </label><input type="text" id="other" name="other"><br><br>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Power_House_Photo">Assessment Observation at the
+                                Power House Photo </label><br>
+                            <input type="file" id="Assessment_Observation_at_the_Power_House_Photo"
+                                name="Assessment_Observation_at_the_Power_House_Photo"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Power_House">Assessment Observation at the Power
+                                House
+                            </label><br>
+                            <input type="text" id="Assessment_Observation_at_the_Power_House"
+                                name="Assessment_Observation_at_the_Power_House"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Compressor_Room_Photo">Assessment Observation at
+                                the Compressor Room Photo</label><br>
+                            <input type="file" id="Assessment_Observation_at_the_Compressor_Room_Photo"
+                                name="Assessment_Observation_at_the_Compressor_Room_Photo"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Compressor_Room">Assessment Observation at the
+                                Compressor Room
+                            </label><br>
+                            <input type="text" id="Assessment_Observation_at_the_Compressor_Room"
+                                name="Assessment_Observation_at_the_Compressor_Room"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Genset_Room_Photo">Assessment Observation at the
+                                Genset Room Photo </label><br>
+                            <input type="file" id="Assessment_Observation_at_the_Genset_Room_Photo"
+                                name="Assessment_Observation_at_the_Genset_Room_Photo"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Genset_Room">Assessment Observation at the Genset
+                                Room
+                            </label><br>
+                            <input type="text" id="Assessment_Observation_at_the_Genset_Room"
+                                name="Assessment_Observation_at_the_Genset_Room"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Boiler_Area_Photo">Assessment Observation at the
+                                Boiler Area Photo </label><br>
+                            <input type="file" id="Assessment_Observation_at_the_Boiler_Area_Photo"
+                                name="Assessment_Observation_at_the_Boiler_Area_Photo"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Boiler_Area">Assessment Observation at the Boiler
+                                Area
+                            </label><br>
+                            <input type="text" id="Assessment_Observation_at_the_Boiler_Area"
+                                name="Assessment_Observation_at_the_Boiler_Area"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Thermopac_Photo">Assessment Observation at the
+                                Thermopac Photo </label><br>
+                            <input type="file" id="Assessment_Observation_at_the_Thermopac_Photo"
+                                name="Assessment_Observation_at_the_Thermopac_Photo"><br><br>
+                        </div>
+                        <div>
+                            <label for="Assessment_Observation_at_the_Thermopac">Assessment Observation at the Thermopac
+                            </label><br>
+                            <input type="text" id="Assessment_Observation_at_the_Thermopac"
+                                name="Assessment_Observation_at_the_Thermopac"><br><br>
+                        </div>
+                        <div>
+                            <label
+                                for="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo">Assessment
+                                Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
+                            <input type="file"
+                                id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"
+                                name="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"><br><br>
+                        </div>
+                        <div>
+                            <label
+                                for="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)">Assessment
+                                Observation at the Other Facilities (Chiller, Cooling Tower Etc)
+                            </label><br>
+                            <input type="text"
+                                id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)"
+                                name="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)"><br><br>
+                        </div>
+                        <div>
+                            <label for="Scope_for_Energy_Savings_in_Compressed_Air_Systems">Scope for Energy Savings in
+                                Compressed Air Systems</label><br>
+                            <input type="checkbox" id="compressed_Air_Leak_Fixing_Opportunities"
+                                name="compressed_Air_Leak_Fixing_Opportunities"
+                                value="Compressed Air Leak Fixing Opportunities">
+                            <label for="compressed_Air_Leak_Fixing_Opportunities">Compressed Air Leak Fixing
+                                Opportunities</label><br>
+                            <input type="checkbox"
+                                id="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)"
+                                name="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)"
+                                value="Scope for Drive InstallationScope for Pressure Optimization (Generation)">
+                            <label for="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)">Scope
+                                for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
+                            <input type="checkbox" id="scope_for_Pressure_Optimization_(Utilization)"
+                                name="scope_for_Pressure_Optimization_(Utilization)"
+                                value="Scope for Pressure Optimization (Utilization)">
+                            <label for="scope_for_Pressure_Optimization_(Utilization)">Scope for Pressure Optimization
+                                (Utilization)</label><br>
+                            <input type="checkbox" id="scope_for_Cleaning_Air_Use_Optimization"
+                                name="scope_for_Cleaning_Air_Use_Optimization"
+                                value="Scope for Cleaning Air Use Optimization">
+                            <label for="scope_for_Cleaning_Air_Use_Optimization">Scope for Cleaning Air Use
+                                Optimization</label><br>
+                            <input type="checkbox" id="other" name="other" value="other">
+                            <label for="other">Other : </label><input type="text" id="other" name="other"><br><br>
+                        </div>
+                        <div>
+                            <label for="Compressed_Air_Systems_Savings_in_kWh/Annum">Compressed Air Systems Savings in
+                                kWh/Annum
+                            </label><br>
+                            <input type="text" id="Compressed_Air_Systems_Savings_in_kWh/Annum"
+                                name="Compressed_Air_Systems_Savings_in_kWh/Annum"><br><br>
+                        </div>
+                        <div>
+                            <label for="Lighting_Systems_-_Observation">Lighting Systems - Observation
+                            </label><br>
+                            <input type="text" id="Lighting_Systems_-_Observation"
+                                name="Lighting_Systems_-_Observation"><br><br>
+                        </div>
+                        <div>
+                            <label for="Lighting_Systems_-_Savings_Opportunities_in_kWh/Annum">Lighting Systems -
+                                Savings Opportunities in kWh/Annum
+                            </label><br>
+                            <input type="text" id="Lighting_Systems_-_Savings_Opportunities_in_kWh/Annum"
+                                name="Lighting_Systems_-_Savings_Opportunities_in_kWh/Annum"><br><br>
+                        </div>
+                        <div>
+                            <label for="Lighting_Systems_-_Estimated_Investments_in_INR">Lighting Systems - Estimated
+                                Investments in INR
+                            </label><br>
+                            <input type="text" id="Lighting_Systems_-_Estimated_Investments_in_INR"
+                                name="Lighting_Systems_-_Estimated_Investments_in_INR"><br><br>
+                        </div>
+                        <div>
+                            <label for="Lighting_Systems_-_Estimated_Savings_in_INR">Lighting Systems - Estimated
+                                Savings in INR
+                            </label><br>
+                            <input type="text" id="Lighting_Systems_-_Estimated_Savings_in_INR"
+                                name="Lighting_Systems_-_Estimated_Savings_in_INR"><br><br>
+                        </div>
+                        <div>
+                            <label for="lighting_systems_photo">Lighting Systems - Photo/label</label> <br>
+                            <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
+                        </div>
+                        <div>
+                            <label for="electrical_motors_observations">Electrical Motors - Observations
+                            </label><br>
+                            <input type="text" id="electrical_motors_observations"
+                                name="electrical_motors_observations"><br><br>
+                        </div>
+                        <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                        <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div id="sect_4">
+        <h1 class="fs-1"><b># Section - 4</b></h1>
+        <div class="container">
+            <fieldset>
+                <div>
+                    <label for="total_elec_motors">Electrical Motors - Total Numbers
+                    </label><br>
+                    <input type="text" id="total_elec_motors"
+                        name="total_elec_motors"><br><br>
+                </div>
+                <div>
+                    <label for="wind-elec-generation">Electrical Motors - Energy Saving Opportunities</label><br>
+                    <input type="checkbox" id="rewound_with_ie3"
+                        name="Replacement_of_Rewound_Motors_with_IE3_Motors"
+                        value="CoalReplacement of Rewound Motors
+                        with IE3 Motors">
+                    <label for="CoalReplacement of Rewound Motors with IE3 Motors">Coal Replacement of Rewound Motors
+                        with IE3 Motors</label><br>
+                    <input type="checkbox" id="Upgradation_of_Conventional_Motors_with_IE3_Motors"
+                        name="Upgradation_of_Conventional_Motors_with_IE3_Motors"
+                        value="Upgradation_of_Conventional_Motors_with_IE3_Motors">
+                    <label for="Upgradation of Conventional Motors with IE3 Motors">Upgradation of Conventional Motors
+                        with IE3 Motors</label><br>
+                </div>
+                <div>
+                    <label for="Energy_Saving_Opportunities_in_Electrical_Motors">Energy Saving Opportunities in
+                        Electrical Motors (kWh/Annum)</label><br>
+                    <input type="text" id="Energy_Saving_Opportunities_in_Electrical_Motors"
+                        name="Energy_Saving_Opportunities_in_Electrical_Motors"><br><br>
+                </div>
+                <div>
+                    <label for="Estimated_Savings-_Motor_Upgradation">Estimated Savings- Motor Upgradation
+                        (INR/Annum)</label><br>
+                    <input type="text" id="Estimated_Savings-_Motor_Upgradation"
+                        name="Estimated_Savings-_Motor_Upgradation"><br><br>
+                </div>
+                <div>
+                    <label for="Waste_Heat_Recovery_Observations">Waste Heat Recovery Observations</label><br>
+                    <input type="text" id="Waste_Heat_Recovery_Observations"
+                        name="Waste_Heat_Recovery_Observations"><br><br>
+                </div>
+                <div>
+                    <label for="Scope_for_Waste_Heat_Recovery">Scope for Waste Heat Recovery</label><br>
+                    <input type="checkbox" id="Flue_Gas_Waste_Heat_Recovery" name="Flue_Gas_Waste_Heat_Recovery"
+                        value="Flue_Gas_Waste_Heat_Recovery">
+                    <label for="Flue Gas Waste Heat Recovery">Flue Gas Waste Heat Recovery</label><br>
+                    <input type="checkbox" id="Cooling_Return_Heat_Recovery" name="Cooling_Return_Heat_Recovery"
+                        value="Cooling_Return_Heat_Recovery">
+                    <label for="Cooling Return Heat Recovery">Cooling Return Heat Recovery</label><br>
+                    <input type="checkbox" id="Effluent_Heat_Recovery" name="Effluent_Heat_Recovery"
+                        value="Effluent_Heat_Recovery">
+                    <label for="Effluent Heat Recovery">Effluent Heat Recovery</label><br>
+                    <input type="checkbox" id="Other_WHR_Systems" name="Other_WHR_Systemsy" value="Other_WHR_Systems">
+                    <label for="Other WHR Systems">Other WHR Systems</label><br>
+                </div><br>
+                <div>
+                    <label for="Waste_Heat_Recovery_Fuel_Savings">Waste Heat Recovery Fuel Savings (Tons/Annum)
+                    </label><br>
+                    <input type="text" id="Waste_Heat_Recovery_Fuel_Savings"
+                        name="Waste_Heat_Recovery_Fuel_Savings"><br><br>
+                </div>
+                <div>
+                    <label for="Assessment_Observation_at_Raw_Material_Inward_Photo">Assessment Observation at Raw
+                        Material Inward Photo</label><br>
+                    <label for="image_upload01" class="upload-btn">Upload Image</label>
+                    <input type="file" id="image_upload01" accept="image/*">
+                    <p class="file-name" id="file_name01"></p>
+                </div>
+                <div>
+                    <label for="Assessment_Observation_at_Raw_Material_Inward">Assessment Observation at Raw Material
+                        Inward</label><br>
+                    <input type="text" id="Assessment_Observation_at_Raw_Material_Inward"
+                        name="Assessment_Observation_at_Raw_Material_Inward"><br><br>
+                </div>
+                <div>
+                    <label for="Assessment_Observation_at_Material_Handling_Photo">Assessment Observation at Material
+                        Handling Photo</label><br>
+                    <label for="image_upload02" class="upload-btn">Upload Image</label>
+                    <input type="file" id="image_upload02" accept="image/*">
+                    <p class="file-name" id="file_name02"></p>
+                </div>
+                <div>
+                    <label for="Assessment_Observation_at_Material_Handling">Assessment Observation at Material
+                        Handling</label><br>
+                    <input type="text" id="Assessment_Observation_at_Material_Handling"
+                        name="Assessment_Observation_at_Material_Handling"><br><br>
+                </div><br>
+                <div>
+                    <label for="Production_Machine_Utilization_Data_Collection_Aspects">Production Machine Utilization &
+                        Data Collection Aspects</label><br>
+                    <input type="text" id="Production_Machine_Utilization_Data_Collection_Aspects"
+                        name="Production_Machine_Utilization_Data_Collection_Aspects"><br><br>
+                </div>
+                <div>
+                    <label for="Production_Machine_Utilization_Data_Collection_Aspects_Photo">Production Machine
+                        Utilization & Data Collection Aspects Photo</label><br>
+                    <label for="image_upload03" class="upload-btn">Upload Image</label>
+                    <input type="file" id="image_upload03" accept="image/*">
+                    <p class="file-name" id="file_name03"></p>
+                </div>
+                <div>
+                    <label for="Production_Layout_Observations">Production Layout Observations</label><br>
+                    <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br><br>
+                </div><br>
+                <div>
+                    <label for="Production_Layout_Observations_Photo">Production Layout Observations Photo</label><br>
+                    <label for="image_upload04" class="upload-btn">Upload Image</label>
+                    <input type="file" id="image_upload04" accept="image/*">
+                    <p class="file-name" id="file_name04"></p>
+                </div>
+                <div>
+                    <label
+                        for="Installation_status_of_Measuring_Monitoring_Systems_for_Energy_Water_Fuel_Waste">Installation
+                        status of Measuring & Monitoring Systems for Energy, Water, Fuel &
+                        Waste Etc</label><br>
+                    <input type="text" id="qty_fresh_water" name="qty_fresh_water">
+                </div><br>
+                <div>
+                    <label for="Management_Committment_on_Energy_Resource_Efficiency">Management Committment on Energy &
+                        Resource Efficiency (Availability of Policy
+                        & Systems)</label><br>
+                    <input type="text" id="total_qty_water" name="total_qty_water"><br>
+                </div><br>
+                <div>
+                    <label for="Technology_Upgradation_Opportunities_in_the_Facility">Technology Upgradation
+                        Opportunities in the Facility</label><br>
+                    <input type="text" id="cost_fresh_water" name="cost_fresh_water"><br>
+                </div><br>
+                <div>
+                    <label for="Material_Conservation_Improvement_Opportunities_in_Packing">Material Conservation &
+                        Improvement Opportunities in Packing</label><br>
+                    <input type="text" id="cost_recovered_water" name="cost_recovered_water"><br>
+                </div><br>
+                <div>
+                    <label for="Water_Recovery_ReUse_Opportunities">Water Recovery & ReUse Opportunities</label><br>
+                    <input type="text" id="Water_Recovery_ReUse_Opportunities"
+                        name="Water_Recovery_ReUse_Opportunities"><br>
+                </div><br>
+                <div>
+                    <label for="Scope_for_Renewable_Energy_Investment_Opportunities">Scope for Renewable Energy
+                        Investment Opportunities</label><br>
+                    <input type="text" id="Scope_for_Renewable_Energy_Investment_Opportunities"
+                        name="Scope_for_Renewable_Energy_Investment_Opportunities"><br>
+                </div><br>
+                <div>
+                    <label for="Details_of_Renewable_Energy_Projects">Details of Renewable Energy Projects</label><br>
+                    <input type="text" id="Details_of_Renewable_Energy_Projects"
+                        name="Details_of_Renewable_Energy_Projects"><br>
+                </div><br>
+                <div>
+                    <label for="Details_of_Renewable_Energy_Projects_Photo">Details of Renewable Energy Projects
+                        Photo</label><br>
+                    <label for="image_upload05" class="upload-btn">Upload Image</label>
+                    <input type="file" id="image_upload05" accept="image/*">
+                    <p class="file-name" id="file_name05"></p>
+                </div>
+                <div>
+                    <label for="Garden_Area_in_Sq.Meter">Garden Area in Sq.Meter</label><br>
+                    <input type="text" id="garden-area" name="Garden_Area_in_Sq.Meter"><br>
+                </div><br>
+                <div>
+                    <label for="Annual_Rainfall_in_Meters">Annual Rainfall in Meters</label><br>
+                    <input type="text" id="Annual_Rainfall_in_Meters" name="Annual_Rainfall_in_Meters"><br><br>
+                </div><br>
+                <div>
+                    <label for="Rain_Water_Harvesting_Scope">Rain Water Harvesting Scope</label><br>
+                    <input type="checkbox" id="Rain_Water_Harvesting" name="Rain_Water_Harvesting"
+                        value="Rain_Water_Harvesting">
+                    <label for="Rain Water Harvesting">Rain Water Harvesting</label><br>
+                    <input type="checkbox" id="Rain_Water_Charging" name="Rain_Water_Charging"
+                        value="Rain_Water_Charging">
+                    <label for="Rain Water Charging">Rain Water Charging</label><br>
+                    <input type="checkbox" id="No_Rain_Water_Harvesting_Structures"
+                        name="No_Rain_Water_Harvesting_Structures" value="No_Rain_Water_Harvesting_Structures">
+                    <label for="No Rain Water Harvesting Structures">No Rain Water Harvesting Structures</label><br>
+                </div><br>
+                <div>
+                    <label for="Rain_Water_Harvesting_Observation">Rain Water Harvesting Observation</label><br>
+                    <input type="text" id="Rain_Water_Harvesting_Observation"
+                        name="Rain_Water_Harvesting_Observation"><br><br>
+                </div><br>
+                <div>
+                    <label for="Process_Water_Saving_Opportunties">Process Water Saving Opportunties</label><br>
+                    <input type="text" id="Process_Water_Saving_Opportunties" name="Annual_Rainfall_in_Meters"><br><br>
+                </div><br>
+                <button onclick="sect3()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                <button onclick="sect5()" name="next4" id="next" class="btn btn-primary">Next &raquo;</button>
+        </div>
+        </fieldset>
+    </div>
+    </div>
+    </div>
+    <div id="sect_5">
+        <h1 class="fs-1"><b># Section - 5</b></h1>
+        <div class="container">
+            <fieldset>
+                <div>
+                    <label for="obs_on_safety">General Observations on Safety:</label><br>
+                    <input type="text" id="obs_on_safety" name="obs_on_safety"><br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_img">General Observations on Safety (Critical) Photo:</label><br>
+                    <input type="file" id="obs_on_safety_img" name="obs_on_safety_img"><br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_crit">General Observations on Safety (Critical):</label><br>
+                    <input type="text" id="obs_on_safety_crit" name="obs_on_safety_crit"><br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_prod_photo">General Observations on Safety (Production) Photo:</label>
+                    <input type="file" id="obs_on_safety_prod_photo" name="obs_on_safety_prod_photo">
+                </div><br><br>
+                <div>
+                    <label for="obs_on_safety_prod">General Observations on Safety (Production):</label><br>
+                    <input type="text" id="obs_on_safety_prod" name="obs_on_safety_prod">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_elec_photo">General Observations on Safety (Electrical)
+                        Photo:</label><br>
+                    <input type="file" id="obs_on_safety_elec_photo" name="obs_on_safety_elec_photo">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_elec">General Observations on Safety (Electrical):</label><br>
+                    <input type="text" id="obs_on_safety_elec" name="obs_on_safety_elec">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_chem_photo">General Observations on Safety (Chemical Handling)
+                        Photo:</label><br>
+                    <input type="file" id="obs_on_safety_chem_photo" name="obs_on_safety_chem_photo">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_chem">General Observations on Safety (Chemical Handling):</label><br>
+                    <input type="text" id="obs_on_safety_chem" name="obs_on_safety_chem">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_fire_photo">General Observations on Safety (Fire Hazards)
+                        Photo:</label><br>
+                    <input type="file" id="obs_on_safety_fire_photo" name="obs_on_safety_fire_photo">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_safety_fire">General Observations on Safety (Fire Hazards):</label><br>
+                    <input type="text" id="obs_on_safety_fire" name="obs_on_safety_fire">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_elec_earth">General Observations on Electrical and Earthing
+                        Systems:</label><br>
+                    <input type="text" id="obs_on_elec_earth" name="obs_on_elec_earth">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="obs_on_elec_earth_photo">General Observations on Electrical and Earthing Systems
+                        Photo:</label><br>
+                    <input type="file" id="obs_on_elec_earth_photo" name="obs_on_elec_earth_photo">
+                    <br><br>
+                </div>
+                <div>
+                    <label for="overall_obs_on_safety_photo">Overall Observations & Remarks on Safety
+                        Photo:</label><br>
+                    <input type="file" id="overall_obs_on_safety_photo" name="overall_obs_on_safety_photo">
+                    <br><br>
+                </div><br>
+                <div>
+                    <label for="specific_energy">Specific Energy (kWh/Unit of Production):</label><br>
+                    <input type="text" id="specific_energy" name="specific_energy"><br><br>
+                </div>
+                <div>
+                    <label for="specific_water">Specific Water (Litres/Unit of Production):</label><br>
+                    <input type="text" id="specific_water" name="specific_water"><br><br>
+                </div>
+                <div>
+                    <label for="specific_fuel">Specific Water (kg/Unit of Production):</label><br>
+                    <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
+                </div>
+                <div>
+                    <label for="specific_fuel_cost">Specific Fuel Cost (Rs/Unit of Production):</label><br>
+                    <input type="text" id="specific_fuel_cost" name="specific_fuel_cost"><br><br>
+                </div>
+
+                <div>
+                    <label for="specific_water_cost">Specific Water (Rs/Unit of Production):</label><br>
+                    <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
+                </div>
+                <button onclick="sect4()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                <button type="button" class="btn btn-primary splbutton"
+                    onclick="this.classList.toggle('splbutton--loading'); submit()" id="next">
+                    <span class="splbutton__text">Submit</span>
+                </button>
+        </div>
+    </div>
+    </fieldset>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="mt-4" style="text-align: center;" height="100vh" width="100vw" id="success">
+        <div class="successDiv d-flex align-items-center">
+            <img src="./img/tick.png" height="70px" width="80px" />
+            <h3><b>Form Submitted Successfully!</b></h3>
+        </div>
+        <div onclick="reloadPage()" class="btn btn-light mt-3">
+            Done
+        </div>
+    </div>
+    <style>
+        #sect_1 {
+            display: block
+        }
+
+        #sect_2 {
+            display: none
+        }
+
+        #sect_3 {
+            display: none
+        }
+
+        #sect_4 {
+            display: none
+        }
+
+        #sect_5 {
+            display: none
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script>
+
+        function sect1() {
+            document.getElementById("sect_1").style.display = "block";
+            document.getElementById("sect_2").style.display = "none";
+            document.getElementById("sect_3").style.display = "none";
+            document.getElementById("sect_4").style.display = "none";
+            document.getElementById("sect_5").style.display = "none";
+            scrollToTop()
+        }
+        function sect2() {
+            document.getElementById("sect_1").style.display = "none";
+            document.getElementById("sect_2").style.display = "block";
+            document.getElementById("sect_3").style.display = "none";
+            document.getElementById("sect_4").style.display = "none";
+            document.getElementById("sect_5").style.display = "none";
+            scrollToTop()
+        }
+        function sect3() {
+            document.getElementById("sect_1").style.display = "none";
+            document.getElementById("sect_2").style.display = "none";
+            document.getElementById("sect_3").style.display = "block";
+            document.getElementById("sect_4").style.display = "none";
+            document.getElementById("sect_5").style.display = "none";
+            scrollToTop()
+        }
+        function sect4() {
+            document.getElementById("sect_1").style.display = "none";
+            document.getElementById("sect_2").style.display = "none";
+            document.getElementById("sect_3").style.display = "none";
+            document.getElementById("sect_4").style.display = "block";
+            document.getElementById("sect_5").style.display = "none";
+            scrollToTop()
+        }
+        function sect5() {
+            document.getElementById("sect_1").style.display = "none";
+            document.getElementById("sect_2").style.display = "none";
+            document.getElementById("sect_3").style.display = "none";
+            document.getElementById("sect_4").style.display = "none";
+            document.getElementById("sect_5").style.display = "block";
+            scrollToTop()
+        }
+        function submit() {
+          
+        }
+        function scrollToTop() {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script src="profile.js"></script>
+    <script src="supply.js"></script>
+    <script src="risk.js"></script>
+    <script src="discharge.js"></script>
+</body>
+</html>
