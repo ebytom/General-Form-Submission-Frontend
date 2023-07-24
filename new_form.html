@@ -47,9 +47,10 @@
                 <fieldset>
                     <div>
                         <label for="facility_pic_ent">Facility Photo at Entrance</label><br>
-                        <input type="file" id="facility_pic_ent" name="facility_pic_ent" accept=".pdf, .doc, .docx, .png">
+                        <input type="file" id="facility_pic_ent" name="facility_pic_ent"
+                            accept=".pdf, .doc, .docx, .png, .jpg, .jpeg, .heic">
                         <p class="facility_pic_ent" id="facility_pic_ent"></p>
-                    
+
                     </div><br>
                     <div>
                         <label for="facility_name">Facility Name</label>
@@ -67,29 +68,33 @@
                         <label for="dateInput">Assesment Conducted on:</label>
                         <input type="date" id="dateInput" name="selectedDate">
                     </div><br><br>
-                    <div>
+                    <div class="f_operation">
                         <label>Facility Operation:</label><br>
-                        <input type="checkbox" id="spinning" name="Facility Operation" value="spinning">
+                        <input type="checkbox" id="spinning" name="f_operation" value="spinning">
                         <label for="spinning">Spinning</label><br>
-                        <input type="checkbox" id="Knitting" name="Facility Operation" value="Knitting">
+                        <input type="checkbox" id="Knitting" name="f_operation" value="Knitting">
                         <label for="Knitting">Knitting</label><br>
-                        <input type="checkbox" id="Processing" name="Facility Operation" value="Processing">
+                        <input type="checkbox" id="Processing" name="f_operation" value="Processing">
                         <label for="Processing">Processing</label><br>
-                        <input type="checkbox" id="Garmenting" name="Facility Operation" value="Garmenting">
+                        <input type="checkbox" id="Garmenting" name="f_operation" value="Garmenting">
                         <label for="Garmenting">Garmenting</label><br>
                     </div><br><br>
                     <div>
                         <label>Facility category</label><br>
-                        <input type="radio" id="Micro" name="Facility category" value="Micro">
+                        <input onclick="facilityCategory('Micro')" type="radio" id="Micro" name="Facility category"
+                            value="Micro">
                         <label for="Micro">Micro</label>
                         <br>
-                        <input type="radio" id="Small" name="Facility category" value="Small">
+                        <input onclick="facilityCategory('Small')" type="radio" id="Small" name="Facility category"
+                            value="Small">
                         <label for="Small">Small</label>
                         <br>
-                        <input type="radio" id="Medium" name="Facility category" value="Medium">
+                        <input onclick="facilityCategory('Medium')" type="radio" id="Medium" name="Facility category"
+                            value="Medium">
                         <label for="Medium">Medium</label>
                         <br>
-                        <input type="radio" id="Large" name="Facility category" value="large">
+                        <input onclick="facilityCategory('large')" type="radio" id="Large" name="Facility category"
+                            value="large">
                         <label for="large">large</label>
                     </div><br><br>
                     <div>
@@ -103,13 +108,16 @@
                     <div>
                         <label>No of Shifts</label>
                         <br>
-                        <input type="radio" id="Single_Shift" name="No of Shifts" value="Single Shift">
+                        <input onclick="numShifts('Single Shift')" type="radio" id="Single_Shift" name="No of Shifts"
+                            value="Single Shift">
                         <label for="Single_Shift">Single Shift</label>
                         <br>
-                        <input type="radio" id="Two_Shift" name="No of Shifts" value="Two Shift">
+                        <input onclick="numShifts('Two Shift')" type="radio" id="Two_Shift" name="No of Shifts"
+                            value="Two Shift">
                         <label for="Two_Shift">Two Shift</label>
                         <br>
-                        <input type="radio" id="Three_Shift" name="No of Shifts" value="Three Shift">
+                        <input onclick="numShifts('Three Shift')" type="radio" id="Three_Shift" name="No of Shifts"
+                            value="Three Shift">
                         <label for="Three_Shift">Three Shift</label>
                     </div><br><br>
                     <div>
@@ -121,24 +129,24 @@
                         <input type="text" id="wrk_frc" name="wrk-frc">
                     </div><br><br>
                     <div>
-                        <label for="name">Certification Obtained</label>
-                        <input type="text" id="name" name="name">
+                        <label for="cert_obtained">Certification Obtained</label>
+                        <input type="text" id="cert_obtained" name="cert_obtained">
                     </div><br><br>
                     <div>
-                        <label for="name">Certifications Planned</label>
-                        <input type="text" id="name" name="name">
+                        <label for="cert_planned">Certifications Planned</label>
+                        <input type="text" id="cert_planned" name="cert_planned">
                     </div><br><br>
                     <div>
-                        <label for="name">Awards recieved</label>
-                        <input type="text" id="name" name="name">
+                        <label for="award_recieved">Awards recieved</label>
+                        <input type="text" id="award_recieved" name="award_recieved">
                     </div><br><br>
-                    <div>
+                    <div class="elec_energy_src">
                         <label>Electrical Energy Source</label><br>
 
-                        <input type="checkbox" id="Grid_Electricity_HT" name="Electrical Energy Source"
+                        <input type="checkbox" id="Grid_Electricity_HT" name="elec_energy_src"
                             value="Grid Electricity HT">
                         <label for="Grid_Electricity_LT">Grid Electricity - HT</label><br>
-                        <input type="checkbox" id="Grid_Electricity_LT" name="Electrical Energy Source"
+                        <input type="checkbox" id="Grid_Electricity_LT" name="elec_energy_src"
                             value="Grid Electricity - LT">
                         <label for="Grid_Electricity_LT">Grid Electricity - LT</label><br>
                     </div><br><br>
@@ -158,7 +166,7 @@
             </div>
         </div>
 
-        <div id="sect_2" >
+        <div id="sect_2">
             <h1 class="fs-1"><b># Section - 2</b></h1>
             <div class="container">
                 <div>
@@ -207,16 +215,16 @@
                             <label for="petrol_cost_logistics">Petrol Cost- Logistics (INR/Annum)</label>
                             <input type="text" id="petrol_cost_logistics" name="petrol_cost_logistics"><br><br>
                         </div>
-                        <div>
+                        <div class="boiler_fuel">
                             <label for="boiler_fuel">Boiler Fuel Used</label><br>
-                            <input type="checkbox" id="coal" name="coal" value="Coal">
+                            <input type="checkbox" id="coal" name="boiler_fuel" value="Coal">
                             <label for="coal">Coal</label><br>
-                            <input type="checkbox" id="firewood" name="firewood" value="Firewood">
+                            <input type="checkbox" id="firewood" name="boiler_fuel" value="Firewood">
                             <label for="firewood">Firewood</label><br>
-                            <input type="checkbox" id="biomass" name="biomass" value="Biomass">
+                            <input type="checkbox" id="biomass" name="boiler_fuel" value="Biomass">
                             <label for="biomass">Biomass</label><br>
-                            <input type="checkbox" id="other" name="other" value="other">
-                            <label for="other">Other : </label><input type="text" id="other" name="other"><br>
+                            <input type="checkbox" id="other" name="boiler_fuel" value="#other_text">
+                            <label for="other">Other : </label><input type="text" id="other_text" name="other"><br>
                         </div><br>
                         <div>
                             <label for="boiler_fuel_quantity">Boiler Fuel Used in Quantity (Ton/Annum)</label>
@@ -230,18 +238,18 @@
                             <label for="annual_production_quantity">Annual Production Qty</label>
                             <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br>
                         </div><br>
-                        <div>
+                        <div class="src_water">
                             <label for="source_water">Source Water</label><br>
-                            <input type="checkbox" id="borewell" name="borewell" value="Borewell">
+                            <input type="checkbox" id="borewell" name="src_water" value="Borewell">
                             <label for="borewell">Borewell</label><br>
-                            <input type="checkbox" id="municipal_supply" name="municipal_supply"
-                                value="Municipal Supply">
+                            <input type="checkbox" id="municipal_supply" name="src_water" value="Municipal Supply">
                             <label for="municipal_supply">Municipal Supply</label><br>
-                            <input type="checkbox" id="ntadcl" name="ntadcl" value="NTADCL">
+                            <input type="checkbox" id="ntadcl" name="src_water" value="NTADCL">
                             <label for="ntadcl">NTADCL</label><br>
-                            <input type="checkbox" id="sipcot" name="sipcot" value="Industrial Estate Supply (SIPCOT)">
+                            <input type="checkbox" id="sipcot" name="src_water"
+                                value="Industrial Estate Supply (SIPCOT)">
                             <label for="sipcot">Industrial Estate Supply (SIPCOT)</label><br>
-                            <input type="checkbox" id="tanker_lorry_supply" name="tanker_lorry_supply"
+                            <input type="checkbox" id="tanker_lorry_supply" name="src_water"
                                 value="Tanker Lorry Supply">
                             <label for="tanker_lorry_supply">Tanker Lorry Supply</label><br>
                         </div><br>
@@ -262,28 +270,34 @@
                             <input type="text" id="cost_recovered_water" name="cost_recovered_water"><br>
                         </div><br>
                         <div>
-                            <label for="ZLD">ZLD Applicable</label><br>
-                            <input type="radio" id="Yes" name="ZLD" value="Yes">
+                            <label for="ZLD" id="zld">ZLD Applicable</label><br>
+                            <input onclick="isZLD('Yes')" type="radio" id="Yes" name="ZLD" value="Yes">
                             <label for="Yes">Yes</label><br>
-                            <input type="radio" id="No" name="ZLD" value="No">
+                            <input onclick="isZLD('No')" type="radio" id="No" name="ZLD" value="No">
                             <label for="No">No</label><br>
                         </div><br>
                         <div>
                             <label for="effluent_treatment">Effluent Treatment Plant Category</label><br>
-                            <input type="radio" id="CETP" name="effluent_treatment" value="CETP">
+                            <input onclick="effTreatment('CETP')" type="radio" id="CETP" name="effluent_treatment"
+                                value="CETP">
                             <label for="CETP">CETP</label><br>
-                            <input type="radio" id="IETP" name="effluent_treatment" value="IETP">
+                            <input onclick="effTreatment('IETP')" type="radio" id="IETP" name="effluent_treatment"
+                                value="IETP">
                             <label for="IETP">IETP</label><br>
-                            <input type="radio" id="no_zld" name="effluent_treatment" value="no-zld">
+                            <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld"
+                                name="effluent_treatment" value="no-zld">
                             <label for="no_zld">No ZLD Plant</label><br>
                         </div><br>
                         <div>
                             <label for="water_quality">Implementation of Water Quality Watch Center</label><br>
-                            <input type="radio" id="yes1" name="effluent_treatment" value="yes1">
+                            <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment"
+                                value="yes1">
                             <label for="yes1">Yes</label><br>
-                            <input type="radio" id="no1" name="effluent_treatment" value="no1">
+                            <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment"
+                                value="no1">
                             <label for="no1">No</label><br>
-                            <input type="radio" id="na1" name="effluent_treatment" value="na1">
+                            <input onclick="waterQuality('Not Applicable')" type="radio" id="na1"
+                                name="effluent_treatment" value="na1">
                             <label for="na1">Not Applicable</label><br>
                         </div><br>
                         <div>
@@ -311,182 +325,162 @@
             <div class="container">
                 <fieldset>
                     <div>
-                        <label for="Garden_&_Domestic_Water_Use_Observations">Garden & Domestic Water Use Observations
+                        <label for="Garden_and_Domestic_Water_Use_Ob">Garden & Domestic Water Use Observations
                         </label><br>
-                        <input type="text" id="Garden_&_Domestic_Water_Use_Observations"
-                            name="Garden_&_Domestic_Water_Use_Observations"><br><br>
+                        <input type="text" id="Garden_and_Domestic_Water_Use_Ob"
+                            name="Garden_and_Domestic_Water_Use_Ob"><br><br>
+                    </div>
+                    <div class="src_fuel">
+                        <label for="Energy_Source_Forms_of_Fuels">Energy Source Forms of Fuels</label><br>
+                        <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
+                        <label for="electricity">Electricity</label><br>
+                        <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
+                        <label for="diesel">Diesel</label><br>
+                        <input type="checkbox" id="firewood" name="src_fuel" value="Firewood">
+                        <label for="firewood">Firewood</label><br>
+                        <input type="checkbox" id="coal" name="src_fuel" value="Coal">
+                        <label for="coal">Coal</label><br>
+                        <input type="checkbox" id="gas" name="src_fuel" value="Gas">
+                        <label for="gas">Gas</label><br>
+                        <input type="checkbox" id="other1" name="src_fuel" value="#other1_text">
+                        <label for="other">Other : </label> <input type="text" id="other1_text" name="src_fuel"><br><br>
                     </div>
                     <div>
-                        <label for="Energy_Source_Forms_of_Fuels">Energy Source Forms of Fuels</label><br>
-                        <input type="checkbox" id="electricity" name="electricity" value="Electricity">
-                        <label for="electricity">Electricity</label><br>
-                        <input type="checkbox" id="diesel" name="diesel" value="Diesel">
-                        <label for="diesel">Diesel</label><br>
-                        <input type="checkbox" id="firewood" name="firewood" value="Firewood">
-                        <label for="firewood">Firewood</label><br>
-                        <input type="checkbox" id="coal" name="coal" value="Coal">
-                        <label for="coal">Coal</label><br>
-                        <input type="checkbox" id="gas" name="gas" value="Gas">
-                        <label for="gas">Gas</label><br>
-                        <input type="checkbox" id="other" name="other" value="Other">
-                        <label for="other">Other : </label><input type="text" id="other" name="other"><br><br>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Power_House_Photo">Assessment Observation at the
-                                Power House Photo </label><br>
-                            <input type="file" id="Assessment_Observation_at_the_Power_House_Photo"
-                                name="Assessment_Observation_at_the_Power_House_Photo"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Power_House">Assessment Observation at the Power
-                                House
-                            </label>
-                            <input type="text" id="Assessment_Observation_at_the_Power_House"
-                                name="Assessment_Observation_at_the_Power_House"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Compressor_Room_Photo">Assessment Observation at
-                                the Compressor Room Photo</label><br>
-                            <input type="file" id="Assessment_Observation_at_the_Compressor_Room_Photo"
-                                name="Assessment_Observation_at_the_Compressor_Room_Photo"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Compressor_Room">Assessment Observation at the
-                                Compressor Room
-                            </label><br>
-                            <input type="text" id="Assessment_Observation_at_the_Compressor_Room"
-                                name="Assessment_Observation_at_the_Compressor_Room"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Genset_Room_Photo">Assessment Observation at the
-                                Genset Room Photo </label><br>
-                            <input type="file" id="Assessment_Observation_at_the_Genset_Room_Photo"
-                                name="Assessment_Observation_at_the_Genset_Room_Photo"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Genset_Room">Assessment Observation at the Genset
-                                Room
-                            </label><br>
-                            <input type="text" id="Assessment_Observation_at_the_Genset_Room"
-                                name="Assessment_Observation_at_the_Genset_Room"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Boiler_Area_Photo">Assessment Observation at the
-                                Boiler Area Photo </label><br>
-                            <input type="file" id="Assessment_Observation_at_the_Boiler_Area_Photo"
-                                name="Assessment_Observation_at_the_Boiler_Area_Photo"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Boiler_Area">Assessment Observation at the Boiler
-                                Area
-                            </label><br>
-                            <input type="text" id="Assessment_Observation_at_the_Boiler_Area"
-                                name="Assessment_Observation_at_the_Boiler_Area"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Thermopac_Photo">Assessment Observation at the
-                                Thermopac Photo </label><br>
-                            <input type="file" id="Assessment_Observation_at_the_Thermopac_Photo"
-                                name="Assessment_Observation_at_the_Thermopac_Photo"><br><br>
-                        </div>
-                        <div>
-                            <label for="Assessment_Observation_at_the_Thermopac">Assessment Observation at the Thermopac
-                            </label><br>
-                            <input type="text" id="Assessment_Observation_at_the_Thermopac"
-                                name="Assessment_Observation_at_the_Thermopac"><br><br>
-                        </div>
-                        <div>
-                            <label
-                                for="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo">Assessment
-                                Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
-                            <input type="file"
-                                id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"
-                                name="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"><br><br>
-                        </div>
-                        <div>
-                            <label
-                                for="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)">Assessment
-                                Observation at the Other Facilities (Chiller, Cooling Tower Etc)
-                            </label><br>
-                            <input type="text"
-                                id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)"
-                                name="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)"><br><br>
-                        </div>
-                        <div>
-                            <label for="Scope_for_Energy_Savings_in_Compressed_Air_Systems">Scope for Energy Savings in
-                                Compressed Air Systems</label><br>
-                            <input type="checkbox" id="compressed_Air_Leak_Fixing_Opportunities"
-                                name="compressed_Air_Leak_Fixing_Opportunities"
-                                value="Compressed Air Leak Fixing Opportunities">
-                            <label for="compressed_Air_Leak_Fixing_Opportunities">Compressed Air Leak Fixing
-                                Opportunities</label><br>
-                            <input type="checkbox"
-                                id="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)"
-                                name="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)"
-                                value="Scope for Drive InstallationScope for Pressure Optimization (Generation)">
-                            <label for="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)">Scope
-                                for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
-                            <input type="checkbox" id="scope_for_Pressure_Optimization_(Utilization)"
-                                name="scope_for_Pressure_Optimization_(Utilization)"
-                                value="Scope for Pressure Optimization (Utilization)">
-                            <label for="scope_for_Pressure_Optimization_(Utilization)">Scope for Pressure Optimization
-                                (Utilization)</label><br>
-                            <input type="checkbox" id="scope_for_Cleaning_Air_Use_Optimization"
-                                name="scope_for_Cleaning_Air_Use_Optimization"
-                                value="Scope for Cleaning Air Use Optimization">
-                            <label for="scope_for_Cleaning_Air_Use_Optimization">Scope for Cleaning Air Use
-                                Optimization</label><br>
-                            <input type="checkbox" id="other" name="other" value="other">
-                            <label for="other">Other : </label><input type="text" id="other" name="other"><br><br>
-                        </div>
-                        <div>
-                            <label for="Compressed_Air_Systems_Savings_in_kWh/Annum">Compressed Air Systems Savings in kWh/Annum
-                            </label>
-                            <input type="text" id="Compressed_Air_Systems_Savings_in_kWh/Annum"
-                                name="Compressed_Air_Systems_Savings_in_kWh/Annum"><br><br>
-                        </div>
-                        <div>
-                            <label for="Lighting_Systems_-_Observation">Lighting Systems - Observation
-                            </label>
-                            <input type="text" id="Lighting_Systems_-_Observation"
-                                name="Lighting_Systems_-_Observation"><br><br>
-                        </div>
-                        <div>
-                            <label for="Lighting_Systems_-_Savings_Opportunities_in_kWh/Annum">Lighting Systems -
-                                Savings Opportunities in kWh/Annum
-                            </label>
-                            <input type="text" id="Lighting_Systems_-_Savings_Opportunities_in_kWh/Annum"
-                                name="Lighting_Systems_-_Savings_Opportunities_in_kWh/Annum"><br><br>
-                        </div>
-                        <div>
-                            <label for="Lighting_Systems_-_Estimated_Investments_in_INR">Lighting Systems - Estimated
-                                Investments in INR
-                            </label>
-                            <input type="text" id="Lighting_Systems_-_Estimated_Investments_in_INR"
-                                name="Lighting_Systems_-_Estimated_Investments_in_INR"><br><br>
-                        </div>
-                        <div>
-                            <label for="Lighting_Systems_-_Estimated_Savings_in_INR">Lighting Systems - Estimated
-                                Savings in INR
-                            </label>
-                            <input type="text" id="Lighting_Systems_-_Estimated_Savings_in_INR"
-                                name="Lighting_Systems_-_Estimated_Savings_in_INR"><br><br>
-                        </div>
-                        <div>
-                            <label for="lighting_systems_photo">Lighting Systems - Photo/label</label> <br>
-                            <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
-                        </div>
-                        <div>
-                            <label for="electrical_motors_observations">Electrical Motors - Observations
-                            </label><br>
-                            <input type="text" id="electrical_motors_observations"
-                                name="electrical_motors_observations"><br><br>
-                        </div>
-                        <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
-                        <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+                        <label for="pic_ob_at_power_house">Assessment Observation at the
+                            Power House Photo </label><br>
+                        <input type="file" id="pic_ob_at_power_house" name="pic_ob_at_power_house"><br><br>
                     </div>
-                </fieldset>
+                    <div>
+                        <label for="assess_ob_at_power_house">Assessment Observation at the Power
+                            House
+                        </label>
+                        <input type="text" id="assess_ob_at_power_house" name="assess_ob_at_power_house"><br><br>
+                    </div>
+                    <div>
+                        <label for="pic_ob_at_compressor">Assessment Observation at
+                            the Compressor Room Photo</label><br>
+                        <input type="file" id="pic_ob_at_compressor" name="pic_ob_at_compressor"><br><br>
+                    </div>
+                    <div>
+                        <label for="assess_ob_at_compressor">Assessment Observation at the
+                            Compressor Room
+                        </label><br>
+                        <input type="text" id="assess_ob_at_compressor" name="assess_ob_at_compressor"><br><br>
+                    </div>
+                    <div>
+                        <label for="pic_ob_at_genset">Assessment Observation at the
+                            Genset Room Photo </label><br>
+                        <input type="file" id="pic_ob_at_genset" name="pic_ob_at_genset"><br><br>
+                    </div>
+                    <div>
+                        <label for="assess_ob_at_genset">Assessment Observation at the Genset
+                            Room
+                        </label><br>
+                        <input type="text" id="assess_ob_at_genset" name="assess_ob_at_genset"><br><br>
+                    </div>
+                    <div>
+                        <label for="pic_ob_at_boiler">Assessment Observation at the
+                            Boiler Area Photo </label><br>
+                        <input type="file" id="pic_ob_at_boiler" name="pic_ob_at_boiler"><br><br>
+                    </div>
+                    <div>
+                        <label for="assess_ob_at_boiler">Assessment Observation at the Boiler
+                            Area
+                        </label><br>
+                        <input type="text" id="assess_ob_at_boiler" name="assess_ob_at_boiler"><br><br>
+                    </div>
+                    <div>
+                        <label for="pic_ob_at_thermopac">Assessment Observation at the
+                            Thermopac Photo </label><br>
+                        <input type="file" id="pic_ob_at_thermopac" name="pic_ob_at_thermopac"><br><br>
+                    </div>
+                    <div>
+                        <label for="assess_ob_at_thermopac">Assessment Observation at the Thermopac
+                        </label><br>
+                        <input type="text" id="assess_ob_at_thermopac" name="assess_ob_at_thermopac"><br><br>
+                    </div>
+                    <div>
+                        <label for="pic_ob_at_other">Assessment
+                            Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
+                        <input type="file"
+                            id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"
+                            name="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"><br><br>
+                    </div>
+                    <div>
+                        <label for="assess_ob_at_other">Assessment
+                            Observation at the Other Facilities (Chiller, Cooling Tower Etc)
+                        </label><br>
+                        <input type="text" id="assess_ob_at_other)" name="assess_ob_at_other"><br><br>
+                    </div>
+                    <div class="scope_comp_air">
+                        <label for="Scope_for_Energy_Savings_in_Compressed_Air_Systems">Scope for Energy Savings in
+                            Compressed Air Systems</label><br>
+                        <input type="checkbox" id="compressed_Air_Leak_Fixing_Opportunities" name="scope_comp_air"
+                            value="Compressed Air Leak Fixing Opportunities">
+                        <label for="compressed_Air_Leak_Fixing_Opportunities">Compressed Air Leak Fixing
+                            Opportunities</label><br>
+                        <input type="checkbox"
+                            id="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)"
+                            name="scope_comp_air"
+                            value="Scope for Drive InstallationScope for Pressure Optimization (Generation)">
+                        <label for="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)">Scope
+                            for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
+                        <input type="checkbox" id="scope_for_Pressure_Optimization_(Utilization)" name="scope_comp_air"
+                            value="Scope for Pressure Optimization (Utilization)">
+                        <label for="scope_for_Pressure_Optimization_(Utilization)">Scope for Pressure Optimization
+                            (Utilization)</label><br>
+                        <input type="checkbox" id="scope_for_Cleaning_Air_Use_Optimization" name="scope_comp_air"
+                            value="Scope for Cleaning Air Use Optimization">
+                        <label for="scope_for_Cleaning_Air_Use_Optimization">Scope for Cleaning Air Use
+                            Optimization</label><br>
+                        <input type="checkbox" id="other2" name="other" value="#other2_text">
+                        <label for="other">Other : </label><input type="text" id="other2_text" name="other"><br><br>
+                    </div>
+                    <div>
+                        <label for="compressed_air_saving">Compressed Air Systems Savings in
+                            kWh/Annum
+                        </label>
+                        <input type="text" id="compressed_air_saving" name="compressed_air_saving"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_observation">Lighting Systems - Observation
+                        </label>
+                        <input type="text" id="lighting_observation" name="lighting_observation"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_saving">Lighting Systems -
+                            Savings Opportunities in kWh/Annum
+                        </label>
+                        <input type="text" id="lighting_saving" name="lighting_saving"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_est_investment">Lighting Systems - Estimated
+                            Investments in INR
+                        </label>
+                        <input type="text" id="lighting_est_investment" name="lighting_est_investment"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_est_savings">Lighting Systems - Estimated
+                            Savings in INR
+                        </label>
+                        <input type="text" id="lighting_est_savings" name="lighting_est_savings"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_systems_photo">Lighting Systems - Photo/label</label> <br>
+                        <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
+                    </div>
+                    <div>
+                        <label for="electrical_motors_observations">Electrical Motors - Observations
+                        </label><br>
+                        <input type="text" id="electrical_motors_observations"
+                            name="electrical_motors_observations"><br><br>
+                    </div>
+                    <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                    <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
             </div>
+            </fieldset>
         </div>
+    </div>
     </div>
     <div id="sect_4">
         <h1 class="fs-1"><b># Section - 4</b></h1>
@@ -495,20 +489,16 @@
                 <div>
                     <label for="total_elec_motors">Electrical Motors - Total Numbers
                     </label><br>
-                    <input type="text" id="total_elec_motors"
-                        name="total_elec_motors"><br><br>
+                    <input type="text" id="total_elec_motors" name="total_elec_motors"><br><br>
                 </div>
-                <div>
+                <div class="elec_motors">
                     <label for="wind-elec-generation">Electrical Motors - Energy Saving Opportunities</label><br>
-                    <input type="checkbox" id="rewound_with_ie3"
-                        name="Replacement_of_Rewound_Motors_with_IE3_Motors"
-                        value="CoalReplacement of Rewound Motors
+                    <input type="checkbox" id="rewound_with_ie3" name="elec_motors" value="Coal Replacement of Rewound Motors
                         with IE3 Motors">
-                    <label for="CoalReplacement of Rewound Motors with IE3 Motors">Coal Replacement of Rewound Motors
+                    <label for="Coal Replacement of Rewound Motors with IE3 Motors">Coal Replacement of Rewound Motors
                         with IE3 Motors</label><br>
-                    <input type="checkbox" id="Upgradation_of_Conventional_Motors_with_IE3_Motors"
-                        name="Upgradation_of_Conventional_Motors_with_IE3_Motors"
-                        value="Upgradation_of_Conventional_Motors_with_IE3_Motors">
+                    <input type="checkbox" id="Upgradation_of_Conventional_Motors_with_IE3_Motors" name="elec_motors"
+                        value="Upgradation of Conventional Motors with IE3 Motors">
                     <label for="Upgradation of Conventional Motors with IE3 Motors">Upgradation of Conventional Motors
                         with IE3 Motors</label><br>
                 </div>
@@ -519,28 +509,28 @@
                         name="Energy_Saving_Opportunities_in_Electrical_Motors"><br><br>
                 </div>
                 <div>
-                    <label for="Estimated_Savings-_Motor_Upgradation">Estimated Savings- Motor Upgradation
+                    <label for="Estimated_Savings_Motor_Upgradation">Estimated Savings- Motor Upgradation
                         (INR/Annum)</label><br>
-                    <input type="text" id="Estimated_Savings-_Motor_Upgradation"
-                        name="Estimated_Savings-_Motor_Upgradation"><br><br>
+                    <input type="text" id="Estimated_Savings_Motor_Upgradation"
+                        name="Estimated_Savings_Motor_Upgradation"><br><br>
                 </div>
                 <div>
                     <label for="Waste_Heat_Recovery_Observations">Waste Heat Recovery Observations</label><br>
                     <input type="text" id="Waste_Heat_Recovery_Observations"
                         name="Waste_Heat_Recovery_Observations"><br><br>
                 </div>
-                <div>
+                <div class="scope_waste">
                     <label for="Scope_for_Waste_Heat_Recovery">Scope for Waste Heat Recovery</label><br>
-                    <input type="checkbox" id="Flue_Gas_Waste_Heat_Recovery" name="Flue_Gas_Waste_Heat_Recovery"
-                        value="Flue_Gas_Waste_Heat_Recovery">
+                    <input type="checkbox" id="Flue_Gas_Waste_Heat_Recovery" name="scope_waste"
+                        value="Flue Gas Waste Heat Recovery">
                     <label for="Flue Gas Waste Heat Recovery">Flue Gas Waste Heat Recovery</label><br>
-                    <input type="checkbox" id="Cooling_Return_Heat_Recovery" name="Cooling_Return_Heat_Recovery"
-                        value="Cooling_Return_Heat_Recovery">
+                    <input type="checkbox" id="Cooling_Return_Heat_Recovery" name="scope_waste"
+                        value="Cooling Return Heat Recovery">
                     <label for="Cooling Return Heat Recovery">Cooling Return Heat Recovery</label><br>
-                    <input type="checkbox" id="Effluent_Heat_Recovery" name="Effluent_Heat_Recovery"
-                        value="Effluent_Heat_Recovery">
+                    <input type="checkbox" id="Effluent_Heat_Recovery" name="scope_waste"
+                        value="Effluent Heat Recovery">
                     <label for="Effluent Heat Recovery">Effluent Heat Recovery</label><br>
-                    <input type="checkbox" id="Other_WHR_Systems" name="Other_WHR_Systemsy" value="Other_WHR_Systems">
+                    <input type="checkbox" id="Other_WHR_Systems" name="scope_waste" value="Other WHR Systems">
                     <label for="Other WHR Systems">Other WHR Systems</label><br>
                 </div><br>
                 <div>
@@ -550,11 +540,10 @@
                         name="Waste_Heat_Recovery_Fuel_Savings"><br><br>
                 </div>
                 <div>
-                    <label for="Assessment_Observation_at_Raw_Material_Inward_Photo">Assessment Observation at Raw
+                    <label for="pic_ob_raw_material">Assessment Observation at Raw
                         Material Inward Photo</label><br>
-                    <label for="image_upload01" class="upload-btn">Upload Image</label>
-                    <input type="file" id="image_upload01" accept="image/*">
-                    <p class="file-name" id="file_name01"></p>
+                    <label for="pic_ob_raw_material" class="upload-btn">Upload Image</label>
+                    <input type="file" id="pic_ob_raw_material" accept="image/*">
                 </div>
                 <div>
                     <label for="Assessment_Observation_at_Raw_Material_Inward">Assessment Observation at Raw Material
@@ -563,11 +552,10 @@
                         name="Assessment_Observation_at_Raw_Material_Inward"><br><br>
                 </div>
                 <div>
-                    <label for="Assessment_Observation_at_Material_Handling_Photo">Assessment Observation at Material
+                    <label for="pic_ob_material_handling">Assessment Observation at Material
                         Handling Photo</label><br>
-                    <label for="image_upload02" class="upload-btn">Upload Image</label>
-                    <input type="file" id="image_upload02" accept="image/*">
-                    <p class="file-name" id="file_name02"></p>
+                    <label for="pic_ob_material_handling" class="upload-btn">Upload Image</label>
+                    <input type="file" id="pic_ob_material_handling" accept="image/*">
                 </div>
                 <div>
                     <label for="Assessment_Observation_at_Material_Handling">Assessment Observation at Material
@@ -582,96 +570,83 @@
                         name="Production_Machine_Utilization_Data_Collection_Aspects"><br><br>
                 </div>
                 <div>
-                    <label for="Production_Machine_Utilization_Data_Collection_Aspects_Photo">Production Machine
+                    <label for="pic_production_machine_util">Production Machine
                         Utilization & Data Collection Aspects Photo</label><br>
-                    <label for="image_upload03" class="upload-btn">Upload Image</label>
-                    <input type="file" id="image_upload03" accept="image/*">
-                    <p class="file-name" id="file_name03"></p>
+                    <label for="pic_production_machine_util" class="upload-btn">Upload Image</label>
+                    <input type="file" id="pic_production_machine_util" accept="image/*">
                 </div>
                 <div>
                     <label for="Production_Layout_Observations">Production Layout Observations</label><br>
                     <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br><br>
                 </div><br>
                 <div>
-                    <label for="Production_Layout_Observations_Photo">Production Layout Observations Photo</label><br>
-                    <label for="image_upload04" class="upload-btn">Upload Image</label>
-                    <input type="file" id="image_upload04" accept="image/*">
-                    <p class="file-name" id="file_name04"></p>
+                    <label for="production_layout_ob_photo">Production Layout Observations Photo</label><br>
+                    <label for="production_layout_ob_photo" class="upload-btn">Upload Image</label>
+                    <input type="file" id="production_layout_ob_photo" accept="image/*">
                 </div>
                 <div>
-                    <label
-                        for="Installation_status_of_Measuring_Monitoring_Systems_for_Energy_Water_Fuel_Waste">Installation
+                    <label for="Installation_Monitoring_Systems">Installation
                         status of Measuring & Monitoring Systems for Energy, Water, Fuel &
                         Waste Etc</label><br>
-                    <input type="text" id="qty_fresh_water" name="qty_fresh_water">
+                    <input type="text" id="Installation_Monitoring_Systems" name="Installation_Monitoring_Systems">
                 </div><br>
                 <div>
-                    <label for="Management_Committment_on_Energy_Resource_Efficiency">Management Committment on Energy &
+                    <label for="mgmt_on_energy_resource">Management Committment on Energy &
                         Resource Efficiency (Availability of Policy
                         & Systems)</label><br>
-                    <input type="text" id="total_qty_water" name="total_qty_water"><br>
+                    <input type="text" id="mgmt_on_energy_resource" name="mgmt_on_energy_resource"><br>
                 </div><br>
                 <div>
-                    <label for="Technology_Upgradation_Opportunities_in_the_Facility">Technology Upgradation
+                    <label for="opportunities_in_the_facility">Technology Upgradation
                         Opportunities in the Facility</label><br>
-                    <input type="text" id="cost_fresh_water" name="cost_fresh_water"><br>
+                    <input type="text" id="opportunities_in_the_facility" name="opportunities_in_the_facility"><br>
                 </div><br>
                 <div>
-                    <label for="Material_Conservation_Improvement_Opportunities_in_Packing">Material Conservation &
+                    <label for="material_conservation_opportunities">Material Conservation &
                         Improvement Opportunities in Packing</label><br>
-                    <input type="text" id="cost_recovered_water" name="cost_recovered_water"><br>
+                    <input type="text" id="material_conservation_opportunities"
+                        name="material_conservation_opportunities"><br>
                 </div><br>
                 <div>
-                    <label for="Water_Recovery_ReUse_Opportunities">Water Recovery & ReUse Opportunities</label><br>
-                    <input type="text" id="Water_Recovery_ReUse_Opportunities"
-                        name="Water_Recovery_ReUse_Opportunities"><br>
+                    <label for="water_reuse_opportunities">Water Recovery & ReUse Opportunities</label><br>
+                    <input type="text" id="water_reuse_opportunities" name="water_reuse_opportunities"><br>
                 </div><br>
                 <div>
-                    <label for="Scope_for_Renewable_Energy_Investment_Opportunities">Scope for Renewable Energy
+                    <label for="scope_for_renewable">Scope for Renewable Energy
                         Investment Opportunities</label><br>
-                    <input type="text" id="Scope_for_Renewable_Energy_Investment_Opportunities"
-                        name="Scope_for_Renewable_Energy_Investment_Opportunities"><br>
+                    <input type="text" id="scope_for_renewable" name="scope_for_renewable"><br>
                 </div><br>
                 <div>
-                    <label for="Details_of_Renewable_Energy_Projects">Details of Renewable Energy Projects</label><br>
-                    <input type="text" id="Details_of_Renewable_Energy_Projects"
-                        name="Details_of_Renewable_Energy_Projects"><br>
+                    <label for="details_of_renewable_energy">Details of Renewable Energy Projects</label><br>
+                    <input type="text" id="details_of_renewable_energy" name="details_of_renewable_energy"><br>
                 </div><br>
                 <div>
-                    <label for="Details_of_Renewable_Energy_Projects_Photo">Details of Renewable Energy Projects
+                    <label for="pic_renewable_energy">Details of Renewable Energy Projects
                         Photo</label><br>
-                    <label for="image_upload05" class="upload-btn">Upload Image</label>
-                    <input type="file" id="image_upload05" accept="image/*">
-                    <p class="file-name" id="file_name05"></p>
+                    <label for="pic_renewable_energy" class="upload-btn">Upload Image</label>
+                    <input type="file" id="pic_renewable_energy" accept="image/*">
                 </div>
                 <div>
-                    <label for="Garden_Area_in_Sq.Meter">Garden Area in Sq.Meter</label><br>
-                    <input type="text" id="garden-area" name="Garden_Area_in_Sq.Meter"><br>
+                    <label for="annual_rainfall">Annual Rainfall in Meters</label><br>
+                    <input type="text" id="annual_rainfall" name="annual_rainfall"><br><br>
                 </div><br>
-                <div>
-                    <label for="Annual_Rainfall_in_Meters">Annual Rainfall in Meters</label><br>
-                    <input type="text" id="Annual_Rainfall_in_Meters" name="Annual_Rainfall_in_Meters"><br><br>
-                </div><br>
-                <div>
+                <div class="rwh_scope">
                     <label for="Rain_Water_Harvesting_Scope">Rain Water Harvesting Scope</label><br>
-                    <input type="checkbox" id="Rain_Water_Harvesting" name="Rain_Water_Harvesting"
-                        value="Rain_Water_Harvesting">
+                    <input type="checkbox" id="Rain_Water_Harvesting" name="rwh_scope" value="Rain_Water_Harvesting">
                     <label for="Rain Water Harvesting">Rain Water Harvesting</label><br>
-                    <input type="checkbox" id="Rain_Water_Charging" name="Rain_Water_Charging"
-                        value="Rain_Water_Charging">
+                    <input type="checkbox" id="Rain_Water_Charging" name="rwh_scope" value="Rain_Water_Charging">
                     <label for="Rain Water Charging">Rain Water Charging</label><br>
-                    <input type="checkbox" id="No_Rain_Water_Harvesting_Structures"
-                        name="No_Rain_Water_Harvesting_Structures" value="No_Rain_Water_Harvesting_Structures">
+                    <input type="checkbox" id="No_Rain_Water_Harvesting_Structures" name="rwh_scope"
+                        value="No_Rain_Water_Harvesting_Structures">
                     <label for="No Rain Water Harvesting Structures">No Rain Water Harvesting Structures</label><br>
                 </div><br>
                 <div>
-                    <label for="Rain_Water_Harvesting_Observation">Rain Water Harvesting Observation</label><br>
-                    <input type="text" id="Rain_Water_Harvesting_Observation"
-                        name="Rain_Water_Harvesting_Observation"><br><br>
+                    <label for="rw_harvesting_observation">Rain Water Harvesting Observation</label><br>
+                    <input type="text" id="rw_harvesting_observation" name="rw_harvesting_observation"><br><br>
                 </div><br>
                 <div>
-                    <label for="Process_Water_Saving_Opportunties">Process Water Saving Opportunties</label><br>
-                    <input type="text" id="Process_Water_Saving_Opportunties" name="Annual_Rainfall_in_Meters"><br><br>
+                    <label for="water_saving_opportunties">Process Water Saving Opportunties</label><br>
+                    <input type="text" id="water_saving_opportunties" name="water_saving_opportunties"><br><br>
                 </div><br>
                 <button onclick="sect3()" class="btn btn-primary" id="prev">&laquo; Previous</button>
                 <button onclick="sect5()" name="next4" id="next" class="btn btn-primary">Next &raquo;</button>
@@ -798,6 +773,7 @@
             Done
         </div>
     </div>
+
     <style>
         #sect_1 {
             display: block
@@ -863,9 +839,6 @@
             document.getElementById("sect_5").style.display = "block";
             scrollToTop()
         }
-        function submit() {
-          
-        }
         function scrollToTop() {
             window.scroll({
                 top: 0,
@@ -873,10 +846,526 @@
                 behavior: 'smooth'
             });
         }
+        //--------------------------------------------------------------------------------------------
+        var facility_category = null;
+        var number_of_shifts = null;
+        var zld = null;
+        var effluent_treatment = null;
+        var effluent_treatment = null;
+        var water_quality = null;
+
+        function facilityCategory(val) {
+            facility_category = val
+        }
+        function numShifts(val) {
+            number_of_shifts = val
+        }
+        function isZLD(val) {
+            zld = val
+        }
+        function effTreatment(val) {
+            effluent_treatment = val
+        }
+        function waterQuality(val) {
+            water_quality = val
+        }
+
+
+        async function submitForm() {
+            // Section - 1
+            const pic1 = document.getElementById("facility_pic_ent").files[0];
+            const facility_name = document.getElementById('facility_name').value;
+            const pic2 = document.getElementById("facility_pic").files[0];
+            const facility_location = document.getElementById('facility_location').value;
+            const product_mfd = document.getElementById('product_mfd').value;
+            const prod_capacity = document.getElementById('prod_capacity').value;
+            const hr_shift = document.getElementById('hr_shift').value;
+            const wrk_frc = document.getElementById('wrk_frc').value;
+            const cert_obtained = document.getElementById('cert_obtained').value;
+            const cert_planned = document.getElementById('cert_planned').value;
+            const award_recieved = document.getElementById('award_recieved').value;
+            const baseline_data_period = document.getElementById('baseline_data_period').value;
+            const total_elec_consumption = document.getElementById('total_elec_consumption').value;
+            // Section - 2
+            const annual_elec_consumption = document.getElementById('annual_elec_consumption').value;
+            const wind_elec_generation = document.getElementById('wind_elec_generation').value;
+            const solar_elec_generation = document.getElementById('solar_elec_generation').value;
+            const annual_energy_cost = document.getElementById('annual_energy_cost').value;
+            const energy_cost = document.getElementById('energy_cost').value;
+            const genset_diesel_consumption = document.getElementById('genset_diesel_consumption').value;
+            const boiler_diesel_consumption = document.getElementById('boiler_diesel_consumption').value;
+            const annual_diesel_cost = document.getElementById('annual_diesel_cost').value;
+            const petrol_consumption_logistics = document.getElementById('petrol_consumption_logistics').value;
+            const petrol_cost_logistics = document.getElementById('petrol_cost_logistics').value;
+            const boiler_fuel_quantity = document.getElementById('boiler_fuel_quantity').value;
+            const boiler_fuel_cost = document.getElementById('boiler_fuel_cost').value;
+            const annual_production_quantity = document.getElementById('annual_production_quantity').value;
+            const qty_fresh_water = document.getElementById('qty_fresh_water').value;
+            const total_qty_water = document.getElementById('total_qty_water').value;
+            const cost_fresh_water = document.getElementById('cost_fresh_water').value;
+            const cost_recovered_water = document.getElementById('cost_recovered_water').value;
+            const domestic_water_consumption = document.getElementById('domestic_water_consumption').value;
+            const garden_area = document.getElementById('garden_area').value;
+            const garden_use = document.getElementById('garden_use').value;
+            //Section - 3 
+            const Garden_and_Domestic_Water_Use_Ob = document.getElementById('Garden_and_Domestic_Water_Use_Ob').value;
+            const pic3 = document.getElementById("pic_ob_at_power_house").files[0];
+            const assess_ob_at_power_house = document.getElementById('assess_ob_at_power_house').value;
+            const pic4 = document.getElementById("pic_ob_at_compressor").files[0];
+            const assess_ob_at_compressor = document.getElementById('assess_ob_at_compressor').value;
+            const pic5 = document.getElementById("pic_ob_at_genset").files[0];
+            const assess_ob_at_genset = document.getElementById('assess_ob_at_genset').value;
+            const pic6 = document.getElementById("pic_ob_at_boiler").files[0];
+            const assess_ob_at_boiler = document.getElementById('assess_ob_at_boiler').value;
+            const pic7 = document.getElementById("pic_ob_at_thermopac").files[0];
+            const assess_ob_at_thermopac = document.getElementById('assess_ob_at_thermopac').value;
+            const pic8 = document.getElementById("pic_ob_at_other").files[0];
+            const assess_ob_at_other = document.getElementById('assess_ob_at_other').value;
+            const compressed_air_saving = document.getElementById('compressed_air_saving').value;
+            const lighting_observation = document.getElementById('lighting_observation').value;
+            const lighting_saving = document.getElementById('lighting_saving').value;
+            const lighting_est_investment = document.getElementById('lighting_est_investment').value;
+            const lighting_est_savings = document.getElementById('lighting_est_savings').value;
+            const pic9 = document.getElementById("lighting_systems_photo").files[0];
+            const electrical_motors_observations = document.getElementById('electrical_motors_observations').value;
+            // Section - 4
+            const total_elec_motors = document.getElementById('total_elec_motors').value;
+            const Energy_Saving_Opportunities_in_Electrical_Motors = document.getElementById('Energy_Saving_Opportunities_in_Electrical_Motors').value;
+            const Estimated_Savings_Motor_Upgradation = document.getElementById('Estimated_Savings_Motor_Upgradation').value;
+            const Waste_Heat_Recovery_Observations = document.getElementById('Waste_Heat_Recovery_Observations').value;
+            const Waste_Heat_Recovery_Fuel_Savings = document.getElementById('Waste_Heat_Recovery_Fuel_Savings').value;
+            const pic10 = document.getElementById("pic_ob_raw_material").files[0];
+            const Assessment_Observation_at_Raw_Material_Inward = document.getElementById('Assessment_Observation_at_Raw_Material_Inward').value;
+            const pic11 = document.getElementById("pic_ob_material_handling").files[0];
+            const Assessment_Observation_at_Material_Handling = document.getElementById('Assessment_Observation_at_Material_Handling').value;
+            const Production_Machine_Utilization_Data_Collection_Aspects = document.getElementById('Production_Machine_Utilization_Data_Collection_Aspects').value;
+            const pic12 = document.getElementById("pic_production_machine_util").files[0];
+            const Production_Layout_Observations = document.getElementById('Production_Layout_Observations').value;
+            const pic13 = document.getElementById("production_layout_ob_photo").files[0];
+            const Installation_Monitoring_Systems = document.getElementById('Installation_Monitoring_Systems').value;
+            const mgmt_on_energy_resource = document.getElementById('mgmt_on_energy_resource').value;
+            const opportunities_in_the_facility = document.getElementById('opportunities_in_the_facility').value;
+            const material_conservation_opportunities = document.getElementById('material_conservation_opportunities').value;
+            const water_reuse_opportunities = document.getElementById('water_reuse_opportunities').value;
+            const scope_for_renewable = document.getElementById('scope_for_renewable').value;
+            const details_of_renewable_energy = document.getElementById('details_of_renewable_energy').value;
+            const pic14 = document.getElementById("pic_renewable_energy").files[0];
+            const annual_rainfall = document.getElementById('annual_rainfall').value;
+            const rw_harvesting_observation = document.getElementById('rw_harvesting_observation').value;
+            const water_saving_opportunties = document.getElementById('water_saving_opportunties').value;
+            // Section - 5
+            const obs_on_safety = document.getElementById('obs_on_safety').value;
+            const pic15 = document.getElementById("obs_on_safety_img").files[0];
+            const obs_on_safety_crit = document.getElementById('obs_on_safety_crit').value;
+            const pic16 = document.getElementById("obs_on_safety_prod_photo").files[0];
+            const obs_on_safety_prod = document.getElementById('obs_on_safety_prod').value;
+            const pic17 = document.getElementById("obs_on_safety_elec_photo").files[0];
+            const obs_on_safety_elec = document.getElementById('obs_on_safety_elec').value;
+            const pic18 = document.getElementById("obs_on_safety_chem_photo").files[0];
+            const obs_on_safety_chem = document.getElementById('obs_on_safety_chem').value;
+            const pic19 = document.getElementById("obs_on_safety_fire_photo").files[0];
+            const obs_on_safety_fire = document.getElementById('obs_on_safety_fire').value;
+            const obs_on_elec_earth = document.getElementById('obs_on_elec_earth').value;
+            const pic20 = document.getElementById("obs_on_elec_earth_photo").files[0];
+            const pic21 = document.getElementById("overall_obs_on_safety_photo").files[0];
+            const specific_energy = document.getElementById('specific_energy').value;
+            const specific_water = document.getElementById('specific_water').value;
+            const specific_fuel = document.getElementById('specific_fuel').value;
+            const specific_fuel_cost = document.getElementById('specific_fuel_cost').value;
+            const specific_water_cost = document.getElementById('specific_water_cost').value;
+
+            let facility_pic_ent = "";
+            let facility_pic = "";
+            let pic_ob_at_power_house = "";
+            let pic_ob_at_compressor = "";
+            let pic_ob_at_genset = "";
+            let pic_ob_at_boiler = "";
+            let pic_ob_at_thermopac = "";
+            let pic_ob_at_other = "";
+            let lighting_systems_photo = "";
+            let pic_ob_raw_material = "";
+            let pic_ob_material_handling = "";
+            let pic_production_machine_util = "";
+            let production_layout_ob_photo = "";
+            let pic_renewable_energy = "";
+            let obs_on_safety_img = "";
+            let obs_on_safety_prod_photo = "";
+            let obs_on_safety_elec_photo = "";
+            let obs_on_safety_chem_photo = "";
+            let obs_on_safety_fire_photo = "";
+            let obs_on_elec_earth_photo = "";
+            let overall_obs_on_safety_photo = "";
+
+            if (pic1 != null) {
+                facility_pic_ent = await uploadFile(pic1)
+            }
+            if (pic2 != null) {
+                facility_pic = await uploadFile(pic2)
+            }
+            if (pic3 != null) {
+                pic_ob_at_power_house = await uploadFile(pic3)
+            }
+            if (pic4 != null) {
+                pic_ob_at_compressor = await uploadFile(pic4)
+            }
+            if (pic5 != null) {
+                pic_ob_at_genset = await uploadFile(pic5)
+            }
+            if (pic6 != null) {
+                pic_ob_at_boiler = await uploadFile(pic6)
+            }
+            if (pic7 != null) {
+                pic_ob_at_thermopac = await uploadFile(pic7)
+            }
+            if (pic8 != null) {
+                pic_ob_at_other = await uploadFile(pic8)
+            }
+            if (pic9 != null) {
+                lighting_systems_photo = await uploadFile(pic9)
+            }
+            if (pic10 != null) {
+                pic_ob_raw_material = await uploadFile(pic10)
+            }
+            if (pic11 != null) {
+                pic_ob_material_handling = await uploadFile(pic11)
+            }
+            if (pic12 != null) {
+                pic_production_machine_util = await uploadFile(pic12)
+            }
+            if (pic13 != null) {
+                production_layout_ob_photo = await uploadFile(pic13)
+            }
+            if (pic14 != null) {
+                pic_renewable_energy = await uploadFile(pic14)
+            }
+            if (pic15 != null) {
+                obs_on_safety_img = await uploadFile(pic15)
+            }
+            if (pic16 != null) {
+                obs_on_safety_prod_photo = await uploadFile(pic16)
+            }
+            if (pic17 != null) {
+                obs_on_safety_elec_photo = await uploadFile(pic17)
+            }
+            if (pic18 != null) {
+                obs_on_safety_chem_photo = await uploadFile(pic18)
+            }
+            if (pic19 != null) {
+                obs_on_safety_fire_photo = await uploadFile(pic19)
+            }
+            if (pic20 != null) {
+                obs_on_elec_earth_photo = await uploadFile(pic19)
+            }
+            if (pic21 != null) {
+                overall_obs_on_safety_photo = await uploadFile(pic19)
+            }
+
+            var f_opGroup = document.querySelectorAll('.f_operation');
+            var f_opItems = [];
+            // Loop through each checkbox group
+            f_opGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        f_opItems.push(checkbox.value);
+                        console.log(f_opItems);
+                    }
+                });
+            })
+
+            var elec_energy_srcGroup = document.querySelectorAll('.elec_energy_src');
+            var elec_energy_srcItems = [];
+            // Loop through each checkbox group
+            elec_energy_srcGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        elec_energy_srcItems.push(checkbox.value);
+                        console.log(elec_energy_srcItems);
+                    }
+                });
+            })
+
+            var boiler_fuelGroup = document.querySelectorAll('.boiler_fuel');
+            var boiler_fuelItems = [];
+            // Loop through each checkbox group
+            boiler_fuelGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        boiler_fuelItems.push(checkbox.value);
+                        console.log(boiler_fuelItems);
+                    }
+                });
+            })
+
+            var src_waterGroup = document.querySelectorAll('.src_water');
+            var src_waterItems = [];
+            // Loop through each checkbox group
+            src_waterGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        src_waterItems.push(checkbox.value);
+                        console.log(src_waterItems);
+                    }
+                });
+            })
+
+            var src_fuelGroup = document.querySelectorAll('.src_fuel');
+            var src_fuelItems = [];
+            // Loop through each checkbox group
+            src_fuelGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        src_fuelItems.push(checkbox.value);
+                        console.log(src_fuelItems);
+                    }
+                });
+            })
+
+            var scope_comp_airGroup = document.querySelectorAll('.scope_comp_air');
+            var scope_comp_airItems = [];
+            // Loop through each checkbox group
+            scope_comp_airGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        scope_comp_airItems.push(checkbox.value);
+                        console.log(scope_comp_airItems);
+                    }
+                });
+            })
+
+            var elec_motorsGroup = document.querySelectorAll('.elec_motors');
+            var elec_motorsItems = [];
+            // Loop through each checkbox group
+            elec_motorsGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        elec_motorsItems.push(checkbox.value);
+                        console.log(elec_motorsItems);
+                    }
+                });
+            })
+
+            var scope_wasteGroup = document.querySelectorAll('.scope_waste');
+            var scope_wasteItems = [];
+            // Loop through each checkbox group
+            scope_wasteGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        scope_wasteItems.push(checkbox.value);
+                        console.log(scope_wasteItems);
+                    }
+                });
+            })
+
+            var rwh_scopeGroup = document.querySelectorAll('.rwh_scope');
+            var rwh_scopeItems = [];
+            // Loop through each checkbox group
+            rwh_scopeGroup.forEach(function (group, index) {
+                // Get all checkboxes within the group
+                var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+
+                // Loop through checkboxes to find checked ones within the group
+                checkboxes.forEach(function (checkbox) {
+                    if (checkbox.checked) {
+                        // Add checked value to the array
+                        rwh_scopeItems.push(checkbox.value);
+                        console.log(rwh_scopeItems);
+                    }
+                });
+            })
+
+            axios.post("http://localhost:8080/services/postInformation", {
+                facility_pic_ent : facility_pic_ent,
+                facility_name : facility_name,
+                facility_location : facility_location,
+                dateInput : dateInput,
+                f_operation : f_operationItems, //checkbox
+                facility_category : facility_category, //radio
+                product_mfd : product_mfd,
+                prod_capacity : prod_capacity,
+                number_of_shifts : number_of_shifts, //radio
+                hr_shift : hr_shift,
+                wrk_frc : wrk_frc,
+                cert_obtained : cert_obtained,
+                cert_planned : cert_planned,
+                award_recieved : award_recieved,
+                elec_energy_src : elec_energy_srcItems, //checkbox
+                baseline_data_period : baseline_data_period,
+                annual_elec_consumption : annual_elec_consumption,
+                wind_elec_generation : wind_elec_generation,
+                solar_elec_generation : solar_elec_generation,
+                annual_energy_cost : annual_energy_cost,
+                energy_cost : energy_cost,
+                genset_diesel_consumption : genset_diesel_consumption,
+                boiler_diesel_consumption : boiler_diesel_consumption,
+                annual_diesel_cost : annual_diesel_cost,
+                petrol_consumption_logistics : petrol_consumption_logistics,
+                petrol_cost_logistics : petrol_cost_logistics,
+                boiler_fuel : boiler_fuelItems, //checkbox
+                boiler_fuel_quantity : boiler_fuel_quantity,
+                boiler_fuel_cost : boiler_fuel_cost,
+                annual_production_quantity : annual_production_quantity,
+                src_water : src_waterItems, //checkbox
+                qty_fresh_water : qty_fresh_water,
+                total_qty_water : total_qty_water,
+                cost_fresh_water : cost_fresh_water,
+                cost_recovered_water : cost_recovered_water,
+                zld : zld, //radio
+                effluent_treatment : effluent_treatment, //radio
+                water_quality : water_quality, //radio
+                domestic_water_consumption : domestic_water_consumption,
+                garden_area : garden_area,
+                garden_use : garden_use,
+                src_fuel : src_fuelItems, //checkbox
+                pic_ob_at_power_house : pic_ob_at_power_house, //file
+                assess_ob_at_power_house : assess_ob_at_power_house,
+                pic_ob_at_compressor : pic_ob_at_compressor, //file
+                assess_ob_at_compressor : assess_ob_at_compressor,
+                pic_ob_at_genset : pic_ob_at_genset, //file
+                assess_ob_at_genset : assess_ob_at_genset,
+                pic_ob_at_boiler : pic_ob_at_boiler, //file
+                assess_ob_at_boiler : assess_ob_at_boiler,
+                pic_ob_at_thermopac : pic_ob_at_thermopac, //file
+                assess_ob_at_thermopac : assess_ob_at_thermopac,
+                pic_ob_at_other : pic_ob_at_other, //file
+                scope_comp_air : scope_comp_airItems,
+                compressed_air_saving : compressed_air_saving,
+                lighting_observation : lighting_observation,
+                lighting_saving : lighting_saving,
+                lighting_est_investment : lighting_est_investment,
+                lighting_est_savings : lighting_est_savings,
+                lighting_systems_photo : lighting_systems_photo, //file
+                electrical_motors_observations : electrical_motors_observations,
+                total_elec_motors : total_elec_motors,
+                elec_motors : elec_motorsItems, //checkbox
+                Energy_Saving_Opportunities_in_Electrical_Motors : Energy_Saving_Opportunities_in_Electrical_Motors,
+                Estimated_Savings_Motor_Upgradation : Estimated_Savings_Motor_Upgradation,
+                Waste_Heat_Recovery_Observations : Waste_Heat_Recovery_Observations,
+                scope_waste : scope_wasteItems, //checkbox
+                Waste_Heat_Recovery_Fuel_Savings : Waste_Heat_Recovery_Fuel_Savings,
+                pic_ob_raw_material : pic_ob_raw_material, //file
+                Assessment_Observation_at_Raw_Material_Inward : Assessment_Observation_at_Raw_Material_Inward,
+                pic_ob_material_handling : pic_ob_material_handling, //file
+                Assessment_Observation_at_Material_Handling : Assessment_Observation_at_Material_Handling,
+                Production_Machine_Utilization_Data_Collection_Aspects : Production_Machine_Utilization_Data_Collection_Aspects,
+                pic_production_machine_util : pic_production_machine_util, //file
+                annual_production_quantity : annual_production_quantity,
+                production_layout_ob_photo : production_layout_ob_photo, //file
+                Installation_Monitoring_Systems : Installation_Monitoring_Systems,
+                mgmt_on_energy_resource : mgmt_on_energy_resource,
+                opportunities_in_the_facility : opportunities_in_the_facility,
+                material_conservation_opportunities : material_conservation_opportunities,
+                water_reuse_opportunities : water_reuse_opportunities,
+                scope_for_renewable : scope_for_renewable,
+                details_of_renewable_energy : details_of_renewable_energy,
+                pic_renewable_energy : pic_renewable_energy, //file
+                annual_rainfall : annual_rainfall,
+                rwh_scope : rwh_scopeItems, //checkbox
+                rw_harvesting_observation : rw_harvesting_observation,
+                water_saving_opportunties : water_saving_opportunties,
+                obs_on_safety : obs_on_safety,
+                obs_on_safety_img : obs_on_safety_img, //file
+                obs_on_safety_crit : obs_on_safety_crit,
+                obs_on_safety_prod_photo : obs_on_safety_prod_photo, //file
+                obs_on_safety_prod : obs_on_safety_prod,
+                obs_on_safety_elec_photo : obs_on_safety_elec_photo, //file
+                obs_on_safety_elec : obs_on_safety_elec,
+                obs_on_safety_chem_photo : obs_on_safety_chem_photo, //file
+                obs_on_safety_chem : obs_on_safety_chem,
+                obs_on_safety_fire_photo : obs_on_safety_fire_photo, //file
+                obs_on_safety_fire : obs_on_safety_fire,
+                obs_on_elec_earth : obs_on_elec_earth,
+                obs_on_elec_earth_photo : obs_on_elec_earth_photo, //file
+                overall_obs_on_safety_photo : overall_obs_on_safety_photo, //file
+                specific_energy : specific_energy,
+                specific_water : specific_water,
+                specific_fuel : specific_fuel,
+                specific_fuel_cost : specific_fuel_cost,
+                specific_water_cost : specific_water_cost,
+                
+            })
+
+                .then(function (response) {
+                    console.log(response)
+                    document.getElementById("sect_5").style.display = "none";
+                    document.getElementById("success").style.display = "block";
+                })
+                .catch(err => console.log(err))
+        }
+        function reloadPage() {
+            location.reload()
+        }
+
+        async function uploadFile(selectedFile) {
+            try {
+
+                let formData = new FormData();
+                formData.append("file", selectedFile);
+                console.log(selectedFile);
+
+                const response = await axios.post('http://localhost:8080/uploadFile', formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    }
+                });
+                return response.data
+            } catch (error) {
+                if (error.response) { // get response with a status code not in range 2xx
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                } else if (error.request) { // no response
+                    console.log(error.request);
+                } else { // Something wrong in setting up the request
+                    console.log('Error', error.message);
+                }
+                console.log(error.config);
+            }
+        }
     </script>
     <script src="profile.js"></script>
     <script src="supply.js"></script>
     <script src="risk.js"></script>
     <script src="discharge.js"></script>
 </body>
+
 </html>
