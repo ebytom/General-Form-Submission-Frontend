@@ -49,8 +49,6 @@
                         <label for="facility_pic_ent">Facility Photo at Entrance</label><br>
                         <input type="file" id="facility_pic_ent" name="facility_pic_ent"
                             accept=".pdf, .doc, .docx, .png, .jpg, .jpeg, .heic">
-                        <p class="facility_pic_ent" id="facility_pic_ent"></p>
-
                     </div><br>
                     <div>
                         <label for="facility_name">Facility Name</label>
@@ -58,7 +56,7 @@
                     </div><br>
                     <div>
                         <label for="facility_pic">Facility Photo</label><br>
-                        <input type="file" id="fileInput" name="uploadedFile" accept=".pdf, .doc, .docx, .png">
+                        <input type="file" id="facility_pic" name="uploadedFile" accept=".pdf, .doc, .docx, .png">
                     </div><br><br>
                     <div>
                         <label for="facility_location">Facility location</label><br>
@@ -277,7 +275,7 @@
                             <label for="No">No</label><br>
                         </div><br>
                         <div>
-                            <label for="effluent_treatment">Effluent Treatment Plant Category</label><br>
+                            <label for="effluent_treatment" id="effluent">Effluent Treatment Plant Category</label><br>
                             <input onclick="effTreatment('CETP')" type="radio" id="CETP" name="effluent_treatment"
                                 value="CETP">
                             <label for="CETP">CETP</label><br>
@@ -289,7 +287,8 @@
                             <label for="no_zld">No ZLD Plant</label><br>
                         </div><br>
                         <div>
-                            <label for="water_quality">Implementation of Water Quality Watch Center</label><br>
+                            <label for="water_quality" id="water_quality">Implementation of Water Quality Watch
+                                Center</label><br>
                             <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment"
                                 value="yes1">
                             <label for="yes1">Yes</label><br>
@@ -1214,114 +1213,114 @@
             })
 
             axios.post("http://localhost:8080/services/postInformation", {
-                facility_pic_ent : facility_pic_ent,
-                facility_name : facility_name,
-                facility_location : facility_location,
-                dateInput : dateInput,
-                f_operation : f_operationItems, //checkbox
-                facility_category : facility_category, //radio
-                product_mfd : product_mfd,
-                prod_capacity : prod_capacity,
-                number_of_shifts : number_of_shifts, //radio
-                hr_shift : hr_shift,
-                wrk_frc : wrk_frc,
-                cert_obtained : cert_obtained,
-                cert_planned : cert_planned,
-                award_recieved : award_recieved,
-                elec_energy_src : elec_energy_srcItems, //checkbox
-                baseline_data_period : baseline_data_period,
-                annual_elec_consumption : annual_elec_consumption,
-                wind_elec_generation : wind_elec_generation,
-                solar_elec_generation : solar_elec_generation,
-                annual_energy_cost : annual_energy_cost,
-                energy_cost : energy_cost,
-                genset_diesel_consumption : genset_diesel_consumption,
-                boiler_diesel_consumption : boiler_diesel_consumption,
-                annual_diesel_cost : annual_diesel_cost,
-                petrol_consumption_logistics : petrol_consumption_logistics,
-                petrol_cost_logistics : petrol_cost_logistics,
-                boiler_fuel : boiler_fuelItems, //checkbox
-                boiler_fuel_quantity : boiler_fuel_quantity,
-                boiler_fuel_cost : boiler_fuel_cost,
-                annual_production_quantity : annual_production_quantity,
-                src_water : src_waterItems, //checkbox
-                qty_fresh_water : qty_fresh_water,
-                total_qty_water : total_qty_water,
-                cost_fresh_water : cost_fresh_water,
-                cost_recovered_water : cost_recovered_water,
-                zld : zld, //radio
-                effluent_treatment : effluent_treatment, //radio
-                water_quality : water_quality, //radio
-                domestic_water_consumption : domestic_water_consumption,
-                garden_area : garden_area,
-                garden_use : garden_use,
-                src_fuel : src_fuelItems, //checkbox
-                pic_ob_at_power_house : pic_ob_at_power_house, //file
-                assess_ob_at_power_house : assess_ob_at_power_house,
-                pic_ob_at_compressor : pic_ob_at_compressor, //file
-                assess_ob_at_compressor : assess_ob_at_compressor,
-                pic_ob_at_genset : pic_ob_at_genset, //file
-                assess_ob_at_genset : assess_ob_at_genset,
-                pic_ob_at_boiler : pic_ob_at_boiler, //file
-                assess_ob_at_boiler : assess_ob_at_boiler,
-                pic_ob_at_thermopac : pic_ob_at_thermopac, //file
-                assess_ob_at_thermopac : assess_ob_at_thermopac,
-                pic_ob_at_other : pic_ob_at_other, //file
-                scope_comp_air : scope_comp_airItems,
-                compressed_air_saving : compressed_air_saving,
-                lighting_observation : lighting_observation,
-                lighting_saving : lighting_saving,
-                lighting_est_investment : lighting_est_investment,
-                lighting_est_savings : lighting_est_savings,
-                lighting_systems_photo : lighting_systems_photo, //file
-                electrical_motors_observations : electrical_motors_observations,
-                total_elec_motors : total_elec_motors,
-                elec_motors : elec_motorsItems, //checkbox
-                energy_saving_opportunities_in_electrical_motors : energy_saving_opportunities_in_electrical_motors,
-                estimated_savings_motor_upgradation : estimated_savings_motor_upgradation,
-                waste_heat_recovery_observations : waste_heat_recovery_observations,
-                scope_waste : scope_wasteItems, //checkbox
-                waste_heat_recovery_fuel_savings : waste_heat_recovery_fuel_savings,
-                pic_ob_raw_material : pic_ob_raw_material, //file
-                assessment_observation_at_raw_material_inward : assessment_observation_at_raw_material_inward,
-                pic_ob_material_handling : pic_ob_material_handling, //file
-                assessment_observation_at_material_handling : assessment_observation_at_material_handling,
-                production_machine_utilization_data_collection_aspects : production_machine_utilization_data_collection_aspects,
-                pic_production_machine_util : pic_production_machine_util, //file
-                annual_production_quantity : annual_production_quantity,
-                production_layout_ob_photo : production_layout_ob_photo, //file
-                installation_monitoring_systems : installation_monitoring_systems,
-                mgmt_on_energy_resource : mgmt_on_energy_resource,
-                opportunities_in_the_facility : opportunities_in_the_facility,
-                material_conservation_opportunities : material_conservation_opportunities,
-                water_reuse_opportunities : water_reuse_opportunities,
-                scope_for_renewable : scope_for_renewable,
-                details_of_renewable_energy : details_of_renewable_energy,
-                pic_renewable_energy : pic_renewable_energy, //file
-                annual_rainfall : annual_rainfall,
-                rwh_scope : rwh_scopeItems, //checkbox
-                rw_harvesting_observation : rw_harvesting_observation,
-                water_saving_opportunties : water_saving_opportunties,
-                obs_on_safety : obs_on_safety,
-                obs_on_safety_img : obs_on_safety_img, //file
-                obs_on_safety_crit : obs_on_safety_crit,
-                obs_on_safety_prod_photo : obs_on_safety_prod_photo, //file
-                obs_on_safety_prod : obs_on_safety_prod,
-                obs_on_safety_elec_photo : obs_on_safety_elec_photo, //file
-                obs_on_safety_elec : obs_on_safety_elec,
-                obs_on_safety_chem_photo : obs_on_safety_chem_photo, //file
-                obs_on_safety_chem : obs_on_safety_chem,
-                obs_on_safety_fire_photo : obs_on_safety_fire_photo, //file
-                obs_on_safety_fire : obs_on_safety_fire,
-                obs_on_elec_earth : obs_on_elec_earth,
-                obs_on_elec_earth_photo : obs_on_elec_earth_photo, //file
-                overall_obs_on_safety_photo : overall_obs_on_safety_photo, //file
-                specific_energy : specific_energy,
-                specific_water : specific_water,
-                specific_fuel : specific_fuel,
-                specific_fuel_cost : specific_fuel_cost,
-                specific_water_cost : specific_water_cost,
-                
+                facility_pic_ent: facility_pic_ent,
+                facility_name: facility_name,
+                facility_location: facility_location,
+                dateInput: dateInput,
+                f_operation: f_operationItems, //checkbox
+                facility_category: facility_category, //radio
+                product_mfd: product_mfd,
+                prod_capacity: prod_capacity,
+                number_of_shifts: number_of_shifts, //radio
+                hr_shift: hr_shift,
+                wrk_frc: wrk_frc,
+                cert_obtained: cert_obtained,
+                cert_planned: cert_planned,
+                award_recieved: award_recieved,
+                elec_energy_src: elec_energy_srcItems, //checkbox
+                baseline_data_period: baseline_data_period,
+                annual_elec_consumption: annual_elec_consumption,
+                wind_elec_generation: wind_elec_generation,
+                solar_elec_generation: solar_elec_generation,
+                annual_energy_cost: annual_energy_cost,
+                energy_cost: energy_cost,
+                genset_diesel_consumption: genset_diesel_consumption,
+                boiler_diesel_consumption: boiler_diesel_consumption,
+                annual_diesel_cost: annual_diesel_cost,
+                petrol_consumption_logistics: petrol_consumption_logistics,
+                petrol_cost_logistics: petrol_cost_logistics,
+                boiler_fuel: boiler_fuelItems, //checkbox
+                boiler_fuel_quantity: boiler_fuel_quantity,
+                boiler_fuel_cost: boiler_fuel_cost,
+                annual_production_quantity: annual_production_quantity,
+                src_water: src_waterItems, //checkbox
+                qty_fresh_water: qty_fresh_water,
+                total_qty_water: total_qty_water,
+                cost_fresh_water: cost_fresh_water,
+                cost_recovered_water: cost_recovered_water,
+                zld: zld, //radio
+                effluent_treatment: effluent_treatment, //radio
+                water_quality: water_quality, //radio
+                domestic_water_consumption: domestic_water_consumption,
+                garden_area: garden_area,
+                garden_use: garden_use,
+                src_fuel: src_fuelItems, //checkbox
+                pic_ob_at_power_house: pic_ob_at_power_house, //file
+                assess_ob_at_power_house: assess_ob_at_power_house,
+                pic_ob_at_compressor: pic_ob_at_compressor, //file
+                assess_ob_at_compressor: assess_ob_at_compressor,
+                pic_ob_at_genset: pic_ob_at_genset, //file
+                assess_ob_at_genset: assess_ob_at_genset,
+                pic_ob_at_boiler: pic_ob_at_boiler, //file
+                assess_ob_at_boiler: assess_ob_at_boiler,
+                pic_ob_at_thermopac: pic_ob_at_thermopac, //file
+                assess_ob_at_thermopac: assess_ob_at_thermopac,
+                pic_ob_at_other: pic_ob_at_other, //file
+                scope_comp_air: scope_comp_airItems,
+                compressed_air_saving: compressed_air_saving,
+                lighting_observation: lighting_observation,
+                lighting_saving: lighting_saving,
+                lighting_est_investment: lighting_est_investment,
+                lighting_est_savings: lighting_est_savings,
+                lighting_systems_photo: lighting_systems_photo, //file
+                electrical_motors_observations: electrical_motors_observations,
+                total_elec_motors: total_elec_motors,
+                elec_motors: elec_motorsItems, //checkbox
+                energy_saving_opportunities_in_electrical_motors: energy_saving_opportunities_in_electrical_motors,
+                estimated_savings_motor_upgradation: estimated_savings_motor_upgradation,
+                waste_heat_recovery_observations: waste_heat_recovery_observations,
+                scope_waste: scope_wasteItems, //checkbox
+                waste_heat_recovery_fuel_savings: waste_heat_recovery_fuel_savings,
+                pic_ob_raw_material: pic_ob_raw_material, //file
+                assessment_observation_at_raw_material_inward: assessment_observation_at_raw_material_inward,
+                pic_ob_material_handling: pic_ob_material_handling, //file
+                assessment_observation_at_material_handling: assessment_observation_at_material_handling,
+                production_machine_utilization_data_collection_aspects: production_machine_utilization_data_collection_aspects,
+                pic_production_machine_util: pic_production_machine_util, //file
+                annual_production_quantity: annual_production_quantity,
+                production_layout_ob_photo: production_layout_ob_photo, //file
+                installation_monitoring_systems: installation_monitoring_systems,
+                mgmt_on_energy_resource: mgmt_on_energy_resource,
+                opportunities_in_the_facility: opportunities_in_the_facility,
+                material_conservation_opportunities: material_conservation_opportunities,
+                water_reuse_opportunities: water_reuse_opportunities,
+                scope_for_renewable: scope_for_renewable,
+                details_of_renewable_energy: details_of_renewable_energy,
+                pic_renewable_energy: pic_renewable_energy, //file
+                annual_rainfall: annual_rainfall,
+                rwh_scope: rwh_scopeItems, //checkbox
+                rw_harvesting_observation: rw_harvesting_observation,
+                water_saving_opportunties: water_saving_opportunties,
+                obs_on_safety: obs_on_safety,
+                obs_on_safety_img: obs_on_safety_img, //file
+                obs_on_safety_crit: obs_on_safety_crit,
+                obs_on_safety_prod_photo: obs_on_safety_prod_photo, //file
+                obs_on_safety_prod: obs_on_safety_prod,
+                obs_on_safety_elec_photo: obs_on_safety_elec_photo, //file
+                obs_on_safety_elec: obs_on_safety_elec,
+                obs_on_safety_chem_photo: obs_on_safety_chem_photo, //file
+                obs_on_safety_chem: obs_on_safety_chem,
+                obs_on_safety_fire_photo: obs_on_safety_fire_photo, //file
+                obs_on_safety_fire: obs_on_safety_fire,
+                obs_on_elec_earth: obs_on_elec_earth,
+                obs_on_elec_earth_photo: obs_on_elec_earth_photo, //file
+                overall_obs_on_safety_photo: overall_obs_on_safety_photo, //file
+                specific_energy: specific_energy,
+                specific_water: specific_water,
+                specific_fuel: specific_fuel,
+                specific_fuel_cost: specific_fuel_cost,
+                specific_water_cost: specific_water_cost,
+
             })
 
                 .then(function (response) {
