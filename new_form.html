@@ -70,28 +70,28 @@
                         <label>Facility Operation:</label><br>
                         <input type="checkbox" id="spinning" name="f_operation" value="spinning">
                         <label for="spinning">Spinning</label><br>
-                        <input type="checkbox" id="Knitting" name="f_operation" value="Knitting">
+                        <input type="checkbox" id="knitting" name="f_operation" value="Knitting">
                         <label for="Knitting">Knitting</label><br>
-                        <input type="checkbox" id="Processing" name="f_operation" value="Processing">
+                        <input type="checkbox" id="processing" name="f_operation" value="Processing">
                         <label for="Processing">Processing</label><br>
-                        <input type="checkbox" id="Garmenting" name="f_operation" value="Garmenting">
+                        <input type="checkbox" id="garmenting" name="f_operation" value="Garmenting">
                         <label for="Garmenting">Garmenting</label><br>
                     </div><br><br>
                     <div>
                         <label>Facility category</label><br>
-                        <input onclick="facilityCategory('Micro')" type="radio" id="Micro" name="Facility category"
+                        <input onclick="facilityCategory('Micro')" type="radio" id="micro" name="Facility category"
                             value="Micro">
                         <label for="Micro">Micro</label>
                         <br>
-                        <input onclick="facilityCategory('Small')" type="radio" id="Small" name="Facility category"
+                        <input onclick="facilityCategory('Small')" type="radio" id="small" name="Facility category"
                             value="Small">
                         <label for="Small">Small</label>
                         <br>
-                        <input onclick="facilityCategory('Medium')" type="radio" id="Medium" name="Facility category"
+                        <input onclick="facilityCategory('Medium')" type="radio" id="medium" name="Facility category"
                             value="Medium">
                         <label for="Medium">Medium</label>
                         <br>
-                        <input onclick="facilityCategory('large')" type="radio" id="Large" name="Facility category"
+                        <input onclick="facilityCategory('large')" type="radio" id="large" name="Facility category"
                             value="large">
                         <label for="large">large</label>
                     </div><br><br>
@@ -106,17 +106,17 @@
                     <div>
                         <label>No of Shifts</label>
                         <br>
-                        <input onclick="numShifts('Single Shift')" type="radio" id="Single_Shift" name="No of Shifts"
+                        <input onclick="numShifts('Single Shift')" type="radio" id="single_shift" name="No of Shifts"
                             value="Single Shift">
-                        <label for="Single_Shift">Single Shift</label>
+                        <label for="single_shift">Single Shift</label>
                         <br>
-                        <input onclick="numShifts('Two Shift')" type="radio" id="Two_Shift" name="No of Shifts"
+                        <input onclick="numShifts('Two Shift')" type="radio" id="two_shift" name="No of Shifts"
                             value="Two Shift">
-                        <label for="Two_Shift">Two Shift</label>
+                        <label for="two_shift">Two Shift</label>
                         <br>
-                        <input onclick="numShifts('Three Shift')" type="radio" id="Three_Shift" name="No of Shifts"
+                        <input onclick="numShifts('Three Shift')" type="radio" id="three_shift" name="No of Shifts"
                             value="Three Shift">
-                        <label for="Three_Shift">Three Shift</label>
+                        <label for="three_shift">Three Shift</label>
                     </div><br><br>
                     <div>
                         <label for="name">Hrs/Shift</label>
@@ -141,12 +141,12 @@
                     <div class="elec_energy_src">
                         <label>Electrical Energy Source</label><br>
 
-                        <input type="checkbox" id="Grid_Electricity_HT" name="elec_energy_src"
+                        <input type="checkbox" id="grid_electricity_ht" name="elec_energy_src"
                             value="Grid Electricity HT">
-                        <label for="Grid_Electricity_LT">Grid Electricity - HT</label><br>
-                        <input type="checkbox" id="Grid_Electricity_LT" name="elec_energy_src"
+                        <label for="grid_electricity_lt">Grid Electricity - HT</label><br>
+                        <input type="checkbox" id="grid_electricity_lt" name="elec_energy_src"
                             value="Grid Electricity - LT">
-                        <label for="Grid_Electricity_LT">Grid Electricity - LT</label><br>
+                        <label for="grid_electricity_lt">Grid Electricity - LT</label><br>
                     </div><br><br>
                     <div>
                         <label for="baseline_data_period">Baseline Data Period (Mention the FY Period as
@@ -276,12 +276,12 @@
                         </div><br>
                         <div>
                             <label for="effluent_treatment" id="effluent">Effluent Treatment Plant Category</label><br>
-                            <input onclick="effTreatment('CETP')" type="radio" id="CETP" name="effluent_treatment"
+                            <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
                                 value="CETP">
-                            <label for="CETP">CETP</label><br>
-                            <input onclick="effTreatment('IETP')" type="radio" id="IETP" name="effluent_treatment"
+                            <label for="cetp">CETP</label><br>
+                            <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
                                 value="IETP">
-                            <label for="IETP">IETP</label><br>
+                            <label for="ietp">IETP</label><br>
                             <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld"
                                 name="effluent_treatment" value="no-zld">
                             <label for="no_zld">No ZLD Plant</label><br>
@@ -330,7 +330,7 @@
                             name="garden_and_domestic_water_use_ob"><br><br>
                     </div>
                     <div class="src_fuel">
-                        <label for="Energy_Source_Forms_of_Fuels">Energy Source Forms of Fuels</label><br>
+                        <label for="energy_source_forms_of_fuels">Energy Source Forms of Fuels</label><br>
                         <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
                         <label for="electricity">Electricity</label><br>
                         <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
@@ -401,9 +401,7 @@
                     <div>
                         <label for="pic_ob_at_other">Assessment
                             Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
-                        <input type="file"
-                            id="pic_ob_at_other"
-                            name="pic_ob_at_other"><br><br>
+                        <input type="file" id="pic_ob_at_other" name="pic_ob_at_other"><br><br>
                     </div>
                     <div>
                         <label for="assess_ob_at_other">Assessment
@@ -412,25 +410,25 @@
                         <input type="text" id="assess_ob_at_other" name="assess_ob_at_other"><br><br>
                     </div>
                     <div class="scope_comp_air">
-                        <label for="Scope_for_Energy_Savings_in_Compressed_Air_Systems">Scope for Energy Savings in
+                        <label for="scope_for_energy_savings_in_compressed_air_systems">Scope for Energy Savings in
                             Compressed Air Systems</label><br>
-                        <input type="checkbox" id="compressed_Air_Leak_Fixing_Opportunities" name="scope_comp_air"
+                        <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
                             value="Compressed Air Leak Fixing Opportunities">
                         <label for="compressed_Air_Leak_Fixing_Opportunities">Compressed Air Leak Fixing
                             Opportunities</label><br>
                         <input type="checkbox"
-                            id="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)"
+                            id="scope_for_drive_installationscope_for_pressure_optimization_generation"
                             name="scope_comp_air"
                             value="Scope for Drive InstallationScope for Pressure Optimization (Generation)">
-                        <label for="scope_for_Drive_InstallationScope_for_Pressure_Optimization_(Generation)">Scope
+                        <label for="scope_for_drive_installationscope_for_pressure_optimization_generation">Scope
                             for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
-                        <input type="checkbox" id="scope_for_Pressure_Optimization_(Utilization)" name="scope_comp_air"
+                        <input type="checkbox" id="scope_for_pressure_optimization_utilization" name="scope_comp_air"
                             value="Scope for Pressure Optimization (Utilization)">
-                        <label for="scope_for_Pressure_Optimization_(Utilization)">Scope for Pressure Optimization
+                        <label for="scope_for_pressure_optimization_utilization">Scope for Pressure Optimization
                             (Utilization)</label><br>
-                        <input type="checkbox" id="scope_for_Cleaning_Air_Use_Optimization" name="scope_comp_air"
+                        <input type="checkbox" id="scope_for_cleaning_air_use_optimization" name="scope_comp_air"
                             value="Scope for Cleaning Air Use Optimization">
-                        <label for="scope_for_Cleaning_Air_Use_Optimization">Scope for Cleaning Air Use
+                        <label for="scope_for_cleaning_air_use_optimization">Scope for Cleaning Air Use
                             Optimization</label><br>
                         <input type="checkbox" id="other2" name="other" value="#other2_text">
                         <label for="other">Other : </label><input type="text" id="other2_text" name="other"><br><br>
@@ -494,11 +492,11 @@
                     <label for="wind-elec-generation">Electrical Motors - Energy Saving Opportunities</label><br>
                     <input type="checkbox" id="rewound_with_ie3" name="elec_motors" value="Coal Replacement of Rewound Motors
                         with IE3 Motors">
-                    <label for="Coal Replacement of Rewound Motors with IE3 Motors">Coal Replacement of Rewound Motors
+                    <label for="rewound_with_ie3">Coal Replacement of Rewound Motors
                         with IE3 Motors</label><br>
-                    <input type="checkbox" id="Upgradation_of_Conventional_Motors_with_IE3_Motors" name="elec_motors"
+                    <input type="checkbox" id="upgradation_of_conventional_motors_with_ie3_motors" name="elec_motors"
                         value="Upgradation of Conventional Motors with IE3 Motors">
-                    <label for="Upgradation of Conventional Motors with IE3 Motors">Upgradation of Conventional Motors
+                    <label for="upgradation_of_conventional_motors_with_ie3_motors">Upgradation of Conventional Motors
                         with IE3 Motors</label><br>
                 </div>
                 <div>
@@ -519,18 +517,18 @@
                         name="waste_heat_recovery_observations"><br><br>
                 </div>
                 <div class="scope_waste">
-                    <label for="Scope_for_Waste_Heat_Recovery">Scope for Waste Heat Recovery</label><br>
-                    <input type="checkbox" id="Flue_Gas_Waste_Heat_Recovery" name="scope_waste"
+                    <label for="scope_for_waste_heat_recovery">Scope for Waste Heat Recovery</label><br>
+                    <input type="checkbox" id="flue_gas_waste_heat_recovery" name="scope_waste"
                         value="Flue Gas Waste Heat Recovery">
-                    <label for="Flue Gas Waste Heat Recovery">Flue Gas Waste Heat Recovery</label><br>
-                    <input type="checkbox" id="Cooling_Return_Heat_Recovery" name="scope_waste"
+                    <label for="flue_gas_waste_heat_recovery">Flue Gas Waste Heat Recovery</label><br>
+                    <input type="checkbox" id="cooling_return_heat_recovery" name="scope_waste"
                         value="Cooling Return Heat Recovery">
-                    <label for="Cooling Return Heat Recovery">Cooling Return Heat Recovery</label><br>
-                    <input type="checkbox" id="Effluent_Heat_Recovery" name="scope_waste"
+                    <label for="cooling_return_heat_recovery">Cooling Return Heat Recovery</label><br>
+                    <input type="checkbox" id="effluent_heat_recovery" name="scope_waste"
                         value="Effluent Heat Recovery">
-                    <label for="Effluent Heat Recovery">Effluent Heat Recovery</label><br>
-                    <input type="checkbox" id="Other_WHR_Systems" name="scope_waste" value="Other WHR Systems">
-                    <label for="Other WHR Systems">Other WHR Systems</label><br>
+                    <label for="effluent_heat_recovery">Effluent Heat Recovery</label><br>
+                    <input type="checkbox" id="other_whr_systems" name="scope_waste" value="Other WHR Systems">
+                    <label for="other_whr_systems">Other WHR Systems</label><br>
                 </div><br>
                 <div>
                     <label for="waste_heat_recovery_fuel_savings">Waste Heat Recovery Fuel Savings (Tons/Annum)
@@ -630,14 +628,14 @@
                     <input type="text" id="annual_rainfall" name="annual_rainfall"><br><br>
                 </div><br>
                 <div class="rwh_scope">
-                    <label for="Rain_Water_Harvesting_Scope">Rain Water Harvesting Scope</label><br>
-                    <input type="checkbox" id="Rain_Water_Harvesting" name="rwh_scope" value="Rain_Water_Harvesting">
-                    <label for="Rain Water Harvesting">Rain Water Harvesting</label><br>
-                    <input type="checkbox" id="Rain_Water_Charging" name="rwh_scope" value="Rain_Water_Charging">
-                    <label for="Rain Water Charging">Rain Water Charging</label><br>
-                    <input type="checkbox" id="No_Rain_Water_Harvesting_Structures" name="rwh_scope"
+                    <label for="rain_water_harvesting_scope">Rain Water Harvesting Scope</label><br>
+                    <input type="checkbox" id="rain_water_harvesting" name="rwh_scope" value="Rain_Water_Harvesting">
+                    <label for="rain_water_harvesting">Rain Water Harvesting</label><br>
+                    <input type="checkbox" id="rain_water_charging" name="rwh_scope" value="Rain_Water_Charging">
+                    <label for="rain_water_charging">Rain Water Charging</label><br>
+                    <input type="checkbox" id="no_rain_water_harvesting_structures" name="rwh_scope"
                         value="No_Rain_Water_Harvesting_Structures">
-                    <label for="No Rain Water Harvesting Structures">No Rain Water Harvesting Structures</label><br>
+                    <label for="no_rain_water_harvesting_structures">No Rain Water Harvesting Structures</label><br>
                 </div><br>
                 <div>
                     <label for="rw_harvesting_observation">Rain Water Harvesting Observation</label><br>
