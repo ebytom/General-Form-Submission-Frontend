@@ -402,14 +402,14 @@
                         <label for="pic_ob_at_other">Assessment
                             Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
                         <input type="file"
-                            id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"
-                            name="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"><br><br>
+                            id="pic_ob_at_other"
+                            name="pic_ob_at_other"><br><br>
                     </div>
                     <div>
                         <label for="assess_ob_at_other">Assessment
                             Observation at the Other Facilities (Chiller, Cooling Tower Etc)
                         </label><br>
-                        <input type="text" id="assess_ob_at_other)" name="assess_ob_at_other"><br><br>
+                        <input type="text" id="assess_ob_at_other" name="assess_ob_at_other"><br><br>
                     </div>
                     <div class="scope_comp_air">
                         <label for="Scope_for_Energy_Savings_in_Compressed_Air_Systems">Scope for Energy Savings in
@@ -576,7 +576,7 @@
                 </div>
                 <div>
                     <label for="production_layout_observations">Production Layout Observations</label><br>
-                    <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br><br>
+                    <input type="text" id="production_layout_observations" name="annual_production_quantity"><br><br>
                 </div><br>
                 <div>
                     <label for="production_layout_ob_photo">Production Layout Observations Photo</label><br>
@@ -1059,8 +1059,8 @@
                 overall_obs_on_safety_photo = await uploadFile(pic19)
             }
 
-            var f_opGroup = document.querySelectorAll('.f_operation');
-            var f_opItems = [];
+            var f_operationGroup = document.querySelectorAll('.f_operation');
+            var f_operationItems = [];
             // Loop through each checkbox group
             f_opGroup.forEach(function (group, index) {
                 // Get all checkboxes within the group
@@ -1071,7 +1071,7 @@
                     if (checkbox.checked) {
                         // Add checked value to the array
                         f_opItems.push(checkbox.value);
-                        console.log(f_opItems);
+                        console.log(f_operationItems);
                     }
                 });
             })
