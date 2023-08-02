@@ -1213,6 +1213,7 @@
             axios.post("http://localhost:8080/services/postInformation", {
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
+                facility_pic: facility_pic,
                 facility_location: facility_location,
                 dateInput: dateInput,
                 f_operation: f_operationItems, //checkbox
@@ -1227,6 +1228,8 @@
                 award_recieved: award_recieved,
                 elec_energy_src: elec_energy_srcItems, //checkbox
                 baseline_data_period: baseline_data_period,
+                total_elec_consumption:total_elec_consumption,
+                //Section - 2
                 annual_elec_consumption: annual_elec_consumption,
                 wind_elec_generation: wind_elec_generation,
                 solar_elec_generation: solar_elec_generation,
@@ -1252,6 +1255,7 @@
                 domestic_water_consumption: domestic_water_consumption,
                 garden_area: garden_area,
                 garden_use: garden_use,
+                //Section - 3
                 src_fuel: src_fuelItems, //checkbox
                 pic_ob_at_power_house: pic_ob_at_power_house, //file
                 assess_ob_at_power_house: assess_ob_at_power_house,
@@ -1264,7 +1268,8 @@
                 pic_ob_at_thermopac: pic_ob_at_thermopac, //file
                 assess_ob_at_thermopac: assess_ob_at_thermopac,
                 pic_ob_at_other: pic_ob_at_other, //file
-                scope_comp_air: scope_comp_airItems,
+                assess_ob_at_other:assess_ob_at_other,
+                scope_comp_air: scope_comp_airItems, //checkbox
                 compressed_air_saving: compressed_air_saving,
                 lighting_observation: lighting_observation,
                 lighting_saving: lighting_saving,
@@ -1272,6 +1277,7 @@
                 lighting_est_savings: lighting_est_savings,
                 lighting_systems_photo: lighting_systems_photo, //file
                 electrical_motors_observations: electrical_motors_observations,
+                //Section - 4
                 total_elec_motors: total_elec_motors,
                 elec_motors: elec_motorsItems, //checkbox
                 energy_saving_opportunities_in_electrical_motors: energy_saving_opportunities_in_electrical_motors,
@@ -1285,7 +1291,7 @@
                 assessment_observation_at_material_handling: assessment_observation_at_material_handling,
                 production_machine_utilization_data_collection_aspects: production_machine_utilization_data_collection_aspects,
                 pic_production_machine_util: pic_production_machine_util, //file
-                annual_production_quantity: annual_production_quantity,
+                production_layout_observations:production_layout_observations,
                 production_layout_ob_photo: production_layout_ob_photo, //file
                 installation_monitoring_systems: installation_monitoring_systems,
                 mgmt_on_energy_resource: mgmt_on_energy_resource,
@@ -1299,6 +1305,7 @@
                 rwh_scope: rwh_scopeItems, //checkbox
                 rw_harvesting_observation: rw_harvesting_observation,
                 water_saving_opportunties: water_saving_opportunties,
+                //Section - 5
                 obs_on_safety: obs_on_safety,
                 obs_on_safety_img: obs_on_safety_img, //file
                 obs_on_safety_crit: obs_on_safety_crit,
