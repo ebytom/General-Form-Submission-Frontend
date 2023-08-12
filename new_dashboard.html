@@ -36,7 +36,7 @@
             }
         }
     </style>
-    <title>Dashboard</title>
+    <title>Dashboard 2</title>
 </head>
 
 <body style="background-color: #243b55; padding-top: 10px; width: 100vw;">
@@ -53,6 +53,12 @@
             <a href="dashboard.html">
                 <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
             </a>
+            <a href="new_form.html">
+                <div class="btn rounded-3 text-white"><b>Form 2</b></div>
+            </a>
+            <a href="new_dashboard.html">
+                <div class="btn rounded-3 text-white"><b>Dashboard 2</b></div>
+            </a>
         </div>
     </div>
     <div class="p-5 py-3">
@@ -61,7 +67,7 @@
             <h2 class="text-white p-3 py-3"><b>Dashboard</b></h2>
         </div> -->
         <div class="my-3">
-            <h1 class="fs-1"><b>Dashboard</b></h1>
+            <h1 class="fs-1"><b>Dashboard 2</b></h1>
         </div>
         <div id="informations" class="my-4">
             <!-- items comes here -->
@@ -540,14 +546,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 
     <script>
-        axios.post("http://localhost:8080/services/getInformations")
+        axios.post("http://localhost:8080/form2/getForm")
             .then(function (response) {
-                console.log(response.data.requests)
-                const htmlRequests = response.data.requests.reverse().map(item =>
-                    `<div onclick="popup(${item.informationId})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                console.log(response.data.form)
+                const htmlRequests = response.data.form.reverse().map(item =>
+                    `<div onclick="popup(${item.form2Id})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="btn text-white rounded-3 p-4 d-flex align-items-center justify-content-between" style="background-color: rgba(0, 0, 0, .5)">
-                    <b class="fs-4">${item.name}</b>
-                    <b class="p-2 py-1 mx-3 rounded bg-primary" style="font-size: 13px;">${new Date(item.informationId).toLocaleDateString('en-GB')}</b>
+                    <b class="fs-4">${item.facility_name}</b>
+                    <b class="p-2 py-1 mx-3 rounded bg-primary" style="font-size: 13px;">${new Date(item.form2Id).toLocaleDateString('en-GB')}</b>
                 </div>
             </div>`).join("");
                 document.getElementById("informations").innerHTML = htmlRequests
