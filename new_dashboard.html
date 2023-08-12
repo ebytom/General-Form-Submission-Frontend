@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro Gurmukhi:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="supply.css">
+
+    <style>
+        body {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #informations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #informations {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+    <title>Dashboard</title>
+</head>
+
+<body style="background-color: #243b55; padding-top: 10px; width: 100vw;">
+    <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
+        style="height: 70px; width: calc(100vw - 33px);">
+        <div>
+            <b class="fs-2 text-white"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MSME</b>
+        </div>
+        <div class="d-flex">
+            <a class="p-0" href="index.html">
+                <div class="btn rounded-3 text-white"><b>Form</b></div>
+            </a>
+            <a href="dashboard.html">
+                <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
+            </a>
+        </div>
+    </div>
+    <div class="p-5 py-3">
+        <!-- <div class="rounded-3 w-100 d-flex justify-content-center"
+            style="background-color: rgba(0, 0, 0, .5); border: 3px solid #fff">
+            <h2 class="text-white p-3 py-3"><b>Dashboard</b></h2>
+        </div> -->
+        <div class="my-3">
+            <h1 class="fs-1"><b>Dashboard</b></h1>
+        </div>
+        <div id="informations" class="my-4">
+            <!-- items comes here -->
+        </div>
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><b class="text-black">#</b><b id="popupTitle" class="text-dark"></b></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-black">
+                        <!-- body here -->
+                        <!-- ---------------------- Section 1 ---------------------- -->
+
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;"> Facility Photo at Entrance</div>
+                            <div class="p-2" id="facility_pic_ent"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Facility Name</div>
+                            <div class="p-2" id="facility_name"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Facility Photo</div>
+                            <div class="p-2" id="facility_pic"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Facility location</div>
+                            <div class="p-2" id="facility_location"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Assesment Conducted on</div>
+                            <div class="p-2" id="dateInput"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Facility Operation</div>
+                            <div class="p-2" id="f_operation"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Facility category</div>
+                            <div class="p-2" id="Facility_category"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Products Manufactured</div>
+                            <div class="p-2" id="product_mfd"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Production Capacity:</div>
+                            <div class="p-2" id="prod_capacity"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">No of Shifts:</div>
+                            <div class="p-2" id="No_of_Shifts"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Hrs/Shift</div>
+                            <div class="p-2" id="hr_shift"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Total Number of Workforce Employed</div>
+                            <div class="p-2" id="wrk_frc"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;"> Certification Obtained</div>
+                            <div class="p-2" id="cert_obtained"></div>
+                        </div>
+                        <div class="d-flex bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Certifications Planned</div>
+                            <div class="p-2" id="cert_planned"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Awards recieved</div>
+                            <div class="p-2" id="award_recieved"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Electrical Energy Source</div>
+                            <div class="p-2" id="elec_energy_src"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Baseline Data Period (Mention the FY Period as
+                                YY-YY)</div>
+                            <div class="p-2" id="baseline_data_period"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Annual Electricity Consumption
+                                (Total)(kWh/Annum)</div>
+                            <div class="p-2" id="total_elec_consumption"></div>
+                        </div>
+
+                        <!-- ---------------------- Section 2 ---------------------- -->
+
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Annual Electricity Consumption
+                                (Grid)(kWh/Annum)</div>
+                            <div class="p-2" id="annual_elec_consumption"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Annual Electricity generation (Renewable
+                                Energy-Wind)(kWh/Annum)</div>
+                            <div class="p-2" id="wind_elec_generation"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Annual Electricity generation (Renewable
+                                Energy-Solar)(kWh/Annum)</div>
+                            <div class="p-2" id="solar_elec_generation"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Annual Energy Cost (INR/Annum)</div>
+                            <div class="p-2" id="annual_energy_cost"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Energy cost (INR/kWh)</div>
+                            <div class="p-2" id="energy_cost"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Genset Diesel Consumption (Kl/Annum)</div>
+                            <div class="p-2" id="genset_diesel_consumption"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Boiler Diesel Consumption (Kl/Annum)</div>
+                            <div class="p-2" id="boiler_diesel_consumption"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Annual Diesel Cost (INR/Annum)</div>
+                            <div class="p-2" id="annual_diesel_cost"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Petrol Consumption - Logistics (Kl/Annum)</div>
+                            <div class="p-2" id="petrol_consumption_logistics"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Petrol Cost- Logistics (INR/Annum)</div>
+                            <div class="p-2" id="petrol_cost_logistics"></div>
+                        </div>
+
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Boiler Fuel Used</div>
+                            <div class="p-2" id="boiler_fuel"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Boiler Fuel Used in Quantity (Ton/Annum)</div>
+                            <div class="p-2" id="boiler_fuel_quantity"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Annual Production Qty:</div>
+                            <div class="p-2" id="annual_production_quantity"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Source Water:</div>
+                            <div class="p-2" id="src_water"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Quantity of Fresh Water (Kl/Annum):</div>
+                            <div class="p-2" id="qty_fresh_water"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Total Quantity of Water (KL/Annum):</div>
+                            <div class="p-2" id="total_qty_water"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Cost of Fresh Water (INR/KL):</div>
+                            <div class="p-2" id="cost_fresh_water"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Cost of Recovered Water (INR/KL):</div>
+                            <div class="p-2" id="cost_recovered_water"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Effluent Treatment Plant Category:</div>
+                            <div class="p-2" id="effluent_treatment"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Implementation of Water Quality Watch Center:</div>
+                            <div class="p-2" id="water_quality"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Water Consumed for Domestic Use (KL/Day):</div>
+                            <div class="p-2" id="domestic_water_consumption"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Garden Area in Sq.Meter:</div>
+                            <div class="p-2" id="garden_area"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Water Consumed for Garden Use (KL/Day):</div>
+                            <div class="p-2" id="garden_use"></div>
+                        </div>
+
+                        <!-- ---------------------- Section 3 ---------------------- -->
+
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Garden & Domestic Water Use Observations:</div>
+                            <div class="p-2" id="Garden_and_Domestic_Water_Use_Ob"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Energy Source Forms of Fuels:</div>
+                            <div class="p-2" id="src_fuel"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the
+                                Power House Photo:</div>
+                            <div class="p-2" id="pic_ob_at_power_house"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Power House:</div>
+                            <div class="p-2" id="assess_ob_at_power_house"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at
+                                the Compressor Room Photo:</div>
+                            <div class="p-2" id="pic_ob_at_compressor"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Compressor Room:</div>
+                            <div class="p-2" id="assess_ob_at_compressor"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Genset Room Photo:</div>
+                            <div class="p-2" id="pic_ob_at_genset"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Genset Room:</div>
+                            <div class="p-2" id="assess_ob_at_genset"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Boiler Area Photo:</div>
+                            <div class="p-2" id="pic_ob_at_boiler"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Boiler Area:</div>
+                            <div class="p-2" id="assess_ob_at_boiler"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Thermopac Photo:</div>
+                            <div class="p-2" id="pic_ob_at_thermopac"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Thermopac:</div>
+                            <div class="p-2" id="assess_ob_at_thermopac"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo:</div>
+                            <div class="p-2" id="Assessment_Observation_at_the_Other_Facilities_(Chiller,_Cooling_Tower_Etc)_Photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at the Other Facilities (Chiller, Cooling Tower Etc):</div>
+                            <div class="p-2" id="assess_ob_at_other"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Scope for Energy Savings in Compressed Air Systems:</div>
+                            <div class="p-2" id="scope_comp_air"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Compressed Air Systems Savings in kWh/Annum:</div>
+                            <div class="p-2" id="compressed_air_saving"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Lighting Systems - Observation:</div>
+                            <div class="p-2" id="lighting_observation"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Lighting Systems - Savings Opportunities in kWh/Annum:</div>
+                            <div class="p-2" id="lighting_saving"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Lighting Systems - Estimated Investments in INR:</div>
+                            <div class="p-2" id="lighting_est_investment"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Electrical Motors - Observations:</div>
+                            <div class="p-2" id="electrical_motors_observations"></div>
+                        </div>
+
+                        <!-- ---------------------- Section 4 ---------------------- -->
+
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Electrical Motors - Total Numbers:</div>
+                            <div class="p-2" id="total_elec_motors"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Electrical Motors - Energy Saving Opportunities:</div>
+                            <div class="p-2" id="elec_motors"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Energy Saving Opportunities in Electrical Motors (kWh/Annum):</div>
+                            <div class="p-2" id="Energy_Saving_Opportunities_in_Electrical_Motors"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Estimated Savings- Motor Upgradation (INR/Annum):</div>
+                            <div class="p-2" id="Estimated_Savings_Motor_Upgradation"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">src_fuelItems Heat Recovery Observations:</div>
+                            <div class="p-2" id="src_fuelItems_Heat_Recovery_Observations"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Scope for src_fuelItems Heat Recovery:</div>
+                            <div class="p-2" id="scope_src_fuelItems"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">src_fuelItems Heat Recovery Fuel Savings:</div>
+                            <div class="p-2" id="src_fuelItems_Heat_Recovery_Fuel_Savings"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at Raw Material Inward Photo:</div>
+                            <div class="p-2" id="pic_ob_raw_material"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at Material Handling Photo:</div>
+                            <div class="p-2" id="pic_ob_material_handling"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Assessment Observation at Material Handling:</div>
+                            <div class="p-2" id="Assessment_Observation_at_Material_Handling"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Production Machine Utilization & Data Collection Aspects:</div>
+                            <div class="p-2" id="Production_Machine_Utilization_Data_Collection_Aspects"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Production Machine Utilization & Data Collection Aspects Photo:</div>
+                            <div class="p-2" id="pic_production_machine_util"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Production Layout Observations:</div>
+                            <div class="p-2" id="annual_production_quantity"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Production Layout Observations Photo:</div>
+                            <div class="p-2" id="production_layout_ob_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Installation status of Measuring & Monitoring Systems for Energy, Water, Fuel & src_fuelItems Etc:</div>
+                            <div class="p-2" id="Installation_Monitoring_Systems"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Management Committment on Energy & Resource Efficiency (Availability of Policy & Systems):</div>
+                            <div class="p-2" id="mgmt_on_energy_resource"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Technology Upgradation Opportunities in the Facility:</div>
+                            <div class="p-2" id="opportunities_in_the_facility"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Material Conservation & Improvement Opportunities in Packing:</div>
+                            <div class="p-2" id="material_conservation_opportunities"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Water Recovery & ReUse Opportunities:</div>
+                            <div class="p-2" id="water_reuse_opportunities"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Scope for Renewable Energy Investment Opportunities:</div>
+                            <div class="p-2" id="scope_for_renewable"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Details of Renewable Energy Projects:</div>
+                            <div class="p-2" id="details_of_renewable_energy"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Details of Renewable Energy Projects Photo:</div>
+                            <div class="p-2" id="pic_renewable_energy"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Annual Rainfall in Meters:</div>
+                            <div class="p-2" id="annual_rainfall"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Rain Water Harvesting Scope:</div>
+                            <div class="p-2" id="rwh_scope"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Rain Water Harvesting Observation:</div>
+                            <div class="p-2" id="rw_harvesting_observation"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Process Water Saving Opportunties:</div>
+                            <div class="p-2" id="water_saving_opportunties"></div>
+                        </div>
+
+                        <!-- ---------------------- Section 5 ---------------------- -->
+
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">General Observations on Safety: </div>
+                            <div class="p-2" id="obs_on_safety"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Safety (Critical) Photo: </div>
+                            <div class="p-2" id="obs_on_safety_img"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">General Observations on Safety (Critical): </div>
+                            <div class="p-2" id="obs_on_safety_crit"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Safety (Production) Photo: </div>
+                            <div class="p-2" id="obs_on_safety_prod_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Safety (Production): </div>
+                            <div class="p-2" id="obs_on_safety_prod"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Safety (Electrical)Photo: </div>
+                            <div class="p-2" id="obs_on_safety_elec_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">General Observations on Safety (Electrical): </div>
+                            <div class="p-2" id="obs_on_safety_elec"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Safety (Chemical Handling)Photo: </div>
+                            <div class="p-2" id="obs_on_safety_chem_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Safety (Chemical Handling): </div>
+                            <div class="p-2" id="obs_on_safety_chem"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">General Observations on Safety (Fire Hazards)Photo: </div>
+                            <div class="p-2" id="obs_on_safety_fire_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">General Observations on Safety (Fire Hazards):</div>
+                            <div class="p-2" id="obs_on_safety_fire"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">General Observations on Electrical and Earthing Systems: </div>
+                            <div class="p-2" id="obs_on_elec_earth"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> General Observations on Electrical and Earthing Systems Photo: </div>
+                            <div class="p-2" id="obs_on_elec_earth_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Overall Observations & Remarks on Safety Photo: </div>
+                            <div class="p-2" id="overall_obs_on_safety_photo"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Specific Energy (kWh/Unit of Production): </div>
+                            <div class="p-2" id="specific_energy"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Specific Water (Litres/Unit of Production): </div>
+                            <div class="p-2" id="specific_water"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;"> Specific Water (kg/Unit of Production): </div>
+                            <div class="p-2" id="specific_fuel"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Specific Fuel Cost (Rs/Unit of Production):</div>
+                            <div class="p-2" id="specific_fuel_cost"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">Specific Water (Rs/Unit of Production): </div>
+                            <div class="p-2" id="specific_water_cost"></div>
+                        </div>
+
+                        <!-- End -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button >
+        Launch demo modal
+    </button> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+
+    <script>
+        axios.post("http://localhost:8080/services/getInformations")
+            .then(function (response) {
+                console.log(response.data.requests)
+                const htmlRequests = response.data.requests.reverse().map(item =>
+                    `<div onclick="popup(${item.informationId})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="btn text-white rounded-3 p-4 d-flex align-items-center justify-content-between" style="background-color: rgba(0, 0, 0, .5)">
+                    <b class="fs-4">${item.name}</b>
+                    <b class="p-2 py-1 mx-3 rounded bg-primary" style="font-size: 13px;">${new Date(item.informationId).toLocaleDateString('en-GB')}</b>
+                </div>
+            </div>`).join("");
+                document.getElementById("informations").innerHTML = htmlRequests
+            })
+            .catch(err => console.log(err))
+
+
+        function popup(id) {
+            axios.post("http://localhost:8080/services/getInformationById", {
+                informationId: id
+            })
+                .then(function (res) {
+                    console.log(res);
+                    document.getElementById("facility_pic_ent").innerHTML = res.data.information.facility_pic_ent
+                    document.getElementById("facility_name").innerHTML = res.data.information.facility_name
+                    document.getElementById("facility_location").innerHTML = res.data.information.facility_location
+                    document.getElementById("dateInput").innerHTML = res.data.information.dateInput
+                    document.getElementById("f_operationItems").innerHTML = res.data.information.f_operationItems.map(item=>" "+item)
+                    document.getElementById("facility_category").innerHTML = res.data.information.facility_category.map(item=>" "+item)
+                    document.getElementById("product_mfd").innerHTML = res.data.information.product_mfd
+                    document.getElementById("prod_capacity").innerHTML = res.data.information.prod_capacity
+                    document.getElementById("number_of_shifts").innerHTML = res.data.information.number_of_shifts.map(item=>" "+item)
+                    document.getElementById("hr_shift").innerHTML = res.data.information.hr_shift
+                    document.getElementById("wrk_frc").innerHTML = res.data.information.wrk_frc
+                    document.getElementById("cert_obtained").innerHTML = res.data.information.cert_obtained
+                    document.getElementById("cert_planned").innerHTML = res.data.information.cert_planned
+                    document.getElementById("award_recieved").innerHTML = res.data.information.award_recieved
+                    document.getElementById("elec_energy_srcItems").innerHTML = res.data.information.elec_energy_srcItems.map(item=>" "+item)
+                    document.getElementById("baseline_data_period").innerHTML = res.data.information.baseline_data_period
+                    document.getElementById("annual_elec_consumption").innerHTML = res.data.information.annual_elec_consumption
+                    document.getElementById("wind_elec_generation").innerHTML = res.data.information.wind_elec_generation
+                    document.getElementById("solar_elec_generation").innerHTML = res.data.solar_elec_generation
+                    document.getElementById("annual_energy_cost").innerHTML = res.data.information.annual_energy_cost
+                    document.getElementById("energy_cost").innerHTML = res.data.information.energy_cost
+                    document.getElementById("genset_diesel_consumption").innerHTML = res.data.information.genset_diesel_consumption
+                    document.getElementById("boiler_diesel_consumption").innerHTML = res.data.information.boiler_diesel_consumption
+                    document.getElementById("annual_diesel_cost").innerHTML = res.data.information.annual_diesel_cost
+                    document.getElementById("petrol_consumption_logistics").innerHTML = res.data.information.petrol_consumption_logistics
+                    document.getElementById("petrol_cost_logistics").innerHTML = res.data.information.petrol_cost_logistics
+                    document.getElementById("boiler_fuelItems").innerHTML = res.data.information.boiler_fuelItems.map(item=>" "+item)
+                    document.getElementById("uboiler_fuel_quantity").innerHTML = res.data.information.boiler_fuel_quantity
+                    document.getElementById("boiler_fuel_cost").innerHTML = res.data.information.boiler_fuel_cost
+                    document.getElementById("annual_production_quantity").innerHTML = res.data.information.annual_production_quantity
+                    document.getElementById("src_waterItems").innerHTML = res.data.information.src_waterItems.map(item=>" "+item)
+                    document.getElementById("qty_fresh_water").innerHTML = res.data.information.qty_fresh_water
+                    document.getElementById("total_qty_water").innerHTML = res.data.information.total_qty_water
+                    document.getElementById("ucost_fresh_water").innerHTML = res.data.information.cost_fresh_water
+                    document.getElementById("cost_recovered_water").innerHTML = res.data.information.cost_recovered_water
+                    document.getElementById("zld").innerHTML = res.data.information.zld.map(item=>" "+item)
+                    document.getElementById("effluent_treatment").innerHTML = res.data.information.effluent_treatment.map(item=>" "+item)
+                    document.getElementById("water_quality").innerHTML = res.data.information.water_quality.map(item=>" "+item)
+                    document.getElementById("domestic_water_consumption").innerHTML = res.data.information.domestic_water_consumption
+                    document.getElementById("garden_area").innerHTML = res.data.information.garden_area
+                    document.getElementById("garden_use").innerHTML = res.data.information.garden_use
+                    document.getElementById("src_fuelItems").innerHTML = res.data.information.src_fuelItems.map(item=>" "+item)
+                    document.getElementById("pic_ob_at_power_house").innerHTML = res.data.information.pic_ob_at_power_house
+                    document.getElementById("assess_ob_at_power_house").innerHTML = res.data.information.assess_ob_at_power_house
+                    document.getElementById("pic_ob_at_compressor").innerHTML = res.data.information.pic_ob_at_compressor
+                    document.getElementById("assess_ob_at_compressor").innerHTML = res.data.information.assess_ob_at_compressor
+                    document.getElementById("pic_ob_at_genset").innerHTML = res.data.information.pic_ob_at_genset
+                    document.getElementById("assess_ob_at_genset").innerHTML = res.data.information.assess_ob_at_genset
+                    document.getElementById("pic_ob_at_boiler").innerHTML = res.data.information.pic_ob_at_boiler
+                    document.getElementById("ssess_ob_at_boiler").innerHTML = res.data.information.ssess_ob_at_boiler
+                    document.getElementById("pic_ob_at_thermopac").innerHTML = res.data.information.pic_ob_at_thermopac
+                    document.getElementById("assess_ob_at_thermopac").innerHTML = res.data.information.assess_ob_at_thermopac
+                    document.getElementById("pic_ob_at_other").innerHTML = res.data.information.pic_ob_at_other
+                    document.getElementById("scope_comp_airItems").innerHTML = res.data.information.scope_comp_airItems
+                    document.getElementById("compressed_air_saving").innerHTML = res.data.information.compressed_air_saving
+                    document.getElementById("lighting_observation").innerHTML = res.data.information.lighting_observation
+                    document.getElementById("lighting_saving").innerHTML = res.data.information.lighting_saving
+                    document.getElementById("lighting_est_investment").innerHTML = res.data.information.lighting_est_investment
+                    document.getElementById("lighting_est_savings").innerHTML = res.data.information.lighting_est_savings
+                    document.getElementById("lighting_systems_photo").innerHTML = res.data.information.lighting_systems_photo
+                    document.getElementById("electrical_motors_observations").innerHTML = res.data.information.electrical_motors_observations
+                    document.getElementById("total_elec_motors").innerHTML = res.data.information.total_elec_motors
+                    document.getElementById("elec_motorsItems").innerHTML = res.data.information.elec_motorsItems.map(item=>" "+item)
+                    document.getElementById("energy_saving_opportunities_in_electrical_motors").innerHTML = res.data.information.energy_saving_opportunities_in_electrical_motors
+                    document.getElementById("estimated_savings_motor_upgradation").innerHTML = res.data.information.estimated_savings_motor_upgradation
+                    document.getElementById("waste_heat_recovery_observations").innerHTML = res.data.information.waste_heat_recovery_observations
+                    document.getElementById("scope_wasteItems").innerHTML = res.data.information.scope_wasteItems.map(item=>" "+item)
+                    document.getElementById("waste_heat_recovery_fuel_savings").innerHTML = res.data.information.waste_heat_recovery_fuel_savings
+                    document.getElementById("spic_ob_raw_material").innerHTML = res.data.information.pic_ob_raw_material
+                    document.getElementById("assessment_observation_at_raw_material_inward").innerHTML = res.data.information.assessment_observation_at_raw_material_inward
+                    document.getElementById("pic_ob_material_handling").innerHTML = res.data.information.pic_ob_material_handling
+                    document.getElementById("assessment_observation_at_material_handling").innerHTML = res.data.information.assessment_observation_at_material_handling
+                    document.getElementById("production_machine_utilization_data_collection_aspects").innerHTML = res.data.information.production_machine_utilization_data_collection_aspects
+                    document.getElementById("pic_production_machine_util").innerHTML = res.data.information.pic_production_machine_util
+                    document.getElementById("annual_production_quantity").innerHTML = res.data.information.annual_production_quantity
+                    document.getElementById("production_layout_ob_photo").innerHTML = res.data.information.production_layout_ob_photo
+                    document.getElementById("installation_monitoring_systems").innerHTML = res.data.information.installation_monitoring_systems
+                    document.getElementById("mgmt_on_energy_resource").innerHTML = res.data.information.mgmt_on_energy_resource
+                    document.getElementById("opportunities_in_the_facility").innerHTML = res.data.information.opportunities_in_the_facility
+                    document.getElementById("material_conservation_opportunities").innerHTML = res.data.information.material_conservation_opportunities
+                    document.getElementById("water_reuse_opportunities").innerHTML = res.data.information.water_reuse_opportunities
+                    document.getElementById("scope_for_renewable").innerHTML = res.data.information.scope_for_renewable
+                    document.getElementById("details_of_renewable_energy,").innerHTML = res.data.information.details_of_renewable_energy
+                    document.getElementById("pic_renewable_energy").innerHTML = res.data.information.pic_renewable_energy
+                    document.getElementById("annual_rainfall").innerHTML = res.data.information.annual_rainfall
+                    document.getElementById("rwh_scopeItems").innerHTML = res.data.information.rwh_scopeItems.map(item=>" "+item)
+                    document.getElementById("rw_harvesting_observation").innerHTML = res.data.information.rw_harvesting_observation
+                    document.getElementById("water_saving_opportunties").innerHTML = res.data.information.water_saving_opportunties
+                    document.getElementById("obs_on_safety").innerHTML = res.data.information.obs_on_safety
+                    document.getElementById("obs_on_safety_img").innerHTML = res.data.information.obs_on_safety_img
+                    document.getElementById("obs_on_safety_crit").innerHTML = res.data.information.obs_on_safety_crit
+                    document.getElementById("obs_on_safety_prod_photo").innerHTML = res.data.information.obs_on_safety_prod_photo
+                    document.getElementById("obs_on_safety_prod").innerHTML = res.data.information.obs_on_safety_prod
+                    document.getElementById("obs_on_safety_elec_photo").innerHTML = res.data.information.obs_on_safety_elec_photo
+                    document.getElementById("obs_on_safety_elec").innerHTML = res.data.information.obs_on_safety_elec
+                    document.getElementById("obs_on_safety_chem_photo").innerHTML = res.data.information.obs_on_safety_chem_photo
+                    document.getElementById("obs_on_safety_chem").innerHTML = res.data.information.obs_on_safety_chem
+                    document.getElementById("obs_on_safety_fire_photo").innerHTML = res.data.information.obs_on_safety_fire_photo
+                    document.getElementById("obs_on_safety_fire").innerHTML = res.data.information.obs_on_safety_fire
+                    document.getElementById("obs_on_elec_earth").innerHTML = res.data.information.obs_on_elec_earth
+                    document.getElementById("obs_on_elec_earth_photo").innerHTML = res.data.information.obs_on_elec_earth_photo
+                    document.getElementById("overall_obs_on_safety_photo").innerHTML = res.data.information.overall_obs_on_safety_photo
+                    document.getElementById("specific_energy").innerHTML = res.data.information.specific_energy
+                    document.getElementById("specific_water").innerHTML = res.data.information.specific_water
+                    document.getElementById("specific_fuel").innerHTML = res.data.information.specific_fuel
+                    document.getElementById("specific_fuel_cost").innerHTML = res.data.information.specific_fuel_cost
+                    document.getElementById("specific_water_cost").innerHTML = res.data.information.specific_water_cost
+                })
+        }
+
+    </script>
+</body>
+
+</html>
