@@ -1216,7 +1216,7 @@
                 });
             })
 
-            axios.post("http://localhost:8080/form2/postForm", {
+            axios.post("https://general-form-submission-backend.vercel.app/form2/postForm", {
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
                 facility_pic: facility_pic,
@@ -1352,7 +1352,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post('http://localhost:8080/uploadFile', formData, {
+                const response = await axios.post('https://general-form-submission-backend.vercel.app/uploadFile', formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }

@@ -195,7 +195,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script>
       function submitForm() {
-        axios.post("http://localhost:8080/services/postInformation", {
+        axios.post("https://general-form-submission-backend.vercel.app/services/postInformation", {
           name: "eby"
         })
           .then(function (response) {
