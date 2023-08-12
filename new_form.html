@@ -35,6 +35,12 @@
             <a href="dashboard.html">
                 <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
             </a>
+            <a href="new_form.html">
+                <div class="btn rounded-3 text-white"><b>Form 2</b></div>
+            </a>
+            <a href="dashboard.html">
+                <div class="btn rounded-3 text-white"><b>Dashboard 2</b></div>
+            </a>
         </div>
     </div>
     <div id="form">
@@ -1068,7 +1074,7 @@
                 checkboxes.forEach(function (checkbox) {
                     if (checkbox.checked) {
                         // Add checked value to the array
-                        f_opItems.push(checkbox.value);
+                        f_operationItems.push(checkbox.value);
                         console.log(f_operationItems);
                     }
                 });
@@ -1210,7 +1216,7 @@
                 });
             })
 
-            axios.post("http://localhost:8080/services/postInformation", {
+            axios.post("http://localhost:8080/form2/postForm", {
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
                 facility_pic: facility_pic,
