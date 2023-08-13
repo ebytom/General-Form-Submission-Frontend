@@ -567,6 +567,7 @@
             })
                 .then(function (res) {
                     console.log(res);
+                    document.getElementById("popupTitle").innerHTML = res.data.form.form2Id
                     document.getElementById("facility_pic_ent").innerHTML = res.data.form.facility_pic_ent
                     document.getElementById("facility_name").innerHTML = res.data.form.facility_name
                     document.getElementById("facility_location").innerHTML = res.data.form.facility_location
