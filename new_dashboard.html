@@ -570,6 +570,7 @@
                     document.getElementById("popupTitle").innerHTML = res.data.form.form2Id
                     document.getElementById("facility_pic_ent").innerHTML = res.data.form.facility_pic_ent
                     document.getElementById("facility_name").innerHTML = res.data.form.facility_name
+                    document.getElementById("facility_pic").innerHTML = res.data.form.facility_pic
                     document.getElementById("facility_location").innerHTML = res.data.form.facility_location
                     document.getElementById("dateInput").innerHTML = res.data.form.dateInput
                     document.getElementById("f_operation").innerHTML = res.data.form.f_operation.map(item=>" "+item)
@@ -584,6 +585,8 @@
                     document.getElementById("award_recieved").innerHTML = res.data.form.award_recieved
                     document.getElementById("elec_energy_src").innerHTML = res.data.form.elec_energy_src.map(item=>" "+item)
                     document.getElementById("baseline_data_period").innerHTML = res.data.form.baseline_data_period
+                    document.getElementById("total_elec_consumption").innerHTML = res.data.form.total_elec_consumption
+                    //
                     document.getElementById("annual_elec_consumption").innerHTML = res.data.form.annual_elec_consumption
                     document.getElementById("wind_elec_generation").innerHTML = res.data.form.wind_elec_generation
                     document.getElementById("solar_elec_generation").innerHTML = res.data.solar_elec_generation
@@ -595,13 +598,13 @@
                     document.getElementById("petrol_consumption_logistics").innerHTML = res.data.form.petrol_consumption_logistics
                     document.getElementById("petrol_cost_logistics").innerHTML = res.data.form.petrol_cost_logistics
                     document.getElementById("boiler_fuel").innerHTML = res.data.form.boiler_fuel.map(item=>" "+item)
-                    document.getElementById("uboiler_fuel_quantity").innerHTML = res.data.form.boiler_fuel_quantity
+                    document.getElementById("boiler_fuel_quantity").innerHTML = res.data.form.boiler_fuel_quantity
                     document.getElementById("boiler_fuel_cost").innerHTML = res.data.form.boiler_fuel_cost
                     document.getElementById("annual_production_quantity").innerHTML = res.data.form.annual_production_quantity
                     document.getElementById("src_water").innerHTML = res.data.form.src_water.map(item=>" "+item)
                     document.getElementById("qty_fresh_water").innerHTML = res.data.form.qty_fresh_water
                     document.getElementById("total_qty_water").innerHTML = res.data.form.total_qty_water
-                    document.getElementById("ucost_fresh_water").innerHTML = res.data.form.cost_fresh_water
+                    document.getElementById("cost_fresh_water").innerHTML = res.data.form.cost_fresh_water
                     document.getElementById("cost_recovered_water").innerHTML = res.data.form.cost_recovered_water
                     document.getElementById("zld").innerHTML = res.data.form.zld.map(item=>" "+item)
                     document.getElementById("effluent_treatment").innerHTML = res.data.form.effluent_treatment.map(item=>" "+item)
@@ -609,6 +612,7 @@
                     document.getElementById("domestic_water_consumption").innerHTML = res.data.form.domestic_water_consumption
                     document.getElementById("garden_area").innerHTML = res.data.form.garden_area
                     document.getElementById("garden_use").innerHTML = res.data.form.garden_use
+                    //
                     document.getElementById("src_fuel").innerHTML = res.data.form.src_fuel.map(item=>" "+item)
                     document.getElementById("pic_ob_at_power_house").innerHTML = res.data.form.pic_ob_at_power_house
                     document.getElementById("assess_ob_at_power_house").innerHTML = res.data.form.assess_ob_at_power_house
@@ -617,7 +621,7 @@
                     document.getElementById("pic_ob_at_genset").innerHTML = res.data.form.pic_ob_at_genset
                     document.getElementById("assess_ob_at_genset").innerHTML = res.data.form.assess_ob_at_genset
                     document.getElementById("pic_ob_at_boiler").innerHTML = res.data.form.pic_ob_at_boiler
-                    document.getElementById("ssess_ob_at_boiler").innerHTML = res.data.form.ssess_ob_at_boiler
+                    document.getElementById("assess_ob_at_boiler").innerHTML = res.data.form.ssess_ob_at_boiler
                     document.getElementById("pic_ob_at_thermopac").innerHTML = res.data.form.pic_ob_at_thermopac
                     document.getElementById("assess_ob_at_thermopac").innerHTML = res.data.form.assess_ob_at_thermopac
                     document.getElementById("pic_ob_at_other").innerHTML = res.data.form.pic_ob_at_other
@@ -629,6 +633,7 @@
                     document.getElementById("lighting_est_savings").innerHTML = res.data.form.lighting_est_savings
                     document.getElementById("lighting_systems_photo").innerHTML = res.data.form.lighting_systems_photo
                     document.getElementById("electrical_motors_observations").innerHTML = res.data.form.electrical_motors_observations
+                    //
                     document.getElementById("total_elec_motors").innerHTML = res.data.form.total_elec_motors
                     document.getElementById("elec_motors").innerHTML = res.data.form.elec_motors.map(item=>" "+item)
                     document.getElementById("energy_saving_opportunities_in_electrical_motors").innerHTML = res.data.form.energy_saving_opportunities_in_electrical_motors
@@ -636,13 +641,13 @@
                     document.getElementById("waste_heat_recovery_observations").innerHTML = res.data.form.waste_heat_recovery_observations
                     document.getElementById("scope_waste").innerHTML = res.data.form.scope_waste.map(item=>" "+item)
                     document.getElementById("waste_heat_recovery_fuel_savings").innerHTML = res.data.form.waste_heat_recovery_fuel_savings
-                    document.getElementById("spic_ob_raw_material").innerHTML = res.data.form.pic_ob_raw_material
+                    document.getElementById("pic_ob_raw_material").innerHTML = res.data.form.pic_ob_raw_material
                     document.getElementById("assessment_observation_at_raw_material_inward").innerHTML = res.data.form.assessment_observation_at_raw_material_inward
                     document.getElementById("pic_ob_material_handling").innerHTML = res.data.form.pic_ob_material_handling
                     document.getElementById("assessment_observation_at_material_handling").innerHTML = res.data.form.assessment_observation_at_material_handling
                     document.getElementById("production_machine_utilization_data_collection_aspects").innerHTML = res.data.form.production_machine_utilization_data_collection_aspects
                     document.getElementById("pic_production_machine_util").innerHTML = res.data.form.pic_production_machine_util
-                    document.getElementById("annual_production_quantity").innerHTML = res.data.form.annual_production_quantity
+                    document.getElementById("production_layout_observations").innerHTML = res.data.form.production_layout_observations
                     document.getElementById("production_layout_ob_photo").innerHTML = res.data.form.production_layout_ob_photo
                     document.getElementById("installation_monitoring_systems").innerHTML = res.data.form.installation_monitoring_systems
                     document.getElementById("mgmt_on_energy_resource").innerHTML = res.data.form.mgmt_on_energy_resource
@@ -656,6 +661,7 @@
                     document.getElementById("rwh_scope").innerHTML = res.data.form.rwh_scope.map(item=>" "+item)
                     document.getElementById("rw_harvesting_observation").innerHTML = res.data.form.rw_harvesting_observation
                     document.getElementById("water_saving_opportunties").innerHTML = res.data.form.water_saving_opportunties
+                    //
                     document.getElementById("obs_on_safety").innerHTML = res.data.form.obs_on_safety
                     document.getElementById("obs_on_safety_img").innerHTML = res.data.form.obs_on_safety_img
                     document.getElementById("obs_on_safety_crit").innerHTML = res.data.form.obs_on_safety_crit
