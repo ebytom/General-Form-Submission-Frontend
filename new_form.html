@@ -77,25 +77,25 @@
                         <input type="checkbox" id="spinning" name="f_operation" value="spinning">
                         <label for="spinning">Spinning</label><br>
                         <input type="checkbox" id="knitting" name="f_operation" value="Knitting">
-                        <label for="Knitting">Knitting</label><br>
+                        <label for="knitting">Knitting</label><br>
                         <input type="checkbox" id="processing" name="f_operation" value="Processing">
-                        <label for="Processing">Processing</label><br>
+                        <label for="processing">Processing</label><br>
                         <input type="checkbox" id="garmenting" name="f_operation" value="Garmenting">
-                        <label for="Garmenting">Garmenting</label><br>
+                        <label for="garmenting">Garmenting</label><br>
                     </div><br><br>
                     <div>
                         <label>Facility category</label><br>
                         <input onclick="facilityCategory('Micro')" type="radio" id="micro" name="Facility category"
                             value="Micro">
-                        <label for="Micro">Micro</label>
+                        <label for="micro">Micro</label>
                         <br>
                         <input onclick="facilityCategory('Small')" type="radio" id="small" name="Facility category"
                             value="Small">
-                        <label for="Small">Small</label>
+                        <label for="small">Small</label>
                         <br>
                         <input onclick="facilityCategory('Medium')" type="radio" id="medium" name="Facility category"
                             value="Medium">
-                        <label for="Medium">Medium</label>
+                        <label for="medium">Medium</label>
                         <br>
                         <input onclick="facilityCategory('large')" type="radio" id="large" name="Facility category"
                             value="large">
@@ -149,7 +149,7 @@
 
                         <input type="checkbox" id="grid_electricity_ht" name="elec_energy_src"
                             value="Grid Electricity HT">
-                        <label for="grid_electricity_lt">Grid Electricity - HT</label><br>
+                        <label for="grid_electricity_ht">Grid Electricity - HT</label><br>
                         <input type="checkbox" id="grid_electricity_lt" name="elec_energy_src"
                             value="Grid Electricity - LT">
                         <label for="grid_electricity_lt">Grid Electricity - LT</label><br>
@@ -283,10 +283,10 @@
                         <div>
                             <label for="effluent_treatment" id="effluent">Effluent Treatment Plant Category</label><br>
                             <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
-                                value="CETP">
+                                value="cetp">
                             <label for="cetp">CETP</label><br>
                             <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
-                                value="IETP">
+                                value="ietp">
                             <label for="ietp">IETP</label><br>
                             <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld"
                                 name="effluent_treatment" value="no-zld">
@@ -295,14 +295,14 @@
                         <div>
                             <label for="water_quality" id="water_quality">Implementation of Water Quality Watch
                                 Center</label><br>
-                            <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment"
+                            <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment2"
                                 value="yes1">
                             <label for="yes1">Yes</label><br>
-                            <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment"
+                            <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment2"
                                 value="no1">
                             <label for="no1">No</label><br>
                             <input onclick="waterQuality('Not Applicable')" type="radio" id="na1"
-                                name="effluent_treatment" value="na1">
+                                name="effluent_treatment2" value="na1">
                             <label for="na1">Not Applicable</label><br>
                         </div><br>
                         <div>
@@ -317,9 +317,11 @@
                             <label for="garden_use">Water Consumed for Garden Use (KL/Day)</label>
                             <input type="text" id="garden_use" name="garden_use"><br><br>
                         </div><br>
-                        <button onclick="sect1()" name="prev2" id="prev2" class="btn btn-primary">&laquo;
-                            Previous</button>
-                        <button onclick="sect3()" name="next2" id="next2" class="btn btn-primary">Next &raquo;</button>
+                        <div style="display: flex;">
+                            <button onclick="sect1()" name="prev2" id="prev2" class="btn btn-primary">&laquo;Previous</button>
+                            <button onclick="sect3()"style="margin-left: auto; margin-right: 45px; padding-left: 12px !important;" name="next2" id="next2" class="btn btn-primary">Next &raquo;</button>
+                        </div>
+                        
                 </div><br>
                 </fieldset>
             </div>
@@ -340,15 +342,15 @@
                         <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
                         <label for="electricity">Electricity</label><br>
                         <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
-                        <label for="diesel">Diesel</label><br>
-                        <input type="checkbox" id="firewood" name="src_fuel" value="Firewood">
-                        <label for="firewood">Firewood</label><br>
-                        <input type="checkbox" id="coal" name="src_fuel" value="Coal">
-                        <label for="coal">Coal</label><br>
+                        <label for="diesel">Diesel</label><br>  
+                        <input type="checkbox" id="firewood1" name="src_fuel" value="Firewood">
+                        <label for="firewood1">Firewood</label><br>
+                        <input type="checkbox" id="coall" name="src_fuel" value="Coal">
+                        <label for="coall">Coal</label><br>
                         <input type="checkbox" id="gas" name="src_fuel" value="Gas">
                         <label for="gas">Gas</label><br>
                         <input type="checkbox" id="other1" name="src_fuel" value="#other1_text">
-                        <label for="other">Other : </label> <input type="text" id="other1_text" name="src_fuel"><br><br>
+                        <label for="other1">Other : </label> <input type="text" id="other1_text" name="src_fuel"><br><br>
                     </div>
                     <div>
                         <label for="pic_ob_at_power_house">Assessment Observation at the
@@ -420,12 +422,12 @@
                             Compressed Air Systems</label><br>
                         <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
                             value="Compressed Air Leak Fixing Opportunities">
-                        <label for="compressed_Air_Leak_Fixing_Opportunities">Compressed Air Leak Fixing
+                        <label for="compressed_air_leak_fixing_opportunities">Compressed Air Leak Fixing
                             Opportunities</label><br>
                         <input type="checkbox"
                             id="scope_for_drive_installationscope_for_pressure_optimization_generation"
                             name="scope_comp_air"
-                            value="Scope for Drive InstallationScope for Pressure Optimization (Generation)">
+                            value="Scope for drive installationScope for pressure optimization (Generation)">
                         <label for="scope_for_drive_installationscope_for_pressure_optimization_generation">Scope
                             for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
                         <input type="checkbox" id="scope_for_pressure_optimization_utilization" name="scope_comp_air"
@@ -436,8 +438,8 @@
                             value="Scope for Cleaning Air Use Optimization">
                         <label for="scope_for_cleaning_air_use_optimization">Scope for Cleaning Air Use
                             Optimization</label><br>
-                        <input type="checkbox" id="other2" name="other" value="#other2_text">
-                        <label for="other">Other : </label><input type="text" id="other2_text" name="other"><br><br>
+                        <input type="checkbox" id="others" name="other" value="#other2_text">
+                        <label for="others">Other : </label><input type="text" id="other2_text" name="other"><br><br>
                     </div>
                     <div>
                         <label for="compressed_air_saving">Compressed Air Systems Savings in
