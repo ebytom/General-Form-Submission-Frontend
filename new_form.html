@@ -62,7 +62,7 @@
                     </div><br>
                     <div>
                         <label for="facility_pic">Facility Photo</label><br>
-                        <input type="file" id="facility_pic" name="uploadedFile" accept=".pdf, .doc, .docx, .png">
+                        <input type="file" id="facility_pic" name="facility_pic" accept=".pdf, .doc, .docx, .png">
                     </div><br><br>
                     <div>
                         <label for="facility_location">Facility location</label><br>
@@ -125,8 +125,8 @@
                         <label for="three_shift">Three Shift</label>
                     </div><br><br>
                     <div>
-                        <label for="name">Hrs/Shift</label>
-                        <input type="text" id="hr_shift" name="hr-shift">
+                        <label for="hr_shift">Hrs/Shift</label>
+                        <input type="text" id="hr_shift" name="hr_shift">
                     </div><br><br>
                     <div>
                         <label for="wrk_frc">Total Number of Workforce Employed</label>
@@ -318,10 +318,13 @@
                             <input type="text" id="garden_use" name="garden_use"><br><br>
                         </div><br>
                         <div style="display: flex;">
-                            <button onclick="sect1()" name="prev2" id="prev2" class="btn btn-primary">&laquo;Previous</button>
-                            <button onclick="sect3()"style="margin-left: auto; margin-right: 45px; padding-left: 12px !important;" name="next2" id="next2" class="btn btn-primary">Next &raquo;</button>
+                            <button onclick="sect1()" name="prev2" id="prev2"
+                                class="btn btn-primary">&laquo;Previous</button>
+                            <button onclick="sect3()"
+                                style="margin-left: auto; margin-right: 45px; padding-left: 12px !important;"
+                                name="next2" id="next2" class="btn btn-primary">Next &raquo;</button>
                         </div>
-                        
+
                 </div><br>
                 </fieldset>
             </div>
@@ -342,7 +345,7 @@
                         <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
                         <label for="electricity">Electricity</label><br>
                         <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
-                        <label for="diesel">Diesel</label><br>  
+                        <label for="diesel">Diesel</label><br>
                         <input type="checkbox" id="firewood1" name="src_fuel" value="Firewood">
                         <label for="firewood1">Firewood</label><br>
                         <input type="checkbox" id="coall" name="src_fuel" value="Coal">
@@ -350,7 +353,8 @@
                         <input type="checkbox" id="gas" name="src_fuel" value="Gas">
                         <label for="gas">Gas</label><br>
                         <input type="checkbox" id="other1" name="src_fuel" value="#other1_text">
-                        <label for="other1">Other : </label> <input type="text" id="other1_text" name="src_fuel"><br><br>
+                        <label for="other1">Other : </label> <input type="text" id="other1_text"
+                            name="src_fuel"><br><br>
                     </div>
                     <div>
                         <label for="pic_ob_at_power_house">Assessment Observation at the
@@ -1236,7 +1240,7 @@
                 award_recieved: award_recieved,
                 elec_energy_src: elec_energy_srcItems, //checkbox
                 baseline_data_period: baseline_data_period,
-                total_elec_consumption:total_elec_consumption,
+                total_elec_consumption: total_elec_consumption,
                 //Section - 2
                 annual_elec_consumption: annual_elec_consumption,
                 wind_elec_generation: wind_elec_generation,
@@ -1276,7 +1280,7 @@
                 pic_ob_at_thermopac: pic_ob_at_thermopac, //file
                 assess_ob_at_thermopac: assess_ob_at_thermopac,
                 pic_ob_at_other: pic_ob_at_other, //file
-                assess_ob_at_other:assess_ob_at_other,
+                assess_ob_at_other: assess_ob_at_other,
                 scope_comp_air: scope_comp_airItems, //checkbox
                 compressed_air_saving: compressed_air_saving,
                 lighting_observation: lighting_observation,
@@ -1299,7 +1303,7 @@
                 assessment_observation_at_material_handling: assessment_observation_at_material_handling,
                 production_machine_utilization_data_collection_aspects: production_machine_utilization_data_collection_aspects,
                 pic_production_machine_util: pic_production_machine_util, //file
-                production_layout_observations:production_layout_observations,
+                production_layout_observations: production_layout_observations,
                 production_layout_ob_photo: production_layout_ob_photo, //file
                 installation_monitoring_systems: installation_monitoring_systems,
                 mgmt_on_energy_resource: mgmt_on_energy_resource,
