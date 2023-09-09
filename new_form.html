@@ -52,8 +52,8 @@
             <div class="container">
                 <fieldset>
                     <div>
-                        <label for="facility_pic_ent">Facility Photo at Entrance</label><br>
-                        <input type="file" id="facility_pic_ent" name="facility_pic_ent"
+                        <label for="facility_pic_ent">Facility Photo at Entrance</label>
+                        <input type="file" id="facility_pic_ent" class="upload-btn" name="facility_pic_ent"
                             accept=".pdf, .doc, .docx, .png, .jpg, .jpeg, .heic">
                     </div><br>
                     <div>
@@ -61,12 +61,13 @@
                         <input type="text" id="facility_name" name="facility_name">
                     </div><br>
                     <div>
-                        <label for="facility_pic">Facility Photo</label><br>
+                        <label for="facility_pic">Facility Photo</label>
                         <input type="file" id="facility_pic" name="facility_pic" accept=".pdf, .doc, .docx, .png">
                     </div><br><br>
                     <div>
-                        <label for="facility_location">Facility location</label><br>
-                        <input type="text" id="facility_location" name="facility_location">
+                        <label for="facility_location">Facility location :</label>
+                        <button type="button" class="btn-primary" onclick="getLocation()" id="facility_location"
+                            name="facility_location">Capture location</button>
                     </div><br>
                     <div>
                         <label for="dateInput">Assesment Conducted on:</label>
@@ -173,322 +174,312 @@
         <div id="sect_2">
             <h1 class="fs-1"><b># Section - 2</b></h1>
             <div class="container">
-                <div>
-                    <fieldset>
-                        <div>
-                            <label for="annual_elec_consumption">Annual Electricity Consumption
-                                (Grid)(kWh/Annum)</label>
-                            <input type="text" id="annual_elec_consumption" name="annual_elec_consumption"><br><br>
-                        </div>
-                        <div>
-                            <label for="wind_elec_generation">Annual Electricity generation (Renewable
-                                Energy-Wind)(kWh/Annum)</label>
-                            <input type="text" id="wind_elec_generation" name="wind_elec_generation"><br><br>
-                        </div>
-                        <div>
-                            <label for="solar_elec_generation">Annual Electricity generation (Renewable
-                                Energy-Solar)(kWh/Annum)</label>
-                            <input type="text" id="solar_elec_generation" name="solar_elec_generation"><br><br>
-                        </div>
-                        <div>
-                            <label for="annual_energy_cost">Annual Energy Cost (INR/Annum)</label>
-                            <input type="text" id="annual_energy_cost" name="annual_energy_cost"><br><br>
-                        </div>
-                        <div>
-                            <label for="energy_cost">Energy cost (INR/kWh)</label>
-                            <input type="text" id="energy_cost" name="energy_cost"><br><br>
-                        </div>
-                        <div>
-                            <label for="genset_diesel_consumption">Genset Diesel Consumption (Kl/Annum)</label>
-                            <input type="text" id="genset_diesel_consumption" name="genset_diesel_consumption"><br><br>
-                        </div>
-                        <div>
-                            <label for="boiler_diesel_consumption">Boiler Diesel Consumption (Kl/Annum)</label>
-                            <input type="text" id="boiler_diesel_consumption" name="boiler_diesel_consumption"><br><br>
-                        </div>
-                        <div>
-                            <label for="annual_diesel_cost">Annual Diesel Cost (INR/Annum)</label>
-                            <input type="text" id="annual_diesel_cost" name="annual_diesel_cost"><br><br>
-                        </div>
-                        <div>
-                            <label for="petrol_consumption_logistics">Petrol Consumption - Logistics (Kl/Annum)</label>
-                            <input type="text" id="petrol_consumption_logistics"
-                                name="petrol_consumption_logistics"><br><br>
-                        </div>
-                        <div>
-                            <label for="petrol_cost_logistics">Petrol Cost- Logistics (INR/Annum)</label>
-                            <input type="text" id="petrol_cost_logistics" name="petrol_cost_logistics"><br><br>
-                        </div>
-                        <div class="boiler_fuel">
-                            <label for="boiler_fuel">Boiler Fuel Used</label><br>
-                            <input type="checkbox" id="coal" name="boiler_fuel" value="Coal">
-                            <label for="coal">Coal</label><br>
-                            <input type="checkbox" id="firewood" name="boiler_fuel" value="Firewood">
-                            <label for="firewood">Firewood</label><br>
-                            <input type="checkbox" id="biomass" name="boiler_fuel" value="Biomass">
-                            <label for="biomass">Biomass</label><br>
-                            <input type="checkbox" id="other" name="boiler_fuel" value="#other_text">
-                            <label for="other">Other : </label><input type="text" id="other_text" name="other"><br>
-                        </div><br>
-                        <div>
-                            <label for="boiler_fuel_quantity">Boiler Fuel Used in Quantity (Ton/Annum)</label>
-                            <input type="text" id="boiler_fuel_quantity" name="boiler_fuel_quantity"><br><br>
-                        </div>
-                        <div>
-                            <label for="boiler_fuel_cost">Boiler Fuel Cost (INR/Kg)</label>
-                            <input type="text" id="boiler_fuel_cost" name="boiler_fuel_cost"><br><br>
-                        </div>
-                        <div>
-                            <label for="annual_production_quantity">Annual Production Qty</label>
-                            <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br>
-                        </div><br>
-                        <div class="src_water">
-                            <label for="source_water">Source Water</label><br>
-                            <input type="checkbox" id="borewell" name="src_water" value="Borewell">
-                            <label for="borewell">Borewell</label><br>
-                            <input type="checkbox" id="municipal_supply" name="src_water" value="Municipal Supply">
-                            <label for="municipal_supply">Municipal Supply</label><br>
-                            <input type="checkbox" id="ntadcl" name="src_water" value="NTADCL">
-                            <label for="ntadcl">NTADCL</label><br>
-                            <input type="checkbox" id="sipcot" name="src_water"
-                                value="Industrial Estate Supply (SIPCOT)">
-                            <label for="sipcot">Industrial Estate Supply (SIPCOT)</label><br>
-                            <input type="checkbox" id="tanker_lorry_supply" name="src_water"
-                                value="Tanker Lorry Supply">
-                            <label for="tanker_lorry_supply">Tanker Lorry Supply</label><br>
-                        </div><br>
-                        <div>
-                            <label for="qty_fresh_water">Quantity of Fresh Water (Kl/Annum)</label>
-                            <input type="text" id="qty_fresh_water" name="qty_fresh_water">
-                        </div><br>
-                        <div>
-                            <label for="total_qty_water">Total Quantity of Water (KL/Annum)</label>
-                            <input type="text" id="total_qty_water" name="total_qty_water"><br>
-                        </div>
-                        <div>
-                            <label for="cost_fresh_water">Cost of Fresh Water (INR/KL)</label>
-                            <input type="text" id="cost_fresh_water" name="cost_fresh_water"><br>
-                        </div><br>
-                        <div>
-                            <label for="cost_recovered_water">Cost of Recovered Water (INR/KL)</label>
-                            <input type="text" id="cost_recovered_water" name="cost_recovered_water"><br>
-                        </div><br>
-                        <div>
-                            <label for="ZLD" id="zld">ZLD Applicable</label><br>
-                            <input onclick="isZLD('Yes')" type="radio" id="Yes" name="ZLD" value="Yes">
-                            <label for="Yes">Yes</label><br>
-                            <input onclick="isZLD('No')" type="radio" id="No" name="ZLD" value="No">
-                            <label for="No">No</label><br>
-                        </div><br>
-                        <div>
-                            <label for="effluent_treatment" id="effluent">Effluent Treatment Plant Category</label><br>
-                            <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
-                                value="cetp">
-                            <label for="cetp">CETP</label><br>
-                            <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
-                                value="ietp">
-                            <label for="ietp">IETP</label><br>
-                            <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld"
-                                name="effluent_treatment" value="no-zld">
-                            <label for="no_zld">No ZLD Plant</label><br>
-                        </div><br>
-                        <div>
-                            <label for="water_quality" id="water_quality">Implementation of Water Quality Watch
-                                Center</label><br>
-                            <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment2"
-                                value="yes1">
-                            <label for="yes1">Yes</label><br>
-                            <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment2"
-                                value="no1">
-                            <label for="no1">No</label><br>
-                            <input onclick="waterQuality('Not Applicable')" type="radio" id="na1"
-                                name="effluent_treatment2" value="na1">
-                            <label for="na1">Not Applicable</label><br>
-                        </div><br>
-                        <div>
-                            <label for="domestic_water_consumption">Water Consumed for Domestic Use (KL/Day)</label>
-                            <input type="text" id="domestic_water_consumption" name="domestic_water_consumption"><br>
-                        </div><br>
-                        <div>
-                            <label for="garden_area">Garden Area in Sq.Meter</label>
-                            <input type="text" id="garden_area" name="garden_area"><br>
-                        </div><br>
-                        <div>
-                            <label for="garden_use">Water Consumed for Garden Use (KL/Day)</label>
-                            <input type="text" id="garden_use" name="garden_use"><br><br>
-                        </div><br>
-                        <div style="display: flex;">
-                            <button onclick="sect1()" name="prev2" id="prev2"
-                                class="btn btn-primary">&laquo;Previous</button>
-                            <button onclick="sect3()"
-                                style="margin-left: auto; margin-right: 45px; padding-left: 12px !important;"
-                                name="next2" id="next2" class="btn btn-primary">Next &raquo;</button>
-                        </div>
-
-                </div><br>
-                </fieldset>
-            </div>
-        </div>
-        <br>
-        <div id="sect_3">
-            <h1 class="fs-1"><b># Section - 3</b></h1>
-            <div class="container">
                 <fieldset>
                     <div>
-                        <label for="garden_and_domestic_water_use_ob">Garden & Domestic Water Use Observations
-                        </label><br>
-                        <input type="text" id="garden_and_domestic_water_use_ob"
-                            name="garden_and_domestic_water_use_ob"><br><br>
-                    </div>
-                    <div class="src_fuel">
-                        <label for="energy_source_forms_of_fuels">Energy Source Forms of Fuels</label><br>
-                        <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
-                        <label for="electricity">Electricity</label><br>
-                        <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
-                        <label for="diesel">Diesel</label><br>
-                        <input type="checkbox" id="firewood1" name="src_fuel" value="Firewood">
-                        <label for="firewood1">Firewood</label><br>
-                        <input type="checkbox" id="coall" name="src_fuel" value="Coal">
-                        <label for="coall">Coal</label><br>
-                        <input type="checkbox" id="gas" name="src_fuel" value="Gas">
-                        <label for="gas">Gas</label><br>
-                        <input type="checkbox" id="other1" name="src_fuel" value="#other1_text">
-                        <label for="other1">Other : </label> <input type="text" id="other1_text"
-                            name="src_fuel"><br><br>
+                        <label for="annual_elec_consumption">Annual Electricity Consumption
+                            (Grid)(kWh/Annum)</label>
+                        <input type="text" id="annual_elec_consumption" name="annual_elec_consumption"><br><br>
                     </div>
                     <div>
-                        <label for="pic_ob_at_power_house">Assessment Observation at the
-                            Power House Photo </label><br>
-                        <input type="file" id="pic_ob_at_power_house" name="pic_ob_at_power_house"><br><br>
+                        <label for="wind_elec_generation">Annual Electricity generation (Renewable
+                            Energy-Wind)(kWh/Annum)</label>
+                        <input type="text" id="wind_elec_generation" name="wind_elec_generation"><br><br>
                     </div>
                     <div>
-                        <label for="assess_ob_at_power_house">Assessment Observation at the Power
-                            House
-                        </label>
-                        <input type="text" id="assess_ob_at_power_house" name="assess_ob_at_power_house"><br><br>
+                        <label for="solar_elec_generation">Annual Electricity generation (Renewable
+                            Energy-Solar)(kWh/Annum)</label>
+                        <input type="text" id="solar_elec_generation" name="solar_elec_generation"><br><br>
                     </div>
                     <div>
-                        <label for="pic_ob_at_compressor">Assessment Observation at
-                            the Compressor Room Photo</label><br>
-                        <input type="file" id="pic_ob_at_compressor" name="pic_ob_at_compressor"><br><br>
+                        <label for="annual_energy_cost">Annual Energy Cost (INR/Annum)</label>
+                        <input type="text" id="annual_energy_cost" name="annual_energy_cost"><br><br>
                     </div>
                     <div>
-                        <label for="assess_ob_at_compressor">Assessment Observation at the
-                            Compressor Room
-                        </label><br>
-                        <input type="text" id="assess_ob_at_compressor" name="assess_ob_at_compressor"><br><br>
+                        <label for="energy_cost">Energy cost (INR/kWh)</label>
+                        <input type="text" id="energy_cost" name="energy_cost"><br><br>
                     </div>
                     <div>
-                        <label for="pic_ob_at_genset">Assessment Observation at the
-                            Genset Room Photo </label><br>
-                        <input type="file" id="pic_ob_at_genset" name="pic_ob_at_genset"><br><br>
+                        <label for="genset_diesel_consumption">Genset Diesel Consumption (Kl/Annum)</label>
+                        <input type="text" id="genset_diesel_consumption" name="genset_diesel_consumption"><br><br>
                     </div>
                     <div>
-                        <label for="assess_ob_at_genset">Assessment Observation at the Genset
-                            Room
-                        </label><br>
-                        <input type="text" id="assess_ob_at_genset" name="assess_ob_at_genset"><br><br>
+                        <label for="boiler_diesel_consumption">Boiler Diesel Consumption (Kl/Annum)</label>
+                        <input type="text" id="boiler_diesel_consumption" name="boiler_diesel_consumption"><br><br>
                     </div>
                     <div>
-                        <label for="pic_ob_at_boiler">Assessment Observation at the
-                            Boiler Area Photo </label><br>
-                        <input type="file" id="pic_ob_at_boiler" name="pic_ob_at_boiler"><br><br>
+                        <label for="annual_diesel_cost">Annual Diesel Cost (INR/Annum)</label>
+                        <input type="text" id="annual_diesel_cost" name="annual_diesel_cost"><br><br>
                     </div>
                     <div>
-                        <label for="assess_ob_at_boiler">Assessment Observation at the Boiler
-                            Area
-                        </label><br>
-                        <input type="text" id="assess_ob_at_boiler" name="assess_ob_at_boiler"><br><br>
+                        <label for="petrol_consumption_logistics">Petrol Consumption - Logistics (Kl/Annum)</label>
+                        <input type="text" id="petrol_consumption_logistics"
+                            name="petrol_consumption_logistics"><br><br>
                     </div>
                     <div>
-                        <label for="pic_ob_at_thermopac">Assessment Observation at the
-                            Thermopac Photo </label><br>
-                        <input type="file" id="pic_ob_at_thermopac" name="pic_ob_at_thermopac"><br><br>
+                        <label for="petrol_cost_logistics">Petrol Cost- Logistics (INR/Annum)</label>
+                        <input type="text" id="petrol_cost_logistics" name="petrol_cost_logistics"><br><br>
+                    </div>
+                    <div class="boiler_fuel">
+                        <label for="boiler_fuel">Boiler Fuel Used</label><br>
+                        <input type="checkbox" id="coal" name="boiler_fuel" value="Coal">
+                        <label for="coal">Coal</label><br>
+                        <input type="checkbox" id="firewood" name="boiler_fuel" value="Firewood">
+                        <label for="firewood">Firewood</label><br>
+                        <input type="checkbox" id="biomass" name="boiler_fuel" value="Biomass">
+                        <label for="biomass">Biomass</label><br>
+                        <input type="checkbox" id="other" name="boiler_fuel" value="#other_text">
+                        <label for="other">Other : </label><input type="text" id="other_text" name="other"><br>
+                    </div><br>
+                    <div>
+                        <label for="boiler_fuel_quantity">Boiler Fuel Used in Quantity (Ton/Annum)</label>
+                        <input type="text" id="boiler_fuel_quantity" name="boiler_fuel_quantity"><br><br>
                     </div>
                     <div>
-                        <label for="assess_ob_at_thermopac">Assessment Observation at the Thermopac
-                        </label><br>
-                        <input type="text" id="assess_ob_at_thermopac" name="assess_ob_at_thermopac"><br><br>
+                        <label for="boiler_fuel_cost">Boiler Fuel Cost (INR/Kg)</label>
+                        <input type="text" id="boiler_fuel_cost" name="boiler_fuel_cost"><br><br>
                     </div>
                     <div>
-                        <label for="pic_ob_at_other">Assessment
-                            Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
-                        <input type="file" id="pic_ob_at_other" name="pic_ob_at_other"><br><br>
+                        <label for="annual_production_quantity">Annual Production Qty</label>
+                        <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br>
+                    </div><br>
+                    <div class="src_water">
+                        <label for="source_water">Source Water</label><br>
+                        <input type="checkbox" id="borewell" name="src_water" value="Borewell">
+                        <label for="borewell">Borewell</label><br>
+                        <input type="checkbox" id="municipal_supply" name="src_water" value="Municipal Supply">
+                        <label for="municipal_supply">Municipal Supply</label><br>
+                        <input type="checkbox" id="ntadcl" name="src_water" value="NTADCL">
+                        <label for="ntadcl">NTADCL</label><br>
+                        <input type="checkbox" id="sipcot" name="src_water" value="Industrial Estate Supply (SIPCOT)">
+                        <label for="sipcot">Industrial Estate Supply (SIPCOT)</label><br>
+                        <input type="checkbox" id="tanker_lorry_supply" name="src_water" value="Tanker Lorry Supply">
+                        <label for="tanker_lorry_supply">Tanker Lorry Supply</label><br>
+                    </div><br>
+                    <div>
+                        <label for="qty_fresh_water">Quantity of Fresh Water (Kl/Annum)</label>
+                        <input type="text" id="qty_fresh_water" name="qty_fresh_water">
+                    </div><br>
+                    <div>
+                        <label for="total_qty_water">Total Quantity of Water (KL/Annum)</label>
+                        <input type="text" id="total_qty_water" name="total_qty_water"><br>
                     </div>
                     <div>
-                        <label for="assess_ob_at_other">Assessment
-                            Observation at the Other Facilities (Chiller, Cooling Tower Etc)
-                        </label><br>
-                        <input type="text" id="assess_ob_at_other" name="assess_ob_at_other"><br><br>
-                    </div>
-                    <div class="scope_comp_air">
-                        <label for="scope_for_energy_savings_in_compressed_air_systems">Scope for Energy Savings in
-                            Compressed Air Systems</label><br>
-                        <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
-                            value="Compressed Air Leak Fixing Opportunities">
-                        <label for="compressed_air_leak_fixing_opportunities">Compressed Air Leak Fixing
-                            Opportunities</label><br>
-                        <input type="checkbox"
-                            id="scope_for_drive_installationscope_for_pressure_optimization_generation"
-                            name="scope_comp_air"
-                            value="Scope for drive installationScope for pressure optimization (Generation)">
-                        <label for="scope_for_drive_installationscope_for_pressure_optimization_generation">Scope
-                            for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
-                        <input type="checkbox" id="scope_for_pressure_optimization_utilization" name="scope_comp_air"
-                            value="Scope for Pressure Optimization (Utilization)">
-                        <label for="scope_for_pressure_optimization_utilization">Scope for Pressure Optimization
-                            (Utilization)</label><br>
-                        <input type="checkbox" id="scope_for_cleaning_air_use_optimization" name="scope_comp_air"
-                            value="Scope for Cleaning Air Use Optimization">
-                        <label for="scope_for_cleaning_air_use_optimization">Scope for Cleaning Air Use
-                            Optimization</label><br>
-                        <input type="checkbox" id="others" name="other" value="#other2_text">
-                        <label for="others">Other : </label><input type="text" id="other2_text" name="other"><br><br>
-                    </div>
+                        <label for="cost_fresh_water">Cost of Fresh Water (INR/KL)</label>
+                        <input type="text" id="cost_fresh_water" name="cost_fresh_water"><br>
+                    </div><br>
                     <div>
-                        <label for="compressed_air_saving">Compressed Air Systems Savings in
-                            kWh/Annum
-                        </label>
-                        <input type="text" id="compressed_air_saving" name="compressed_air_saving"><br><br>
-                    </div>
+                        <label for="cost_recovered_water">Cost of Recovered Water (INR/KL)</label>
+                        <input type="text" id="cost_recovered_water" name="cost_recovered_water"><br>
+                    </div><br>
                     <div>
-                        <label for="lighting_observation">Lighting Systems - Observation
-                        </label>
-                        <input type="text" id="lighting_observation" name="lighting_observation"><br><br>
-                    </div>
+                        <label for="ZLD" id="zld">ZLD Applicable</label><br>
+                        <input onclick="isZLD('Yes')" type="radio" id="Yes" name="ZLD" value="Yes">
+                        <label for="Yes">Yes</label><br>
+                        <input onclick="isZLD('No')" type="radio" id="No" name="ZLD" value="No">
+                        <label for="No">No</label><br>
+                    </div><br>
                     <div>
-                        <label for="lighting_saving">Lighting Systems -
-                            Savings Opportunities in kWh/Annum
-                        </label>
-                        <input type="text" id="lighting_saving" name="lighting_saving"><br><br>
-                    </div>
+                        <label for="effluent_treatment" id="effluent">Effluent Treatment Plant Category</label><br>
+                        <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
+                            value="cetp">
+                        <label for="cetp">CETP</label><br>
+                        <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
+                            value="ietp">
+                        <label for="ietp">IETP</label><br>
+                        <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld" name="effluent_treatment"
+                            value="no-zld">
+                        <label for="no_zld">No ZLD Plant</label><br>
+                    </div><br>
                     <div>
-                        <label for="lighting_est_investment">Lighting Systems - Estimated
-                            Investments in INR
-                        </label>
-                        <input type="text" id="lighting_est_investment" name="lighting_est_investment"><br><br>
-                    </div>
+                        <label for="water_quality" id="water_quality">Implementation of Water Quality Watch
+                            Center</label><br>
+                        <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment2"
+                            value="yes1">
+                        <label for="yes1">Yes</label><br>
+                        <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment2"
+                            value="no1">
+                        <label for="no1">No</label><br>
+                        <input onclick="waterQuality('Not Applicable')" type="radio" id="na1" name="effluent_treatment2"
+                            value="na1">
+                        <label for="na1">Not Applicable</label><br>
+                    </div><br>
                     <div>
-                        <label for="lighting_est_savings">Lighting Systems - Estimated
-                            Savings in INR
-                        </label>
-                        <input type="text" id="lighting_est_savings" name="lighting_est_savings"><br><br>
-                    </div>
+                        <label for="domestic_water_consumption">Water Consumed for Domestic Use (KL/Day)</label>
+                        <input type="text" id="domestic_water_consumption" name="domestic_water_consumption"><br>
+                    </div><br>
                     <div>
-                        <label for="lighting_systems_photo">Lighting Systems - Photo/label</label> <br>
-                        <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
-                    </div>
+                        <label for="garden_area">Garden Area in Sq.Meter</label>
+                        <input type="text" id="garden_area" name="garden_area"><br>
+                    </div><br>
                     <div>
-                        <label for="electrical_motors_observations">Electrical Motors - Observations
-                        </label><br>
-                        <input type="text" id="electrical_motors_observations"
-                            name="electrical_motors_observations"><br><br>
-                    </div>
-                    <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
-                    <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+                        <label for="garden_use">Water Consumed for Garden Use (KL/Day)</label>
+                        <input type="text" id="garden_use" name="garden_use"><br><br>
+                    </div><br>
+
+                    <button onclick="sect1()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                    <button onclick="sect3()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
             </div>
             </fieldset>
         </div>
+    </div>
+    <br>
+    <div id="sect_3">
+        <h1 class="fs-1"><b># Section - 3</b></h1>
+        <div class="container">
+            <fieldset>
+                <div>
+                    <label for="garden_and_domestic_water_use_ob">Garden & Domestic Water Use Observations
+                    </label><br>
+                    <input type="text" id="garden_and_domestic_water_use_ob"
+                        name="garden_and_domestic_water_use_ob"><br><br>
+                </div>
+                <div class="src_fuel">
+                    <label for="energy_source_forms_of_fuels">Energy Source Forms of Fuels</label><br>
+                    <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
+                    <label for="electricity">Electricity</label><br>
+                    <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
+                    <label for="diesel">Diesel</label><br>
+                    <input type="checkbox" id="firewood1" name="src_fuel" value="Firewood">
+                    <label for="firewood1">Firewood</label><br>
+                    <input type="checkbox" id="coall" name="src_fuel" value="Coal">
+                    <label for="coall">Coal</label><br>
+                    <input type="checkbox" id="gas" name="src_fuel" value="Gas">
+                    <label for="gas">Gas</label><br>
+                    <input type="checkbox" id="other1" name="src_fuel" value="#other1_text">
+                    <label for="other1">Other : </label> <input type="text" id="other1_text" name="src_fuel"><br><br>
+                </div>
+                <div>
+                    <label for="pic_ob_at_power_house">Assessment Observation at the
+                        Power House Photo </label><br>
+                    <input type="file" id="pic_ob_at_power_house" name="pic_ob_at_power_house"><br><br>
+                </div>
+                <div>
+                    <label for="assess_ob_at_power_house">Assessment Observation at the Power
+                        House
+                    </label>
+                    <input type="text" id="assess_ob_at_power_house" name="assess_ob_at_power_house"><br><br>
+                </div>
+                <div>
+                    <label for="pic_ob_at_compressor">Assessment Observation at
+                        the Compressor Room Photo</label><br>
+                    <input type="file" id="pic_ob_at_compressor" name="pic_ob_at_compressor"><br><br>
+                </div>
+                <div>
+                    <label for="assess_ob_at_compressor">Assessment Observation at the
+                        Compressor Room
+                    </label><br>
+                    <input type="text" id="assess_ob_at_compressor" name="assess_ob_at_compressor"><br><br>
+                </div>
+                <div>
+                    <label for="pic_ob_at_genset">Assessment Observation at the
+                        Genset Room Photo </label><br>
+                    <input type="file" id="pic_ob_at_genset" name="pic_ob_at_genset"><br><br>
+                </div>
+                <div>
+                    <label for="assess_ob_at_genset">Assessment Observation at the Genset
+                        Room
+                    </label><br>
+                    <input type="text" id="assess_ob_at_genset" name="assess_ob_at_genset"><br><br>
+                </div>
+                <div>
+                    <label for="pic_ob_at_boiler">Assessment Observation at the
+                        Boiler Area Photo </label><br>
+                    <input type="file" id="pic_ob_at_boiler" name="pic_ob_at_boiler"><br><br>
+                </div>
+                <div>
+                    <label for="assess_ob_at_boiler">Assessment Observation at the Boiler
+                        Area
+                    </label><br>
+                    <input type="text" id="assess_ob_at_boiler" name="assess_ob_at_boiler"><br><br>
+                </div>
+                <div>
+                    <label for="pic_ob_at_thermopac">Assessment Observation at the
+                        Thermopac Photo </label><br>
+                    <input type="file" id="pic_ob_at_thermopac" name="pic_ob_at_thermopac"><br><br>
+                </div>
+                <div>
+                    <label for="assess_ob_at_thermopac">Assessment Observation at the Thermopac
+                    </label><br>
+                    <input type="text" id="assess_ob_at_thermopac" name="assess_ob_at_thermopac"><br><br>
+                </div>
+                <div>
+                    <label for="pic_ob_at_other">Assessment
+                        Observation at the Other Facilities (Chiller, Cooling Tower Etc) Photo </label><br>
+                    <input type="file" id="pic_ob_at_other" name="pic_ob_at_other"><br><br>
+                </div>
+                <div>
+                    <label for="assess_ob_at_other">Assessment
+                        Observation at the Other Facilities (Chiller, Cooling Tower Etc)
+                    </label><br>
+                    <input type="text" id="assess_ob_at_other" name="assess_ob_at_other"><br><br>
+                </div>
+                <div class="scope_comp_air">
+                    <label for="scope_for_energy_savings_in_compressed_air_systems">Scope for Energy Savings in
+                        Compressed Air Systems</label><br>
+                    <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
+                        value="Compressed Air Leak Fixing Opportunities">
+                    <label for="compressed_air_leak_fixing_opportunities">Compressed Air Leak Fixing
+                        Opportunities</label><br>
+                    <input type="checkbox" id="scope_for_drive_installationscope_for_pressure_optimization_generation"
+                        name="scope_comp_air"
+                        value="Scope for drive installationScope for pressure optimization (Generation)">
+                    <label for="scope_for_drive_installationscope_for_pressure_optimization_generation">Scope
+                        for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
+                    <input type="checkbox" id="scope_for_pressure_optimization_utilization" name="scope_comp_air"
+                        value="Scope for Pressure Optimization (Utilization)">
+                    <label for="scope_for_pressure_optimization_utilization">Scope for Pressure Optimization
+                        (Utilization)</label><br>
+                    <input type="checkbox" id="scope_for_cleaning_air_use_optimization" name="scope_comp_air"
+                        value="Scope for Cleaning Air Use Optimization">
+                    <label for="scope_for_cleaning_air_use_optimization">Scope for Cleaning Air Use
+                        Optimization</label><br>
+                    <input type="checkbox" id="others" name="other" value="#other2_text">
+                    <label for="others">Other : </label><input type="text" id="other2_text" name="other"><br><br>
+                </div>
+                <div>
+                    <label for="compressed_air_saving">Compressed Air Systems Savings in
+                        kWh/Annum
+                    </label>
+                    <input type="text" id="compressed_air_saving" name="compressed_air_saving"><br><br>
+                </div>
+                <div>
+                    <label for="lighting_observation">Lighting Systems - Observation
+                    </label>
+                    <input type="text" id="lighting_observation" name="lighting_observation"><br><br>
+                </div>
+                <div>
+                    <label for="lighting_saving">Lighting Systems -
+                        Savings Opportunities in kWh/Annum
+                    </label>
+                    <input type="text" id="lighting_saving" name="lighting_saving"><br><br>
+                </div>
+                <div>
+                    <label for="lighting_est_investment">Lighting Systems - Estimated
+                        Investments in INR
+                    </label>
+                    <input type="text" id="lighting_est_investment" name="lighting_est_investment"><br><br>
+                </div>
+                <div>
+                    <label for="lighting_est_savings">Lighting Systems - Estimated
+                        Savings in INR
+                    </label>
+                    <input type="text" id="lighting_est_savings" name="lighting_est_savings"><br><br>
+                </div>
+                <div>
+                    <label for="lighting_systems_photo">Lighting Systems - Photo/label</label> <br>
+                    <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
+                </div>
+                <div>
+                    <label for="electrical_motors_observations">Electrical Motors - Observations
+                    </label><br>
+                    <input type="text" id="electrical_motors_observations"
+                        name="electrical_motors_observations"><br><br>
+                </div>
+                <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+        </div>
+        </fieldset>
+    </div>
     </div>
     </div>
     <div id="sect_4">
@@ -856,6 +847,20 @@
             });
         }
         //--------------------------------------------------------------------------------------------
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                facility_location.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            facility_location.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
         var facility_category = null;
         var number_of_shifts = null;
         var zld = null;
