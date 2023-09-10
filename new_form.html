@@ -577,7 +577,7 @@
                 </div>
                 <div>
                     <label for="production_layout_observations">Production Layout Observations</label><br>
-                    <input type="text" id="production_layout_observations" name="annual_production_quantity"><br><br>
+                    <input type="text" id="production_layout_observations" name="production_layout_observations"><br><br>
                 </div><br>
                 <div>
                     <label for="production_layout_ob_photo">Production Layout Observations Photo</label><br>
@@ -858,7 +858,7 @@
 
         function showPosition(position) {
             facility_location.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
+                ", <br>Longitude: " + position.coords.longitude;
         }
 
         var facility_category = null;
@@ -890,7 +890,7 @@
             const pic1 = document.getElementById("facility_pic_ent").files[0];
             const facility_name = document.getElementById('facility_name').value;
             const pic2 = document.getElementById("facility_pic").files[0];
-            const facility_location = position.coords;
+            const facility_location = document.getElementById('facility_location').textContent;
             const product_mfd = document.getElementById('product_mfd').value;
             const prod_capacity = document.getElementById('prod_capacity').value;
             const hr_shift = document.getElementById('hr_shift').value;
@@ -1227,7 +1227,9 @@
                 });
             })
 
-            axios.post("https://general-form-submission-backend.vercel.app/form2/postForm", {
+            // axios.post("https://general-form-submission-backend.vercel.app/form2/postForm", {
+            axios.post("http://localhost:8080/form2/postForm", {
+                form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
                 facility_pic: facility_pic,
@@ -1273,6 +1275,7 @@
                 garden_area: garden_area,
                 garden_use: garden_use,
                 //Section - 3
+                garden_and_domestic_water_use_ob: garden_and_domestic_water_use_ob,
                 src_fuel: src_fuelItems, //checkbox
                 pic_ob_at_power_house: pic_ob_at_power_house, //file
                 assess_ob_at_power_house: assess_ob_at_power_house,
@@ -1363,7 +1366,8 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post('https://general-form-submission-backend.vercel.app/uploadFile', formData, {
+                // const response = await axios.post('https://general-form-submission-backend.vercel.app/uploadFile', formData, {
+                const response = await axios.post('http://localhost:8080/uploadFile', formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }
