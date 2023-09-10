@@ -940,7 +940,8 @@
         }
 
         function downloadFile(path, fileName) {
-            axios.get(`http://localhost:8080/downloadFile`, {
+            axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {
+            // axios.get(`http://localhost:8080/downloadFile`, {
                 responseType: 'blob',
                 params: { fileId: path },
             })
