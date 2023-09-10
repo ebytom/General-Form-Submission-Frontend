@@ -847,7 +847,7 @@
             });
         }
         //--------------------------------------------------------------------------------------------
-
+        let loc=null;
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
@@ -857,6 +857,7 @@
         }
 
         function showPosition(position) {
+            loc=position.coords.latitude + "," + position.coords.longitude;
             facility_location.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
         }
@@ -890,7 +891,7 @@
             const pic1 = document.getElementById("facility_pic_ent").files[0];
             const facility_name = document.getElementById('facility_name').value;
             const pic2 = document.getElementById("facility_pic").files[0];
-            const facility_location = position.coords;
+            const facility_location = "http://www.google.com/maps/place/" + loc;
             const product_mfd = document.getElementById('product_mfd').value;
             const prod_capacity = document.getElementById('prod_capacity').value;
             const hr_shift = document.getElementById('hr_shift').value;

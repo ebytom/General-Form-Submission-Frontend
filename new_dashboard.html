@@ -595,7 +595,7 @@
                     document.getElementById("facility_pic_ent").innerHTML = res.data.form.facility_pic_ent
                     document.getElementById("facility_name").innerHTML = res.data.form.facility_name
                     document.getElementById("facility_pic").innerHTML = res.data.form.facility_pic
-                    document.getElementById("facility_location").innerHTML = res.data.form.facility_location
+                    document.getElementById("facility_location").innerHTML = "<a href='"+res.data.form.facility_location+"'>"+res.data.form.facility_location+"</a>"
                     document.getElementById("dateInput").innerHTML = res.data.form.dateInput
                     document.getElementById("f_operation").innerHTML = res.data.form.f_operation.map(item=>" "+item)
                     document.getElementById("facility_category").innerHTML = res.data.form.facility_category
@@ -632,7 +632,7 @@
                     document.getElementById("cost_recovered_water").innerHTML = res.data.form.cost_recovered_water
                     document.getElementById("zld").innerHTML = res.data.form.zld
                     document.getElementById("effluent_treatment").innerHTML = res.data.form.effluent_treatment
-                    document.getElementById("water_quality").innerHTML = res.data.form.water_quality.map(item=>" "+item)
+                    document.getElementById("water_quality").innerHTML = res.data.form.water_quality
                     document.getElementById("domestic_water_consumption").innerHTML = res.data.form.domestic_water_consumption
                     document.getElementById("garden_area").innerHTML = res.data.form.garden_area
                     document.getElementById("garden_use").innerHTML = res.data.form.garden_use
