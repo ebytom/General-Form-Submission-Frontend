@@ -210,7 +210,12 @@
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">19.6 upload water report
                                 file(pdf/docx)(year1):</div>
-                            <div class="p-2" id="avatar"></div>
+
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <div class="p-2" id="avatar"></div>
+                                <div class="btn btn-primary"
+                                    onclick="downloadFile(`/public/resources/${file1}`, `${file1}`)">Download</div>
+                            </div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">20.1 Cost of Water
@@ -240,7 +245,12 @@
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">20.6 upload water report
                                 file(pdf/docx)(year2):</div>
-                            <div class="p-2" id="avatar2"></div>
+
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <div class="p-2" id="avatar2"></div>
+                                <div class="btn btn-primary"
+                                    onclick="downloadFile(`/public/resources/${file2}`, `${file2}`)">Download</div>
+                            </div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">21.1 Cost of Water
@@ -270,7 +280,12 @@
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">21.6 upload water report
                                 file(pdf/docx)(year3):</div>
-                            <div class="p-2" id="avatar3"></div>
+
+                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                <div class="p-2" id="avatar3"></div>
+                                <div class="btn btn-primary"
+                                    onclick="downloadFile(`/public/resources/${file3}`, `${file3}`)">Download</div>
+                            </div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">22. Does your facility
@@ -290,13 +305,13 @@
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">24.1. Wastewater
                                 treatment methods/ practices:</div>
-                            <div class="p-2" id="method"></div>
+                            <div class="p-2" id="methods"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">24.2.Please, fill the
                                 appropriate methods (<i>refer FEM 3.0
                                     Module</i>) :</div>
-                            <div class="p-2" id="methods"></div>
+                            <div class="p-2" id="method"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">24.3. Total water
@@ -313,7 +328,7 @@
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">25.1. Wastewater volume
                                 percentage - Industrial(%)</div>
-                            <div class="p-2" id="Industrial"></div>
+                            <div class="p-2" id="industrial"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">25.1. Wastewater volume
@@ -344,7 +359,7 @@
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">28. Details on discharge
                                 of Industrial
                                 sludge:</div>
-                            <div class="p-2" id="Industrial_sludge"></div>
+                            <div class="p-2" id="industrial_sludge"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold rounded-3 p-2" style="background-color: #ddd;">29. Is the factory always
@@ -493,33 +508,36 @@
                     document.getElementById("balance").innerHTML = res.data.information.balance
                     document.getElementById("waterusage").innerHTML = res.data.information.waterusage
                     document.getElementById("usage").innerHTML = res.data.information.usage
-                    document.getElementById("avatar").innerHTML = res.data.information.avatar
+                    document.getElementById("avatar").innerHTML = res.data.information.avatar1
+                    file1 = res.data.information.avatar1
                     document.getElementById("cost2").innerHTML = res.data.information.cost2
                     document.getElementById("consumption2").innerHTML = res.data.information.consumption2
                     document.getElementById("balance2").innerHTML = res.data.information.balance2
                     document.getElementById("waterusage2").innerHTML = res.data.information.waterusage2
                     document.getElementById("usage2").innerHTML = res.data.information.usage2
                     document.getElementById("avatar2").innerHTML = res.data.information.avatar2
+                    file2 = res.data.information.avatar2
                     document.getElementById("cost3").innerHTML = res.data.information.cost3
                     document.getElementById("consumption3").innerHTML = res.data.information.consumption3
                     document.getElementById("balance3").innerHTML = res.data.information.balance3
                     document.getElementById("waterusage3").innerHTML = res.data.information.waterusage3
                     document.getElementById("usage3").innerHTML = res.data.information.usage3
                     document.getElementById("avatar3").innerHTML = res.data.information.avatar3
+                    file3 = res.data.information.avatar3
                     document.getElementById("waste").innerHTML = res.data.information.waste
                     document.getElementById("liquid").innerHTML = res.data.information.liquid
                     document.getElementById("effluent").innerHTML = res.data.information.treatmentFacility.map(item => " " + item)
-                    document.getElementById("method").innerHTML = res.data.information.methods
+                    document.getElementById("method").innerHTML = res.data.information.method
                     document.getElementById("methods").innerHTML = res.data.information.practiceMethods.map(item => " " + item)
                     document.getElementById("treatment_capacity").innerHTML = res.data.information.treatment_capacity
                     document.getElementById("domestic").innerHTML = res.data.information.domestic
                     document.getElementById("industrial").innerHTML = res.data.information.industrial
                     document.getElementById("dom").innerHTML = res.data.information.domestic1
-                    document.getElementById("industrial2").innerHTML = res.data.information.industrial2
-                    document.getElementById("dom2").innerHTML = res.data.information.dom2
+                    document.getElementById("industrial2").innerHTML = res.data.information.industrial1
+                    document.getElementById("dom2").innerHTML = res.data.information.domestic2
                     document.getElementById("untreated").innerHTML = res.data.information.untreatedWater.map(item => " " + item)
-                    document.getElementById("recovery").innerHTML = res.data.information.recovery
-                    document.getElementById("industrial_sludge").innerHTML = res.data.information.Industrial_sludge
+                    document.getElementById("recovery").innerHTML = res.data.information.water_recovery
+                    document.getElementById("industrial_sludge").innerHTML = res.data.information.industrial_sludge
                     document.getElementById("standards").innerHTML = res.data.information.qualityStandards.map(item => " " + item)
                     document.getElementById("comments").innerHTML = res.data.information.comments
                     document.getElementById("legal").innerHTML = res.data.information.legalEnforcement.map(item => " " + item)
@@ -538,6 +556,24 @@
 
                 })
 
+        }
+
+        function downloadFile(path, fileName) {
+            // axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {
+            axios.get(`http://localhost:8080/downloadFile`, {
+                responseType: 'blob',
+                params: { fileId: path },
+            })
+                .then(function (res) {
+                    var ee = document.createElement("a");
+                    ee.href = URL.createObjectURL(new Blob([res.data]));
+                    ee.setAttribute("download", fileName)
+                    document.body.append(ee)
+                    ee.click()
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
 
     </script>
