@@ -1427,8 +1427,8 @@
 
 
 
-            axios.post("https://general-form-submission-backend.vercel.app/services/postInformation", {
-            // axios.post("http://localhost:8080/services/postInformation", {
+            // axios.post("https://general-form-submission-backend.vercel.app/services/postInformation", {
+            axios.post("http://localhost:8080/services/postInformation", {
                 name: name,
                 orgName: orgName,
                 mail: mail,
@@ -1528,8 +1528,8 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post('https://general-form-submission-backend.vercel.app/uploadFile', formData, {
-                // const response = await axios.post('http://localhost:8080/uploadFile', formData, {
+                // const response = await axios.post('https://general-form-submission-backend.vercel.app/uploadFile', formData, {
+                const response = await axios.post('http://localhost:8080/uploadFile', formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }
