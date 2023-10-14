@@ -72,9 +72,10 @@
         <div id="informations" class="my-4">
             <!-- items comes here -->
         </div>
-        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade " id="dashboardModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <div class="modal-content" id="dashboardBody">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"><b class="text-black">#</b><b id="popupTitle"
                                 class="text-dark"></b></h5>
@@ -444,7 +445,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Download</button>
+                        <button type="button" class="btn btn-primary" onclick="generateDashboardPDF()">Download</button>
                     </div>
                 </div>
             </div>
@@ -459,11 +460,11 @@
 
     <script>
         axios.post("https://general-form-submission-backend.vercel.app/services/getInformations")
-        // axios.post("http://localhost:8080/services/getInformations")
+            // axios.post("http://localhost:8080/services/getInformations")
             .then(function (response) {
                 console.log(response.data.requests)
                 const htmlRequests = response.data.requests.reverse().map(item =>
-                    `<div onclick="popup(${item.informationId})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    `<div onclick="popup(${item.informationId})" type="button" data-bs-toggle="modal" data-bs-target="#dashboardModal">
                 <div class="btn text-white rounded-3 p-4 d-flex align-items-center justify-content-between" style="background-color: rgba(0, 0, 0, .5)">
                     <b class="fs-4">${item.name}</b>
                     <b class="p-2 py-1 mx-3 rounded bg-primary" style="font-size: 13px;">${new Date(item.informationId).toLocaleDateString('en-GB')}</b>
@@ -476,7 +477,7 @@
 
         function popup(id) {
             axios.post("https://general-form-submission-backend.vercel.app/services/getInformationById", {
-            // axios.post("http://localhost:8080/services/getInformationById", {
+                // axios.post("http://localhost:8080/services/getInformationById", {
                 informationId: id
             })
                 .then(function (res) {
@@ -560,7 +561,7 @@
 
         function downloadFile(path, fileName) {
             axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {
-            // axios.get(`http://localhost:8080/downloadFile`, {
+                // axios.get(`http://localhost:8080/downloadFile`, {
                 responseType: 'blob',
                 params: { fileId: path },
             })
@@ -576,6 +577,22 @@
                 })
         }
 
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function generateDashboardPDF() {
+            const element = document.getElementById("dashboardBody")
+
+            console.log(element);
+
+            html2pdf()
+                .from(element)
+                .save();
+        }
     </script>
 </body>
 

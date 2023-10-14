@@ -74,7 +74,7 @@
         </div>
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <div class="modal-content" id="dashboardBody">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel"><b class="text-black">#</b><b id="popupTitle"
                                 class="text-dark"></b></h5>
@@ -763,7 +763,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Download</button>
+                        <button type="button" class="btn btn-primary" onclick="generateDashboardPDF()">Download</button>
                     </div>
                 </div>
             </div>
@@ -941,7 +941,7 @@
 
         function downloadFile(path, fileName) {
             axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {
-            // axios.get(`http://localhost:8080/downloadFile`, {
+                // axios.get(`http://localhost:8080/downloadFile`, {
                 responseType: 'blob',
                 params: { fileId: path },
             })
@@ -957,6 +957,21 @@
                 })
         }
 
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function generateDashboardPDF() {
+            const element = document.getElementById("dashboardBody")
+
+            console.log(element);
+
+            html2pdf()
+                .from(element)
+                .save();
+        }
     </script>
 </body>
 
