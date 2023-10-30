@@ -83,6 +83,8 @@
                         <label for="processing">Processing</label><br>
                         <input type="checkbox" id="garmenting" name="f_operation" value="Garmenting">
                         <label for="garmenting">Garmenting</label><br>
+                        <input type="checkbox" id="printing" name="f_operation" value="printing">
+                        <label for="printing">Printing</label><br>
                     </div><br><br>
                     <div>
                         <label>7. Facility category</label><br>
@@ -221,8 +223,8 @@
                     </div>
                     <div class="boiler_fuel">
                         <label for="boiler_fuel">30. Boiler Fuel Used</label><br>
-                        <input type="checkbox" id="coal" name="boiler_fuel" value="Coal">
-                        <label for="coal">Coal</label><br>
+                        <!-- <input type="checkbox" id="coal" name="boiler_fuel" value="Coal">
+                        <label for="coal">Coal</label><br> -->
                         <input type="checkbox" id="firewood" name="boiler_fuel" value="Firewood">
                         <label for="firewood">Firewood</label><br>
                         <input type="checkbox" id="biomass" name="boiler_fuel" value="Biomass">
@@ -341,8 +343,8 @@
                     <label for="diesel">Diesel</label><br>
                     <input type="checkbox" id="firewood1" name="src_fuel" value="Firewood">
                     <label for="firewood1">Firewood</label><br>
-                    <input type="checkbox" id="coall" name="src_fuel" value="Coal">
-                    <label for="coall">Coal</label><br>
+                    <!-- <input type="checkbox" id="coall" name="src_fuel" value="Coal">
+                    <label for="coall">Coal</label><br> -->
                     <input type="checkbox" id="gas" name="src_fuel" value="Gas">
                     <label for="gas">Gas</label><br>
                     <input type="checkbox" id="other1" name="src_fuel" value="#other1_text">
@@ -749,18 +751,18 @@
                     <input type="text" id="specific_energy" name="specific_energy"><br><br>
                 </div>
                 <div>
-                    <label for="specific_water">109. Specific Water (Litres/Unit of Production):</label><br>
+                    <label for="specific_fuel_cost">109. Specific Fuel Cost (Rs/Unit of Production):</label><br>
+                    <input type="text" id="specific_fuel_cost" name="specific_fuel_cost"><br><br>
+                </div>
+                <div>
+                    <label for="specific_water">110. Specific Water (Litres/Unit of Production):</label><br>
                     <input type="text" id="specific_water" name="specific_water"><br><br>
                 </div>
                 <div>
-                    <label for="specific_fuel">110. Specific Water (kg/Unit of Production):</label><br>
+                    <label for="specific_fuel">111. Specific Water (kg/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
                 </div>
-                <div>
-                    <label for="specific_fuel_cost">111. Specific Fuel Cost (Rs/Unit of Production):</label><br>
-                    <input type="text" id="specific_fuel_cost" name="specific_fuel_cost"><br><br>
-                </div>
-
+            
                 <div>
                     <label for="specific_water_cost">112. Specific Water (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
@@ -780,7 +782,7 @@
     <div class="mt-4" style="text-align: center;" height="100vh" width="100vw" id="success">
         <div class="successDiv d-flex align-items-center">
             <img src="./img/tick.png" height="70px" width="80px" />
-            <h3><b>Form Submitted Successfully!</b></h3>
+            <h3><b>Assessment Entries Submitted Successfully!</b></h3>
         </div>
         <div onclick="reloadPage()" class="btn btn-light mt-3">
             Done
