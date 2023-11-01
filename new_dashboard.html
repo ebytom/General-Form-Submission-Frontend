@@ -763,7 +763,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="generateDashboardPDF()">Download</button>
+                        <!-- <a href="/report.html?formId=${formId}"><button type="button" class="btn btn-primary">Generate
+                                Report</button></a> -->
+                        <a id="generateReportButton" onclick="generateReport()" class="btn btn-primary">Generate
+                            Report</a>
                     </div>
                 </div>
             </div>
@@ -778,6 +781,7 @@
 
     <script>
         var file1
+        var formId
 
         axios.post("https://general-form-submission-backend.vercel.app/form2/getForm")
             .then(function (response) {
@@ -801,6 +805,7 @@
                 .then(function (res) {
                     console.log(res);
                     document.getElementById("popupTitle").innerHTML = res.data.form.form2Id
+                    formId = res.data.form.form2Id
                     document.getElementById("facility_pic_ent").innerHTML = res.data.form.facility_pic_ent
                     file1 = res.data.form.facility_pic_ent
                     document.getElementById("facility_name").innerHTML = res.data.form.facility_name
@@ -938,6 +943,17 @@
                     document.getElementById("specific_water_cost").innerHTML = res.data.form.specific_water_cost
                 })
         }
+
+        function generateReport() {
+            // Construct the URL with the formId parameter
+            var reportUrl = "report.html?formId=" + document.getElementById("popupTitle").innerHTML;
+
+            // Redirect to the report URL
+            window.location.href = reportUrl;
+        }
+
+
+
 
         function downloadFile(path, fileName) {
             axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {

@@ -445,7 +445,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="generateDashboardPDF()">Download</button>
+                        <!-- <button type="button" class="btn btn-primary" onclick="generateDashboardPDF()">Download</button> -->
+                        <a id="generateReportButton" onclick="generateReport()" class="btn btn-primary">Generate
+                            Report</a>
                     </div>
                 </div>
             </div>
@@ -575,6 +577,15 @@
                 .catch(err => {
                     console.log(err);
                 })
+        }
+
+
+        function generateReport() {
+            // Construct the URL with the formId parameter
+            var reportUrl = "report.html?formId=" + document.getElementById("popupTitle").innerHTML;
+
+            // Redirect to the report URL
+            window.location.href = reportUrl;
         }
 
     </script>

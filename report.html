@@ -55,7 +55,7 @@
 
         </h4>
         <br><br>
- 
+
         </h2>
         <h4>
             Location
@@ -89,14 +89,14 @@
         <tr>
             <td>01</td>
             <td>Facility Name</td>
-            <td>{facility_name}</td>
+            <td id="facility_name">{facility_name}</td>
             <td></td>
         </tr>
 
         <tr>
             <td>02</td>
             <td>Facility Location</td>
-            <td>{facility_location}</td>
+            <td id="facility_location">{facility_location}</td>
             <td></td>
         </tr>
 
@@ -980,6 +980,29 @@
             </tr>
 
         </table>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+
+        <script>
+            // Get the current URL
+            const url = new URL(window.location.href);
+
+            // Extract the value of "param1"
+            const formIdValue = url.searchParams.get("formId");
+
+            axios.post("https://general-form-submission-backend.vercel.app/form2/getFormById", {
+                form2Id: formIdValue
+            })
+                .then(function (response) {
+                    console.log(response.data.form)
+
+                    document.getElementById("facility_name").innerHTML = response.data.form.facility_name
+                    document.getElementById("facility_location").innerHTML = response.data.form.facility_location
+                })
+                .catch(err => console.log(err))
+        </script>
 
 </body>
 
