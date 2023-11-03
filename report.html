@@ -214,7 +214,7 @@
                 <tr>
                     <td>15</td>
                     <td>Electrical Energy Source</td>
-                    <td id="mgmt_on_energy_resource">{Electrical_Energy_Source}</td>
+                    <td id="elec_energy_src">{Electrical_Energy_Source}</td>
                     <td></td>
                 </tr>
 
@@ -488,7 +488,7 @@
                 <tr>
                     <td>51</td>
                     <td>Lighting Systems - Savings Opportunities in kWh/Annum</td>
-                    <td id="lighting_est_savings">{Lighting_Systems\_-\_Savings_Opportunities_in_kWh\_/\_Annum}</td>
+                    <td id="light_save">{Lighting_Systems\_-\_Savings_Opportunities_in_kWh\_/\_Annum}</td>
                     <td></td>
                 </tr>
 
@@ -502,7 +502,7 @@
                 <tr>
                     <td>53</td>
                     <td>Lighting Systems - Estimated Savings in INR</td>
-                    <td id="lighting_est_investment">{Lighting_Systems\_-\_Estimated_Savings_in_INR}</td>
+                    <td id="lighting_est_savings">{Lighting_Systems\_-\_Estimated_Savings_in_INR}</td>
                     <td></td>
                 </tr>
 
@@ -525,7 +525,7 @@
                 <tr>
                     <td>56</td>
                     <td>Electrical Motors - Energy Saving Opportunities</td>
-                    <td>{Electrical_Motors\_-\_Energy_Saving_Opportunities}</td>
+                    <td id="elec_motors">{Electrical_Motors\_-\_Energy_Saving_Opportunities}</td>
                     <td></td>
                 </tr>
 
@@ -597,7 +597,7 @@
                 <tr>
                     <td>65</td>
                     <td>Technology Upgradation Opportunities in the Facility</td>
-                    <td>{Technology_Upgradation_Opportunities_in_the_Facility}</td>
+                    <td id="opportunities_in_the_facility">{Technology_Upgradation_Opportunities_in_the_Facility}</td>
                     <td></td>
                 </tr>
 
@@ -610,28 +610,28 @@
                     <tr>
                         <td>66</td>
                         <td>Material Conservation & Improvement Opportunities in Packing</td>
-                        <td>{Material_Conservation\_&\_Improvement_Opportunities_in_Packing}</td>
+                        <td id="material_conservation_opportunities">{Material_Conservation\_&\_Improvement_Opportunities_in_Packing}</td>
                         <td></td>
                     </tr>
 
                     <tr>
                         <td>67</td>
                         <td>Water Recovery & ReUse Opportunities</td>
-                        <td>{Water_Recovery\_&\_ReUse_Opportunities}</td>
+                        <td id="water_reuse_opportunities">{Water_Recovery\_&\_ReUse_Opportunities}</td>
                         <td></td>
                     </tr>
 
                     <tr>
                         <td>68</td>
                         <td>Scope for Renewable Energy Investment Opportunities</td>
-                        <td>{Scope_for_Renewable_Energy_Investment_Opportunities}</td>
+                        <td id="scope_for_renewable">{Scope_for_Renewable_Energy_Investment_Opportunities}</td>
                         <td></td>
                     </tr>
 
                     <tr>
                         <td>69</td>
                         <td>Details of Renewable Energy Projects</td>
-                        <td>{Details_of_Renewable_Energy_Projects}</td>
+                        <td id="details_of_renewable_energy">{Details_of_Renewable_Energy_Projects}</td>
                         <td></td>
                     </tr>
 
@@ -645,7 +645,7 @@
                     <tr>
                         <td>71</td>
                         <td>Annual Rainfall in Meters</td>
-                        <td>{Annual_Rainfall_in_Meters}</td>
+                        <td id="annual_rainfall"> {Annual_Rainfall_in_Meters}</td>
                         <td></td>
                     </tr>
 
@@ -659,14 +659,14 @@
                     <tr>
                         <td>73</td>
                         <td>Rain Water Harvesting Scope</td>
-                        <td>{Rain_Water_Harvesting_Scope}</td>
+                        <td >{Rain_Water_Harvesting_Scope}</td>
                         <td></td>
                     </tr>
 
                     <tr>
                         <td>74</td>
                         <td>Rain Water Harvesting Observation</td>
-                        <td>{Rain_Water_Harvesting_Observation}</td>
+                        <td id="rw_harvesting_observation">{Rain_Water_Harvesting_Observation}</td>
                         <td></td>
                     </tr>
 
@@ -689,14 +689,14 @@
                     <tr>
                         <td>76</td>
                         <td>General Observations on Safety</td>
-                        <td>{General_Observations_on_Safety}</td>
+                        <td id="obs_on_safety">{General_Observations_on_Safety}</td>
                         <td></td>
                     </tr>
 
                     <tr>
                         <td>77</td>
                         <td>General Observations on Electrical Earthing & Electrical Systems</td>
-                        <td>{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
+                        <td id="obs_on_elec_earth">{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
                         <td></td>
                     </tr>
 
@@ -715,7 +715,7 @@
 
                         <tr>
                             <th><strong>Total Production (Kgs)</strong></th>
-                            <td>{Annual_Production_Qty}</td>
+                            <td id="annual_production_quantity">{Annual_Production_Qty}</td>
                         </tr>
 
                         <tr>
@@ -1041,7 +1041,7 @@
                 document.getElementById('cert_obtained').innerHTML = response.data.form.cert_obtained;
                 document.getElementById('cert_planned').innerHTML = response.data.form.cert_planned;
                 document.getElementById('awards_received').innerHTML = response.data.form.award_recieved;
-                document.getElementById("mgmt_on_energy_resource").innerHTML = response.data.form.mgmt_on_energy_resource;
+                document.getElementById("elec_energy_src").innerHTML = response.data.form.mgmt_on_energy_resource;
                 document.getElementById('baseline_data_period').innerHTML = response.data.form.baseline_data_period;
                 document.getElementById('annual_elec_consumption').innerHTML = response.data.form.annual_elec_consumption;
                 document.getElementById('total_elec_consumption').innerHTML = response.data.form.total_elec_consumption;
@@ -1089,17 +1089,44 @@
                 document.getElementById('compressed_air_saving').innerHTML = response.data.form.compressed_air_saving;
                 document.getElementById('scope_comp_air').innerHTML = response.data.form.scope_comp_air;
                 document.getElementById('lighting_observation').innerHTML = response.data.form.lighting_observation;
-                document.getElementById('lighting_est_savings').innerHTML = response.data.form.lighting_est_savings;
-                document.getElementById('lighting_est_investment').innerHTML = response.data.form.lighting_est_investment;
+                document.getElementById('light_save').innerHTML = response.data.form.lighting_saving;               
+                 document.getElementById('lighting_est_investment').innerHTML = response.data.form.lighting_est_investment;
 
                 document.getElementById('electrical_motors_observations').innerHTML = response.data.form.electrical_motors_observations;
                 document.getElementById('total_elec_motors').innerHTML = response.data.form.total_elec_motors;
                 document.getElementById('elec_motors').innerHTML = response.data.form.elec_motors;
                 document.getElementById('scope_waste').innerHTML = response.data.form.scope_waste;
+
+                document.getElementById('lighting_est_savings').innerHTML = response.data.form.lighting_est_savings;
+                document.getElementById('elec_motors').innerHTML = response.data.form.elec_motors;
+                document.getElementById('opportunities_in_the_facility').innerHTML = response.data.form.opportunities_in_the_facility;
+                document.getElementById('material_conservation_opportunities').innerHTML = response.data.form.material_conservation_opportunities;
+                document.getElementById('water_reuse_opportunities').innerHTML = response.data.form.water_reuse_opportunities;
+                document.getElementById('scope_for_renewable').innerHTML = response.data.form.facility_category;
+                document.getElementById('details_of_renewable_energy').innerHTML = response.data.form.details_of_renewable_energy;
+                document.getElementById('annual_rainfall').innerHTML = response.data.form.annual_rainfall;
+                document.getElementById('rw_harvesting_observation').innerHTML = response.data.form.rw_harvesting_observation;
+
+
+                document.getElementById('obs_on_safety').innerHTML = response.data.form.obs_on_safety;
+                document.getElementById('obs_on_elec_earth').innerHTML = response.data.form.obs_on_elec_earth;
+                document.getElementById('annual_production_quantity').innerHTML = response.data.form.annual_production_quantity;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
+
+
+
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+
 
 
 
