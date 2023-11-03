@@ -258,11 +258,11 @@
                         <label for="tanker_lorry_supply">Tanker Lorry Supply</label><br>
                     </div><br>
                     <div>
-                        <label for="qty_fresh_water">35. Quantity of Fresh Water (Kl/Annum)</label>
+                        <label for="qty_fresh_water">35. Quantity of Fresh Water (KL/Annum)</label>
                         <input type="text" id="qty_fresh_water" name="qty_fresh_water">
                     </div><br>
                     <div>
-                        <label for="total_qty_water">36. Total Quantity of Water (KL/Annum)</label>
+                        <label for="total_qty_water">36. Total Quantity of Recovered Water (KL/Annum)</label>
                         <input type="text" id="total_qty_water" name="total_qty_water"><br>
                     </div>
                     <div>
@@ -1243,8 +1243,8 @@
                 });
             })
 
-            axios.post("https://general-form-submission-backend.vercel.app/form2/postForm", {
-                // axios.post("http://localhost:8080/form2/postForm", {
+            // axios.post("https://general-form-submission-backend.vercel.app/form2/postForm", {
+                axios.post("http://localhost:8080/form2/postForm", {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
