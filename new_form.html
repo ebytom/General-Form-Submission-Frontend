@@ -275,36 +275,41 @@
                     </div><br>
                     <div>
                         <label for="ZLD" id="zld">39. ZLD Applicable</label><br>
-                        <input onclick="isZLD('Yes')" type="radio" id="Yes" name="ZLD" value="Yes">
+                        <input onclick="isZLD('Yes')"  type="radio" id="Yes" name="ZLD" value="Yes">
                         <label for="Yes">Yes</label><br>
-                        <input onclick="isZLD('No')" type="radio" id="No" name="ZLD" value="No">
+                        <input onclick="isZLD('No')"  type="radio" id="No" name="ZLD" value="No">
                         <label for="No">No</label><br>
                     </div><br>
-                    <div>
-                        <label for="effluent_treatment" id="effluent">40. Effluent Treatment Plant Category</label><br>
-                        <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
-                            value="cetp">
-                        <label for="cetp">CETP</label><br>
-                        <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
-                            value="ietp">
-                        <label for="ietp">IETP</label><br>
-                        <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld" name="effluent_treatment"
-                            value="no-zld">
-                        <label for="no_zld">No ZLD Plant</label><br>
-                    </div><br>
-                    <div>
-                        <label for="water_quality" id="water_quality">41. Implementation of Water Quality Watch
-                            Center</label><br>
-                        <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment2"
-                            value="yes1">
-                        <label for="yes1">Yes</label><br>
-                        <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment2"
-                            value="no1">
-                        <label for="no1">No</label><br>
-                        <input onclick="waterQuality('Not Applicable')" type="radio" id="na1" name="effluent_treatment2"
-                            value="na1">
-                        <label for="na1">Not Applicable</label><br>
-                    </div><br>
+                    <div class="zldpresent" id="zldpresent">
+
+                        <div>
+                            <label for="effluent_treatment" id="effluent">40. Effluent Treatment Plant Category</label><br>
+                            <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
+                                value="cetp">
+                            <label for="cetp">CETP</label><br>
+                            <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
+                                value="ietp">
+                            <label for="ietp">IETP</label><br>
+                            <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld" name="effluent_treatment"
+                                value="no-zld">
+                            <label for="no_zld">No ZLD Plant</label><br>
+                        </div><br>
+                        <div>
+                            <label for="water_quality" id="water_quality">41. Implementation of Water Quality Watch
+                                Center</label><br>
+                            <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment2"
+                                value="yes1">
+                            <label for="yes1">Yes</label><br>
+                            <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment2"
+                                value="no1">
+                            <label for="no1">No</label><br>
+                            <input onclick="waterQuality('Not Applicable')" type="radio" id="na1" name="effluent_treatment2"
+                                value="na1">
+                            <label for="na1">Not Applicable</label><br>
+                        </div><br>
+
+                    </div>
+                   
                     <div>
                         <label for="domestic_water_consumption">42. Water Consumed for Domestic Use (KL/Day)</label>
                         <input type="text" id="domestic_water_consumption" name="domestic_water_consumption"><br>
@@ -360,7 +365,7 @@
                         House
                     </label>
                     <textarea type="textarea" id="assess_ob_at_power_house"
-                        name="assess_ob_at_power_house"><br><br></textarea>
+                        name="assess_ob_at_power_house"></textarea>
                 </div>
                 <div>
                     <label for="pic_ob_at_compressor">49. Assessment Observation at
@@ -500,7 +505,7 @@
                     <label for="wind-elec-generation">68. Electrical Motors - Energy Saving Opportunities</label><br>
                     <input type="checkbox" id="rewound_with_ie3" name="elec_motors" value="Coal Replacement of Rewound Motors
                         with IE3 Motors">
-                    <label for="rewound_with_ie3">Coal Replacement of Rewound Motors
+                    <label for="rewound_with_ie3">Replacement of Rewound Motors
                         with IE3 Motors</label><br>
                     <input type="checkbox" id="upgradation_of_conventional_motors_with_ie3_motors" name="elec_motors"
                         value="Upgradation of Conventional Motors with IE3 Motors">
@@ -751,7 +756,7 @@
                     <input type="text" id="specific_energy" name="specific_energy"><br><br>
                 </div>
                 <div>
-                    <label for="specific_fuel_cost">109. Specific Fuel Cost (Rs/Unit of Production):</label><br>
+                    <label for="specific_fuel_cost">109. Specific Energy Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel_cost" name="specific_fuel_cost"><br><br>
                 </div>
                 <div>
@@ -759,13 +764,17 @@
                     <input type="text" id="specific_water" name="specific_water"><br><br>
                 </div>
                 <div>
-                    <label for="specific_fuel">111. Specific Water (kg/Unit of Production):</label><br>
+                    <label for="specific_fuel">111. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
                 </div>
             
                 <div>
-                    <label for="specific_water_cost">112. Specific Water (Rs/Unit of Production):</label><br>
+                    <label for="specific_water_cost">112. Specific Fuel Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
+                </div>
+                <div>
+                    <label for="specific_water_cost1">113. Specific Water Cost (Rs/Unit of Production):</label><br>
+                    <input type="text" id="specific_water_cost1" name="specific_water_cost1"><br><br>
                 </div>
                 <button onclick="sect4()" class="btn btn-primary" id="prev">&laquo; Previous</button>
                 <button type="button" class="btn btn-primary splbutton"
@@ -809,6 +818,9 @@
         #sect_5 {
             display: none
         }
+        #zldpresent{
+            display: none;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
@@ -846,6 +858,12 @@
             document.getElementById("sect_5").style.display = "none";
             scrollToTop()
         }
+        function zldpres(){
+            document.getElementById("zldpresent").style.display="block";
+        }
+        function zldabsent(){
+            document.getElementById("zldpresent").style.display="none";
+        }
         function sect5() {
             document.getElementById("sect_1").style.display = "none";
             document.getElementById("sect_2").style.display = "none";
@@ -861,6 +879,7 @@
                 behavior: 'smooth'
             });
         }
+
         //--------------------------------------------------------------------------------------------
         let loc = null;
         function getLocation() {
@@ -892,6 +911,7 @@
         }
         function isZLD(val) {
             zld = val
+            document.getElementById("zldpresent").style.display="block";
         }
         function effTreatment(val) {
             effluent_treatment = val
@@ -1003,6 +1023,7 @@
             const specific_fuel = document.getElementById('specific_fuel').value;
             const specific_fuel_cost = document.getElementById('specific_fuel_cost').value;
             const specific_water_cost = document.getElementById('specific_water_cost').value;
+            const specific_water_cost1 = document.getElementById('specific_water_cost1').value;
 
             let facility_pic_ent = "";
             let facility_pic = "";
@@ -1361,6 +1382,7 @@
                 specific_fuel: specific_fuel,
                 specific_fuel_cost: specific_fuel_cost,
                 specific_water_cost: specific_water_cost,
+                specific_water_cost1: specific_water_cost1,
 
             })
 

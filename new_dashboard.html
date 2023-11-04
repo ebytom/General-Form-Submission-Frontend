@@ -754,9 +754,14 @@
                             <div class="p-2" id="specific_fuel_cost"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
-                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Specific Water
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Specific Fuel Cost
                                 (Rs/Unit of Production): </div>
                             <div class="p-2" id="specific_water_cost"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Specific Water
+                                (Rs/Unit of Production): </div>
+                            <div class="p-2" id="specific_water_cost1"></div>
                         </div>
 
                         <!-- End -->
@@ -941,6 +946,7 @@
                     document.getElementById("specific_fuel").innerHTML = res.data.form.specific_fuel
                     document.getElementById("specific_fuel_cost").innerHTML = res.data.form.specific_fuel_cost
                     document.getElementById("specific_water_cost").innerHTML = res.data.form.specific_water_cost
+                    document.getElementById("specific_water_cost1").innerHTML = res.data.form.specific_water_cost1
                 })
         }
 
