@@ -45,6 +45,35 @@
         .mark {
             background-color: yellow;
         }
+
+        /* TOP LOGO PART CSS */
+
+        .out-container {
+            border: 1px solid black;
+            width: 700px;
+            
+        }
+
+        .container {
+            display: flex;
+
+
+            width: 700px;
+        }
+
+        .column {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 100px;
+            width: 100px;
+        }
     </style>
 </head>
 
@@ -73,9 +102,9 @@
                 </h4>
             </center>
 
-            <h2>Executive Summary</h2>
+            <br>
 
-            <p>WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for the conservation of the
+            <!-- <p>WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for the conservation of the
                 Noyyal
                 and
                 Bhavani rivers. The Industrial Water Stewardship component of the program will look at working with Textile industries along the key stretches of Noyyal
@@ -88,8 +117,44 @@
                 M/s {facility_name} enrolled for the Stewardship Program. The Preliminary visit was conducted by M/s
                 VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify the
                 potential areas for Water, Energy savings.
-            </p>
+            </p> -->
+            <center>
+                <div class="out-container">
+                    <div class="container">
+                        <div class="column">
+                            <h5>prepared by:</h5>
+                            <img class="image" src="/img/logo.jpeg" alt="Image 1">
 
+                        </div>
+                        <div class="column">
+                            <!-- Middle column is empty -->
+                        </div>
+                        <div class="column">
+                            <h5>Submitted Through:</h5>
+                            <img class="image" src="/img/wwf-logo.png" alt="Image 2">
+                        </div>
+                    </div><br>
+                    <p style="margin-top: -30px;font-size: 16px;">
+                    Raman Azhahia Manavalan (CEO - VRNC) | <a href="#">www.vrnc.in </a>| <a href="#" >ram@vrnc.in </a> | +91-9965555774 |  
+                    </p>
+                </div>
+            </center>
+
+            <br>
+            <h2>Executive Summary</h2>
+            <p>WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for the conservation of the
+                Noyyal and Bhavani rivers. The Industrial Water Stewardship component of the program will look at
+                working with Textile industries along the key stretches of Noyyal to minimize their impacts on the river
+                and ensure the long sustainability of the industries. To develop the strategy for industrial water
+                management work and to develop a clean technology implementation plan. Under the 2nd phase of the
+                program, 10 companies have enrolled for the Assessment to identify the opportunities for Resource
+                Efficiency & Cleaner Production. M/s Menaka Textiles (Sudhama Group), Tirupur is a Small-Scale Unit and
+                is engaged in Export and Domestic Knit Garment Manufacturing. To explore Opportunities in Technology
+                Up-gradation, Water & Resource Conservation, the management expressed their interest to get enrolling in
+                the WWF Supported Cleaner Production & Water Stewardship Program. The Preliminary visit was conducted by
+                M/s VRNC at the unit in June 2022 to identify the potential areas for Water, Energy savings.
+            </p>
+            <br>
 
             <table>
                 <tr>
@@ -226,7 +291,7 @@
                 <tr>
                     <td>17</td>
                     <td>Annual Electricity Consumption (Total)(kWh/Annum)</td>
-                    <td id="total_elec_consumption" >{Annual_Electricity_consumption_Total_kWh/Annum}</td>
+                    <td id="total_elec_consumption">{Annual_Electricity_consumption_Total_kWh/Annum}</td>
                     <td></td>
                 </tr>
 
@@ -608,7 +673,8 @@
                     <tr>
                         <td>66</td>
                         <td>Material Conservation & Improvement Opportunities in Packing</td>
-                        <td id="material_conservation_opportunities">{Material_Conservation\_&\_Improvement_Opportunities_in_Packing}</td>
+                        <td id="material_conservation_opportunities">
+                            {Material_Conservation\_&\_Improvement_Opportunities_in_Packing}</td>
                         <td></td>
                     </tr>
 
@@ -657,7 +723,7 @@
                     <tr>
                         <td>73</td>
                         <td>Rain Water Harvesting Scope</td>
-                        <td >{Rain_Water_Harvesting_Scope}</td>
+                        <td>{Rain_Water_Harvesting_Scope}</td>
                         <td></td>
                     </tr>
 
@@ -694,7 +760,8 @@
                     <tr>
                         <td>77</td>
                         <td>General Observations on Electrical Earthing & Electrical Systems</td>
-                        <td id="obs_on_elec_earth">{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
+                        <td id="obs_on_elec_earth">{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}
+                        </td>
                         <td></td>
                     </tr>
 
@@ -1087,8 +1154,8 @@
                 document.getElementById('compressed_air_saving').innerHTML = response.data.form.compressed_air_saving;
                 document.getElementById('scope_comp_air').innerHTML = response.data.form.scope_comp_air;
                 document.getElementById('lighting_observation').innerHTML = response.data.form.lighting_observation;
-                document.getElementById('light_save').innerHTML = response.data.form.lighting_saving;               
-                 document.getElementById('lighting_est_investment').innerHTML = response.data.form.lighting_est_investment;
+                document.getElementById('light_save').innerHTML = response.data.form.lighting_saving;
+                document.getElementById('lighting_est_investment').innerHTML = response.data.form.lighting_est_investment;
 
                 document.getElementById('electrical_motors_observations').innerHTML = response.data.form.electrical_motors_observations;
                 document.getElementById('total_elec_motors').innerHTML = response.data.form.total_elec_motors;
