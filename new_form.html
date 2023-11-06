@@ -109,7 +109,7 @@
                         <input type="text" id="product_mfd" name="product_mfd">
                     </div><br><br>
                     <div>
-                        <label for="prod_capacity">10. Production Capacity:</label>
+                        <label for="prod_capacity">10. Production Capacity(Unit of Meaurement - PCS/Annum Tonnes/Day No. of Spindles):</label>
                         <input type="text" id="prod_capacity" name="prod_capacity">
                     </div><br><br>
                     <div>
@@ -158,9 +158,17 @@
                         <label for="grid_electricity_lt">Grid Electricity - LT</label><br>
                     </div><br><br>
                     <div>
-                        <label for="baseline_data_period">18. Baseline Data Period (Mention the FY Period as
+                        <label for="baseline_data">18. Baseline Data Period (Mention the FY Period as
                             YY-YY)</label><br>
-                        <input type="text" id="baseline_data_period" name="baseline_data_period">
+                        <input onclick="financial()"  type="radio" id="financial" name="period" value="yes4">
+                        <label for="financial">Financial Year</label><br>
+
+                        <input onclick="calender()"  type="radio" id="calender" name="period" value="no4">
+                        <label for="calender">Calender Year</label>
+                            <div class="display_data" id="display_data">
+                                <input type="text" id="baseline_data_period" name="baseline_data_period">
+                            </div>
+                        
                     </div><br><br>
                     <div>
                         <label for="total_elec_consumption">19. Annual Electricity Consumption
@@ -241,7 +249,7 @@
                         <input type="text" id="boiler_fuel_cost" name="boiler_fuel_cost"><br><br>
                     </div>
                     <div>
-                        <label for="annual_production_quantity">33. Annual Production Qty</label>
+                        <label for="annual_production_quantity">33. Annual Production Qty(Unit of Meaurement - PCS/Annum Tonnes/Annum)</label>
                         <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br>
                     </div><br>
                     <div class="src_water">
@@ -275,15 +283,15 @@
                     </div><br>
                     <div>
                         <label for="ZLD" id="zld">39. ZLD Applicable</label><br>
-                        <input onclick="isZLD('Yes')"  type="radio" id="Yes" name="ZLD" value="Yes">
+                        <input onclick="isZLD('Yes'); zldpres();"  type="radio" id="Yes" name="ZLD" value="Yes">
                         <label for="Yes">Yes</label><br>
-                        <input onclick="isZLD('No')"  type="radio" id="No" name="ZLD" value="No">
+                        <input onclick="isZLD('No'); zldabsent();"  type="radio" id="No" name="ZLD" value="No">
                         <label for="No">No</label><br>
                     </div><br>
                     <div class="zldpresent" id="zldpresent">
 
                         <div>
-                            <label for="effluent_treatment" id="effluent">40. Effluent Treatment Plant Category</label><br>
+                            <label for="effluent_treatment" id="effluent">39.1. Effluent Treatment Plant Category</label><br>
                             <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
                                 value="cetp">
                             <label for="cetp">CETP</label><br>
@@ -295,7 +303,7 @@
                             <label for="no_zld">No ZLD Plant</label><br>
                         </div><br>
                         <div>
-                            <label for="water_quality" id="water_quality">41. Implementation of Water Quality Watch
+                            <label for="water_quality" id="water_quality">39.2. Implementation of Water Quality Watch
                                 Center</label><br>
                             <input onclick="waterQuality('Yes')" type="radio" id="yes1" name="effluent_treatment2"
                                 value="yes1">
@@ -311,15 +319,15 @@
                     </div>
                    
                     <div>
-                        <label for="domestic_water_consumption">42. Water Consumed for Domestic Use (KL/Day)</label>
+                        <label for="domestic_water_consumption">40. Water Consumed for Domestic Use (KL/Day)</label>
                         <input type="text" id="domestic_water_consumption" name="domestic_water_consumption"><br>
                     </div><br>
                     <div>
-                        <label for="garden_area">43. Garden Area in Sq.Meter</label>
+                        <label for="garden_area">41. Garden Area in Sq.Meter</label>
                         <input type="text" id="garden_area" name="garden_area"><br>
                     </div><br>
                     <div>
-                        <label for="garden_use">44. Water Consumed for Garden Use (KL/Day)</label>
+                        <label for="garden_use">42. Water Consumed for Garden Use (KL/Day)</label>
                         <input type="text" id="garden_use" name="garden_use"><br><br>
                     </div><br>
 
@@ -335,13 +343,13 @@
         <div class="container">
             <fieldset>
                 <div>
-                    <label for="garden_and_domestic_water_use_ob">45. Garden & Domestic Water Use Observations
+                    <label for="garden_and_domestic_water_use_ob">43. Garden & Domestic Water Use Observations
                     </label><br>
                     <textarea id="garden_and_domestic_water_use_ob" name="garden_and_domestic_water_use_ob">
                     </textarea><br><br>
                 </div>
                 <div class="src_fuel">
-                    <label for="energy_source_forms_of_fuels">46. Energy Source Forms of Fuels</label><br>
+                    <label for="energy_source_forms_of_fuels">44. Energy Source Forms of Fuels</label><br>
                     <input type="checkbox" id="electricity" name="src_fuel" value="Electricity">
                     <label for="electricity">Electricity</label><br>
                     <input type="checkbox" id="diesel" name="src_fuel" value="Diesel">
@@ -356,31 +364,31 @@
                     <label for="other1">Other : </label> <input type="text" id="other1_text" name="src_fuel"><br><br>
                 </div>
                 <div>
-                    <label for="pic_ob_at_power_house">47. Assessment Observation at the
+                    <label for="pic_ob_at_power_house">45. Assessment Observation at the
                         Power House Photo </label><br>
                     <input type="file" id="pic_ob_at_power_house" name="pic_ob_at_power_house"><br><br>
                 </div>
                 <div>
-                    <label for="assess_ob_at_power_house">48. Assessment Observation at the Power
+                    <label for="assess_ob_at_power_house">46. Assessment Observation at the Power
                         House
                     </label>
                     <textarea type="textarea" id="assess_ob_at_power_house"
                         name="assess_ob_at_power_house"></textarea>
                 </div>
                 <div>
-                    <label for="pic_ob_at_compressor">49. Assessment Observation at
+                    <label for="pic_ob_at_compressor">47. Assessment Observation at
                         the Compressor Room Photo</label><br>
                     <input type="file" id="pic_ob_at_compressor" name="pic_ob_at_compressor"><br><br>
                 </div>
                 <div>
-                    <label for="assess_ob_at_compressor">50. Assessment Observation at the
+                    <label for="assess_ob_at_compressor">48. Assessment Observation at the
                         Compressor Room
                     </label><br>
                     <textarea type="textarea" id="assess_ob_at_compressor"
                         name="assess_ob_at_compressor"></textarea><br><br>
                 </div>
                 <div class="scope_comp_air">
-                    <label for="scope_for_energy_savings_in_compressed_air_systems">59. Scope for Energy Savings in
+                    <label for="scope_for_energy_savings_in_compressed_air_systems">49. Scope for Energy Savings in
                         Compressed Air Systems</label><br>
                     <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
                         value="Compressed Air Leak Fixing Opportunities">
@@ -403,7 +411,7 @@
                     <label for="others">Other : </label><input type="text" id="other2_text" name="other"><br><br>
                 </div>
                 <div>
-                    <label for="compressed_air_saving">60. Compressed Air Systems Savings in
+                    <label for="compressed_air_saving">50. Compressed Air Systems Savings in
                         kWh/Annum
                     </label>
                     <input type="text" id="compressed_air_saving" name="compressed_air_saving"><br><br>
@@ -453,34 +461,34 @@
                     <textarea type="textarea" id="assess_ob_at_other" name="assess_ob_at_other"></textarea><br><br>
                
                 <div>
-                    <label for="lighting_observation">61. Lighting Systems - Observation
+                    <label for="lighting_observation">59. Lighting Systems - Observation
                     </label>
                     <textarea type="textarea" id="lighting_observation" name="lighting_observation"></textarea><br><br>
                 </div>
                 <div>
-                    <label for="lighting_saving">62. Lighting Systems -
+                    <label for="lighting_saving">60. Lighting Systems -
                         Savings Opportunities in kWh/Annum
                     </label>
                     <input type="text" id="lighting_saving" name="lighting_saving"><br><br>
                 </div>
                 <div>
-                    <label for="lighting_est_investment">63. Lighting Systems - Estimated
+                    <label for="lighting_est_investment">61. Lighting Systems - Estimated
                         Investments in INR
                     </label>
                     <input type="text" id="lighting_est_investment" name="lighting_est_investment"><br><br>
                 </div>
                 <div>
-                    <label for="lighting_est_savings">64. Lighting Systems - Estimated
+                    <label for="lighting_est_savings">62. Lighting Systems - Estimated
                         Savings in INR
                     </label>
                     <input type="text" id="lighting_est_savings" name="lighting_est_savings"><br><br>
                 </div>
                 <div>
-                    <label for="lighting_systems_photo">65. Lighting Systems - Photo/label</label> <br>
+                    <label for="lighting_systems_photo">63. Lighting Systems - Photo/label</label> <br>
                     <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
                 </div>
                 <div>
-                    <label for="electrical_motors_observations">66. Electrical Motors - Observations
+                    <label for="electrical_motors_observations">64. Electrical Motors - Observations
                     </label><br>
                     <textarea type="textarea" id="electrical_motors_observations"
                         name="electrical_motors_observations"></textarea><br><br>
@@ -497,12 +505,12 @@
         <div class="container">
             <fieldset>
                 <div>
-                    <label for="total_elec_motors">67. Electrical Motors - Total Numbers
+                    <label for="total_elec_motors">65. Electrical Motors - Total Numbers
                     </label><br>
                     <input type="text" id="total_elec_motors" name="total_elec_motors"><br><br>
                 </div>
                 <div class="elec_motors">
-                    <label for="wind-elec-generation">68. Electrical Motors - Energy Saving Opportunities</label><br>
+                    <label for="wind-elec-generation">66. Electrical Motors - Energy Saving Opportunities</label><br>
                     <input type="checkbox" id="rewound_with_ie3" name="elec_motors" value="Coal Replacement of Rewound Motors
                         with IE3 Motors">
                     <label for="rewound_with_ie3">Replacement of Rewound Motors
@@ -513,24 +521,24 @@
                         with IE3 Motors</label><br>
                 </div>
                 <div>
-                    <label for="energy_saving_opportunities_in_electrical_motors">69. Energy Saving Opportunities in
+                    <label for="energy_saving_opportunities_in_electrical_motors">67. Energy Saving Opportunities in
                         Electrical Motors (kWh/Annum)</label><br>
                     <input type="text" id="energy_saving_opportunities_in_electrical_motors"
                         name="energy_saving_opportunities_in_electrical_motors"><br><br>
                 </div>
                 <div>
-                    <label for="estimated_savings_motor_upgradation">70. Estimated Savings- Motor Upgradation
+                    <label for="estimated_savings_motor_upgradation">68. Estimated Savings- Motor Upgradation
                         (INR/Annum)</label><br>
                     <input type="text" id="estimated_savings_motor_upgradation"
                         name="estimated_savings_motor_upgradation"><br><br>
                 </div>
                 <div>
-                    <label for="waste_heat_recovery_observations">71. Waste Heat Recovery Observations</label><br>
+                    <label for="waste_heat_recovery_observations">69. Waste Heat Recovery Observations</label><br>
                     <textarea type="textarea" id="waste_heat_recovery_observations"
                         name="waste_heat_recovery_observations"></textarea><br><br>
                 </div>
                 <div class="scope_waste">
-                    <label for="scope_for_waste_heat_recovery">72. Scope for Waste Heat Recovery</label><br>
+                    <label for="scope_for_waste_heat_recovery">70. Scope for Waste Heat Recovery</label><br>
                     <input type="checkbox" id="flue_gas_waste_heat_recovery" name="scope_waste"
                         value="Flue Gas Waste Heat Recovery">
                     <label for="flue_gas_waste_heat_recovery">Flue Gas Waste Heat Recovery</label><br>
@@ -544,112 +552,112 @@
                     <label for="other_whr_systems">Other WHR Systems</label><br>
                 </div><br>
                 <div>
-                    <label for="waste_heat_recovery_fuel_savings">73. Waste Heat Recovery Fuel Savings (Tons/Annum)
+                    <label for="waste_heat_recovery_fuel_savings">71. Waste Heat Recovery Fuel Savings (Tons/Annum)
                     </label><br>
                     <input type="text" id="waste_heat_recovery_fuel_savings"
                         name="waste_heat_recovery_fuel_savings"><br><br>
                 </div>
                 <div>
-                    <label for="pic_ob_raw_material">74. Assessment Observation at Raw
+                    <label for="pic_ob_raw_material">72. Assessment Observation at Raw
                         Material Inward Photo</label><br>
                     <label for="pic_ob_raw_material" class="upload-btn">Upload Image</label>
                     <input type="file" id="pic_ob_raw_material" accept="image/*">
                 </div>
                 <div>
-                    <label for="assessment_observation_at_raw_material_inward">75. Assessment Observation at Raw
+                    <label for="assessment_observation_at_raw_material_inward">73. Assessment Observation at Raw
                         Material
                         Inward</label><br>
                     <textarea type="textarea" id="assessment_observation_at_raw_material_inward"
                         name="assessment_observation_at_raw_material_inward"></textarea><br><br>
                 </div>
                 <div>
-                    <label for="pic_ob_material_handling">76. Assessment Observation at Material
+                    <label for="pic_ob_material_handling">74. Assessment Observation at Material
                         Handling Photo</label><br>
                     <label for="pic_ob_material_handling" class="upload-btn">Upload Image</label>
                     <input type="file" id="pic_ob_material_handling" accept="image/*">
                 </div>
                 <div>
-                    <label for="assessment_observation_at_material_handling">77. Assessment Observation at Material
+                    <label for="assessment_observation_at_material_handling">75. Assessment Observation at Material
                         Handling</label><br>
                     <textarea type="textarea" id="assessment_observation_at_material_handling"
                         name="assessment_observation_at_material_handling"></textarea><br><br>
                 </div><br>
                 <div>
-                    <label for="production_machine_utilization_data_collection_aspects">78. Production Machine
+                    <label for="production_machine_utilization_data_collection_aspects">76. Production Machine
                         Utilization &
                         Data Collection Aspects</label><br>
                     <textarea type="textarea" id="production_machine_utilization_data_collection_aspects"
                         name="production_machine_utilization_data_collection_aspects"></textarea><br><br>
                 </div>
                 <div>
-                    <label for="pic_production_machine_util">79. Production Machine
+                    <label for="pic_production_machine_util">77. Production Machine
                         Utilization & Data Collection Aspects Photo</label><br>
                     <label for="pic_production_machine_util" class="upload-btn">Upload Image</label>
                     <input type="file" id="pic_production_machine_util" accept="image/*">
                 </div>
                 <div>
-                    <label for="production_layout_observations">80. Production Layout Observations</label><br>
+                    <label for="production_layout_observations">78. Production Layout Observations</label><br>
                     <textarea type="textarea" id="production_layout_observations"
                         name="production_layout_observations"></textarea><br><br>
                 </div><br>
                 <div>
-                    <label for="production_layout_ob_photo">81. Production Layout Observations Photo</label><br>
+                    <label for="production_layout_ob_photo">79. Production Layout Observations Photo</label><br>
                     <label for="production_layout_ob_photo" class="upload-btn">Upload Image</label>
                     <input type="file" id="production_layout_ob_photo" accept="image/*">
                 </div>
                 <div>
-                    <label for="installation_monitoring_systems">82. Installation
+                    <label for="installation_monitoring_systems">80. Installation
                         status of Measuring & Monitoring Systems for Energy, Water, Fuel &
                         Waste Etc</label><br>
                     <textarea type="textarea" id="installation_monitoring_systems"
                         name="installation_monitoring_systems"></textarea><br><br>
                 </div><br>
                 <div>
-                    <label for="mgmt_on_energy_resource">83. Management Committment on Energy &
+                    <label for="mgmt_on_energy_resource">81. Management Committment on Energy &
                         Resource Efficiency (Availability of Policy
                         & Systems)</label><br>
                     <textarea type="textarea" id="mgmt_on_energy_resource"
                         name="mgmt_on_energy_resource"></textarea><br><br>
                 </div><br>
                 <div>
-                    <label for="opportunities_in_the_facility">84. Technology Upgradation
+                    <label for="opportunities_in_the_facility">82. Technology Upgradation
                         Opportunities in the Facility</label><br>
                     <textarea type="textarea" id="opportunities_in_the_facility"
                         name="opportunities_in_the_facility"></textarea><br><br>
                 </div><br>
                 <div>
-                    <label for="material_conservation_opportunities">85. Material Conservation &
+                    <label for="material_conservation_opportunities">83. Material Conservation &
                         Improvement Opportunities in Packing</label><br>
                     <textarea type="textarea" id="material_conservation_opportunities"
                         name="material_conservation_opportunities"></textarea><br>
                 </div><br>
                 <div>
-                    <label for="water_reuse_opportunities">86. Water Recovery & ReUse Opportunities</label><br>
+                    <label for="water_reuse_opportunities">84. Water Recovery & ReUse Opportunities</label><br>
                     <textarea type="textarea" id="water_reuse_opportunities"
                         name="water_reuse_opportunities"></textarea><br>
                 </div><br>
                 <div>
-                    <label for="scope_for_renewable">87. Scope for Renewable Energy
+                    <label for="scope_for_renewable">85. Scope for Renewable Energy
                         Investment Opportunities</label><br>
                     <textarea type="textarea" id="scope_for_renewable" name="scope_for_renewable"></textarea><br>
                 </div><br>
                 <div>
-                    <label for="details_of_renewable_energy">88. Details of Renewable Energy Projects</label><br>
+                    <label for="details_of_renewable_energy">86. Details of Renewable Energy Projects</label><br>
                     <textarea type="textarea" id="details_of_renewable_energy"
                         name="details_of_renewable_energy"></textarea><br>
                 </div><br>
                 <div>
-                    <label for="pic_renewable_energy">89. Details of Renewable Energy Projects
+                    <label for="pic_renewable_energy">87. Details of Renewable Energy Projects
                         Photo</label><br>
                     <label for="pic_renewable_energy" class="upload-btn">Upload Image</label>
                     <input type="file" id="pic_renewable_energy" accept="image/*">
                 </div>
                 <div>
-                    <label for="annual_rainfall">90. Annual Rainfall in Meters</label><br>
+                    <label for="annual_rainfall">88. Annual Rainfall in Meters</label><br>
                     <input type="text" id="annual_rainfall" name="annual_rainfall"><br><br>
                 </div><br>
                 <div class="rwh_scope">
-                    <label for="rain_water_harvesting_scope">91. Rain Water Harvesting Scope</label><br>
+                    <label for="rain_water_harvesting_scope">89. Rain Water Harvesting Scope</label><br>
                     <input type="checkbox" id="rain_water_harvesting" name="rwh_scope" value="Rain_Water_Harvesting">
                     <label for="rain_water_harvesting">Rain Water Harvesting</label><br>
                     <input type="checkbox" id="rain_water_charging" name="rwh_scope" value="Rain_Water_Charging">
@@ -659,12 +667,12 @@
                     <label for="no_rain_water_harvesting_structures">No Rain Water Harvesting Structures</label><br>
                 </div><br>
                 <div>
-                    <label for="rw_harvesting_observation">92. Rain Water Harvesting Observation</label><br>
+                    <label for="rw_harvesting_observation">90. Rain Water Harvesting Observation</label><br>
                     <textarea type="textarea" id="rw_harvesting_observation"
                         name="rw_harvesting_observation"></textarea><br><br>
                 </div><br>
                 <div>
-                    <label for="water_saving_opportunties">93. Process Water Saving Opportunties</label><br>
+                    <label for="water_saving_opportunties">91. Process Water Saving Opportunties</label><br>
                     <textarea type="textarea" id="water_saving_opportunties"
                         name="water_saving_opportunties"></textarea><br><br>
                 </div><br>
@@ -680,100 +688,100 @@
         <div class="container">
             <fieldset>
                 <div>
-                    <label for="obs_on_safety">94. General Observations on Safety:</label><br>
+                    <label for="obs_on_safety">92. General Observations on Safety:</label><br>
                     <textarea type="textarea" id="obs_on_safety" name="obs_on_safety"></textarea><br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_img">95. General Observations on Safety (Critical) Photo:</label><br>
+                    <label for="obs_on_safety_img">93. General Observations on Safety (Critical) Photo:</label><br>
                     <input type="file" id="obs_on_safety_img" name="obs_on_safety_img"><br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_crit">96. General Observations on Safety (Critical):</label><br>
+                    <label for="obs_on_safety_crit">94. General Observations on Safety (Critical):</label><br>
                     <textarea type="textarea" id="obs_on_safety_crit" name="obs_on_safety_crit"></textarea><br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_prod_photo">97. General Observations on Safety (Production) Photo:</label>
+                    <label for="obs_on_safety_prod_photo">95. General Observations on Safety (Production) Photo:</label>
                     <input type="file" id="obs_on_safety_prod_photo" name="obs_on_safety_prod_photo">
                 </div><br><br>
                 <div>
-                    <label for="obs_on_safety_prod">98. General Observations on Safety (Production):</label><br>
+                    <label for="obs_on_safety_prod">96. General Observations on Safety (Production):</label><br>
                     <textarea type="textarea" id="obs_on_safety_prod" name="obs_on_safety_prod"></textarea>
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_elec_photo">99. General Observations on Safety (Electrical)
+                    <label for="obs_on_safety_elec_photo">97. General Observations on Safety (Electrical)
                         Photo:</label><br>
                     <input type="file" id="obs_on_safety_elec_photo" name="obs_on_safety_elec_photo">
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_elec">100. General Observations on Safety (Electrical):</label><br>
+                    <label for="obs_on_safety_elec">98. General Observations on Safety (Electrical):</label><br>
                     <textarea type="textarea" id="obs_on_safety_elec" name="obs_on_safety_elec"></textarea>
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_chem_photo">101. General Observations on Safety (Chemical Handling)
+                    <label for="obs_on_safety_chem_photo">99. General Observations on Safety (Chemical Handling)
                         Photo:</label><br>
                     <input type="file" id="obs_on_safety_chem_photo" name="obs_on_safety_chem_photo">
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_chem">102. General Observations on Safety (Chemical Handling):</label><br>
+                    <label for="obs_on_safety_chem">100. General Observations on Safety (Chemical Handling):</label><br>
                     <textarea type="textarea" id="obs_on_safety_chem" name="obs_on_safety_chem"></textarea>
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_fire_photo">103. General Observations on Safety (Fire Hazards)
+                    <label for="obs_on_safety_fire_photo">101. General Observations on Safety (Fire Hazards)
                         Photo:</label><br>
                     <input type="file" id="obs_on_safety_fire_photo" name="obs_on_safety_fire_photo">
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_safety_fire">104. General Observations on Safety (Fire Hazards):</label><br>
+                    <label for="obs_on_safety_fire">102. General Observations on Safety (Fire Hazards):</label><br>
                     <textarea type="textarea" id="obs_on_safety_fire" name="obs_on_safety_fire"></textarea>
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_elec_earth">105. General Observations on Electrical and Earthing
+                    <label for="obs_on_elec_earth">103. General Observations on Electrical and Earthing
                         Systems:</label><br>
                     <textarea type="textarea" id="obs_on_elec_earth" name="obs_on_elec_earth"></textarea>
                     <br><br>
                 </div>
                 <div>
-                    <label for="obs_on_elec_earth_photo">106. General Observations on Electrical and Earthing Systems
+                    <label for="obs_on_elec_earth_photo">104. General Observations on Electrical and Earthing Systems
                         Photo:</label><br>
                     <input type="file" id="obs_on_elec_earth_photo" name="obs_on_elec_earth_photo">
                     <br><br>
                 </div>
                 <div>
-                    <label for="overall_obs_on_safety_photo">107. Overall Observations & Remarks on Safety
+                    <label for="overall_obs_on_safety_photo">105. Overall Observations & Remarks on Safety
                         Photo:</label><br>
                     <input type="file" id="overall_obs_on_safety_photo" name="overall_obs_on_safety_photo">
                     <br><br>
                 </div><br>
                 <div>
-                    <label for="specific_energy">108. Specific Energy (kWh/Unit of Production):</label><br>
+                    <label for="specific_energy">106. Specific Energy (kWh/Unit of Production):</label><br>
                     <input type="text" id="specific_energy" name="specific_energy"><br><br>
                 </div>
                 <div>
-                    <label for="specific_fuel_cost">109. Specific Energy Cost (Rs/Unit of Production):</label><br>
+                    <label for="specific_fuel_cost">107. Specific Energy Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel_cost" name="specific_fuel_cost"><br><br>
                 </div>
                 <div>
-                    <label for="specific_water">110. Specific Water (Litres/Unit of Production):</label><br>
+                    <label for="specific_water">108. Specific Water (Litres/Unit of Production):</label><br>
                     <input type="text" id="specific_water" name="specific_water"><br><br>
                 </div>
                 <div>
-                    <label for="specific_water_cost1">111. Specific Water Cost (Rs/Unit of Production):</label><br>
+                    <label for="specific_water_cost1">109. Specific Water Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_water_cost1" name="specific_water_cost1"><br><br>
                 </div>
                 <div>
-                    <label for="specific_fuel">112. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
+                    <label for="specific_fuel">110. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
                 </div>
             
                 <div>
-                    <label for="specific_water_cost">113. Specific Fuel Cost (Rs/Unit of Production):</label><br>
+                    <label for="specific_water_cost">111. Specific Fuel Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
                 </div>
                
@@ -822,6 +830,9 @@
         #zldpresent{
             display: none;
         }
+        #display_data{
+            display: none;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
@@ -864,6 +875,12 @@
         }
         function zldabsent(){
             document.getElementById("zldpresent").style.display="none";
+        }
+        function financial(){
+            document.getElementById("display_data").style.display="block";
+        }
+        function calender(){
+            document.getElementById("display_data").style.display="block";
         }
         function sect5() {
             document.getElementById("sect_1").style.display = "none";
@@ -912,7 +929,6 @@
         }
         function isZLD(val) {
             zld = val
-            document.getElementById("zldpresent").style.display="block";
         }
         function effTreatment(val) {
             effluent_treatment = val
