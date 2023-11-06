@@ -379,6 +379,35 @@
                     <textarea type="textarea" id="assess_ob_at_compressor"
                         name="assess_ob_at_compressor"></textarea><br><br>
                 </div>
+                <div class="scope_comp_air">
+                    <label for="scope_for_energy_savings_in_compressed_air_systems">59. Scope for Energy Savings in
+                        Compressed Air Systems</label><br>
+                    <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
+                        value="Compressed Air Leak Fixing Opportunities">
+                    <label for="compressed_air_leak_fixing_opportunities">Compressed Air Leak Fixing
+                        Opportunities</label><br>
+                    <input type="checkbox" id="scope_for_drive_installationscope_for_pressure_optimization_generation"
+                        name="scope_comp_air"
+                        value="Scope for drive installationScope for pressure optimization (Generation)">
+                    <label for="scope_for_drive_installationscope_for_pressure_optimization_generation">Scope
+                        for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
+                    <input type="checkbox" id="scope_for_pressure_optimization_utilization" name="scope_comp_air"
+                        value="Scope for Pressure Optimization (Utilization)">
+                    <label for="scope_for_pressure_optimization_utilization">Scope for Pressure Optimization
+                        (Utilization)</label><br>
+                    <input type="checkbox" id="scope_for_cleaning_air_use_optimization" name="scope_comp_air"
+                        value="Scope for Cleaning Air Use Optimization">
+                    <label for="scope_for_cleaning_air_use_optimization">Scope for Cleaning Air Use
+                        Optimization</label><br>
+                    <input type="checkbox" id="others" name="other" value="#other2_text">
+                    <label for="others">Other : </label><input type="text" id="other2_text" name="other"><br><br>
+                </div>
+                <div>
+                    <label for="compressed_air_saving">60. Compressed Air Systems Savings in
+                        kWh/Annum
+                    </label>
+                    <input type="text" id="compressed_air_saving" name="compressed_air_saving"><br><br>
+                </div>
                 <div>
                     <label for="pic_ob_at_genset">51. Assessment Observation at the
                         Genset Room Photo </label><br>
@@ -422,36 +451,7 @@
                         Observation at the Other Facilities (Chiller, Cooling Tower Etc)
                     </label><br>
                     <textarea type="textarea" id="assess_ob_at_other" name="assess_ob_at_other"></textarea><br><br>
-                </div>
-                <div class="scope_comp_air">
-                    <label for="scope_for_energy_savings_in_compressed_air_systems">59. Scope for Energy Savings in
-                        Compressed Air Systems</label><br>
-                    <input type="checkbox" id="compressed_air_leak_fixing_opportunities" name="scope_comp_air"
-                        value="Compressed Air Leak Fixing Opportunities">
-                    <label for="compressed_air_leak_fixing_opportunities">Compressed Air Leak Fixing
-                        Opportunities</label><br>
-                    <input type="checkbox" id="scope_for_drive_installationscope_for_pressure_optimization_generation"
-                        name="scope_comp_air"
-                        value="Scope for drive installationScope for pressure optimization (Generation)">
-                    <label for="scope_for_drive_installationscope_for_pressure_optimization_generation">Scope
-                        for Drive InstallationScope for Pressure Optimization (Generation)</label><br>
-                    <input type="checkbox" id="scope_for_pressure_optimization_utilization" name="scope_comp_air"
-                        value="Scope for Pressure Optimization (Utilization)">
-                    <label for="scope_for_pressure_optimization_utilization">Scope for Pressure Optimization
-                        (Utilization)</label><br>
-                    <input type="checkbox" id="scope_for_cleaning_air_use_optimization" name="scope_comp_air"
-                        value="Scope for Cleaning Air Use Optimization">
-                    <label for="scope_for_cleaning_air_use_optimization">Scope for Cleaning Air Use
-                        Optimization</label><br>
-                    <input type="checkbox" id="others" name="other" value="#other2_text">
-                    <label for="others">Other : </label><input type="text" id="other2_text" name="other"><br><br>
-                </div>
-                <div>
-                    <label for="compressed_air_saving">60. Compressed Air Systems Savings in
-                        kWh/Annum
-                    </label>
-                    <input type="text" id="compressed_air_saving" name="compressed_air_saving"><br><br>
-                </div>
+               
                 <div>
                     <label for="lighting_observation">61. Lighting Systems - Observation
                     </label>
@@ -764,18 +764,19 @@
                     <input type="text" id="specific_water" name="specific_water"><br><br>
                 </div>
                 <div>
-                    <label for="specific_fuel">111. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
+                    <label for="specific_water_cost1">111. Specific Water Cost (Rs/Unit of Production):</label><br>
+                    <input type="text" id="specific_water_cost1" name="specific_water_cost1"><br><br>
+                </div>
+                <div>
+                    <label for="specific_fuel">112. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
                 </div>
             
                 <div>
-                    <label for="specific_water_cost">112. Specific Fuel Cost (Rs/Unit of Production):</label><br>
+                    <label for="specific_water_cost">113. Specific Fuel Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
                 </div>
-                <div>
-                    <label for="specific_water_cost1">113. Specific Water Cost (Rs/Unit of Production):</label><br>
-                    <input type="text" id="specific_water_cost1" name="specific_water_cost1"><br><br>
-                </div>
+               
                 <button onclick="sect4()" class="btn btn-primary" id="prev">&laquo; Previous</button>
                 <button type="button" class="btn btn-primary splbutton"
                     onclick="this.classList.toggle('splbutton--loading'); submitForm()" id="next">
