@@ -594,7 +594,7 @@
                 <tr>
                     <td>58</td>
                     <td id="elec_motors">Estimated Savings- Motor Upgradation (INR/Annum)</td>
-                    <td>{Estimated_Savings\_-\_Motor_Upgradation_INR/Annum}</td>
+                    <td id="estimated_savings_motor_upgradation">{Estimated_Savings\_-\_Motor_Upgradation_INR/Annum}</td>
                     <td></td>
                 </tr>
 
@@ -1171,13 +1171,11 @@
                 document.getElementById('annual_production_quantity').innerHTML = response.data.form.annual_production_quantity;
 
 
-                document.getElementById('energy_saving_opportunities_in_electrical_motors').innerHTML = response.data.form.energy_saving_opportunities_in_electrical_motors
+                document.getElementById('energy_saving_opportunities_in_electrical_motors').innerHTML = response.data.form.energy_saving_opportunities_in_electrical_motors;
+                document.getElementById('estimated_savings_motor_upgradation').innerHTML = response.data.form.estimated_savings_motor_upgradation;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
-                document.getElementById('').innerHTML = response.data.form.facility_category;
-
-
 
                 document.getElementById('').innerHTML = response.data.form.facility_category;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
