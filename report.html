@@ -79,10 +79,11 @@
 
 <body>
     <div>
-        <div class="p-3 m-5 border border-3 rounded d-flex align-items-center justify-content-between">
+        <div class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between">
             <b class="fs-3">Click this button to download the report</b>
             <div class="btn btn-primary p-3" onclick="generateReportPDF()">Download Report</div>
         </div>
+        <hr>
         <div id="reportContent" class="p-5">
             <center>
                 <h2>Diagnostic Study on Clean
@@ -91,7 +92,7 @@
                 <h4><br> @ M/s <span id="facility_name1">{facility_name}</span><br>
                 </h4>
                 <!-- {Facility_Photo_at_Entrance} -->
-                <img src="" id="Facility_Photo_at_Entrance" alt="Facility_Photo_at_Entrance">
+                <img src="" id="Facility_Photo_at_Entrance" alt="Facility_Photo_at_Entrance" style="height: 400px">
                 <br><br>
 
                 </h2>
@@ -127,9 +128,10 @@
                 </div>
             </center>
 
-            <br>
+            <br><br><br><br><br><br><br><br><br>
             <h2>Executive Summary</h2>
-            <p>WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for the conservation of the
+            <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for
+                the conservation of the
                 Noyyal
                 and
                 Bhavani rivers. The Industrial Water Stewardship component of the program will look at working with
@@ -636,7 +638,8 @@
                 <tr>
                     <td>63</td>
                     <td>Installation status of Measuring & Monitoring Systems for Energy, Water, Fuel & Waste Etc</td>
-                    <td id="installation_monitoring_systems">{Installation_status_of_Measuring\_&\_Monitoring_Systems_for_Energy,\_Water,\_Fuel\_&\_Waste_Etc}
+                    <td id="installation_monitoring_systems">
+                        {Installation_status_of_Measuring\_&\_Monitoring_Systems_for_Energy,\_Water,\_Fuel\_&\_Waste_Etc}
                     </td>
                     <td></td>
                 </tr>
@@ -644,7 +647,8 @@
                 <tr>
                     <td>64</td>
                     <td>Management Commitment on Energy & Resource Efficiency (Availability of Policy & Systems)</td>
-                    <td id="mgmt_on_energy_resource">{Management_Commitment_on_Energy\_&\_Resource_Efficiency_Availability_of_Policy\_&\_Systems}
+                    <td id="mgmt_on_energy_resource">
+                        {Management_Commitment_on_Energy\_&\_Resource_Efficiency_Availability_of_Policy\_&\_Systems}
                     </td>
                     <td></td>
                 </tr>
@@ -760,7 +764,7 @@
                     <tr>
                         <td>78</td>
                         <td>Overall Observations & Remarks on Safety</td>
-                        <td >{Overall_Observations\_&\_Remarks_on_Safety}</td>
+                        <td>{Overall_Observations\_&\_Remarks_on_Safety}</td>
                         <td></td>
                     </tr>
 
@@ -966,10 +970,10 @@
                 <table>
 
                     <tr>
-                        <td><img src="" alt="Assessment_Observation_at_the_Power_House_Photo"
+                        <td><img style="height: 250px" src="" alt="Assessment_Observation_at_the_Power_House_Photo"
                                 id="Assessment_Observation_at_the_Power_House_Photo" />
                         </td>
-                        <td><img src="" alt="Assessment_Observation_at_the_Compressor_Room_Photo"
+                        <td><img style="height: 250px" src="" alt="Assessment_Observation_at_the_Compressor_Room_Photo"
                                 id="Assessment_Observation_at_the_Compressor_Room_Photo" />
                         </td>
                     </tr>
@@ -981,11 +985,11 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="Assessment_Observation_at_the_Genset_Room_Photo"
+                            <img style="height: 250px" src="" alt="Assessment_Observation_at_the_Genset_Room_Photo"
                                 id="Assessment_Observation_at_the_Genset_Room_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="Assessment_Observation_at_the_Boiler_Area_Photo"
+                            <img style="height: 250px" src="" alt="Assessment_Observation_at_the_Boiler_Area_Photo"
                                 id="Assessment_Observation_at_the_Boiler_Area_Photo" />
                         </td>
                     </tr>
@@ -997,11 +1001,12 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="Assessment_Observation_at_the_Thermopac_Photo"
+                            <img style="height: 250px" src="" alt="Assessment_Observation_at_the_Thermopac_Photo"
                                 id="Assessment_Observation_at_the_Thermopac_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="Assessment_Observation_at_the_Other_Facilities_Chiller"
+                            <img style="height: 250px" src=""
+                                alt="Assessment_Observation_at_the_Other_Facilities_Chiller"
                                 id="Assessment_Observation_at_the_Other_Facilities_Chiller" />
                         </td>
                     </tr>
@@ -1013,10 +1018,11 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="Lighting_Systems_Photo" id="Lighting_Systems_Photo" />
+                            <img style="height: 250px" src="" alt="Lighting_Systems_Photo"
+                                id="Lighting_Systems_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="Assessment_Observation_at_Raw_Material_Inward_Photo"
+                            <img style="height: 250px" src="" alt="Assessment_Observation_at_Raw_Material_Inward_Photo"
                                 id="Assessment_Observation_at_Raw_Material_Inward_Photo" />
                     </tr>
 
@@ -1027,10 +1033,11 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="Assessment_Observation_at_Material_Handling_Photo"
+                            <img style="height: 250px" src="" alt="Assessment_Observation_at_Material_Handling_Photo"
                                 id="Assessment_Observation_at_Material_Handling_Photo" />
                         <td>
-                            <img src="" alt="Production_Machine_Utilization_Data_Collection_Aspects_Photo"
+                            <img style="height: 250px" src=""
+                                alt="Production_Machine_Utilization_Data_Collection_Aspects_Photo"
                                 id="Production_Machine_Utilization_Data_Collection_Aspects_Photo" />
                         </td>
                     </tr>
@@ -1042,11 +1049,11 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="Production_Layout_Observations_Photo"
+                            <img style="height: 250px" src="" alt="Production_Layout_Observations_Photo"
                                 id="Production_Layout_Observations_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="Details_of_Renewable_Energy_Projects_Photo"
+                            <img style="height: 250px" src="" alt="Details_of_Renewable_Energy_Projects_Photo"
                                 id="Details_of_Renewable_Energy_Projects_Photo" />
                         </td>
                     </tr>
@@ -1058,11 +1065,11 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="General_Observations_on_Safety_Critical_Photo"
+                            <img style="height: 250px" src="" alt="General_Observations_on_Safety_Critical_Photo"
                                 id="General_Observations_on_Safety_Critical_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="General_Observations_on_Safety_Production_Photo"
+                            <img style="height: 250px" src="" alt="General_Observations_on_Safety_Production_Photo"
                                 id="General_Observations_on_Safety_Production_Photo" />
                         </td>
                     </tr>
@@ -1074,11 +1081,12 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="General_Observations_on_Safety_Electrical_Photo"
+                            <img style="height: 250px" src="" alt="General_Observations_on_Safety_Electrical_Photo"
                                 id="General_Observations_on_Safety_Electrical_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="General_Observations_on_Safety_Chemical_Handling_Photo"
+                            <img style="height: 250px" src=""
+                                alt="General_Observations_on_Safety_Chemical_Handling_Photo"
                                 id="General_Observations_on_Safety_Chemical_Handling_Photo" />
                         </td>
                     </tr>
@@ -1090,11 +1098,12 @@
 
                     <tr>
                         <td>
-                            <img src="" alt="General_Observations_on_Safety_Fire_Hazards_Photo"
+                            <img style="height: 250px" src="" alt="General_Observations_on_Safety_Fire_Hazards_Photo"
                                 id="General_Observations_on_Safety_Fire_Hazards_Photo" />
                         </td>
                         <td>
-                            <img src="" alt="General_Observations_on_Electrical_Earthing_Electrical_Systems_Photo"
+                            <img style="height: 250px" src=""
+                                alt="General_Observations_on_Electrical_Earthing_Electrical_Systems_Photo"
                                 id="General_Observations_on_Electrical_Earthing_Electrical_Systems_Photo" />
                     </tr>
 
@@ -1260,7 +1269,7 @@
                 document.getElementById('rwh_scopeItems').innerHTML = response.data.form.facility_category;
                 document.getElementById('annual_rainfall').innerHTML = response.data.form.annual_rainfall;
                 document.getElementById('annual_rainfalls').innerHTML = response.data.form.annual_rainfally;
-                
+
                 document.getElementById('annual_production_quantitys').innerHTML = response.data.form.annual_production_quantity;
                 document.getElementById('domestic_water_consumption').innerHTML = response.data.form.domestic_water_consumption;
                 document.getElementById('qty_fresh_water').innerHTML = response.data.form.qty_fresh_water;
