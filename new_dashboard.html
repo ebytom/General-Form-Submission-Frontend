@@ -788,7 +788,8 @@
         var file1
         var formId
 
-        axios.post("https://general-form-submission-backend.vercel.app/form2/getForm")
+        //axios.post("https://general-form-submission-backend.vercel.app/form2/getForm")
+         axios.post("http://localhost:8080/form2/getForm")
             .then(function (response) {
                 console.log(response.data.form)
                 const htmlRequests = response.data.form.reverse().map(item =>
@@ -804,7 +805,7 @@
 
 
         function popup(id) {
-            axios.post("https://general-form-submission-backend.vercel.app/form2/getFormById", {
+            axios.post("http://localhost:8080/form2/getFormById", {
                 form2Id: id
             })
                 .then(function (res) {
@@ -962,8 +963,8 @@
 
 
         function downloadFile(path, fileName) {
-            axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {
-                // axios.get(`http://localhost:8080/downloadFile`, {
+            //axios.get("https://general-form-submission-backend.vercel.app/form2/getFormById", {
+                axios.get(`http://localhost:8080/downloadFile`, {
                 responseType: 'blob',
                 params: { fileId: path },
             })
