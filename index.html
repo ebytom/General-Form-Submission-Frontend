@@ -1429,7 +1429,7 @@
 
 
 
-            axios.post(`${process.env.BACKEND_URL}/services/postInformation`, {
+            axios.post(`http://103.88.225.131:8080/services/postInformation`, {
                 name: name,
                 orgName: orgName,
                 mail: mail,
@@ -1532,7 +1532,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post(`${process.env.BACKEND_URL}/uploadFile`, formData, {
+                const response = await axios.post(`http://103.88.225.131:8080/uploadFile`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }
