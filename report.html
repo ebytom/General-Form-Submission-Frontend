@@ -1129,7 +1129,7 @@
         // Extract the value of "param1"
         const formIdValue = url.searchParams.get("formId");
 
-        axios.post(`${BACKEND_URL}/form2/getFormById`, {
+        axios.post(`${process.env.BACKEND_URL}/form2/getFormById`, {
             form2Id: formIdValue
         })
             .then(function (response) {

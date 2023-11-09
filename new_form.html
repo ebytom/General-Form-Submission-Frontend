@@ -1281,7 +1281,7 @@
                 });
             })
 
-                 axios.post(`${BACKEND_URL}/form2/postForm`, {
+                 axios.post(`${process.env.BACKEND_URL}/form2/postForm`, {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
@@ -1420,7 +1420,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                    const response = await axios.post(`${BACKEND_URL}/uploadFile`, formData, {
+                    const response = await axios.post(`${process.env.BACKEND_URL}/uploadFile`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }

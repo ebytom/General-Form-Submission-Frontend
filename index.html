@@ -1429,7 +1429,7 @@
 
 
 
-            axios.post(`${BACKEND_URL}/services/postInformation`, {
+            axios.post(`${process.env.BACKEND_URL}/services/postInformation`, {
                 name: name,
                 orgName: orgName,
                 mail: mail,
@@ -1532,7 +1532,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post(`${BACKEND_URL}/uploadFile`, formData, {
+                const response = await axios.post(`${process.env.BACKEND_URL}/uploadFile`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }
