@@ -1129,6 +1129,8 @@
         // Extract the value of "param1"
         const formIdValue = url.searchParams.get("formId");
 
+        const BACKEND_URL = "http://103.88.225.131:8080"
+
         axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
             form2Id: formIdValue
         })
@@ -1140,25 +1142,25 @@
 
                 //images
 
-                document.getElementById("Facility_Photo_at_Entrance").src = "http://localhost:8080/resources/" + response.data.form.facility_pic_ent
-                document.getElementById("Assessment_Observation_at_the_Power_House_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_at_power_house
-                document.getElementById("Assessment_Observation_at_the_Compressor_Room_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_at_compressor
-                document.getElementById("Assessment_Observation_at_the_Genset_Room_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_at_genset
-                document.getElementById("Assessment_Observation_at_the_Boiler_Area_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_at_boiler
-                document.getElementById("Assessment_Observation_at_the_Thermopac_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_at_thermopac
-                document.getElementById("Assessment_Observation_at_the_Other_Facilities_Chiller").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_at_other
-                document.getElementById("Lighting_Systems_Photo").src = "http://localhost:8080/resources/" + response.data.form.lighting_systems_photo
-                document.getElementById("Assessment_Observation_at_Raw_Material_Inward_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_raw_material
-                document.getElementById("Assessment_Observation_at_Material_Handling_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_ob_material_handling
-                document.getElementById("Production_Machine_Utilization_Data_Collection_Aspects_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_production_machine_util
-                document.getElementById("Production_Layout_Observations_Photo").src = "http://localhost:8080/resources/" + response.data.form.production_layout_ob_photo
-                document.getElementById("Details_of_Renewable_Energy_Projects_Photo").src = "http://localhost:8080/resources/" + response.data.form.pic_renewable_energy
-                document.getElementById("General_Observations_on_Safety_Critical_Photo").src = "http://localhost:8080/resources/" + response.data.form.obs_on_safety_img
-                document.getElementById("General_Observations_on_Safety_Production_Photo").src = "http://localhost:8080/resources/" + response.data.form.obs_on_safety_prod_photo
-                document.getElementById("General_Observations_on_Safety_Electrical_Photo").src = "http://localhost:8080/resources/" + response.data.form.obs_on_safety_elec_photo
-                document.getElementById("General_Observations_on_Safety_Chemical_Handling_Photo").src = "http://localhost:8080/resources/" + response.data.form.obs_on_safety_chem_photo
-                document.getElementById("General_Observations_on_Safety_Fire_Hazards_Photo").src = "http://localhost:8080/resources/" + response.data.form.obs_on_safety_fire_photo
-                document.getElementById("General_Observations_on_Electrical_Earthing_Electrical_Systems_Photo").src = "http://localhost:8080/resources/" + response.data.form.obs_on_elec_earth_photo
+                document.getElementById("Facility_Photo_at_Entrance").src = `${BACKEND_URL}/resources/` + response.data.form.facility_pic_ent
+                document.getElementById("Assessment_Observation_at_the_Power_House_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_power_house
+                document.getElementById("Assessment_Observation_at_the_Compressor_Room_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_compressor
+                document.getElementById("Assessment_Observation_at_the_Genset_Room_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_genset
+                document.getElementById("Assessment_Observation_at_the_Boiler_Area_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_boiler
+                document.getElementById("Assessment_Observation_at_the_Thermopac_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_thermopac
+                document.getElementById("Assessment_Observation_at_the_Other_Facilities_Chiller").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_other
+                document.getElementById("Lighting_Systems_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.lighting_systems_photo
+                document.getElementById("Assessment_Observation_at_Raw_Material_Inward_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_raw_material
+                document.getElementById("Assessment_Observation_at_Material_Handling_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_ob_material_handling
+                document.getElementById("Production_Machine_Utilization_Data_Collection_Aspects_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_production_machine_util
+                document.getElementById("Production_Layout_Observations_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.production_layout_ob_photo
+                document.getElementById("Details_of_Renewable_Energy_Projects_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.pic_renewable_energy
+                document.getElementById("General_Observations_on_Safety_Critical_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_img
+                document.getElementById("General_Observations_on_Safety_Production_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_prod_photo
+                document.getElementById("General_Observations_on_Safety_Electrical_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_elec_photo
+                document.getElementById("General_Observations_on_Safety_Chemical_Handling_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_chem_photo
+                document.getElementById("General_Observations_on_Safety_Fire_Hazards_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo
+                document.getElementById("General_Observations_on_Electrical_Earthing_Electrical_Systems_Photo").src = `${BACKEND_URL}/resources/` + response.data.form.obs_on_elec_earth_photo
 
 
 
