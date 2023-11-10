@@ -71,6 +71,9 @@
         </div>
         <div id="informations" class="my-4">
             <!-- items comes here -->
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
         </div>
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -791,6 +794,7 @@
         axios.post(`http://103.88.225.131:8080/form2/getForm`)
             .then(function (response) {
                 console.log(response.data.form)
+                const emptyComp = "<h3>No Entries Found</h3>"
                 const htmlRequests = response.data.form.reverse().map(item =>
                     `<div onclick="popup(${item.form2Id})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="btn text-white rounded-3 p-4 d-flex align-items-center justify-content-between" style="background-color: rgba(0, 0, 0, .5)">
@@ -798,7 +802,13 @@
                     <b class="p-2 py-1 mx-3 rounded bg-primary" style="font-size: 13px;">${new Date(item.form2Id).toLocaleDateString('en-GB')}</b>
                 </div>
             </div>`).join("");
-                document.getElementById("informations").innerHTML = htmlRequests
+
+                if (response?.data?.form.length == 0) {
+                    document.getElementById("informations").innerHTML = emptyComp
+                }
+                else {
+                    document.getElementById("informations").innerHTML = htmlRequests
+                }
             })
             .catch(err => console.log(err))
 
