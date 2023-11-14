@@ -81,7 +81,7 @@
     <div>
         <div class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between">
             <b class="fs-3">Click this button to download the report</b>
-            <div class="btn btn-primary p-3" onclick="generateReportPDF()">Download Report</div>
+            <div class="btn btn-primary p-3" id="downloadBtn" onclick="generateReportPDF()">Download Report</div>
         </div>
         <hr>
         <div id="reportContent" class="p-5">
@@ -1300,6 +1300,9 @@
             .catch(err => console.log(err))
 
         function generateReportPDF() {
+
+            // const loader = `<div class="spinner-border" role="status">< span class="sr-only"> Loading...</span ></div >`
+            document.getElementById("downloadBtn").innerHTML = loader
             const element = document.getElementById("reportContent")
 
             console.log(element);
@@ -1307,6 +1310,8 @@
             html2pdf()
                 .from(element)
                 .save();
+
+            // document.getElementById("downloadBtn").innerHTML = "Download Report"
         }
 
     </script>
