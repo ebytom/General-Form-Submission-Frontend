@@ -283,7 +283,7 @@
                 <tr>
                     <td>17</td>
                     <td>Annual Electricity Consumption (Total)(kWh/Annum)</td>
-                    <td id="total_elec_consumption">{Annual_Electricity_consumption_Total_kWh/Annum}</td>
+                    <td id="total_elec_consumption_1">{Annual_Electricity_consumption_Total_kWh/Annum}</td>
                     <td></td>
                 </tr>
 
@@ -749,7 +749,7 @@
                     <tr>
                         <td>76</td>
                         <td id="obs_on_safety">General Observations on Safety</td>
-                        <td id="obs_on_safety">{General_Observations_on_Safety}</td>
+                        <td id="obs_on_safety_1">{General_Observations_on_Safety}</td>
                         <td></td>
                     </tr>
 
@@ -764,7 +764,7 @@
                     <tr>
                         <td>78</td>
                         <td>Overall Observations & Remarks on Safety</td>
-                        <td>{Overall_Observations\_&\_Remarks_on_Safety}</td>
+                        <td id="overall_obs_on_safety_photo">{Overall_Observations\_&\_Remarks_on_Safety}</td>
                         <td></td>
                     </tr>
 
@@ -790,7 +790,7 @@
 
                         <tr>
                             <th><strong>Recovered Water KL/Annum</strong></td>
-                            <td id="total_qty_water">{Quantity_of_Recovered_Water_KL/Annum}</td>
+                            <td id="total_qty_water_1">{Quantity_of_Recovered_Water_KL/Annum}</td>
                         </tr>
 
                         <tr>
@@ -884,34 +884,34 @@
                     </tr>
 
                     <tr>
-                        <td>{Scope_for_Energy_Savings_in_Compressed_Air_Systems}</td>
-                        <td>{Compressed_Air_Systems_Savings_in_kWh/Annum}</td>
-                        <td>{Compressed_Air_System}</td>
+                        <td id="scope_comp_air_1">{Scope_for_Energy_Savings_in_Compressed_Air_Systems}</td>
+                        <td id="compressed_air_saving_1">{Compressed_Air_Systems_Savings_in_kWh/Annum}</td>
+                        <td id="scope_comp_airItems_1">{Compressed_Air_System}</td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
 
                     <tr>
-                        <td>Lighting Systems - Observations</td>
-                        <td>Lighting Systems - Savings Opportunities in kWh/Annum</td>
-                        <td>[Lighting Systems - Estimated Savings in INR]{.mark}</td>
-                        <td>Lighting Systems - Estimated Investments in INR</td>
+                        <td id="lighting_observation_1">Lighting Systems - Observations</td>
+                        <td id="lighting_saving_1">Lighting Systems - Savings Opportunities in kWh/Annum</td>
+                        <td id="lighting_est_savings_1">[Lighting Systems - Estimated Savings in INR]{.mark}</td>
+                        <td id="lighting_est_investment_1">Lighting Systems - Estimated Investments in INR</td>
                         <td>{Lighting_Payback}</td>
                     </tr>
 
                     <tr>
-                        <td>Electrical Motors - Energy Saving Opportunities</td>
-                        <td>Energy Saving Opportunities in Electrical Motors (kWh/Annum)</td>
-                        <td>Estimated Savings- Motor Upgradation (INR/Annum)</td>
+                        <td id="elec_motors_1">Electrical Motors - Energy Saving Opportunities</td>
+                        <td id="energy_saving_opportunities_in_electrical_motors_1">Energy Saving Opportunities in Electrical Motors (kWh/Annum)</td>
+                        <td id="estimated_savings_motor_upgradation_1">Estimated Savings- Motor Upgradation (INR/Annum)</td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
 
                     <tr>
-                        <td>Scope for Waste Heat Recovery</td>
-                        <td>Waste Heat Recovery Fuel Savings (Tons/Annum)</td>
+                        <td id="scope_waste_1">Scope for Waste Heat Recovery</td>
+                        <td id="waste_heat_recovery_fuel_savings_1">Waste Heat Recovery Fuel Savings (Tons/Annum)</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1275,26 +1275,35 @@
                 document.getElementById('annual_production_quantitys').innerHTML = response.data.form.annual_production_quantity;
                 document.getElementById('domestic_water_consumption').innerHTML = response.data.form.domestic_water_consumption;
                 document.getElementById('qty_fresh_water').innerHTML = response.data.form.qty_fresh_water;
-                document.getElementById('total_qty_water').innerHTML = response.data.form.total_qty_water;
+                document.getElementById('total_qty_water_1').innerHTML = response.data.form.total_qty_water;
                 document.getElementById('specific_water').innerHTML = response.data.form.specific_water;
                 document.getElementById('boiler_fuel_quantitys').innerHTML = response.data.form.boiler_fuel_quantity;
-                document.getElementById('total_elec_consumption').innerHTML = response.data.form.total_elec_consumption;
+                document.getElementById('total_elec_consumption_1').innerHTML = response.data.form.total_elec_consumption;
                 document.getElementById('specific_energy').innerHTML = response.data.form.specific_energy;
                 document.getElementById('energy_cost').innerHTML = response.data.form.energy_cost;
                 document.getElementById('specific_water_cost1').innerHTML = response.data.form.specific_water_cost1;
                 document.getElementById('specific_fuel_cost').innerHTML = response.data.form.specific_fuel_cost;
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('obs_on_safety_1').innerHTML = response.data.form.obs_on_safety;
+                document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.overall_obs_on_safety_photo;
+                document.getElementById('scope_comp_airItems_1').innerHTML = response.data.form.scope_comp_airItems;
+                 document.getElementById('scope_comp_air_1').innerHTML = response.data.form.scope_comp_air;
+                 document.getElementById('compressed_air_saving_1').innerHTML = response.data.form.compressed_air_saving;
+                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
 
+                 document.getElementById('lighting_observation_1').innerHTML = response.data.form.lighting_observation;
+                document.getElementById('lighting_saving_1').innerHTML = response.data.form.lighting_saving;
+                document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
+                document.getElementById('lighting_est_savings_1').innerHTML = response.data.form.lighting_est_savings;
+                document.getElementById('waste_heat_recovery_fuel_savings_1').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
+                document.getElementById('estimated_savings_motor_upgradation_1').innerHTML = response.data.form.elec_motors;
+                document.getElementById('elec_motors_1').innerHTML = response.data.form.facility_category;
+                document.getElementById('scope_waste_1').innerHTML = response.data.form.scope_waste;
+                document.getElementById('energy_saving_opportunities_in_electrical_motors_1').innerHTML = response.data.form.energy_saving_opportunities_in_electrical_motors;
+                document.getElementById('waste_heat_recovery_fuel_savings_1').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
+                document.getElementById('').innerHTML = response.data.form.facility_category;
 
             })
             .catch(err => console.log(err))
