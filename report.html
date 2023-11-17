@@ -89,7 +89,7 @@
                 <h2>Diagnostic Study on Clean
                     <br> Technology Implementation in Tiruppur Textile<br>Cluster
                 </h2>
-                <h4><br> @ M/s <span id="facility_name1">{facility_name}</span><br>
+                <h4><br> @ M/s <span id="facility_name2">{facility_name}</span><br>
                 </h4>
                 <!-- {Facility_Photo_at_Entrance} -->
                 <img src="" id="Facility_Photo_at_Entrance" alt="Facility_Photo_at_Entrance" style="height: 400px">
@@ -981,8 +981,8 @@
                     </tr>
 
                     <tr>
-                        <td>{Assessment_Observation_at_the_Power_House}</td>
-                        <td>{Assessment_Observation_at_the_Compressor_Room}</td>
+                        <td id="assess_ob_at_power_house_2">{Assessment_Observation_at_the_Power_House}</td>
+                        <td id="assess_ob_at_compressor_2">{Assessment_Observation_at_the_Compressor_Room}</td>
                     </tr>
 
                     <tr>
@@ -997,8 +997,8 @@
                     </tr>
 
                     <tr>
-                        <td>{Assessment_Observation_at_the_Genset_Room}</td>
-                        <td>{Assessment_Observation_at_the_Boiler_Area}</td>
+                        <td id="assess_ob_at_genset_2">{Assessment_Observation_at_the_Genset_Room}</td>
+                        <td id="assess_ob_at_boiler_2">{Assessment_Observation_at_the_Boiler_Area}</td>
                     </tr>
 
                     <tr>
@@ -1014,8 +1014,8 @@
                     </tr>
 
                     <tr>
-                        <td>{Assessment_Observation_at_the_Thermopac}</td>
-                        <td>{Assessment_Observation_at_the_Other_Facilities_Chiller Cooling Tower Etc}</td>
+                        <td id="assess_ob_at_thermopac_2">{Assessment_Observation_at_the_Thermopac}</td>
+                        <td id="assess_ob_at_other_2">{Assessment_Observation_at_the_Other_Facilities_Chiller Cooling Tower Etc}</td>
                     </tr>
 
                     <tr>
@@ -1029,8 +1029,8 @@
                     </tr>
 
                     <tr>
-                        <td>{Lighting_Systems_Photo}</td>
-                        <td>{Assessment_Observation_at\_ Raw_Material_Inward}</td>
+                        <td id="lighting_systems_photo_2">{Lighting_Systems_Photo}</td>
+                        <td id="lighting_observation_2">{Assessment_Observation_at\_ Raw_Material_Inward}</td>
                     </tr>
 
                     <tr>
@@ -1045,8 +1045,8 @@
                     </tr>
 
                     <tr>
-                        <td>{Assessment_Observation_at_Material_Handling}</td>
-                        <td>{Production_Machine_Utilization\_&\_Data_Collection_Aspects}</td>
+                        <td id="assessment_observation_at_material_handling_2">{Assessment_Observation_at_Material_Handling}</td>
+                        <td id="production_machine_utilization_data_collection_aspects_2">{Production_Machine_Utilization\_&\_Data_Collection_Aspects}</td>
                     </tr>
 
                     <tr>
@@ -1061,8 +1061,8 @@
                     </tr>
 
                     <tr>
-                        <td>{Production_Layout_Observations}</td>
-                        <td>{Details_of_Renewable_Energy_Projects}</td>
+                        <td id="production_layout_observations_2">{Production_Layout_Observations}</td>
+                        <td id="details_of_renewable_energy_2">{Details_of_Renewable_Energy_Projects}</td>
                     </tr>
 
                     <tr>
@@ -1077,8 +1077,8 @@
                     </tr>
 
                     <tr>
-                        <td>{General_Observations_on_Safety_Critical}</td>
-                        <td>{General_Observations_on_Safety_Production}</td>
+                        <td id="obs_on_safety_crit_2">{General_Observations_on_Safety_Critical}</td>
+                        <td id="obs_on_safety_prod_2">{General_Observations_on_Safety_Production}</td>
                     </tr>
 
                     <tr>
@@ -1094,8 +1094,8 @@
                     </tr>
 
                     <tr>
-                        <td>{General_Observations_on_Safety_Electrical}</td>
-                        <td>{General_Observations_on_Safety_Chemical_Handling}</td>
+                        <td id="obs_on_safety_elec_2">{General_Observations_on_Safety_Electrical}</td>
+                        <td id="obs_on_safety_chem_2">{General_Observations_on_Safety_Chemical_Handling}</td>
                     </tr>
 
                     <tr>
@@ -1110,8 +1110,8 @@
                     </tr>
 
                     <tr>
-                        <td>{General_Observations_on_Safety_Fire_Hazards}</td>
-                        <td>{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
+                        <td id="obs_on_safety_fire_2">{General_Observations_on_Safety_Fire_Hazards}</td>
+                        <td id="obs_on_elec_earth_2">{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
                     </tr>
 
                 </table>
@@ -1170,7 +1170,7 @@
                 //endofimages
 
                 document.getElementById("facility_name").innerHTML = response.data.form.facility_name;
-                document.getElementById("facility_name1").innerHTML = response.data.form.facility_name;
+                
                 document.getElementById("facility_location").innerHTML = response.data.form.facility_location;
                 document.getElementById("facility_location1").innerHTML = response.data.form.facility_location;
                 document.getElementById("assessment_conducted_on").innerHTML = date.toLocaleDateString()
@@ -1287,12 +1287,13 @@
                 document.getElementById('specific_fuel_cost').innerHTML = response.data.form.specific_fuel_cost;
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
                 document.getElementById('obs_on_safety_1').innerHTML = response.data.form.obs_on_safety;
-                document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.overall_obs_on_safety_photo;
+                document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.obs_on_safety;
                 document.getElementById('scope_comp_airItems_1').innerHTML = response.data.form.scope_comp_airItems;
                 document.getElementById('scope_comp_air_1').innerHTML = response.data.form.scope_comp_air;
                 document.getElementById('compressed_air_saving_1').innerHTML = response.data.form.compressed_air_saving;
                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
 
+                document.getElementById('facility_name2').innerHTML = response.data.form.facility_name;
                 document.getElementById('lighting_observation_1').innerHTML = response.data.form.lighting_observation;
                 document.getElementById('lighting_saving_1').innerHTML = response.data.form.lighting_saving;
                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
@@ -1303,9 +1304,29 @@
                 document.getElementById('scope_waste_1').innerHTML = response.data.form.scope_waste;
                 document.getElementById('energy_saving_opportunities_in_electrical_motors_1').innerHTML = response.data.form.energy_saving_opportunities_in_electrical_motors;
                 document.getElementById('waste_heat_recovery_fuel_savings_1').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
+                 document.getElementById('assess_ob_at_thermopac_2').innerHTML = response.data.form.assess_ob_at_thermopac;
+                document.getElementById('assess_ob_at_other_2').innerHTML = response.data.form.assess_ob_at_other;
+                document.getElementById('assess_ob_at_genset_2').innerHTML = response.data.form.assess_ob_at_genset;
+                document.getElementById('assess_ob_at_boiler_2').innerHTML = response.data.form.assess_ob_at_boiler;
+                document.getElementById('assess_ob_at_compressor_2').innerHTML = response.data.form.assess_ob_at_compressor;
+                document.getElementById('assess_ob_at_power_house_2').innerHTML = response.data.form.assess_ob_at_power_house;
+                document.getElementById('obs_on_elec_earth_2').innerHTML = response.data.form.obs_on_elec_earth;
+                document.getElementById('obs_on_safety_fire_2').innerHTML = response.data.form.obs_on_safety_fire;
+                document.getElementById('obs_on_safety_elec_2').innerHTML = response.data.form.obs_on_safety_elec;
+                document.getElementById('obs_on_safety_crit_2').innerHTML = response.data.form.obs_on_safety_crit;
+                document.getElementById('obs_on_safety_prod_2').innerHTML = response.data.form.obs_on_safety_prod;
+                document.getElementById('production_layout_observations_2').innerHTML = response.data.form.production_layout_observations;
+                document.getElementById('details_of_renewable_energy_2').innerHTML = response.data.form.details_of_renewable_energy;
+                document.getElementById('obs_on_safety_chem_2').innerHTML = response.data.form.facility_category;
+                document.getElementById('lighting_systems_photo_2').innerHTML = response.data.form.lighting_systems_photo;
+                document.getElementById('lighting_observation_2').innerHTML = response.data.form.lighting_observation;
+                document.getElementById('assess_ob_at_thermopac_2').innerHTML = response.data.form.assess_ob_at_thermopac;
+                document.getElementById('assess_ob_at_other_2').innerHTML = response.data.form.assess_ob_at_other;
+                document.getElementById('assessment_observation_at_material_handling_2').innerHTML = response.data.form.assessment_observation_at_material_handling;
+                document.getElementById('production_machine_utilization_data_collection_aspects_2').innerHTML = response.data.form.production_machine_utilization_data_collection_aspects;
                 document.getElementById('').innerHTML = response.data.form.facility_category;
-                document.getElementById('').innerHTML = response.data.form.facility_category;
-                document.getElementById('').innerHTML = response.data.form.facility_category;
+                // document.getElementById('obs_on_safety_chem_2').innerHTML = response.data.form.obs_on_safety_chem;
+
 
             })
             .catch(err => console.log(err))
