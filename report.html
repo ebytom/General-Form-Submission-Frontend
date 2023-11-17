@@ -902,8 +902,10 @@
 
                     <tr>
                         <td id="elec_motors_1">Electrical Motors - Energy Saving Opportunities</td>
-                        <td id="energy_saving_opportunities_in_electrical_motors_1">Energy Saving Opportunities in Electrical Motors (kWh/Annum)</td>
-                        <td id="estimated_savings_motor_upgradation_1">Estimated Savings- Motor Upgradation (INR/Annum)</td>
+                        <td id="energy_saving_opportunities_in_electrical_motors_1">Energy Saving Opportunities in
+                            Electrical Motors (kWh/Annum)</td>
+                        <td id="estimated_savings_motor_upgradation_1">Estimated Savings- Motor Upgradation (INR/Annum)
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1287,11 +1289,11 @@
                 document.getElementById('obs_on_safety_1').innerHTML = response.data.form.obs_on_safety;
                 document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.overall_obs_on_safety_photo;
                 document.getElementById('scope_comp_airItems_1').innerHTML = response.data.form.scope_comp_airItems;
-                 document.getElementById('scope_comp_air_1').innerHTML = response.data.form.scope_comp_air;
-                 document.getElementById('compressed_air_saving_1').innerHTML = response.data.form.compressed_air_saving;
-                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
+                document.getElementById('scope_comp_air_1').innerHTML = response.data.form.scope_comp_air;
+                document.getElementById('compressed_air_saving_1').innerHTML = response.data.form.compressed_air_saving;
+                document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
 
-                 document.getElementById('lighting_observation_1').innerHTML = response.data.form.lighting_observation;
+                document.getElementById('lighting_observation_1').innerHTML = response.data.form.lighting_observation;
                 document.getElementById('lighting_saving_1').innerHTML = response.data.form.lighting_saving;
                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
                 document.getElementById('lighting_est_savings_1').innerHTML = response.data.form.lighting_est_savings;
@@ -1309,19 +1311,23 @@
             .catch(err => console.log(err))
 
         function generateReportPDF() {
-
-            // const loader = `<div class="spinner-border" role="status">< span class="sr-only"> Loading...</span ></div >`
-            document.getElementById("downloadBtn").innerHTML = loader
-            const element = document.getElementById("reportContent")
+            const loader = `<div class="spinner-border" role="status"></div >`;
+            document.getElementById("downloadBtn").innerHTML = loader;
+            const element = document.getElementById("reportContent");
 
             console.log(element);
 
             html2pdf()
                 .from(element)
+                .toPdf()
+                .get('pdf')
+                .then(pdf => {
+                    // PDF generation completed
+                    document.getElementById("downloadBtn").innerHTML = "<span>Download Report<span>";
+                })
                 .save();
-
-            // document.getElementById("downloadBtn").innerHTML = "Download Report"
         }
+
 
     </script>
 
