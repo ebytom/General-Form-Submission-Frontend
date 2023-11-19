@@ -142,7 +142,7 @@
                 Under
                 the
                 {Assessment_Phase} of the program.
-                M/s {facility_name} enrolled for the Stewardship Program. The Preliminary visit was conducted by M/s
+                M/s <span id="facility_name_3"> {facility_name}</span> enrolled for the Stewardship Program. The Preliminary visit was conducted by M/s
                 VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify the
                 potential areas for Water, Energy savings.
             </p>
@@ -1324,8 +1324,8 @@
                 document.getElementById('assess_ob_at_other_2').innerHTML = response.data.form.assess_ob_at_other;
                 document.getElementById('assessment_observation_at_material_handling_2').innerHTML = response.data.form.assessment_observation_at_material_handling;
                 document.getElementById('production_machine_utilization_data_collection_aspects_2').innerHTML = response.data.form.production_machine_utilization_data_collection_aspects;
-                document.getElementById('').innerHTML = response.data.form.facility_category;
-                // document.getElementById('obs_on_safety_chem_2').innerHTML = response.data.form.obs_on_safety_chem;
+               
+                document.getElementById('facility_name_3').innerHTML = response.data.form.facility_name;
 
 
             })
