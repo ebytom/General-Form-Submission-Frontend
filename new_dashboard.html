@@ -42,7 +42,8 @@
 <body style="background-color: #243b55; padding-top: 10px; width: 100vw;">
     <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
         style="height: 70px; width: calc(100vw - 33px);">
-        <div>
+        <div class="d-flex align-items-center gap-3">
+            <img height="60px" class="rounded" src="/img/logo.jpeg" />
             <b class="fs-2 text-white"
                 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
         </div>
@@ -773,7 +774,8 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <!-- <a href="/report.html?formId=${formId}"><button type="button" class="btn btn-primary">Generate
                                 Report</button></a> -->
-                        <a id="generateReportButton" onclick="generateReport()" class="btn btn-primary">Generate
+                        <a id="generateReportButton" onclick="generateReport(`${formId}`)"
+                            class=" btn btn-primary">Generate
                             Report</a>
                     </div>
                 </div>
@@ -798,8 +800,11 @@
                 const htmlRequests = response.data.form.reverse().map(item =>
                     `<div onclick="popup(${item.form2Id})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="btn text-white rounded-3 p-4 d-flex align-items-center justify-content-between" style="background-color: rgba(0, 0, 0, .5)">
+                    <div class="d-flex align-items-center">
                     <b class="fs-4">${item.facility_name}</b>
-                    <b class="p-2 py-1 mx-3 rounded bg-primary" style="font-size: 13px;">${new Date(item.form2Id).toLocaleDateString('en-GB')}</b>
+                    <b class="p-2 py-1 mx-3 rounded" style="font-size: 13px; background: #1a293a;">${new Date(item.form2Id).toLocaleDateString('en-GB')}</b>
+                    </div>
+                    <div class="p-1 btn btn-primary rounded px-2" onclick="generateReport(${item.form2Id})"><b style="font-size: 13px;">Report</b></div>
                 </div>
             </div>`).join("");
 
@@ -960,9 +965,10 @@
                 })
         }
 
-        function generateReport() {
+        function generateReport(id) {
             // Construct the URL with the formId parameter
-            var reportUrl = "report.html?formId=" + document.getElementById("popupTitle").innerHTML;
+            // var reportUrl = "report.html?formId=" + document.getElementById("popupTitle").innerHTML;
+            var reportUrl = "report.html?formId=" + id;
 
             // Redirect to the report URL
             window.location.href = reportUrl;

@@ -25,8 +25,10 @@
 <body>
     <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
         style="height: 70px; width: 100vw;">
-        <div>
-            <b class="fs-2" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
+        <div class="d-flex align-items-center gap-3">
+            <img height="60px" class="rounded" src="/img/logo.jpeg" />
+            <b class="fs-2 text-white"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
         </div>
         <div class="d-flex">
             <a class="p-0" href="index.html">
@@ -109,7 +111,8 @@
                         <input type="text" id="product_mfd" name="product_mfd">
                     </div><br><br>
                     <div>
-                        <label for="prod_capacity">10. Production Capacity(Unit of Meaurement - PCS/Annum Tonnes/Day No. of Spindles):</label>
+                        <label for="prod_capacity">10. Production Capacity(Unit of Meaurement - PCS/Annum Tonnes/Day No.
+                            of Spindles):</label>
                         <input type="text" id="prod_capacity" name="prod_capacity">
                     </div><br><br>
                     <div>
@@ -160,15 +163,15 @@
                     <div>
                         <label for="baseline_data">18. Baseline Data Period (Mention the FY Period as
                             YY-YY)</label><br>
-                        <input onclick="financial()"  type="radio" id="financial" name="period" value="yes4">
+                        <input onclick="financial()" type="radio" id="financial" name="period" value="yes4">
                         <label for="financial">Financial Year</label><br>
 
-                        <input onclick="calender()"  type="radio" id="calender" name="period" value="no4">
+                        <input onclick="calender()" type="radio" id="calender" name="period" value="no4">
                         <label for="calender">Calender Year</label>
-                            <div class="display_data" id="display_data">
-                                <input type="text" id="baseline_data_period" name="baseline_data_period">
-                            </div>
-                        
+                        <div class="display_data" id="display_data">
+                            <input type="text" id="baseline_data_period" name="baseline_data_period">
+                        </div>
+
                     </div><br><br>
                     <div>
                         <label for="total_elec_consumption">19. Annual Electricity Consumption
@@ -249,7 +252,8 @@
                         <input type="text" id="boiler_fuel_cost" name="boiler_fuel_cost"><br><br>
                     </div>
                     <div>
-                        <label for="annual_production_quantity">33. Annual Production Qty(Unit of Meaurement - PCS/Annum Tonnes/Annum)</label>
+                        <label for="annual_production_quantity">33. Annual Production Qty(Unit of Meaurement - PCS/Annum
+                            Tonnes/Annum)</label>
                         <input type="text" id="annual_production_quantity" name="annual_production_quantity"><br>
                     </div><br>
                     <div class="src_water">
@@ -283,23 +287,24 @@
                     </div><br>
                     <div>
                         <label for="ZLD" id="zld">39. ZLD Applicable</label><br>
-                        <input onclick="isZLD('Yes'); zldpres();"  type="radio" id="Yes" name="ZLD" value="Yes">
+                        <input onclick="isZLD('Yes'); zldpres();" type="radio" id="Yes" name="ZLD" value="Yes">
                         <label for="Yes">Yes</label><br>
-                        <input onclick="isZLD('No'); zldabsent();"  type="radio" id="No" name="ZLD" value="No">
+                        <input onclick="isZLD('No'); zldabsent();" type="radio" id="No" name="ZLD" value="No">
                         <label for="No">No</label><br>
                     </div><br>
                     <div class="zldpresent" id="zldpresent">
 
                         <div>
-                            <label for="effluent_treatment" id="effluent">39.1. Effluent Treatment Plant Category</label><br>
+                            <label for="effluent_treatment" id="effluent">39.1. Effluent Treatment Plant
+                                Category</label><br>
                             <input onclick="effTreatment('CETP')" type="radio" id="cetp" name="effluent_treatment"
                                 value="cetp">
                             <label for="cetp">CETP</label><br>
                             <input onclick="effTreatment('IETP')" type="radio" id="ietp" name="effluent_treatment"
                                 value="ietp">
                             <label for="ietp">IETP</label><br>
-                            <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld" name="effluent_treatment"
-                                value="no-zld">
+                            <input onclick="effTreatment('No ZLD Plant')" type="radio" id="no_zld"
+                                name="effluent_treatment" value="no-zld">
                             <label for="no_zld">No ZLD Plant</label><br>
                         </div><br>
                         <div>
@@ -311,13 +316,13 @@
                             <input onclick="waterQuality('No')" type="radio" id="no1" name="effluent_treatment2"
                                 value="no1">
                             <label for="no1">No</label><br>
-                            <input onclick="waterQuality('Not Applicable')" type="radio" id="na1" name="effluent_treatment2"
-                                value="na1">
+                            <input onclick="waterQuality('Not Applicable')" type="radio" id="na1"
+                                name="effluent_treatment2" value="na1">
                             <label for="na1">Not Applicable</label><br>
                         </div><br>
 
                     </div>
-                   
+
                     <div>
                         <label for="domestic_water_consumption">40. Water Consumed for Domestic Use (KL/Day)</label>
                         <input type="text" id="domestic_water_consumption" name="domestic_water_consumption"><br>
@@ -372,8 +377,7 @@
                     <label for="assess_ob_at_power_house">46. Assessment Observation at the Power
                         House
                     </label>
-                    <textarea type="textarea" id="assess_ob_at_power_house"
-                        name="assess_ob_at_power_house"></textarea>
+                    <textarea type="textarea" id="assess_ob_at_power_house" name="assess_ob_at_power_house"></textarea>
                 </div>
                 <div>
                     <label for="pic_ob_at_compressor">47. Assessment Observation at
@@ -459,45 +463,46 @@
                         Observation at the Other Facilities (Chiller, Cooling Tower Etc)
                     </label><br>
                     <textarea type="textarea" id="assess_ob_at_other" name="assess_ob_at_other"></textarea><br><br>
-               
-                <div>
-                    <label for="lighting_observation">59. Lighting Systems - Observation
-                    </label>
-                    <textarea type="textarea" id="lighting_observation" name="lighting_observation"></textarea><br><br>
+
+                    <div>
+                        <label for="lighting_observation">59. Lighting Systems - Observation
+                        </label>
+                        <textarea type="textarea" id="lighting_observation"
+                            name="lighting_observation"></textarea><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_saving">60. Lighting Systems -
+                            Savings Opportunities in kWh/Annum
+                        </label>
+                        <input type="text" id="lighting_saving" name="lighting_saving"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_est_investment">61. Lighting Systems - Estimated
+                            Investments in INR
+                        </label>
+                        <input type="text" id="lighting_est_investment" name="lighting_est_investment"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_est_savings">62. Lighting Systems - Estimated
+                            Savings in INR
+                        </label>
+                        <input type="text" id="lighting_est_savings" name="lighting_est_savings"><br><br>
+                    </div>
+                    <div>
+                        <label for="lighting_systems_photo">63. Lighting Systems - Photo/label</label> <br>
+                        <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
+                    </div>
+                    <div>
+                        <label for="electrical_motors_observations">64. Electrical Motors - Observations
+                        </label><br>
+                        <textarea type="textarea" id="electrical_motors_observations"
+                            name="electrical_motors_observations"></textarea><br><br>
+                    </div>
+                    <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
+                    <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
                 </div>
-                <div>
-                    <label for="lighting_saving">60. Lighting Systems -
-                        Savings Opportunities in kWh/Annum
-                    </label>
-                    <input type="text" id="lighting_saving" name="lighting_saving"><br><br>
-                </div>
-                <div>
-                    <label for="lighting_est_investment">61. Lighting Systems - Estimated
-                        Investments in INR
-                    </label>
-                    <input type="text" id="lighting_est_investment" name="lighting_est_investment"><br><br>
-                </div>
-                <div>
-                    <label for="lighting_est_savings">62. Lighting Systems - Estimated
-                        Savings in INR
-                    </label>
-                    <input type="text" id="lighting_est_savings" name="lighting_est_savings"><br><br>
-                </div>
-                <div>
-                    <label for="lighting_systems_photo">63. Lighting Systems - Photo/label</label> <br>
-                    <input type="file" id="lighting_systems_photo" name="lighting_systems_photo"><br><br>
-                </div>
-                <div>
-                    <label for="electrical_motors_observations">64. Electrical Motors - Observations
-                    </label><br>
-                    <textarea type="textarea" id="electrical_motors_observations"
-                        name="electrical_motors_observations"></textarea><br><br>
-                </div>
-                <button onclick="sect2()" class="btn btn-primary" id="prev">&laquo; Previous</button>
-                <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+            </fieldset>
         </div>
-        </fieldset>
-    </div>
     </div>
     </div>
     <div id="sect_4">
@@ -779,12 +784,12 @@
                     <label for="specific_fuel">110. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
                 </div>
-            
+
                 <div>
                     <label for="specific_water_cost">111. Specific Fuel Cost (Rs/Unit of Production):</label><br>
                     <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
                 </div>
-               
+
                 <button onclick="sect4()" class="btn btn-primary" id="prev">&laquo; Previous</button>
                 <button type="button" class="btn btn-primary splbutton"
                     onclick="this.classList.toggle('splbutton--loading'); submitForm()" id="next">
@@ -827,10 +832,12 @@
         #sect_5 {
             display: none
         }
-        #zldpresent{
+
+        #zldpresent {
             display: none;
         }
-        #display_data{
+
+        #display_data {
             display: none;
         }
     </style>
@@ -870,17 +877,17 @@
             document.getElementById("sect_5").style.display = "none";
             scrollToTop()
         }
-        function zldpres(){
-            document.getElementById("zldpresent").style.display="block";
+        function zldpres() {
+            document.getElementById("zldpresent").style.display = "block";
         }
-        function zldabsent(){
-            document.getElementById("zldpresent").style.display="none";
+        function zldabsent() {
+            document.getElementById("zldpresent").style.display = "none";
         }
-        function financial(){
-            document.getElementById("display_data").style.display="block";
+        function financial() {
+            document.getElementById("display_data").style.display = "block";
         }
-        function calender(){
-            document.getElementById("display_data").style.display="block";
+        function calender() {
+            document.getElementById("display_data").style.display = "block";
         }
         function sect5() {
             document.getElementById("sect_1").style.display = "none";
@@ -1281,7 +1288,7 @@
                 });
             })
 
-                 axios.post(`http://103.88.225.131:8080/form2/postForm`, {
+            axios.post(`http://103.88.225.131:8080/form2/postForm`, {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
@@ -1420,7 +1427,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                    const response = await axios.post(`http://103.88.225.131:8080/uploadFile`, formData, {
+                const response = await axios.post(`http://103.88.225.131:8080/uploadFile`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }
