@@ -10,63 +10,58 @@
         body {
             font-family: Arial, sans-serif;
         }
-
-        h1,
-        h2,
-        h3 {
+    
+        h1, h2, h3 {
             color: #333;
         }
+       
 
         table {
             border-collapse: collapse;
             width: 100%;
         }
-
-        th,
-        td {
+    
+        th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
-
+    
         th {
             background-color: #FFA500;
         }
-
+    
         img {
             max-width: 100%;
             height: auto;
         }
-
+    
         .underline {
             text-decoration: underline;
         }
-
+    
         .mark {
             background-color: yellow;
         }
-
+    
         /* TOP LOGO PART CSS */
-
+    
         .out-container {
             border: 1px solid black;
             width: 700px;
-
         }
-
+    
         .container {
             display: flex;
-
-
             width: 700px;
         }
-
+    
         .column {
             flex: 1;
             text-align: center;
             padding: 10px;
         }
-
+    
         .image {
             display: block;
             margin: 0 auto;
@@ -74,14 +69,62 @@
             height: 100px;
             width: 100px;
         }
+    
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            table {
+            table-layout: auto;
+            page-break-inside: avoid;
+        }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+                word-wrap: break-word;
+            }
+            .out-container {
+            border: 1px solid black;
+            width: 1000px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+    
+
+            .image {
+                max-width: 100%;
+                height: auto;
+            }
+            #toppper-button
+            {
+                display: none;
+            }
+            .fs-3{
+                display: none;
+            }
+             #downloadBtn
+             {
+                display: none;
+             }
+             
+             #last-col
+             {
+                margin-left: 0;
+             }
+            /* Adjust other styles for printing as needed */
+           
+                 }
     </style>
 </head>
 
 <body>
     <div>
-        <div class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between">
+        <div class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between d-print-none">
             <b class="fs-3">Click this button to download the report</b>
-            <div class="btn btn-primary p-3" id="downloadBtn" onclick="generateReportPDF()">Download Report</div>
+            <div class="btn btn-primary p-3" id="downloadBtn" onclick="window.print();">Download Report</div>
         </div>
         <hr>
         <div id="reportContent" class="p-5">
@@ -113,10 +156,10 @@
                             <img class="image" src="./img/logo.jpeg" alt="Image 1">
 
                         </div>
-                        <div class="column">
+                        <div class="column" id="middle-col">
                             <!-- Middle column is empty -->
                         </div>
-                        <div class="column">
+                        <div class="column" id="m=last-col">
                             <h5>Submitted Through:</h5>
                             <img class="image" src="./img/wwf-logo.png" alt="Image 2">
                         </div>
@@ -129,7 +172,8 @@
             </center>
 
             <br><br><br><br><br><br><br><br><br>
-            <h2>Executive Summary</h2>
+            <div>
+            <h2 >Executive Summary</h2>
             <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for
                 the conservation of the
                 Noyyal
@@ -146,6 +190,7 @@
                 VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify the
                 potential areas for Water, Energy savings.
             </p>
+        </div>
             <br>
 
             <table>
@@ -255,7 +300,7 @@
                 </tr>
 
             </table>
-
+            <br>
             <h3>Resource Consumption Details</h3>
 
             <table>
@@ -532,7 +577,7 @@
                     <td id="compressed_air_saving">{Compressed_Air_Systems_Savings_in_kWh/Annum}</td>
                     <td></td>
                 </tr>
-                v
+                
                 <tr>
                     <td>50</td>
                     <td>Lighting Systems - Observations</td>
@@ -624,7 +669,7 @@
             </table>
 
 
-            <table>
+         <table>
                 <tr>
                     <th colspan="3">Production Shopfloor</th>
                 </tr>
@@ -769,7 +814,7 @@
                     </tr>
 
                 </table>
-
+               <br>
 
                 <table>
                     <h3>Consolidated Table on Resource Consumption</h2>
@@ -966,8 +1011,8 @@
                     </tr>
 
                 </table>
-
-                <h3>Glimpse during Assessment</h3>
+              <br>
+                <h3>Glimpses of the Assessment</h3>
 
                 <table>
 
