@@ -773,7 +773,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
-                            onclick="deleteEntry()">Delete</button>
+                            onclick="deleteEntry(`${formId}`)">Delete</button>
                         <!-- <a href="/report.html?formId=${formId}"><button type="button" class="btn btn-primary">Generate
                                 Report</button></a> -->
                         <a id="generateReportButton" onclick="generateReport(`${formId}`)"
@@ -996,11 +996,11 @@
                 })
         }
 
-        function deleteEntry() {
+        function deleteEntry(id) {
             if (window.confirm("Are you sure?")) {
                 axios.delete('http://localhost:8080/form2/deleteEntry', {
                     data: {
-                        formId: formId
+                        formId: id
                     }
                 })
                     .then(response => {
