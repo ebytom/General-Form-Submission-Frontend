@@ -998,7 +998,8 @@
 
         function deleteEntry(id) {
             if (window.confirm("Are you sure?")) {
-                axios.delete('http://localhost:8080/form2/deleteEntry', {
+                // axios.delete('http://localhost:8080/form2/deleteEntry', {
+                axios.delete('http://103.88.225.131:8080/form2/deleteEntry', {
                     data: {
                         formId: id
                     }
