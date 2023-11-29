@@ -14,8 +14,7 @@
         h1, h2, h3 {
             color: #333;
         }
-       
-
+    
         table {
             border-collapse: collapse;
             width: 100%;
@@ -28,7 +27,7 @@
         }
     
         th {
-            background-color: #FFA500;
+            background-color: #FFA500 !important;
         }
     
         img {
@@ -75,49 +74,57 @@
             body {
                 font-size: 12pt;
             }
+    
             table {
-            table-layout: auto;
-            page-break-inside: avoid;
-        }
+                table-layout: auto;
+                page-break-inside: avoid;
+            }
+    
             th, td {
                 border: 1px solid #ddd;
                 padding: 8px;
                 text-align: left;
                 word-wrap: break-word;
             }
-            .out-container {
-            border: 1px solid black;
-            width: 1000px;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
     
-
+            .out-container {
+                border: 1px solid black;
+                width: 995px;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                margin-top: 20%;
+                
+            }
+    
             .image {
                 max-width: 100%;
                 height: auto;
             }
-            #toppper-button
+    
+            #toppper-button {
+                display: none;
+            }
+    
+            .fs-3 {
+                display: none;
+            }
+    
+            #downloadBtn {
+                display: none;
+            }
+            .exec{
+                
+                margin-top: -5%;
+            }
+            #cent
             {
-                display: none;
+               margin-top: 25%;
             }
-            .fs-3{
-                display: none;
-            }
-             #downloadBtn
-             {
-                display: none;
-             }
-             
-             #last-col
-             {
-                margin-left: 0;
-             }
             /* Adjust other styles for printing as needed */
-           
-                 }
+        }
     </style>
+    
 </head>
 
 <body>
@@ -128,7 +135,7 @@
         </div>
         <hr>
         <div id="reportContent" class="p-5">
-            <center>
+            <center id="cent">
                 <h2>Diagnostic Study on Clean
                     <br> Technology Implementation in Tiruppur Textile<br>Cluster
                 </h2>
@@ -172,7 +179,7 @@
             </center>
 
             <br><br><br><br><br><br><br><br><br>
-            <div>
+         <div class="exec">
             <h2 >Executive Summary</h2>
             <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for
                 the conservation of the
@@ -190,7 +197,7 @@
                 VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify the
                 potential areas for Water, Energy savings.
             </p>
-        </div>
+          </div>
             <br>
 
             <table>
