@@ -314,7 +314,7 @@
                 <tr>
                     <td>15</td>
                     <td>Electrical Energy Source</td>
-                    <td id="elec_energy_src">{Electrical_Energy_Source}</td>
+                    <td id="elec_energy_src_1">{Electrical_Energy_Source}</td>
                     <td></td>
                 </tr>
 
@@ -832,11 +832,11 @@
 
                         <tr>
                             <th><strong>Water Consumption KL/Annum</strong></th>
-                            <td id="domestic_water_consumption">{Total_Quantity_of_Water_KL/Annum}</td>
+                            <td id="domestic_water_consumption_1">{Total_Quantity_of_Water_KL/Annum}</td>
                         </tr>
                         <tr>
                             <th><strong>Fresh Water Usage KL/Annum</strong></td>
-                            <td id="qty_fresh_water">{Quantity_of_Fresh_Water_Kl/Annum}</td>
+                            <td id="qty_fresh_water_1">{Quantity_of_Fresh_Water_Kl/Annum}</td>
                         </tr>
 
                         <tr>
@@ -866,7 +866,7 @@
 
                         <tr>
                             <th><strong>Specific firewood Consumption (Kg/Kg)</strong></td>
-                            <td>{Specific_Fuel_Kg/Unit_of_Production}</td>
+                            <td id="specific_fuel_1">{Specific_Fuel_Kg/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
@@ -1240,7 +1240,7 @@
                 document.getElementById('cert_obtained').innerHTML = response.data.form.cert_obtained;
                 document.getElementById('cert_planned').innerHTML = response.data.form.cert_planned;
                 document.getElementById('awards_received').innerHTML = response.data.form.award_recieved;
-                document.getElementById("elec_energy_src").innerHTML = response.data.form.mgmt_on_energy_resource;
+                document.getElementById("elec_energy_src_1").innerHTML = response.data.form.elec_energy_src;
                 document.getElementById('baseline_data_period').innerHTML = response.data.form.baseline_data_period;
                 document.getElementById('annual_elec_consumption').innerHTML = response.data.form.annual_elec_consumption;
                 document.getElementById('total_elec_consumption').innerHTML = response.data.form.total_elec_consumption;
@@ -1272,8 +1272,9 @@
                 document.getElementById('effluent_treatment').innerHTML = response.data.form.effluent_treatment;
                 document.getElementById("water_quality").innerHTML = response.data.form.water_quality;
 
-                document.getElementById('domestic_water_consumption').innerHTML = response.data.form.domestic_water_consumption;
+                document.getElementById('domestic_water_consumption').innerHTML = response.data.form.total_qty_water;
                 document.getElementById('domestic_water_consumption1').innerHTML = response.data.form.domestic_water_consumption;
+                document.getElementById('domestic_water_consumption_1').innerHTML = response.data.form.total_qty_water;
                 document.getElementById("garden_area").innerHTML = response.data.form.garden_area;
                 document.getElementById('garden_use').innerHTML = response.data.form.garden_use;
 
@@ -1320,7 +1321,7 @@
 
                 document.getElementById('installation_monitoring_systems').innerHTML = response.data.form.installation_monitoring_systems;
                 document.getElementById('mgmt_on_energy_resource').innerHTML = response.data.form.mgmt_on_energy_resource;
-                document.getElementById('qty_fresh_water').innerHTML = response.data.form.qty_fresh_water;
+                document.getElementById('qty_fresh_water_1').innerHTML = response.data.form.qty_fresh_water;
                 document.getElementById('water_saving_opportunties').innerHTML = response.data.form.water_saving_opportunties;
                 document.getElementById('rwh_scopeItems').innerHTML = response.data.form.facility_category;
                 document.getElementById('annual_rainfall').innerHTML = response.data.form.annual_rainfall;
@@ -1376,7 +1377,8 @@
                 document.getElementById('assess_ob_at_other_2').innerHTML = response.data.form.assess_ob_at_other;
                 document.getElementById('assessment_observation_at_material_handling_2').innerHTML = response.data.form.assessment_observation_at_material_handling;
                 document.getElementById('production_machine_utilization_data_collection_aspects_2').innerHTML = response.data.form.production_machine_utilization_data_collection_aspects;
-               
+                document.getElementById('specific_fuel_1').innerHTML = response.data.form.specific_fuel;
+                
                 document.getElementById('facility_name_3').innerHTML = response.data.form.facility_name;
 
 
