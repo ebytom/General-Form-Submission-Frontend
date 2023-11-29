@@ -68,8 +68,12 @@
                     </div><br><br>
                     <div>
                         <label for="facility_location">4. Facility location :</label>
-                        <button type="button" class="btn-primary" onclick="getLocation()" id="facility_location"
-                            name="facility_location">Capture location</button>
+                        <!-- <button type="button" class="btn-primary" onclick="getLocation()" id="facility_location"
+                            name="facility_location">Capture location</button> -->
+                        <div>
+                            <input type="text" placeholder="latitude" id="facility_location1">
+                            <input type="text" placeholder="longitude" id="facility_location2">
+                        </div>
                     </div><br>
                     <div>
                         <label for="dateInput">5. Assesment Conducted on:</label>
@@ -950,7 +954,7 @@
             const pic1 = document.getElementById("facility_pic_ent").files[0];
             const facility_name = document.getElementById('facility_name').value;
             const pic2 = document.getElementById("facility_pic").files[0];
-            const facility_location = "http://www.google.com/maps/place/" + loc;
+            const facility_location = "http://www.google.com/maps/place/" + document.getElementById('facility_location1').value + "," + document.getElementById('facility_location2').value;
             const product_mfd = document.getElementById('product_mfd').value;
             const prod_capacity = document.getElementById('prod_capacity').value;
             const hr_shift = document.getElementById('hr_shift').value;
