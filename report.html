@@ -10,58 +10,61 @@
         body {
             font-family: Arial, sans-serif;
         }
-    
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             color: #333;
         }
-       
+
 
         table {
             border-collapse: collapse;
             width: 100%;
         }
-    
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
-    
+
         th {
             background-color: #FFA500;
         }
-    
+
         img {
             max-width: 100%;
             height: auto;
         }
-    
+
         .underline {
             text-decoration: underline;
         }
-    
+
         .mark {
             background-color: yellow;
         }
-    
+
         /* TOP LOGO PART CSS */
-    
+
         .out-container {
             border: 1px solid black;
             width: 700px;
         }
-    
+
         .container {
             display: flex;
             width: 700px;
         }
-    
+
         .column {
             flex: 1;
             text-align: center;
             padding: 10px;
         }
-    
+
         .image {
             display: block;
             margin: 0 auto;
@@ -69,60 +72,66 @@
             height: 100px;
             width: 100px;
         }
-    
+
         /* Print styles */
         @media print {
             body {
                 font-size: 12pt;
             }
+
             table {
-            table-layout: auto;
-            page-break-inside: avoid;
-        }
-            th, td {
+                table-layout: auto;
+                page-break-inside: avoid;
+            }
+
+            th,
+            td {
                 border: 1px solid #ddd;
                 padding: 8px;
                 text-align: left;
                 word-wrap: break-word;
             }
+
             .out-container {
-            border: 1px solid black;
-            width: 1000px;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-    
+                border: 1px solid black;
+                width: 1000px;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+
 
             .image {
                 max-width: 100%;
                 height: auto;
             }
-            #toppper-button
-            {
+
+            #toppper-button {
                 display: none;
             }
-            .fs-3{
+
+            .fs-3 {
                 display: none;
             }
-             #downloadBtn
-             {
+
+            #downloadBtn {
                 display: none;
-             }
-             
-             #last-col
-             {
+            }
+
+            #last-col {
                 margin-left: 0;
-             }
+            }
+
             /* Adjust other styles for printing as needed */
-           
-                 }
+
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <div class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between d-print-none">
+        <div
+            class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between d-print-none">
             <b class="fs-3">Click this button to download the report</b>
             <div class="btn btn-primary p-3" id="downloadBtn" onclick="window.print();">Download Report</div>
         </div>
@@ -173,24 +182,28 @@
 
             <br><br><br><br><br><br><br><br><br>
             <div>
-            <h2 >Executive Summary</h2>
-            <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for
-                the conservation of the
-                Noyyal
-                and
-                Bhavani rivers. The Industrial Water Stewardship component of the program will look at working with
-                Textile industries along the key stretches of Noyyal
-                to
-                minimize their impacts on the river and ensure the long sustainability of the industries. To develop the
-                strategy for industrial water management work and to develop a clean technology implementation plan.
-                Under
-                the
-                Scaleup of Clean Technology Initiatives in the Tiruppur Textile Cluster of the program.
-                M/s <span id="facility_name_3"> {facility_name}</span> enrolled for the Stewardship Program. The Preliminary visit was conducted by M/s
-                VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify the
-                potential areas for Water, Energy savings.
-            </p>
-        </div>
+                <h2>Executive Summary</h2>
+                <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program
+                    for
+                    the conservation of the
+                    Noyyal
+                    and
+                    Bhavani rivers. The Industrial Water Stewardship component of the program will look at working with
+                    Textile industries along the key stretches of Noyyal
+                    to
+                    minimize their impacts on the river and ensure the long sustainability of the industries. To develop
+                    the
+                    strategy for industrial water management work and to develop a clean technology implementation plan.
+                    Under
+                    the
+                    Scaleup of Clean Technology Initiatives in the Tiruppur Textile Cluster of the program.
+                    M/s <span id="facility_name_3"> {facility_name}</span> enrolled for the Stewardship Program. The
+                    Preliminary visit was conducted by M/s
+                    VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify
+                    the
+                    potential areas for Water, Energy savings.
+                </p>
+            </div>
             <br>
 
             <table>
@@ -579,7 +592,7 @@
                     <td id="compressed_air_saving">{Compressed_Air_Systems_Savings_in_kWh/Annum}</td>
                     <td></td>
                 </tr>
-                
+
                 <tr>
                     <td>50</td>
                     <td>Lighting Systems - Observations</td>
@@ -671,7 +684,7 @@
             </table>
 
 
-         <table>
+            <table>
                 <tr>
                     <th colspan="3">Production Shopfloor</th>
                     <th style="width: 150px;"></th>
@@ -820,7 +833,7 @@
                     </tr>
 
                 </table>
-               <br>
+                <br>
 
                 <table>
                     <h3>Consolidated Table on Resource Consumption</h2>
@@ -884,39 +897,39 @@
                             <td id="specific_water_cost1">{Specific_Water_Cost_Rs/Unit_of_Production}</td>
                         </tr>
 
-                <!-- </table>
+                        <!-- </table>
 
                 <table> -->
 
-                    <tr>
-                        <th><strong>Identified Electricity Savings kWh/Yr</strong></td>
-                        <td></td>
-                    </tr>
+                        <tr>
+                            <th><strong>Identified Electricity Savings kWh/Yr</strong></td>
+                            <td></td>
+                        </tr>
 
-                    <tr>
-                        <th><strong>Identified Fuel Savings Ton/Yr</strong></td>
-                        <td id="waste_heat_recovery_fuel_savings"></td>
-                    </tr>
+                        <tr>
+                            <th><strong>Identified Fuel Savings Ton/Yr</strong></td>
+                            <td id="waste_heat_recovery_fuel_savings"></td>
+                        </tr>
 
-                    <tr>
-                        <th><strong>Identified Water Savings KL/Yr</strong></td>
-                        <td></td>
-                    </tr>
+                        <tr>
+                            <th><strong>Identified Water Savings KL/Yr</strong></td>
+                            <td></td>
+                        </tr>
 
-                    <tr>
-                        <th><strong>Identified Material Savings</strong></td>
-                        <td></td>
-                    </tr>
+                        <tr>
+                            <th><strong>Identified Material Savings</strong></td>
+                            <td></td>
+                        </tr>
 
-                    <tr>
-                        <th><strong>Reduction in tCO2</strong></td>
-                        <td></td>
-                    </tr>
+                        <tr>
+                            <th><strong>Reduction in tCO2</strong></td>
+                            <td></td>
+                        </tr>
 
-                    <tr>
-                        <th><strong>Total Number of CT Opportunities Identified</strong></td>
-                        <td></td>
-                    </tr>
+                        <tr>
+                            <th><strong>Total Number of CT Opportunities Identified</strong></td>
+                            <td></td>
+                        </tr>
 
                 </table>
                 <br>
@@ -1018,7 +1031,7 @@
                     </tr>
 
                 </table>
-              <br>
+                <br>
                 <h3>Glimpses of the Assessment</h3>
 
                 <table>
@@ -1067,7 +1080,8 @@
 
                     <tr>
                         <td id="assess_ob_at_thermopac_2">{Assessment_Observation_at_the_Thermopac}</td>
-                        <td id="assess_ob_at_other_2">{Assessment_Observation_at_the_Other_Facilities_Chiller Cooling Tower Etc}</td>
+                        <td id="assess_ob_at_other_2">{Assessment_Observation_at_the_Other_Facilities_Chiller Cooling
+                            Tower Etc}</td>
                     </tr>
 
                     <tr>
@@ -1097,8 +1111,10 @@
                     </tr>
 
                     <tr>
-                        <td id="assessment_observation_at_material_handling_2">{Assessment_Observation_at_Material_Handling}</td>
-                        <td id="production_machine_utilization_data_collection_aspects_2">{Production_Machine_Utilization\_&\_Data_Collection_Aspects}</td>
+                        <td id="assessment_observation_at_material_handling_2">
+                            {Assessment_Observation_at_Material_Handling}</td>
+                        <td id="production_machine_utilization_data_collection_aspects_2">
+                            {Production_Machine_Utilization\_&\_Data_Collection_Aspects}</td>
                     </tr>
 
                     <tr>
@@ -1163,7 +1179,8 @@
 
                     <tr>
                         <td id="obs_on_safety_fire_2">{General_Observations_on_Safety_Fire_Hazards}</td>
-                        <td id="obs_on_elec_earth_2">{General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
+                        <td id="obs_on_elec_earth_2">
+                            {General_Observations_on_Electrical_Earthing\_&\_Electrical_Systems}</td>
                     </tr>
 
                 </table>
@@ -1222,12 +1239,12 @@
                 //endofimages
 
                 document.getElementById("facility_name").innerHTML = response.data.form.facility_name;
-                
+
                 document.getElementById("facility_location").innerHTML = response.data.form.facility_location;
                 document.getElementById("facility_location1").innerHTML = response.data.form.facility_location;
-                document.getElementById("assessment_conducted_on").innerHTML = date.toLocaleDateString()
-                document.getElementById("assessment_conducted_on1").innerHTML = date.toLocaleDateString()
-                document.getElementById("assessment_conducted_on2").innerHTML = date.toLocaleDateString()
+                document.getElementById("assessment_conducted_on").innerHTML = response.data.form.dateInput.split("-").reverse().join("/");
+                document.getElementById("assessment_conducted_on1").innerHTML = response.data.form.dateInput.split("-").reverse().join("/");
+                document.getElementById("assessment_conducted_on2").innerHTML = response.data.form.dateInput.split("-").reverse().join("/");
                 document.getElementById('facility_operations').innerHTML = response.data.form.f_operation[0]
                 document.getElementById('facility_category').innerHTML = response.data.form.facility_categor
                 document.getElementById("product_mfd").innerHTML = response.data.form.product_mfd;
@@ -1357,7 +1374,7 @@
                 document.getElementById('scope_waste_1').innerHTML = response.data.form.scope_waste;
                 document.getElementById('energy_saving_opportunities_in_electrical_motors_1').innerHTML = response.data.form.energy_saving_opportunities_in_electrical_motors;
                 document.getElementById('waste_heat_recovery_fuel_savings_1').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
-                 document.getElementById('assess_ob_at_thermopac_2').innerHTML = response.data.form.assess_ob_at_thermopac;
+                document.getElementById('assess_ob_at_thermopac_2').innerHTML = response.data.form.assess_ob_at_thermopac;
                 document.getElementById('assess_ob_at_other_2').innerHTML = response.data.form.assess_ob_at_other;
                 document.getElementById('assess_ob_at_genset_2').innerHTML = response.data.form.assess_ob_at_genset;
                 document.getElementById('assess_ob_at_boiler_2').innerHTML = response.data.form.assess_ob_at_boiler;
@@ -1378,7 +1395,7 @@
                 document.getElementById('assessment_observation_at_material_handling_2').innerHTML = response.data.form.assessment_observation_at_material_handling;
                 document.getElementById('production_machine_utilization_data_collection_aspects_2').innerHTML = response.data.form.production_machine_utilization_data_collection_aspects;
                 document.getElementById('specific_fuel_1').innerHTML = response.data.form.specific_fuel;
-                
+
                 document.getElementById('facility_name_3').innerHTML = response.data.form.facility_name;
 
 
