@@ -768,6 +768,35 @@
                             <div class="p-2" id="specific_water_cost1"></div>
                         </div>
 
+
+
+
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;"> Total Identified Electrical Energy Savings (kWh/Annum): </div>
+                            <div class="p-2" id="energy_savings"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Total Fuel Savings (Ton/Annum): </div>
+                            <div class="p-2" id="fuel_savings"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Total Water Savings (KL/Annum): </div>
+                            <div class="p-2" id="water_savings"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Total RWH Augmentation (KL/Annum): </div>
+                            <div class="p-2" id="rwh"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Total Material Savings: </div>
+                            <div class="p-2" id="material_savings"></div>
+                        </div>
+                        <div class="bg-light rounded-3 my-2">
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Total Number of CT Opportunities Identified: </div>
+                            <div class="p-2" id="ct_opportunities"></div>
+                        </div>
+
+
                         <!-- End -->
                     </div>
                     <div class="modal-footer">
@@ -964,6 +993,13 @@
                     document.getElementById("specific_fuel_cost").innerHTML = res.data.form.specific_fuel_cost
                     document.getElementById("specific_water_cost").innerHTML = res.data.form.specific_water_cost
                     document.getElementById("specific_water_cost1").innerHTML = res.data.form.specific_water_cost1
+
+                    document.getElementById("energy_savings").innerHTML = res.data.form.energy_savings
+                    document.getElementById("fuel_savings").innerHTML = res.data.form.fuel_savings
+                    document.getElementById("water_savings").innerHTML = res.data.form.water_savings
+                    document.getElementById("rwh").innerHTML = res.data.form.rwh
+                    document.getElementById("material_savings").innerHTML = res.data.form.material_savings
+                    document.getElementById("ct_opportunities").innerHTML = res.data.form.ct_opportunities
                 })
         }
 

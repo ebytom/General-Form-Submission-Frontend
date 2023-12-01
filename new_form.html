@@ -163,6 +163,8 @@
                         <input type="checkbox" id="grid_electricity_lt" name="elec_energy_src"
                             value="Grid Electricity - LT">
                         <label for="grid_electricity_lt">Grid Electricity - LT</label><br>
+                        <input type="checkbox" id="ltct" name="elec_energy_src" value="LTCT">
+                        <label for="ltct">LTCT</label><br>
                     </div><br><br>
                     <div>
                         <label for="baseline_data">18. Baseline Data Period (Mention the FY Period as
@@ -244,6 +246,8 @@
                         <label for="firewood">Firewood</label><br>
                         <input type="checkbox" id="biomass" name="boiler_fuel" value="Biomass">
                         <label for="biomass">Biomass</label><br>
+                        <input type="checkbox" id="boiler" name="boiler_fuel" value="Biomass">
+                        <label for="boiler">Electrical Ironing Boiler</label><br>
                         <input type="checkbox" id="other" name="boiler_fuel" value="#other_text">
                         <label for="other">Other : </label><input type="text" id="other_text" name="other"><br>
                     </div><br>
@@ -557,8 +561,12 @@
                     <input type="checkbox" id="effluent_heat_recovery" name="scope_waste"
                         value="Effluent Heat Recovery">
                     <label for="effluent_heat_recovery">Effluent Heat Recovery</label><br>
-                    <input type="checkbox" id="other_whr_systems" name="scope_waste" value="Other WHR Systems">
+                    <input type="checkbox" onclick="toggleTextField()" id="other_whr_systems" name="scope_waste" value="Other WHR Systems" >
                     <label for="other_whr_systems">Other WHR Systems</label><br>
+                    <div id="textAreaContainer" class="hidden">
+                        <!-- <label for="textArea">Text Area:</label> -->
+                        <textarea id="whr"></textarea>
+                      </div>
                 </div><br>
                 <div>
                     <label for="waste_heat_recovery_fuel_savings">71. Waste Heat Recovery Fuel Savings (Tons/Annum)
@@ -785,13 +793,37 @@
                     <input type="text" id="specific_water_cost1" name="specific_water_cost1"><br><br>
                 </div>
                 <div>
+                    <label for="specific_water_cost">110. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
+                    <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
+                </div>
+                <div>
                     <label for="specific_fuel">110. Specific Fuel(Boiler)(kg/Unit of Production):</label><br>
                     <input type="text" id="specific_fuel" name="specific_fuel"><br><br>
                 </div>
 
                 <div>
-                    <label for="specific_water_cost">111. Specific Fuel Cost (Rs/Unit of Production):</label><br>
-                    <input type="text" id="specific_water_cost" name="specific_water_cost"><br><br>
+                    <label for="energy_savings">112. Total Identified Electrical Energy Savings (kWh/Annum):</label><br>
+                    <input type="text" id="energy_savings" name="energy_savings"><br><br>
+                </div>
+                <div>
+                    <label for="fuel_savings">113.Total Fuel Savings (Ton/Annum) :</label><br>
+                    <input type="text" id="fuel_savings" name="fuel_savings"><br><br>
+                </div>
+                <div>
+                    <label for="water_savings">114. Total Water Savings (KL/Annum) :</label><br>
+                    <input type="text" id="water_savings" name="water_savings"><br><br>
+                </div>
+                <div>
+                    <label for="rwh">115. Total RWH Augmentation (KL/Annum) :</label><br>
+                    <input type="text" id="rwh" name="rwh"><br><br>
+                </div>
+                <div>
+                    <label for="material_savings">116. Total Material Savings :</label><br>
+                    <input type="text" id="material_savings" name="material_savings"><br><br>
+                </div>
+                <div>
+                    <label for="ct_opportunities">117. Total Number of CT Opportunities Identified :</label><br>
+                    <input type="text" id="ct_opportunities" name="ct_opportunities"><br><br>
                 </div>
 
                 <button onclick="sect4()" class="btn btn-primary" id="prev">&laquo; Previous</button>
@@ -844,6 +876,9 @@
         #display_data {
             display: none;
         }
+        #textAreaContainer{
+            display: none;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
@@ -893,6 +928,12 @@
         function calender() {
             document.getElementById("display_data").style.display = "block";
         }
+                    
+        function toggleTextField() {
+            textarea= document.getElementById("textAreaContainer");
+                textarea.style.display = "block";
+    
+          }
         function sect5() {
             document.getElementById("sect_1").style.display = "none";
             document.getElementById("sect_2").style.display = "none";
@@ -1053,6 +1094,12 @@
             const specific_fuel_cost = document.getElementById('specific_fuel_cost').value;
             const specific_water_cost = document.getElementById('specific_water_cost').value;
             const specific_water_cost1 = document.getElementById('specific_water_cost1').value;
+            const energy_savings = document.getElementById('energy_savings').value;
+            const fuel_savings = document.getElementById('fuel_savings').value;
+            const water_savings = document.getElementById('water_savings').value;
+            const rwh = document.getElementById('rwh').value;
+            const material_savings = document.getElementById('material_savings').value;
+            const ct_opportunities = document.getElementById('ct_opportunities').value;
 
             let facility_pic_ent = "";
             let facility_pic = "";
@@ -1139,6 +1186,8 @@
             if (pic21 != null) {
                 overall_obs_on_safety_photo = await uploadFile(pic19)
             }
+
+
 
             var f_operationGroup = document.querySelectorAll('.f_operation');
             var f_operationItems = [];
@@ -1293,6 +1342,7 @@
                 });
             })
 
+
             axios.post(`http://103.88.225.131:8080/form2/postForm`, {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
@@ -1411,7 +1461,13 @@
                 specific_fuel_cost: specific_fuel_cost,
                 specific_water_cost: specific_water_cost,
                 specific_water_cost1: specific_water_cost1,
-
+                
+                energy_savings:energy_savings,
+                fuel_savings:fuel_savings,
+                water_savings:water_savings,
+                rwh:rwh,
+                material_savings:material_savings,
+                ct_opportunities:ct_opportunities,
             })
 
                 .then(function (response) {
