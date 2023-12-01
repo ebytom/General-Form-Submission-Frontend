@@ -16,7 +16,7 @@
         h3 {
             color: #333;
         }
-    
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -77,19 +77,20 @@
             body {
                 font-size: 12pt;
             }
-    
+
             table {
                 table-layout: auto;
                 page-break-inside: avoid;
             }
-    
-            th, td {
+
+            th,
+            td {
                 border: 1px solid #ddd;
                 padding: 8px;
                 text-align: left;
                 word-wrap: break-word;
             }
-    
+
             .out-container {
                 border: 1px solid black;
                 width: 995px;
@@ -97,37 +98,39 @@
                 text-align: center;
                 align-items: center;
                 margin-top: 20%;
-                
+
             }
-    
+
             .image {
                 max-width: 100%;
                 height: auto;
             }
-    
+
             #toppper-button {
                 display: none;
             }
-    
+
             .fs-3 {
                 display: none;
             }
-    
+
             #downloadBtn {
                 display: none;
             }
-            .exec{
-                
+
+            .exec {
+
                 margin-top: -5%;
             }
-            #cent
-            {
-               margin-top: 25%;
+
+            #cent {
+                margin-top: 25%;
             }
+
             /* Adjust other styles for printing as needed */
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -183,25 +186,29 @@
             </center>
 
             <br><br><br><br><br><br><br><br><br>
-         <div class="exec">
-            <h2 >Executive Summary</h2>
-            <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program for
-                the conservation of the
-                Noyyal
-                and
-                Bhavani rivers. The Industrial Water Stewardship component of the program will look at working with
-                Textile industries along the key stretches of Noyyal
-                to
-                minimize their impacts on the river and ensure the long sustainability of the industries. To develop the
-                strategy for industrial water management work and to develop a clean technology implementation plan.
-                Under
-                the
-                {Assessment_Phase} of the program.
-                M/s <span id="facility_name_3"> {facility_name}</span> enrolled for the Stewardship Program. The Preliminary visit was conducted by M/s
-                VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify the
-                potential areas for Water, Energy savings.
-            </p>
-          </div>
+            <div class="exec">
+                <h2>Executive Summary</h2>
+                <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program
+                    for
+                    the conservation of the
+                    Noyyal
+                    and
+                    Bhavani rivers. The Industrial Water Stewardship component of the program will look at working with
+                    Textile industries along the key stretches of Noyyal
+                    to
+                    minimize their impacts on the river and ensure the long sustainability of the industries. To develop
+                    the
+                    strategy for industrial water management work and to develop a clean technology implementation plan.
+                    Under
+                    the
+                    {Assessment_Phase} of the program.
+                    M/s <span id="facility_name_3"> {facility_name}</span> enrolled for the Stewardship Program. The
+                    Preliminary visit was conducted by M/s
+                    VRNC at the unit on <span id="assessment_conducted_on1">{Assessment_Conducted_on}</span> to identify
+                    the
+                    potential areas for Water, Energy savings.
+                </p>
+            </div>
             <br>
 
             <table>
@@ -948,14 +955,15 @@
                     <tr>
                         <td id="scope_comp_air_1">{Scope_for_Energy_Savings_in_Compressed_Air_Systems}</td>
                         <td id="compressed_air_saving_1">{Compressed_Air_Systems_Savings_in_kWh/Annum}</td>
-                        <td id="scope_comp_airItems_1">{Compressed_Air_System}</td>
                         <td></td>
+                        <td id="scope_comp_airItems_1">{Compressed_Air_System}</td>
                         <td></td>
                         <td></td>
                     </tr>
 
                     <tr>
-                        <td id="lighting_observation_1">Lighting Systems - Observations</td>
+                        <!-- <td id="lighting_observation_1">Lighting Systems - Observations</td> -->
+                        <td>Lighting Systems - Observations</td>
                         <td id="lighting_saving_1">Lighting Systems - Savings Opportunities in kWh/Annum</td>
                         <td id="lighting_est_savings_1">[Lighting Systems - Estimated Savings in INR]{.mark}</td>
                         <td id="lighting_est_investment_1">Lighting Systems - Estimated Investments in INR</td>
@@ -964,7 +972,8 @@
                     </tr>
 
                     <tr>
-                        <td id="elec_motors_1">Electrical Motors - Energy Saving Opportunities</td>
+                        <!-- <td id="elec_motors_1">Electrical Motors - Energy Saving Opportunities</td> -->
+                        <td>Electrical Motors - Energy Saving Opportunities</td>
                         <td id="energy_saving_opportunities_in_electrical_motors_1">Energy Saving Opportunities in
                             Electrical Motors (kWh/Annum)</td>
                         <td id="estimated_savings_motor_upgradation_1">Estimated Savings- Motor Upgradation (INR/Annum)
@@ -975,7 +984,8 @@
                     </tr>
 
                     <tr>
-                        <td id="scope_waste_1">Scope for Waste Heat Recovery</td>
+                        <!-- <td id="scope_waste_1">Scope for Waste Heat Recovery</td> -->
+                        <td>Scope for Waste Heat Recovery</td>
                         <td id="waste_heat_recovery_fuel_savings_1">Waste Heat Recovery Fuel Savings (Tons/Annum)</td>
                         <td></td>
                         <td></td>
@@ -1362,14 +1372,14 @@
                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
 
                 document.getElementById('facility_name2').innerHTML = response.data.form.facility_name;
-                document.getElementById('lighting_observation_1').innerHTML = response.data.form.lighting_observation;
+                // document.getElementById('lighting_observation_1').innerHTML = response.data.form.lighting_observation;
                 document.getElementById('lighting_saving_1').innerHTML = response.data.form.lighting_saving;
                 document.getElementById('lighting_est_investment_1').innerHTML = response.data.form.lighting_est_investment;
                 document.getElementById('lighting_est_savings_1').innerHTML = response.data.form.lighting_est_savings;
                 document.getElementById('waste_heat_recovery_fuel_savings_1').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
                 document.getElementById('estimated_savings_motor_upgradation_1').innerHTML = response.data.form.elec_motors;
-                document.getElementById('elec_motors_1').innerHTML = response.data.form.facility_category;
-                document.getElementById('scope_waste_1').innerHTML = response.data.form.scope_waste;
+                // document.getElementById('elec_motors_1').innerHTML = response.data.form.facility_category;
+                // document.getElementById('scope_waste_1').innerHTML = response.data.form.scope_waste;
                 document.getElementById('energy_saving_opportunities_in_electrical_motors_1').innerHTML = response.data.form.energy_saving_opportunities_in_electrical_motors;
                 document.getElementById('waste_heat_recovery_fuel_savings_1').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
                 document.getElementById('assess_ob_at_thermopac_2').innerHTML = response.data.form.assess_ob_at_thermopac;

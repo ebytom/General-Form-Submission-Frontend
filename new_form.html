@@ -561,12 +561,13 @@
                     <input type="checkbox" id="effluent_heat_recovery" name="scope_waste"
                         value="Effluent Heat Recovery">
                     <label for="effluent_heat_recovery">Effluent Heat Recovery</label><br>
-                    <input type="checkbox" onclick="toggleTextField()" id="other_whr_systems" name="scope_waste" value="Other WHR Systems" >
+                    <input type="checkbox" onclick="toggleTextField()" id="other_whr_systems" name="scope_waste"
+                        value="Other WHR Systems">
                     <label for="other_whr_systems">Other WHR Systems</label><br>
                     <div id="textAreaContainer" class="hidden">
                         <!-- <label for="textArea">Text Area:</label> -->
                         <textarea id="whr"></textarea>
-                      </div>
+                    </div>
                 </div><br>
                 <div>
                     <label for="waste_heat_recovery_fuel_savings">71. Waste Heat Recovery Fuel Savings (Tons/Annum)
@@ -876,7 +877,8 @@
         #display_data {
             display: none;
         }
-        #textAreaContainer{
+
+        #textAreaContainer {
             display: none;
         }
     </style>
@@ -928,12 +930,15 @@
         function calender() {
             document.getElementById("display_data").style.display = "block";
         }
-                    
+
         function toggleTextField() {
-            textarea= document.getElementById("textAreaContainer");
+            var textarea = document.getElementById("textAreaContainer");
+            if (textarea.style.display === "none" || textarea.style.display === "") {
                 textarea.style.display = "block";
-    
-          }
+            } else {
+                textarea.style.display = "none";
+            }
+        }
         function sect5() {
             document.getElementById("sect_1").style.display = "none";
             document.getElementById("sect_2").style.display = "none";
@@ -1323,6 +1328,10 @@
                         console.log(scope_wasteItems);
                     }
                 });
+
+                if (document.getElementById("textAreaContainer").style.display == "block") {
+                    scope_wasteItems.push(document.getElementById("whr").value)
+                }
             })
 
             var rwh_scopeGroup = document.querySelectorAll('.rwh_scope');
@@ -1344,6 +1353,7 @@
 
 
             axios.post(`http://103.88.225.131:8080/form2/postForm`, {
+                // axios.post(`http://localhost:8080/form2/postForm`, {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
                 facility_name: facility_name,
@@ -1461,13 +1471,13 @@
                 specific_fuel_cost: specific_fuel_cost,
                 specific_water_cost: specific_water_cost,
                 specific_water_cost1: specific_water_cost1,
-                
-                energy_savings:energy_savings,
-                fuel_savings:fuel_savings,
-                water_savings:water_savings,
-                rwh:rwh,
-                material_savings:material_savings,
-                ct_opportunities:ct_opportunities,
+
+                energy_savings: energy_savings,
+                fuel_savings: fuel_savings,
+                water_savings: water_savings,
+                rwh: rwh,
+                material_savings: material_savings,
+                ct_opportunities: ct_opportunities,
             })
 
                 .then(function (response) {
