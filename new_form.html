@@ -670,7 +670,7 @@
                         name="material_conservation_opportunities"></textarea><br>
                 </div><br>
                 <div>
-                    <label for="water_reuse_opportunities">84. Water Recovery & ReUse Opportunities</label><br>
+                    <label for="water_reuse_opportunities">84. Water Recovery & Reuse Opportunities</label><br>
                     <textarea type="textarea" id="water_reuse_opportunities"
                         name="water_reuse_opportunities"></textarea><br>
                         <label for="savings2">84.1. Savings
@@ -1153,6 +1153,22 @@
             const rwh = document.getElementById('rwh').value;
             const material_savings = document.getElementById('material_savings').value;
             const ct_opportunities = document.getElementById('ct_opportunities').value;
+            const savings1 = document.getElementById('savings1').value;
+            const savings2 = document.getElementById('savings2').value;
+            const savings3 = document.getElementById('savings3').value;
+            const savings4 = document.getElementById('savings4').value;
+            const savings5 = document.getElementById('savings5').value;
+            const investments= document.getElementById('investments').value;
+            const investments1 = document.getElementById('investments1').value;
+            const investments2 = document.getElementById('investments2').value;
+            const investments3 = document.getElementById('investments3').value;
+            const investments4 = document.getElementById('investments4').value;
+            const investments5 = document.getElementById('investments5').value;
+            const investments6= document.getElementById('investments6').value;
+            const investments7 = document.getElementById('investments7').value;
+            const investments8= document.getElementById('investments8').value;
+            
+            
 
             let facility_pic_ent = "";
             let facility_pic = "";
@@ -1526,6 +1542,21 @@
                 rwh: rwh,
                 material_savings: material_savings,
                 ct_opportunities: ct_opportunities,
+                savings1:savings1,
+                savings2:savings2,
+                savings3:savings3,
+                savings4:savings4,
+                savings5:savings5,
+                investments:investments,
+                investments1:investments1,
+                investments2:investments2,
+                investments3:investments3,
+                investments4:investments4,
+                investments5:investments5,
+                investments6:investments6,
+                investments7:investments7,
+                investments8:investments8,
+
             })
 
                 .then(function (response) {

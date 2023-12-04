@@ -321,6 +321,11 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Garden & Domestic
                                 Water Use Observations:</div>
                             <div class="p-2" id="garden_and_domestic_water_use_ob"></div>
+
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in Units:</div>
+                            <div class="p-2" id="savings1"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Energy Source Forms
@@ -341,6 +346,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Assessment
                                 Observation at the Power House:</div>
                             <div class="p-2" id="assess_ob_at_power_house"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments1"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Assessment
@@ -421,6 +428,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Scope for Energy
                                 Savings in Compressed Air Systems:</div>
                             <div class="p-2" id="scope_comp_air"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments2"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Compressed Air
@@ -477,6 +486,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Electrical Motors -
                                 Energy Saving Opportunities:</div>
                             <div class="p-2" id="elec_motors"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments3"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;"> Energy Saving
@@ -497,6 +508,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Scope for Waste Heat
                                 Recovery:</div>
                             <div class="p-2" id="scope_waste"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments4"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Waste Heat Recovery
@@ -588,11 +601,19 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Water Recovery &
                                 ReUse Opportunities:</div>
                             <div class="p-2" id="water_reuse_opportunities"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="p-2" id="savings2"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments5"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Scope for Renewable
                                 Energy Investment Opportunities:</div>
                             <div class="p-2" id="scope_for_renewable"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="p-2" id="savings3"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments6"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Details of Renewable
@@ -618,6 +639,10 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Rain Water
                                 Harvesting Scope:</div>
                             <div class="p-2" id="rwh_scope"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="p-2" id="savings4"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments7"></div>
                         </div>
                         <div class="bg-light rounded-3 my-2">
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Rain Water
@@ -628,6 +653,10 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Process Water Saving
                                 Opportunties:</div>
                             <div class="p-2" id="water_saving_opportunties"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="p-2" id="savings5"></div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
+                            <div class="p-2" id="investments8"></div>
                         </div>
 
                         <!-- ---------------------- Section 5 ---------------------- -->
@@ -1000,13 +1029,28 @@
                     document.getElementById("specific_fuel_cost").innerHTML = res.data.form.specific_fuel_cost
                     document.getElementById("specific_water_cost").innerHTML = res.data.form.specific_water_cost
                     document.getElementById("specific_water_cost1").innerHTML = res.data.form.specific_water_cost1
-
                     document.getElementById("energy_savings").innerHTML = res.data.form.energy_savings
                     document.getElementById("fuel_savings").innerHTML = res.data.form.fuel_savings
                     document.getElementById("water_savings").innerHTML = res.data.form.water_savings
                     document.getElementById("rwh").innerHTML = res.data.form.rwh
                     document.getElementById("material_savings").innerHTML = res.data.form.material_savings
                     document.getElementById("ct_opportunities").innerHTML = res.data.form.ct_opportunities
+
+
+                    document.getElementById("savings1").innerHTML = res.data.form.savings1
+                    document.getElementById("savings2").innerHTML = res.data.form.savings2
+                    document.getElementById("savings3").innerHTML = res.data.form.savings3
+                    document.getElementById("savings4").innerHTML = res.data.form.savings4
+                    document.getElementById("savings5").innerHTML = res.data.form.savings5
+                    document.getElementById("investments").innerHTML = res.data.form.investments
+                    document.getElementById("investments1").innerHTML = res.data.form.investments1
+                    document.getElementById("investments2").innerHTML = res.data.form.investments2
+                    document.getElementById("investments3").innerHTML = res.data.form.investments3
+                    document.getElementById("investments4").innerHTML = res.data.form.investments4
+                    document.getElementById("investments5").innerHTML = res.data.form.investments5
+                    document.getElementById("investments6").innerHTML = res.data.form.investments6
+                    document.getElementById("investments7").innerHTML = res.data.form.investments7
+                    document.getElementById("investments8").innerHTML = res.data.form.investments8
                 })
         }
 
