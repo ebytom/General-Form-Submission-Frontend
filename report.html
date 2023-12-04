@@ -1425,6 +1425,36 @@
         }
 
 
+
+
+
+
+
+        function populateTable() {
+  const table = document.querySelector('table');
+
+  for (const key in data) {
+    if (data.hasOwnProperty(key)) {
+      const value = data[key];
+      const element = document.getElementById(key);
+      
+      if (element) {
+        if (value.trim() !== "") {
+          if (element.tagName === "IMG") {
+            element.src = value;
+          } else {
+            element.textContent = value;
+          }
+        } else {
+          // Hide the parent table cell if value is empty
+          element.parentNode.style.display = 'none';
+        }
+      }
+    }
+  }
+}
+
+
     </script>
 
 </body>
