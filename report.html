@@ -548,6 +548,20 @@
                 </tr>
 
                 <tr>
+                    <td>43.1</td>
+                    <td>Savings in Units</td>
+                    <td id="savings1">{savings1}</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>43.2</td>
+                    <td>Investments</td>
+                    <td id="investment">{investments}</td>
+                    <td></td>
+                </tr>
+
+                <tr>
                     <td>44</td>
                     <td>Assessment Observation at the Compressor Room</td>
                     <td id="assess_ob_at_compressor">{Assessment_Observation_at_the_Compressor_Room}</td>
@@ -565,6 +579,13 @@
                     <td>46</td>
                     <td>Assessment Observation at the Boiler Area</td>
                     <td id="assess_ob_at_boiler">{Assessment_Observation_at_the_Boiler_Area}</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>46.1</td>
+                    <td>Investments</td>
+                    <td id="investments1">{investments1}</td>
                     <td></td>
                 </tr>
 
@@ -595,6 +616,13 @@
                     <td>49</td>
                     <td>Compressed Air Systems Savings in kWh/Annum</td>
                     <td id="compressed_air_saving">{Compressed_Air_Systems_Savings_in_kWh/Annum}</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>49.1</td>
+                    <td>Investments</td>
+                    <td id="investments2">{investments2/Annum}</td>
                     <td></td>
                 </tr>
 
@@ -743,6 +771,14 @@
                     </tr>
 
                     <tr>
+                        <td>66.1</td>
+                        <td>Investments</td>
+                        <td id="investments3">
+                            {investments3}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
                         <td>67</td>
                         <td>Water Recovery & ReUse Opportunities</td>
                         <td id="water_reuse_opportunities">{Water_Recovery\_&\_ReUse_Opportunities}</td>
@@ -757,6 +793,20 @@
                     </tr>
 
                     <tr>
+                        <td>68.1</td>
+                        <td> Savingsin Units</td>
+                        <td id="savings3">{ Savings in Units}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>68.2</td>
+                        <td>Investments</td>
+                        <td id="investments6">{Investments}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
                         <td>69</td>
                         <td>Details of Renewable Energy Projects</td>
                         <td id="details_of_renewable_energy">{Details_of_Renewable_Energy_Projects}</td>
@@ -767,6 +817,13 @@
                         <td>70</td>
                         <td>Total Roof Area in Sq.Meter</td>
                         <td>{Total_Roof_Area_in_SqMeter}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>70.1</td>
+                        <td>Investments</td>
+                        <td id="investments4">{Investments}</td>
                         <td></td>
                     </tr>
 
@@ -799,9 +856,37 @@
                     </tr>
 
                     <tr>
+                        <td>74.1</td>
+                        <td>Savings in Units</td>
+                        <td id="savings4">{savings4}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>74.2</td>
+                        <td>Investmentsn</td>
+                        <td id="investments7">{investments7}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
                         <td>75</td>
                         <td>Process Water Saving Opportunties</td>
                         <td id="water_saving_opportunties"> {Process_Water_Saving_Opportunties}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>75.1</td>
+                        <td>Savings in Units</td>
+                        <td id="savings5"> {savings5}</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>75.2</td>
+                        <td>Investments</td>
+                        <td id="investments8"> {investments8}</td>
                         <td></td>
                     </tr>
 
@@ -860,6 +945,12 @@
                         <tr>
                             <th><strong>Recovered Water KL/Annum</strong></td>
                             <td id="total_qty_water_1">{Quantity_of_Recovered_Water_KL/Annum}</td>
+                        </tr>
+
+                        <tr>
+                            <th><strong>Water Recovery Savings
+                                in Units</strong></td>
+                            <td id="savings2">{Quantity_of_Recovered_Water_KL/Annum}</td>
                         </tr>
 
                         <tr>
@@ -1377,18 +1468,20 @@
                 document.getElementById('specific_fuel_1').innerHTML = response.data.form.specific_fuel;
                 document.getElementById('facility_name_3').innerHTML = response.data.form.facility_name;
 
-
-                // document.getElementById('assess_ob_at_thermopac_2').innerHTML = response.data.form.assess_ob_at_thermopac;
-                // document.getElementById('assess_ob_at_other_2').innerHTML = response.data.form.assess_ob_at_other;
-                // document.getElementById('assess_ob_at_genset_2').innerHTML = response.data.form.assess_ob_at_genset;
-                // document.getElementById('assess_ob_at_boiler_2').innerHTML = response.data.form.assess_ob_at_boiler;
-                // document.getElementById('assess_ob_at_compressor_2').innerHTML = response.data.form.assess_ob_at_compressor;
-                // document.getElementById('assess_ob_at_power_house_2').innerHTML = response.data.form.assess_ob_at_power_house;
-                // document.getElementById('obs_on_elec_earth_2').innerHTML = response.data.form.obs_on_elec_earth;
-                // document.getElementById('obs_on_safety_fire_2').innerHTML = response.data.form.obs_on_safety_fire;
-                // document.getElementById('obs_on_safety_elec_2').innerHTML = response.data.form.obs_on_safety_elec;
-                // document.getElementById('obs_on_safety_crit_2').innerHTML = response.data.form.obs_on_safety_crit;
-                // document.getElementById('obs_on_safety_prod_2').innerHTML = response.data.form.obs_on_safety_prod;
+                 // ⭐️ NEW IDS
+                 document.getElementById('savings1').innerHTML = response.data.form.savings1;
+                 document.getElementById('investment').innerHTML = response.data.form.assess_ob_at_other;
+                 document.getElementById('investments1').innerHTML = response.data.form.investments1;
+                document.getElementById('investments3').innerHTML = response.data.form.investments3;
+                document.getElementById('investments4').innerHTML = response.data.form.investments4;
+                document.getElementById('savings2').innerHTML = response.data.form.savings2;
+                 document.getElementById('savings3').innerHTML = response.data.form.savings3;
+                document.getElementById('savings4').innerHTML = response.data.form.savings4;
+                document.getElementById('savings5').innerHTML = response.data.form.savings5;
+                 document.getElementById('investments8').innerHTML = response.data.form.investments8;
+                 document.getElementById('investments7').innerHTML = response.data.form.investments7;
+                document.getElementById('investments2').innerHTML = response.data.form.investments2;
+                document.getElementById('investments6').innerHTML = response.data.form.investments6;
                 // document.getElementById('production_layout_observations_2').innerHTML = response.data.form.production_layout_observations;
                 // document.getElementById('details_of_renewable_energy_2').innerHTML = response.data.form.details_of_renewable_energy;
                 // document.getElementById('obs_on_safety_chem_2').innerHTML = response.data.form.obs_on_safety_chem;
