@@ -999,32 +999,32 @@
 
                         <tr>
                             <th><strong>Identified Electricity Savings kWh/Yr</strong></td>
-                            <td></td>
+                            <td id="energy_savings">{energy_savings}</td>
                         </tr>
 
                         <tr>
                             <th><strong>Identified Fuel Savings Ton/Yr</strong></td>
-                            <td id="waste_heat_recovery_fuel_savings"></td>
+                            <td id="fuel_savings">{fuel_savings}</td>
                         </tr>
 
                         <tr>
                             <th><strong>Identified Water Savings KL/Yr</strong></td>
-                            <td></td>
+                            <td id="water_savings">{water_savings}</td>
                         </tr>
 
                         <tr>
                             <th><strong>Identified Material Savings</strong></td>
-                            <td></td>
+                            <td id="material_savings">{material_savings}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Reduction in tCO2</strong></td>
-                            <td></td>
+                            <th><strong>Total RWH Augmentation (KL/Annum)</strong></td>
+                            <td id="rwh">{rwh}</td>
                         </tr>
 
                         <tr>
                             <th><strong>Total Number of CT Opportunities Identified</strong></td>
-                            <td></td>
+                            <td id="ct_opportunities">{ct_opportunities}</td>
                         </tr>
 
                 </table>
@@ -1482,6 +1482,13 @@
                  document.getElementById('investments7').innerHTML = response.data.form.investments7;
                 document.getElementById('investments2').innerHTML = response.data.form.investments2;
                 document.getElementById('investments6').innerHTML = response.data.form.investments6;
+                document.getElementById('energy_savings').innerHTML=response.data.form.energy_savings;
+
+                document.getElementById('fuel_savings').innerHTML = response.data.form.fuel_savings;
+                document.getElementById('water_savings').innerHTML = response.data.form.water_savings;
+                document.getElementById('material_savings').innerHTML = response.data.form.material_savings;
+                document.getElementById('ct_opportunities').innerHTML = response.data.form.ct_opportunities;
+                document.getElementById('rwh').innerHTML=response.data.form.rwh;
                 // document.getElementById('production_layout_observations_2').innerHTML = response.data.form.production_layout_observations;
                 // document.getElementById('details_of_renewable_energy_2').innerHTML = response.data.form.details_of_renewable_energy;
                 // document.getElementById('obs_on_safety_chem_2').innerHTML = response.data.form.obs_on_safety_chem;
