@@ -76,6 +76,10 @@
                         </div>
                     </div><br>
                     <div>
+                        <label for="facility_pic">4.1. Facility Address</label>
+                        <input type="text" id="facility_address" name="facility_address">
+                    </div>
+                    <div>
                         <label for="dateInput">5. Assesment Conducted on:</label>
                         <input type="date" id="dateInput" name="selectedDate">
                     </div><br><br>
@@ -546,9 +550,9 @@
                     <label for="upgradation_of_conventional_motors_with_ie3_motors">Upgradation of Conventional Motors
                         with IE3 Motors</label><br>
 
-                        <label for="investments3">66.1. Investments
-                        </label>
-                        <input type="text" id="investments3" name="investments3"><br>
+                    <label for="investments3">66.1. Investments
+                    </label>
+                    <input type="text" id="investments3" name="investments3"><br>
                 </div>
                 <div>
                     <label for="energy_saving_opportunities_in_electrical_motors">67. Energy Saving Opportunities in
@@ -673,19 +677,19 @@
                     <label for="water_reuse_opportunities">84. Water Recovery & Reuse Opportunities</label><br>
                     <textarea type="textarea" id="water_reuse_opportunities"
                         name="water_reuse_opportunities"></textarea><br>
-                        <label for="savings2">84.1. Savings
-                            in Units
-                        </label>
-                        <input type="text" id="savings2" name="savings2"><br>
-                        <label for="investments5">84.2. Investments
-                        </label>
-                        <input type="text" id="investments5" name="investments5"><br>
+                    <label for="savings2">84.1. Savings
+                        in Units
+                    </label>
+                    <input type="text" id="savings2" name="savings2"><br>
+                    <label for="investments5">84.2. Investments
+                    </label>
+                    <input type="text" id="investments5" name="investments5"><br>
                 </div><br>
                 <div>
                     <label for="scope_for_renewable">85. Scope for Renewable Energy
                         Investment Opportunities</label><br>
                     <textarea type="textarea" id="scope_for_renewable" name="scope_for_renewable"></textarea><br>
-                   
+
                     <label for="savings3">85.1. Savings in Units </label>
                     <input type="text" id="savings3" name="savings3"><br>
 
@@ -706,6 +710,10 @@
                 <div>
                     <label for="annual_rainfall">88. Annual Rainfall in Meters</label><br>
                     <input type="text" id="annual_rainfall" name="annual_rainfall"><br><br>
+                </div><br>
+                <div>
+                    <label for="total_roof_area">88.1. Total Roof Area</label><br>
+                    <input type="text" id="total_roof_area" name="total_roof_area"><br><br>
                 </div><br>
                 <div class="rwh_scope">
                     <label for="rain_water_harvesting_scope">89. Rain Water Harvesting Scope</label><br>
@@ -733,13 +741,13 @@
                     <label for="water_saving_opportunties">91. Process Water Saving Opportunties</label><br>
                     <textarea type="textarea" id="water_saving_opportunties"
                         name="water_saving_opportunties"></textarea><br>
-                        <label for="savings5">91.1. Savings
-                            in Units
-                        </label>
-                        <input type="text" id="savings5" name="savings5"><br>
-                        <label for="investments8">84.2. Investments
-                        </label>
-                        <input type="text" id="investments8" name="investments8"><br><br>
+                    <label for="savings5">91.1. Savings
+                        in Units
+                    </label>
+                    <input type="text" id="savings5" name="savings5"><br>
+                    <label for="investments8">91.2. Investments
+                    </label>
+                    <input type="text" id="investments8" name="investments8"><br><br>
                 </div><br>
                 <button onclick="sect3()" class="btn btn-primary" id="prev">&laquo; Previous</button>
                 <button onclick="sect5()" name="next4" id="next" class="btn btn-primary">Next &raquo;</button>
@@ -1049,6 +1057,7 @@
             const pic2 = document.getElementById("facility_pic").files[0];
             const dateInput = document.getElementById("dateInput").value;
             const facility_location = "http://www.google.com/maps/place/" + document.getElementById('facility_location1').value + "," + document.getElementById('facility_location2').value;
+            const facility_address = document.getElementById('facility_address').value;
             const product_mfd = document.getElementById('product_mfd').value;
             const prod_capacity = document.getElementById('prod_capacity').value;
             const hr_shift = document.getElementById('hr_shift').value;
@@ -1123,6 +1132,7 @@
             const details_of_renewable_energy = document.getElementById('details_of_renewable_energy').value;
             const pic14 = document.getElementById("pic_renewable_energy").files[0];
             const annual_rainfall = document.getElementById('annual_rainfall').value;
+            const total_roof_area = document.getElementById('total_roof_area').value;
             const rw_harvesting_observation = document.getElementById('rw_harvesting_observation').value;
             const water_saving_opportunties = document.getElementById('water_saving_opportunties').value;
             // Section - 5
@@ -1157,17 +1167,17 @@
             const savings3 = document.getElementById('savings3').value;
             const savings4 = document.getElementById('savings4').value;
             const savings5 = document.getElementById('savings5').value;
-            const investments= document.getElementById('investments').value;
+            const investments = document.getElementById('investments').value;
             const investments1 = document.getElementById('investments1').value;
             const investments2 = document.getElementById('investments2').value;
             const investments3 = document.getElementById('investments3').value;
             const investments4 = document.getElementById('investments4').value;
             const investments5 = document.getElementById('investments5').value;
-            const investments6= document.getElementById('investments6').value;
+            const investments6 = document.getElementById('investments6').value;
             const investments7 = document.getElementById('investments7').value;
-            const investments8= document.getElementById('investments8').value;
-            
-            
+            const investments8 = document.getElementById('investments8').value;
+
+
 
             let facility_pic_ent = "";
             let facility_pic = "";
@@ -1422,6 +1432,7 @@
                 facility_name: facility_name,
                 facility_pic: facility_pic,
                 facility_location: facility_location,
+                facility_address: facility_address,
                 dateInput: dateInput,
                 f_operation: f_operationItems, //checkbox
                 facility_category: facility_category, //radio
@@ -1510,6 +1521,7 @@
                 details_of_renewable_energy: details_of_renewable_energy,
                 pic_renewable_energy: pic_renewable_energy, //file
                 annual_rainfall: annual_rainfall,
+                total_roof_area: total_roof_area,
                 rwh_scope: rwh_scopeItems, //checkbox
                 rw_harvesting_observation: rw_harvesting_observation,
                 water_saving_opportunties: water_saving_opportunties,
@@ -1540,21 +1552,21 @@
                 water_savings: water_savings,
                 rwh: rwh,
                 material_savings: material_savings,
-                ct_opportunities: ct_opportunities,   
-                savings1:savings1,
-                savings2:savings2,
-                savings3:savings3,
-                savings4:savings4,
-                savings5:savings5,
-                investments:investments,
-                investments1:investments1,
-                investments2:investments2,
-                investments3:investments3,
-                investments4:investments4,
-                investments5:investments5,
-                investments6:investments6,
-                investments7:investments7,
-                investments8:investments8,
+                ct_opportunities: ct_opportunities,
+                savings1: savings1,
+                savings2: savings2,
+                savings3: savings3,
+                savings4: savings4,
+                savings5: savings5,
+                investments: investments,
+                investments1: investments1,
+                investments2: investments2,
+                investments3: investments3,
+                investments4: investments4,
+                investments5: investments5,
+                investments6: investments6,
+                investments7: investments7,
+                investments8: investments8,
 
             })
 
