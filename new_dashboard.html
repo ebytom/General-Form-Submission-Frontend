@@ -864,8 +864,8 @@
         var file1
         var formId
 
-        // axios.post(`http://103.88.225.131:8080/form2/getForm`)
-        axios.post(`http://localhost:8080/form2/getForm`)
+        axios.post(`http://103.88.225.131:8080/form2/getForm`)
+        // axios.post(`http://localhost:8080/form2/getForm`)
             .then(function (response) {
                 console.log(response.data.form)
                 const emptyComp = "<h3>No Entries Found</h3>"
@@ -891,8 +891,8 @@
 
 
         function popup(id) {
-            // axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
-            axios.post(`http://localhost:8080/form2/getFormById`, {
+            axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
+            // axios.post(`http://localhost:8080/form2/getFormById`, {
                 form2Id: id
             })
                 .then(function (res) {
@@ -1091,8 +1091,8 @@
 
         function deleteEntry(id) {
             if (window.confirm("Are you sure?")) {
-                axios.delete('http://localhost:8080/form2/deleteEntry', {
-                    // axios.delete('http://103.88.225.131:8080/form2/deleteEntry', {
+                // axios.delete('http://localhost:8080/form2/deleteEntry', {
+                    axios.delete('http://103.88.225.131:8080/form2/deleteEntry', {
                     data: {
                         formId: id
                     }
