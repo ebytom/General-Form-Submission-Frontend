@@ -615,12 +615,12 @@
                     <td></td>
                 </tr> -->
 
-                <tr>
+                <!-- <tr>
                     <td>43.2</td>
                     <td>Investments</td>
                     <td id="investment">{investments}</td>
                     <td></td>
-                </tr>
+                </tr> -->
 
                 <tr>
                     <td>44</td>
@@ -1747,7 +1747,7 @@
                             <img style="height: 400px" src="" alt="Assessment_Observation_at_the_Genset_Room_Photo"
                                 id="Assessment_Observation_at_the_Genset_Room_Photo" />
                         </td>
-                        <td id="assess_ob_at_genset_2">{Assessment_Observation_at_the_Genset_Room}</td>
+                        <td id="assess_ob_at_genset_3">{Assessment_Observation_at_the_Genset_Room}</td>
                     </tr>
 
                     <tr>
@@ -1763,7 +1763,7 @@
                             <img style="height: 400px" src="" alt="Assessment_Observation_at_the_Thermopac_Photo"
                                 id="Assessment_Observation_at_the_Thermopac_Photo" />
                         </td>
-                        <td id="assess_ob_at_thermopac_2">{Assessment_Observation_at_the_Thermopac}</td>
+                        <td id="assess_ob_at_thermopac_4">{Assessment_Observation_at_the_Thermopac}</td>
 
                     </tr>
 
@@ -1790,7 +1790,7 @@
                             <img style="height: 400px" src="" alt="Assessment_Observation_at_Raw_Material_Inward_Photo"
                                 id="Assessment_Observation_at_Raw_Material_Inward_Photo" />
                         </td>
-                        <td id="lighting_observation_2">{Assessment_Observation_at\_ Raw_Material_Inward}</td>
+                        <td id="lighting_observation_3">{Assessment_Observation_at\_ Raw_Material_Inward}</td>
                     </tr>
 
                     <tr>
@@ -2065,7 +2065,7 @@
 
                 // ⭐️ NEW IDS
                 document.getElementById('savings1').innerHTML = response.data.form.savings1;
-                document.getElementById('investment').innerHTML = response.data.form.assess_ob_at_other;
+                // document.getElementById('investment').innerHTML = response.data.form.assess_ob_at_other;
                 document.getElementById('investments1').innerHTML = response.data.form.investments1;
                 document.getElementById('investments3').innerHTML = response.data.form.investments3;
                 document.getElementById('investments4').innerHTML = response.data.form.investments4;
@@ -2202,12 +2202,12 @@
 
                     "assess_ob_at_power_house_2": response.data.form.assess_ob_at_power_house,
                     "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content
-                    "assess_ob_at_genset_2": response.data.form.assess_ob_at_genset,
+                    "assess_ob_at_genset_3": response.data.form.assess_ob_at_genset,
                     "assess_ob_at_boiler_2": response.data.form.assess_ob_at_boiler,
-                    "assess_ob_at_thermopac_2": response.data.form.assess_ob_at_thermopac, // Empty content
+                    "assess_ob_at_thermopac_4": response.data.form.assess_ob_at_thermopac, // Empty content
                     "assess_ob_at_other_2": response.data.form.assess_ob_at_other,
                     "lighting_systems_photo_2": response.data.form.lighting_systems_photo,
-                    "lighting_observation_2": response.data.form.lighting_observation, // Empty content
+                    "lighting_observation_3": response.data.form.lighting_observation, // Empty content
                     "assessment_observation_at_material_handling_2": response.data.form.assessment_observation_at_material_handling,
                     "production_machine_utilization_data_collection_aspects_2": response.data.form.production_machine_utilization_data_collection_aspects,
                     "production_layout_observations_2": response.data.form.production_layout_observations,
