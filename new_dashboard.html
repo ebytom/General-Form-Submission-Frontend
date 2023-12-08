@@ -322,7 +322,8 @@
                                 Water Use Observations:</div>
                             <div class="p-2" id="garden_and_domestic_water_use_ob"></div>
 
-                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in Units:</div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in Units:
+                            </div>
                             <div class="p-2" id="savings1"></div>
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
                             <div class="p-2" id="investments"></div>
@@ -601,7 +602,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Water Recovery &
                                 ReUse Opportunities:</div>
                             <div class="p-2" id="water_reuse_opportunities"></div>
-                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:
+                            </div>
                             <div class="p-2" id="savings2"></div>
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
                             <div class="p-2" id="investments5"></div>
@@ -610,7 +612,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Scope for Renewable
                                 Energy Investment Opportunities:</div>
                             <div class="p-2" id="scope_for_renewable"></div>
-                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:
+                            </div>
                             <div class="p-2" id="savings3"></div>
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
                             <div class="p-2" id="investments6"></div>
@@ -639,7 +642,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Rain Water
                                 Harvesting Scope:</div>
                             <div class="p-2" id="rwh_scope"></div>
-                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:
+                            </div>
                             <div class="p-2" id="savings4"></div>
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
                             <div class="p-2" id="investments7"></div>
@@ -653,7 +657,8 @@
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Process Water Saving
                                 Opportunties:</div>
                             <div class="p-2" id="water_saving_opportunties"></div>
-                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:</div>
+                            <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Savings in units:
+                            </div>
                             <div class="p-2" id="savings5"></div>
                             <div class="fw-bold w-25 rounded-3 p-2" style="background-color: #ddd;">Investments:</div>
                             <div class="p-2" id="investments8"></div>
@@ -859,7 +864,8 @@
         var file1
         var formId
 
-        axios.post(`http://103.88.225.131:8080/form2/getForm`)
+        // axios.post(`http://103.88.225.131:8080/form2/getForm`)
+        axios.post(`http://localhost:8080/form2/getForm`)
             .then(function (response) {
                 console.log(response.data.form)
                 const emptyComp = "<h3>No Entries Found</h3>"
@@ -885,8 +891,8 @@
 
 
         function popup(id) {
-            axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
-            // axios.post(`http://localhost:8080/form2/getFormById`, {
+            // axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
+            axios.post(`http://localhost:8080/form2/getFormById`, {
                 form2Id: id
             })
                 .then(function (res) {
@@ -1085,8 +1091,8 @@
 
         function deleteEntry(id) {
             if (window.confirm("Are you sure?")) {
-                // axios.delete('http://localhost:8080/form2/deleteEntry', {
-                axios.delete('http://103.88.225.131:8080/form2/deleteEntry', {
+                axios.delete('http://localhost:8080/form2/deleteEntry', {
+                    // axios.delete('http://103.88.225.131:8080/form2/deleteEntry', {
                     data: {
                         formId: id
                     }

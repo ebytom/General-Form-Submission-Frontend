@@ -221,10 +221,10 @@
 
             <table>
                 <tr>
-                    <th>SL #</th>
-                    <th>Diagnostic Study Parameters</th>
-                    <th>Observations</th>
-                    <th style="width: 150px;">Remarks</th>
+                    <th style="width: 80px;">SL #</th>
+                    <th style="width: 500px">Diagnostic Study Parameters</th>
+                    <th style="width: 500px">Observations</th>
+                    <th>Remarks</th>
                 </tr>
 
                 <tr>
@@ -326,15 +326,51 @@
                 </tr>
 
             </table>
+            <br><br>
+
+            <!-- ⭐️ NEW TABLE  -->
+
+            <table>
+
+                <tr>
+                    <th>Total Power consumption (kwh/Yr)</th>
+                    <th>Total water consumption (KL/yr)</th>
+                    <th>% of energy savings</th>
+                    <th>% of water saving </th>
+                    <th>Total RWH Potential (Kl/Yr)</th>
+                    <th>% of Rainwater to fresh water</th>
+                </tr>
+                <td id="powerTotal"></td>
+                <td id="waterTotal"></td>
+                <td id="energySavingsPercent"></td>
+                <td id="waterSavingsPercent"></td>
+                <td id="rwhTotal"></td>
+                <td id="freshWaterPercent"></td>
+
+                <tr>
+                    <th>Total number of Opportunities identified</th>
+                    <th>Total energy savings in kWh/Yr</th>
+                    <th>Total water savings in Kl/Yr</th>
+                    <th>Total material saving</th>
+                    <th>Total Investment inr</th>
+                    <th>Total savings inr</th>
+                </tr>
+                <td>15</td>
+                <td id="energySavingsTotal"></td>
+                <td id="waterSavingsTotal"></td>
+                <td id="materialSavingsTotal"></td>
+                <td id="investmentTotal"></td>
+                <td id="savingsTotal"></td>
+            </table>
             <br>
             <h3>Resource Consumption Details</h3>
 
             <table>
                 <tr>
-                    <th>SL #</th>
-                    <th>Diagnostic Study Parameters</th>
-                    <th>Observations</th>
-                    <th style="width: 150px;">Remarks</th>
+                    <th style="width: 80px">SL #</th>
+                    <th style="width: 500px">Diagnostic Study Parameters</th>
+                    <th style="width: 500px">Observations</th>
+                    <th style="width: 200px">Remarks</th>
                 </tr>
 
                 <tr>
@@ -539,13 +575,13 @@
             <table>
                 <tr>
                     <th colspan="3">Utility Observations</th>
-                    <th style="width: 150px;"></th>
+                    <th></th>
                 </tr>
                 <tr>
-                    <td>42</td>
-                    <td>Energy Source Forms of Fuels</td>
-                    <td id="src_fuel">{Energy_Source_Forms_of_Fuels}</td>
-                    <td></td>
+                    <td style="width: 80px">42</td>
+                    <td style="width: 500px">Energy Source Forms of Fuels</td>
+                    <td style="width: 500px" id="src_fuel">{Energy_Source_Forms_of_Fuels}</td>
+                    <td style="width: 200px"></td>
                 </tr>
 
                 <tr>
@@ -610,14 +646,15 @@
             <table>
                 <tr>
                     <th colspan="3">Energy Saving Opportunities</th>
-                    <th style="width: 150px;"></th>
+                    <th></th>
                 </tr>
                 <tr>
                 <tr>
-                    <td>48</td>
-                    <td>Scope for Energy Savings in Compressed Air Systems</td>
-                    <td id="scope_comp_air">{Scope_for_Energy_Savings_in_Compressed_Air_Systems}</td>
-                    <td></td>
+                    <td style="width: 80px">48</td>
+                    <td style="width: 500px">Scope for Energy Savings in Compressed Air Systems</td>
+                    <td style="width: 500px" id="scope_comp_air">{Scope_for_Energy_Savings_in_Compressed_Air_Systems}
+                    </td>
+                    <td style="width: 200px"></td>
                 </tr>
 
                 <tr>
@@ -728,14 +765,14 @@
             <table>
                 <tr>
                     <th colspan="3">Production Shopfloor</th>
-                    <th style="width: 150px;"></th>
+                    <th></th>
                 </tr>
                 <tr>
                 <tr>
-                    <td>62</td>
-                    <td>Production Machine Utilization & Data Collection Aspects</td>
-                    <td id="production_machine_utilization_data_collection_aspects"></td>
-                    <td></td>
+                    <td style="width: 80px">62</td>
+                    <td style="width: 500px">Production Machine Utilization & Data Collection Aspects</td>
+                    <td style="width: 500px" id="production_machine_utilization_data_collection_aspects"></td>
+                    <td style="width: 200px"></td>
                 </tr>
 
                 <tr>
@@ -767,15 +804,15 @@
                 <table>
                     <tr>
                         <th colspan="3">Sustainability Initiatives, Material Conservation, Water Saving Measures</th>
-                        <th style="width: 150px;"></th>
+                        <th></th>
                     </tr>
                     <tr>
                     <tr>
-                        <td>66</td>
-                        <td>Material Conservation & Improvement Opportunities in Packing</td>
-                        <td id="material_conservation_opportunities">
+                        <td style="width: 80px">66</td>
+                        <td style="width: 500px">Material Conservation & Improvement Opportunities in Packing</td>
+                        <td style="width: 500px" id="material_conservation_opportunities">
                             {Material_Conservation\_&\_Improvement_Opportunities_in_Packing}</td>
-                        <td></td>
+                        <td style="width: 200px"></td>
                     </tr>
 
                     <!-- <tr>
@@ -905,14 +942,14 @@
                 <table>
                     <tr>
                         <th colspan="3">Safety Observations</th>
-                        <th style="width: 150px;"></th>
+                        <th></th>
                     </tr>
                     <tr>
                     <tr>
-                        <td>76</td>
-                        <td>General Observations on Safety</td>
-                        <td id="obs_on_safety_1">{General_Observations_on_Safety}</td>
-                        <td></td>
+                        <td style="width: 80px">76</td>
+                        <td style="width: 500px">General Observations on Safety</td>
+                        <td style="width: 500px" id="obs_on_safety_1">{General_Observations_on_Safety}</td>
+                        <td style="width: 200px"></td>
                     </tr>
 
                     <tr>
@@ -1046,7 +1083,7 @@
                         style="border:0.75pt solid #000000; -aw-border:0.5pt single; -aw-border-insideh:0.5pt single #000000; -aw-border-insidev:0.5pt single #000000; border-collapse:collapse">
 
                         <tr style="height:26.75pt; -aw-height-rule:exactly">
-                            <th>
+                            <th style="width: 80px">
                                 <p>Sl No.</p>
                             </th>
                             <th
@@ -1054,27 +1091,27 @@
                                 <p style="font-size:15px"><span>CT Opportunities</span></p>
                             </th>
                             <th
-                                style="width:29.75pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
+                                style="border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
                                 <p style="font-size:16px"><span>UOM</span></p>
                             </th>
                             <th
-                                style="width:28.5pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
+                                style="border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
                                 <p style="font-size:16px"><span>Savings in Units</span></p>
                             </th>
                             <th
-                                style="width:28.05pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
+                                style="border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
                                 <p style="font-size:16px"><span>Unit Cost</span></p>
                             </th>
                             <th
-                                style="width:45.2pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
+                                style="border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
                                 <p style="font-size:16px"><span>Savings in INR/Yr</span></p>
                             </th>
                             <th
-                                style="width:41.85pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
+                                style="border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
                                 <p style="font-size:16px"><span>Investments</span></p>
                             </th>
                             <th
-                                style="width:52.3pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
+                                style="border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
                                 <p style="font-size:16px"><span>Payback in Months</span></p>
                             </th>
                         </tr>
@@ -1644,42 +1681,7 @@
                     </tr> -->
 
                 </table>
-                <br>
 
-                <!-- ⭐️ NEW TABLE  -->
-
-                <table>
-
-                    <tr>
-                        <th>Total Power consumption (kwh/Yr)</th>
-                        <th>Total water consumption (KL/yr)</th>
-                        <th>% of energy savings</th>
-                        <th>% of water saving </th>
-                        <th>Total RWH Potential (Kl/Yr)</th>
-                        <th>% of Rainwater to fresh water</th>
-                    </tr>
-                    <td></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-
-                    <tr>
-                        <th>Total number of Opportunities identified</th>
-                        <th>Total energy savings in kWh/Yr</th>
-                        <th>Total water savings in Kl/Yr</th>
-                        <th>Total material saving</th>
-                        <th>Total Investment inr</th>
-                        <th>Total savings inr</th>
-                    </tr>
-                    <td>15</td>
-                    <td id="energySavingsTotal"></td>
-                    <td id="waterSavingsTotal"></td>
-                    <td id="materialSavingsTotal"></td>
-                    <td id="investmentTotal"></td>
-                    <td id="savingsTotal"></td>
-                </table>
 
                 <br>
 
@@ -1863,7 +1865,8 @@
 
         const BACKEND_URL = "http://103.88.225.131:8080"
 
-        axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
+        // axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
+        axios.post(`http://localhost:8080/form2/getFormById`, {
             form2Id: formIdValue
         })
             .then(function (response) {
@@ -2062,6 +2065,13 @@
                 document.getElementById('energySavingsTotal').innerHTML = parseInt(response.data.form.compressed_air_saving) + parseInt(response.data.form.lighting_saving) + parseInt(response.data.form.energy_saving_opportunities_in_electrical_motors) + parseInt(response.data.form.savings3);
                 document.getElementById('waterSavingsTotal').innerHTML = parseInt(response.data.form.savings1) + parseInt(response.data.form.savings2) + parseInt(response.data.form.savings4) + parseInt(response.data.form.savings5);
                 document.getElementById('investmentTotal').innerHTML = parseInt(response.data.form.investments) + parseInt(response.data.form.investments1) + parseInt(response.data.form.investments2) + parseInt(response.data.form.lighting_est_investment) + parseInt(response.data.form.investments5) + parseInt(response.data.form.investments6) + parseInt(response.data.form.investments3) + parseInt(response.data.form.investments4) + parseInt(response.data.form.investments7) + parseInt(response.data.form.investments8);
+
+                document.getElementById("powerTotal").innerHTML = parseInt(response.data.form.total_elec_consumption);
+                document.getElementById("waterTotal").innerHTML = parseInt(response.data.form.qty_fresh_water) + parseInt(response.data.form.total_qty_water);
+                document.getElementById("energySavingsPercent").innerHTML = ((parseInt(response.data.form.compressed_air_saving) + parseInt(response.data.form.lighting_saving) + parseInt(response.data.form.energy_saving_opportunities_in_electrical_motors) + parseInt(response.data.form.savings3)) / parseInt(response.data.form.total_elec_consumption)) * 100;
+                document.getElementById("waterSavingsPercent").innerHTML = ((parseInt(response.data.form.savings1) + parseInt(response.data.form.savings2) + parseInt(response.data.form.savings4) + parseInt(response.data.form.savings5)) / (parseInt(response.data.form.qty_fresh_water) + parseInt(response.data.form.total_qty_water))) * 100;
+                document.getElementById("rwhTotal").innerHTML = parseInt(response.data.form.savings4);
+                document.getElementById("freshWaterPercent").innerHTML = (parseInt(response.data.form.savings4) / parseInt(response.data.form.qty_fresh_water)) * 100;
 
 
                 document.getElementById('fuel_savings').innerHTML = response.data.form.fuel_savings;
