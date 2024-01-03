@@ -1049,7 +1049,7 @@
 
                         <tr>
                             <th><strong>Energy Cost/Kg</strong></td>
-                            <td id="energy_cost">{Specific_Energy_Cost_Rs/Unit_of_Production}</td>
+                            <td id="energy_cost1">{Specific_Energy_Cost_Rs/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
@@ -2037,6 +2037,7 @@
                 document.getElementById('total_elec_consumption_1').innerHTML = response.data.form.total_elec_consumption;
                 document.getElementById('specific_energy').innerHTML = response.data.form.specific_energy;
                 document.getElementById('energy_cost').innerHTML = response.data.form.energy_cost;
+                document.getElementById('energy_cost1').innerHTML = response.data.form.energy_cost;
                 document.getElementById('specific_water_cost1').innerHTML = response.data.form.specific_water_cost1;
                 document.getElementById('specific_fuel_cost').innerHTML = response.data.form.specific_fuel_cost;
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
