@@ -2107,6 +2107,7 @@
 
                 // document.getElementById('energySavingsTotal').innerHTML = (parseValue(response.data.form.compressed_air_saving) + parseValue(response.data.form.lighting_saving) + parseValue(response.data.form.energy_saving_opportunities_in_electrical_motors) + parseValue(response.data.form.savings3)).toFixed(2);
                 document.getElementById('energySavingsTotal').innerHTML = response.data.form.energy_savings;
+                document.getElementById('materialSavingsTotal').innerHTML = response.data.form.material_savings;
                 document.getElementById('waterSavingsTotal').innerHTML = (parseValue(response.data.form.savings1) + parseValue(response.data.form.savings2) + parseValue(response.data.form.savings4) + parseValue(response.data.form.savings5)).toFixed(2);
                 document.getElementById('investmentTotal').innerHTML = (parseValue(response.data.form.investments) + parseValue(response.data.form.investments1) + parseValue(response.data.form.investments2) + parseValue(response.data.form.lighting_est_investment) + parseValue(response.data.form.investments5) + parseValue(response.data.form.investments6) + parseValue(response.data.form.investments3) + parseValue(response.data.form.investments4) + parseValue(response.data.form.investments7) + parseValue(response.data.form.investments8)).toFixed(2);
 
