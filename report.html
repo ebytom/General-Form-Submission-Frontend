@@ -2092,11 +2092,12 @@
                 document.getElementById('investmentMul1').innerHTML = ((parseValue(response.data.form.investments)) / (parseValue(response.data.form.savings1) * parseValue(response.data.form.cost_fresh_water)) * 12).toFixed(2);
                 document.getElementById('savingsMul2').innerHTML = (parseValue(response.data.form.compressed_air_saving) * parseValue(response.data.form.energy_cost)).toFixed(2);
                 document.getElementById('investmentMul2').innerHTML = (((parseValue(response.data.form.investments2) / (parseValue(response.data.form.compressed_air_saving) * parseValue(response.data.form.energy_cost))) * 12).toFixed(2));
-                document.getElementById('investmentMul3').innerHTML = (((parseValue(response.data.form.lighting_est_savings)) / parseValue(response.data.form.lighting_est_investment)) * 12).toFixed(2);
-                document.getElementById('investmentMul4').innerHTML = (((parseValue(response.data.form.energy_saving_opportunities_in_electrical_motors)) / parseValue(response.data.form.investments3)) * 12).toFixed(2);
+                document.getElementById('investmentMul3').innerHTML = (((parseValue(response.data.form.lighting_est_investment)) / parseValue(response.data.form.lighting_est_savings)) * 12).toFixed(2);
+                document.getElementById('investmentMul4').innerHTML = ((parseValue(response.data.form.investments65) / parseValue(response.data.form.estimated_savings_motor_upgradation)) * 12).toFixed(2);
+                // document.getElementById('investmentMul4').innerHTML = parseValue(response.data.form.energy_saving_opportunities_in_electrical_motors);
                 document.getElementById('savingsMul5').innerHTML = (parseValue(response.data.form.waste_heat_recovery_fuel_savings) * parseValue(response.data.form.energy_cost)).toFixed(2);
                 document.getElementById('investmentMul5').innerHTML = ((parseValue(response.data.form.investments4) / (parseValue(response.data.form.waste_heat_recovery_fuel_savings) * parseValue(response.data.form.energy_cost))) * 12).toFixed(2);
-                document.getElementById('savingsMul6').innerHTML = (parseValue(response.data.form.savings2) * parseValue(response.data.form.cost_fresh_water)).toFixed(2);
+                document.getElementById('savingsMul6').innerHTML = (parseValue(response.data.form.cost_fresh_water) * parseValue(response.data.form.savings2)).toFixed(2);
                 document.getElementById('investmentMul6').innerHTML = ((parseValue(response.data.form.investments5) / (parseValue(response.data.form.savings2) * parseValue(response.data.form.cost_fresh_water))) * 12).toFixed(2);
                 document.getElementById('savingsMul7').innerHTML = (parseValue(response.data.form.savings3) * parseValue(response.data.form.energy_cost)).toFixed(2);
                 document.getElementById('investmentMul7').innerHTML = ((parseValue(response.data.form.investments6) / (parseValue(response.data.form.savings3) * parseValue(response.data.form.energy_cost))) * 12).toFixed(2);
