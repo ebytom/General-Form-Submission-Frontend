@@ -732,8 +732,8 @@
                 <tr>
                     <td>55</td>
                     <td>Electrical Motors - Total Numbers</td>
-                    <td id="total_elec_motors">
-                        <id="total_elec_motors">>{Electrical_Motors\_-\_Total_Numbers}
+                    <td id="total_elec_motors" class="elec_motorsItems_together">
+                        <id="total_elec_motors">>{Electrical_Motors\_-\_Total_Numbers} 
                     </td>
                     <td></td>
                 </tr>
@@ -2051,8 +2051,8 @@
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
                 document.getElementById('obs_on_safety_1').innerHTML = response.data.form.obs_on_safety;
                 document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.obs_on_safety_prod;
-                document.getElementById('investments3').innerHTML = response.data.form.investments3;
-                document.getElementById('elec_motors_1').innerHTML = response.data.form.elec_motors;
+                document.getElementById('investments3').innerHTML = (parseValue(response.data.form.investments65))+(parseValue(response.data.form.investments65)).toFixed(2);
+                document.getElementById('elec_motors_1').innerHTML = response.data.form.electrical_motors_observations +'<br>'+ response.data.form.total_elec_motors;
                 document.getElementById('scope_waste_2').innerHTML = response.data.form.scope_waste;
                 document.getElementById('lighting_est_investment_5').innerHTML = response.data.form.lighting_est_investment;
 
@@ -2211,12 +2211,13 @@
                     "General_Observations_on_Safety_Electrical_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_elec_photo,
                     "General_Observations_on_Safety_Chemical_Handling_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_chem_photo,
                     "General_Observations_on_Safety_Fire_Hazards_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo,
-                    "obs_on_safety_fire_photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo,
+                    "obs_on_safety_fire_photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo, 
                     "Assessment_Observation_at_Raw_Material_Inward_Photo": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_raw_material,
 
 
                     "assess_ob_at_power_house_2": response.data.form.assess_ob_at_power_house,
-                    "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content
+                // "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content 
+                    "assess_ob_at_compressor_2": response.data.form.assess_ob_at_compressor,
                     "assess_ob_at_genset_3": response.data.form.assess_ob_at_genset,
                     "assess_ob_at_boiler_2": response.data.form.assess_ob_at_boiler,
                     "assess_ob_at_thermopac_4": response.data.form.assess_ob_at_thermopac, // Empty content
