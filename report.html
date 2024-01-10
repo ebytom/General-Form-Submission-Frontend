@@ -1416,7 +1416,7 @@
                             </td>
                             <td
                                 style="width:41.45pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border:0.5pt single">
-                                <p style="font-size:12pt"><span id="investments3"></span></p>
+                                <p style="font-size:12pt"><span id="investments65"></span></p>
                             </td>
                             <td
                                 style="width:51.9pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top; -aw-border-bottom:0.5pt single; -aw-border-left:0.5pt single; -aw-border-top:0.5pt single">
@@ -1776,12 +1776,12 @@
                     Tower Etc}</td>
             </tr>
 
-            <tr>
+            <!-- <tr>
                 <td>
                     <img style="height: 400px" src="" alt="Lighting_Systems_Photo_2" id="Lighting_Systems_Photo" />
                 </td>
                 <td id="lighting_systems_photo_2">{Lighting_Systems_Photo}</td>
-            </tr>
+            </tr> -->
 
             <tr>
                 <td>
@@ -2051,7 +2051,7 @@
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
                 document.getElementById('obs_on_safety_1').innerHTML = response.data.form.obs_on_safety;
                 document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.obs_on_safety_prod;
-                document.getElementById('investments3').innerHTML = (parseValue(response.data.form.investments65))+(parseValue(response.data.form.investments65)).toFixed(2);
+                document.getElementById('investments65').innerHTML = (parseValue(response.data.form.investments65)+ parseValue(response.data.form.investments3)).toFixed(2);
                 document.getElementById('elec_motors_1').innerHTML = response.data.form.electrical_motors_observations +'<br>'+ response.data.form.total_elec_motors;
                 document.getElementById('scope_waste_2').innerHTML = response.data.form.scope_waste;
                 document.getElementById('lighting_est_investment_5').innerHTML = response.data.form.lighting_est_investment;
@@ -2075,7 +2075,7 @@
                 document.getElementById('savings1').innerHTML = response.data.form.savings1;
                 // document.getElementById('investment').innerHTML = response.data.form.assess_ob_at_other;
                 document.getElementById('investments1').innerHTML = response.data.form.investments1;
-                document.getElementById('investments3').innerHTML = response.data.form.investments3;
+                // document.getElementById('investments3').innerHTML = response.data.form.investments3;
                 document.getElementById('investments4').innerHTML = response.data.form.investments4;
                 document.getElementById('savings2').innerHTML = response.data.form.savings2;
                 document.getElementById('savings3').innerHTML = response.data.form.savings3;
@@ -2200,7 +2200,7 @@
                     "Assessment_Observation_at_the_Boiler_Area_Photo": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_boiler,
                     "pic_ob_at_thermopac": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_thermopac,
                     "Assessment_Observation_at_the_Other_Facilities_Chiller": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_at_other,
-                    "Lighting_Systems_Photo": `${BACKEND_URL}/resources/` + response.data.form.lighting_systems_photo, // An empty photo source
+                    // "Lighting_Systems_Photo": `${BACKEND_URL}/resources/` + response.data.form.lighting_systems_photo, // An empty photo source
                     "lighting_systems_photo": `${BACKEND_URL}/resources/` + response.data.form.lighting_systems_photo,
                     "Assessment_Observation_at_Material_Handling_Photo": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_material_handling,
                     "Production_Machine_Utilization_Data_Collection_Aspects_Photo": `${BACKEND_URL}/resources/` + response.data.form.pic_production_machine_util,
@@ -2210,19 +2210,19 @@
                     "General_Observations_on_Safety_Production_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_prod_photo,
                     "General_Observations_on_Safety_Electrical_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_elec_photo,
                     "General_Observations_on_Safety_Chemical_Handling_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_chem_photo,
-                    "General_Observations_on_Safety_Fire_Hazards_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo,
+                    "General_Observations_on_Safety_Fire_Hazards_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_elec_earth_photo,
                     "obs_on_safety_fire_photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo, 
                     "Assessment_Observation_at_Raw_Material_Inward_Photo": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_raw_material,
 
 
                     "assess_ob_at_power_house_2": response.data.form.assess_ob_at_power_house,
-                // "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content 
+                    // "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content 
                     "assess_ob_at_compressor_2": response.data.form.assess_ob_at_compressor,
                     "assess_ob_at_genset_3": response.data.form.assess_ob_at_genset,
                     "assess_ob_at_boiler_2": response.data.form.assess_ob_at_boiler,
                     "assess_ob_at_thermopac_4": response.data.form.assess_ob_at_thermopac, // Empty content
                     "assess_ob_at_other_2": response.data.form.assess_ob_at_other,
-                    "lighting_systems_photo_2": response.data.form.lighting_observation,
+                    // "lighting_systems_photo_2": response.data.form.lighting_observation,
                     "lighting_observation_3": response.data.form.lighting_observation, // Empty content
                     "assessment_observation_at_material_handling_2": response.data.form.assessment_observation_at_material_handling,
                     "production_machine_utilization_data_collection_aspects_2": response.data.form.production_machine_utilization_data_collection_aspects,
