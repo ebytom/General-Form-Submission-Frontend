@@ -2113,7 +2113,8 @@
 
                 document.getElementById("powerTotal").innerHTML = parseValue(response.data.form.total_elec_consumption).toFixed(2);
                 document.getElementById("waterTotal").innerHTML = (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water)).toFixed(2);
-                document.getElementById("energySavingsPercent").innerHTML = (((parseValue(response.data.form.compressed_air_saving) + parseValue(response.data.form.lighting_saving) + parseValue(response.data.form.energy_saving_opportunities_in_electrical_motors) + parseValue(response.data.form.savings3)) / parseValue(response.data.form.total_elec_consumption)) * 100).toFixed(2);
+                // document.getElementById("energySavingsPercent").innerHTML = (((parseValue(response.data.form.compressed_air_saving) + parseValue(response.data.form.lighting_saving) + parseValue(response.data.form.energy_saving_opportunities_in_electrical_motors) + parseValue(response.data.form.savings3)) / parseValue(response.data.form.total_elec_consumption)) * 100).toFixed(2);
+                document.getElementById("energySavingsPercent").innerHTML = ((parseValue(response.data.form.energy_savings) / parseValue(response.data.form.total_elec_consumption)) * 100).toFixed(2);
                 document.getElementById("waterSavingsPercent").innerHTML = (((parseValue(response.data.form.savings1) + parseValue(response.data.form.savings2) + parseValue(response.data.form.savings4) + parseValue(response.data.form.savings5)) / (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water))) * 100).toFixed(2);
                 document.getElementById("rwhTotal").innerHTML = parseValue(response.data.form.savings4).toFixed(2);
                 document.getElementById("freshWaterPercent").innerHTML = (((parseValue(response.data.form.savings4) / parseValue(response.data.form.qty_fresh_water)) * 100)).toFixed(2);
