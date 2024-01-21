@@ -733,7 +733,7 @@
                     <td>55</td>
                     <td>Electrical Motors - Total Numbers</td>
                     <td id="total_elec_motors" class="elec_motorsItems_together">
-                        <id="total_elec_motors">>{Electrical_Motors\_-\_Total_Numbers} 
+                        <id="total_elec_motors">>{Electrical_Motors\_-\_Total_Numbers}
                     </td>
                     <td></td>
                 </tr>
@@ -1971,7 +1971,7 @@
 
                 document.getElementById("qty_fresh_water").innerHTML = response.data.form.qty_fresh_water;
 
-                document.getElementById('total_qty_water').innerHTML = response.data.form.total_qty_water;
+                document.getElementById('total_qty_water').innerHTML = (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water)).toFixed(2);
                 document.getElementById("cost_fresh_water").innerHTML = response.data.form.cost_fresh_water;
                 document.getElementById('cost_recovered_water').innerHTML = response.data.form.cost_recovered_water;
                 document.getElementById("zld").innerHTML = response.data.form.zld;
@@ -1981,7 +1981,7 @@
 
                 document.getElementById('domestic_water_consumption').innerHTML = response.data.form.total_qty_water;
                 // document.getElementById('domestic_water_consumption1').innerHTML = response.data.form.domestic_water_consumption;
-                document.getElementById('domestic_water_consumption_1').innerHTML = response.data.form.total_qty_water;
+                document.getElementById('domestic_water_consumption_1').innerHTML = (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water));
                 document.getElementById("garden_area").innerHTML = response.data.form.garden_area;
                 document.getElementById('garden_use').innerHTML = response.data.form.garden_use;
 
@@ -2051,8 +2051,8 @@
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
                 document.getElementById('obs_on_safety_1').innerHTML = response.data.form.obs_on_safety;
                 document.getElementById('overall_obs_on_safety_photo').innerHTML = response.data.form.obs_on_safety_prod;
-                document.getElementById('investments65').innerHTML = (parseValue(response.data.form.investments65)+ parseValue(response.data.form.investments3)).toFixed(2);
-                document.getElementById('elec_motors_1').innerHTML = response.data.form.electrical_motors_observations +'<br>'+ response.data.form.total_elec_motors;
+                document.getElementById('investments65').innerHTML = (parseValue(response.data.form.investments65) + parseValue(response.data.form.investments3)).toFixed(2);
+                document.getElementById('elec_motors_1').innerHTML = response.data.form.electrical_motors_observations + '<br>' + response.data.form.total_elec_motors;
                 document.getElementById('scope_waste_2').innerHTML = response.data.form.scope_waste;
                 document.getElementById('lighting_est_investment_5').innerHTML = response.data.form.lighting_est_investment;
 
@@ -2110,13 +2110,18 @@
                 document.getElementById('energySavingsTotal').innerHTML = response.data.form.energy_savings;
                 document.getElementById('materialSavingsTotal').innerHTML = response.data.form.material_savings;
                 document.getElementById('waterSavingsTotal').innerHTML = (parseValue(response.data.form.savings1) + parseValue(response.data.form.savings2) + parseValue(response.data.form.savings4) + parseValue(response.data.form.savings5)).toFixed(2);
+
                 document.getElementById('investmentTotal').innerHTML = (parseValue(response.data.form.investments) + parseValue(response.data.form.investments1) + parseValue(response.data.form.investments2) + parseValue(response.data.form.lighting_est_investment) + parseValue(response.data.form.investments5) + parseValue(response.data.form.investments6) + parseValue(response.data.form.investments3) + parseValue(response.data.form.investments4) + parseValue(response.data.form.investments7) + parseValue(response.data.form.investments8)).toFixed(2);
+
+
+
+
 
                 document.getElementById("powerTotal").innerHTML = parseValue(response.data.form.total_elec_consumption).toFixed(2);
                 document.getElementById("waterTotal").innerHTML = (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water)).toFixed(2);
                 // document.getElementById("energySavingsPercent").innerHTML = (((parseValue(response.data.form.compressed_air_saving) + parseValue(response.data.form.lighting_saving) + parseValue(response.data.form.energy_saving_opportunities_in_electrical_motors) + parseValue(response.data.form.savings3)) / parseValue(response.data.form.total_elec_consumption)) * 100).toFixed(2);
                 document.getElementById("energySavingsPercent").innerHTML = ((parseValue(response.data.form.energy_savings) / parseValue(response.data.form.total_elec_consumption)) * 100).toFixed(2);
-                document.getElementById("waterSavingsPercent").innerHTML = (((parseValue(response.data.form.savings1) + parseValue(response.data.form.savings2) + parseValue(response.data.form.savings4) + parseValue(response.data.form.savings5)) / (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water))) * 100).toFixed(2);
+                document.getElementById("waterSavingsPercent").innerHTML = (((parseValue(response.data.form.savings1) + parseValue(response.data.form.savings2) + parseValue(response.data.form.savings5)) / (parseValue(response.data.form.qty_fresh_water) + parseValue(response.data.form.total_qty_water))) * 100).toFixed(2);
                 document.getElementById("rwhTotal").innerHTML = parseValue(response.data.form.savings4).toFixed(2);
                 document.getElementById("freshWaterPercent").innerHTML = (((parseValue(response.data.form.savings4) / parseValue(response.data.form.qty_fresh_water)) * 100)).toFixed(2);
 
@@ -2165,6 +2170,23 @@
                 document.getElementById('cost_fresh_water_5').innerHTML = response.data.form.cost_fresh_water;
                 document.getElementById('cost_fresh_water_6').innerHTML = response.data.form.cost_fresh_water;
                 document.getElementById('cost_fresh_water_7').innerHTML = response.data.form.cost_fresh_water;
+
+
+                var totalSavings =
+  parseValue(response.data.form.savings1) * parseValue(response.data.form.cost_fresh_water) +
+  parseValue(response.data.form.compressed_air_saving) * parseValue(response.data.form.energy_cost) +
+  parseValue(response.data.form.lighting_est_savings) +
+  parseValue(response.data.form.waste_heat_recovery_fuel_savings) * parseValue(response.data.form.energy_cost) +
+  parseValue(response.data.form.cost_fresh_water) * parseValue(response.data.form.savings2) +
+  parseValue(response.data.form.savings3) * parseValue(response.data.form.energy_cost) +
+  parseValue(response.data.form.savings4) * parseValue(response.data.form.cost_fresh_water) +
+  parseValue(response.data.form.savings5) * parseValue(response.data.form.cost_fresh_water);
+
+        document.getElementById('savingsTotal').innerHTML = (totalSavings).toFixed(2);
+
+
+
+
                 // document.getElementById('').innerHTML = response.data.form.;
                 // document.getElementById('').innerHTML = response.data.form.;
                 // document.getElementById('').innerHTML = response.data.form.;
@@ -2212,7 +2234,7 @@
                     "General_Observations_on_Safety_Electrical_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_elec_photo,
                     "General_Observations_on_Safety_Chemical_Handling_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_chem_photo,
                     "General_Observations_on_Safety_Fire_Hazards_Photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_elec_earth_photo,
-                    "obs_on_safety_fire_photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo, 
+                    "obs_on_safety_fire_photo": `${BACKEND_URL}/resources/` + response.data.form.obs_on_safety_fire_photo,
                     "Assessment_Observation_at_Raw_Material_Inward_Photo": `${BACKEND_URL}/resources/` + response.data.form.pic_ob_raw_material,
 
 
@@ -2312,8 +2334,22 @@
         // }
 
 
+        // var savingsTotalElement = document.getElementById('savingsTotal');
+
+        // var savingsMul1Value = parseFloat(document.getElementById('savingsMul1').value) || 0;
+        // var savingsMul2Value = parseFloat(document.getElementById('savingsMul2').value) || 0;
+        // var lightingEstSavings5Value = parseFloat(document.getElementById('lighting_est_savings_5').value) || 0;
+        // var savingsMul5Value = parseFloat(document.getElementById('savingsMul5').value) || 0;
+        // var savingsMul6Value = parseFloat(document.getElementById('savingsMul6').value) || 0;
+        // var savingsMul7Value = parseFloat(document.getElementById('savingsMul7').value) || 0;
+        // var savingsMul8Value = parseFloat(document.getElementById('savingsMul8').value) || 0;
+        // var savingsMul9Value = parseFloat(document.getElementById('savingsMul9').value) || 0;
+
+        
 
     </script>
+
+
 
 </body>
 
