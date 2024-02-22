@@ -1431,7 +1431,8 @@
             })
 
 
-            axios.post(`http://103.88.225.131:8080/form2/postForm`, {
+            // axios.post(`http://103.88.225.131:8080/form2/postForm`, {
+            axios.post(`https://general-form-submission-backend.onrender.com:8080/form2/postForm`, {
                 // axios.post(`http://localhost:8080/form2/postForm`, {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
@@ -1595,7 +1596,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post(`http://103.88.225.131:8080/uploadFile`, formData, {
+                const response = await axios.post(`https://general-form-submission-backend.onrender.com:8080/uploadFile`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }
